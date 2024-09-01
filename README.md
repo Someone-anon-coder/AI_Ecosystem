@@ -20,7 +20,7 @@ AI Ecosystem is an evolving project that aims to build a hierarchical model stru
 
 ## Usage
 
-**Note:** As the project is still under development, usage instructions will be provided in future updates.
+**Note:** As the project is still under development, usage instructions will be provided in future updates. You can read the _progress report_ in "support_files/progress_report" to keep track of what is happening in the project right now.
 
 ## Contributing
 
