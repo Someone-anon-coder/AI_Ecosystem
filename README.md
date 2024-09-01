@@ -1,49 +1,39 @@
-# AI Ecosystem: A Hierarchal AI Environment for NLP to TASK
+# AI Ecosystem: A Framework for NLP-driven Task Completion
 
-This project aims to develop an AI Ecosystem, a comprehensive and hierarchical environment where Natural Language Processing (NLP) powers efficient task completion. The vision is to enable a system that can understand human instructions, break down complex tasks into smaller manageable components, and execute them autonomously on a computer.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Project Goal:
+## Description
 
-To create a robust AI environment capable of performing a wide range of tasks, mimicking human capabilities on a computer. This includes:
+AI Ecosystem is an evolving project that aims to build a hierarchical model structure capable of efficiently completing human-like tasks on a computer using natural language processing (NLP). It tackles the challenge of bridging the gap between complex human instructions and automated task execution by developing a system that understands, interprets, and translates natural language commands into actionable steps.
 
-    Understanding natural language: The system should be able to understand complex instructions given in natural language, without requiring specific commands or syntax.
+## Features
 
-    Task Decomposition: The ability to break down large tasks into smaller, more manageable sub-tasks, logically sequencing them for efficient execution.
+- **Hierarchical Model Structure**:  The project is structured as a hierarchy of models, allowing for increasingly complex tasks to be broken down into smaller, more manageable subtasks.
+- **Natural Language Understanding**:  Models are trained to understand natural language instructions, including nuances, context, and implicit information.
+- **Task Decomposition**:  Complex tasks are automatically decomposed into a series of smaller, executable steps.
+- **Multi-Modal Capabilities**:  The system will eventually support interaction with various data sources and interfaces, including files, websites, and APIs.
+- **Modular Design**: The project is designed to be modular, allowing for easy addition and customization of new models and task functionalities.
 
-    Action Execution: Executing these sub-tasks on the computer, interacting with the user interface and system resources as needed.
+## Installation
 
-    Learning and Adaptation: Continuously learning and adapting from user interactions and feedback, improving performance and expanding its task repertoire.
+**Note:** AI Ecosystem is currently in its early stages of development, and the installation process is not yet finalized. This README will be updated with instructions once the project is more mature.
 
-## Project Components:
+## Usage
 
-The AI Ecosystem will be built upon a hierarchical structure of AI models, each specializing in a specific area:
+**Note:** As the project is still under development, usage instructions will be provided in future updates.
 
-    NLP Understanding: A robust NLP model for interpreting natural language instructions, identifying key information, and understanding user intent.
+## Contributing
 
-    Task Decomposition: A model responsible for breaking down tasks into logical steps and sequences, considering dependencies and resource requirements.
+Contributions are welcome! If you're interested in contributing to the development of AI Ecosystem, please feel free to reach out to the project maintainers or submit a pull request.
 
-    Action Execution: A collection of specialized models or agents capable of interacting with various software tools and interfaces (e.g., web browsers, text editors, spreadsheets) to execute the individual steps of a task.
+## Disclaimer
 
-    Learning and Adaptation: A model that learns from user feedback, analyzes past task executions, and adapts its strategies for better performance.
+This project is still under active development. Features and functionality may be subject to change. Right Gemini API key is used for nlp to task convergence, but will change in the future to operate smaller local models to ensure privacy and latency free task completions
 
-## Potential Applications:
+## Future Plans
 
-This AI Ecosystem has the potential to revolutionize various areas:
+- **Expansion of Model Capabilities**:  The project will continuously expand the capabilities of its models to handle a broader range of tasks and scenarios.
+- **Integration with External APIs**:  Integration with external APIs will enhance the project's ability to interact with real-world data and systems.
+- **User-Friendly Interface**:  The project will strive to provide a user-friendly interface for interacting with the system and specifying tasks.
 
-    Personal Productivity: Automate repetitive tasks, streamline workflows, and improve efficiency in personal tasks.
-
-    Business Processes: Automate business processes, improve data handling, and enhance customer service interactions.
-
-    Education and Research: Facilitate complex research tasks, automate data analysis, and enable personalized learning experiences.
-
-    Accessibility: Enable individuals with disabilities to interact with computers more easily, bridging the gap between humans and technology.
-
-## Project Roadmap:
-
-The project will be developed in phases:
-
-    Phase 1: Implement a basic NLP understanding model, a simple task decomposition model, and a basic action execution model for a limited set of tasks.
-
-    Phase 2: Expand the task repertoire, improve NLP understanding and task decomposition capabilities, and develop more specialized action execution models.
-
-    Phase 3: Implement a learning and adaptation model, enabling the AI Ecosystem to learn from user interactions and improve its performance.
+We believe AI Ecosystem has the potential to revolutionize how humans interact with computers, enabling seamless automation of complex tasks through natural language. 
