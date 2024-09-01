@@ -1,0 +1,6 @@
+google-generativeai
+gnews
+newspaper3k
+pybind11
+setuptools
+ollama

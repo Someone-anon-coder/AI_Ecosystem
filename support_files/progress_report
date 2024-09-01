@@ -1,0 +1,106 @@
+-- Day 1
+
+Got gemini api key
+created a class to define functions to use gemini programmatically
+defined functions to ask gemini and get response
+created function easily change gemini model to use
+defined a context from the system
+created a conversation keeping file (history file)
+created a way to save the ongoing conversation in the file
+
+-- Day 2
+
+created a way to get infomation about models you can use with the api key
+created a way to set system message for model from file or by specifying text as the system message
+completed gemini model configuration on a basic level
+got a github repository on the use of google news programmatically
+Tailaring the code to my specific use
+tuned the functions to get query when function calling and returns are irrelevant
+created a way to send the history of conversations with current prompt to gemini model
+
+-- Day 3
+Changed the news function to save the articles in a file for access later
+changed the article function to get the url from the file itself
+created a new function to return particular informations like title, author from the article
+Issue arised when accessin news date wise, the parameters are not correctly setup
+understood how to provide start date and end date in google news website
+changed the function to directly integrate start date and end date with the query
+Now the query works and news articles are returned according to the date range
+started working on class to manipulate files programmatically
+created functions for basic file operations
+tuned the functions to not return anything important and work independently
+
+-- Day 4
+Started working on created C programs for basic and calculative tasks for fatster and efficient processing
+created class to handle file operations
+created the necessary functions to check, write, read and delete files
+basic file manipulation class is completed
+wanted to include the class in python and use its methods
+created a header file for this class
+linked the cpp file to the header file
+created binging file to bind header file to python
+created setup file to setup the file cpp program as python module
+now file class can be accessed from the module in python
+created a seperate directory to save the new modules that will be created in the future for this project
+after moving the module to this directory, vscode gives syntactical error as the module could not be resolved, so "# type: ignore" is necessary to be written in front of the import statement
+Okay dont have to do "# type: ignore" anymore it was fixed automatically
+added a function to hide the file in file class
+Created a new class Folder to handle folders
+added functions like create, move, delete
+added function for listing the folder contents
+created header and cpp files for this class
+binded the both classes to angel_configuration
+saved the configuration to modules directory
+now both classes can be accessed from the modules directory in python
+
+-- Day 5
+Starting implementation of super class for handling app related tasks like start, stop
+created class for application handling
+created function declarations for app handling in header file
+Was wrong to do it this way, started anew
+one function, with defination and then another, after completing the class, will create header and cpp file for it
+created a proper function to take the app name along with arguments and start the app
+
+-- Day 6
+created a function to forcefully or gracefully stop an running application
+created a proper function to stop the application
+got a list of all the general operations possible on a application
+created small functions to get each status of app
+status of app can be checked like cpu usage, memory usage, owner of app, uptime, etc
+Curated a function to get the statuses and save in status file
+Created functions to support handling of window operations
+these functions are used internally by the class itself
+window functions are created to resize, minimize, maximize and such
+Some issues arised when dealing with windows not sure how to deal with it right now
+created functions to install, check for updates and uninstall applications
+basic application class is now completed
+
+-- Day 7
+Starting to create google news api in cpp
+using the knowledge from gnews in python
+created the constructor function to initialize the url parameters with proper values like country, start date, end date and keyword
+created private varialbles for internal help with functions
+created functions to set and get values of the class variables
+created vectors for stories country and language codes
+set up period variable for a time of period to search news for
+created function to check if the start date is before the end date
+added functionality to check if the start date and end date has atleast 1 day of difference
+Created function to add the date query, country, language to the url parameters
+created private functions to help request a url, return it and parse xml from it
+fixed a function to correctly format the url
+Now news articles are returned with title, link, published date, source and description
+the returned data is now saved in a file
+
+-- Day 8
+fixed a function to only parse the max results specified by the user
+created a function to accept query and search and parse the news for the query
+added function to create the query call the main function to get the news like getting news by a specific topic or country
+Basic implementation of google news class is completed
+reimplemented declarations in header file for this class and defined the functions in cpp file
+added this class in modules directory
+
+-- Day 9
+fixed error that said undefined reference of the function
+added libraries used in cpp files to the libraries parameter while creating setup
+Now news can be accessed with python
+fixed a function and private variable to accurately get news articles and avoid segmentation fault cause of incorrect url

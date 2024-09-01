@@ -1,0 +1,14 @@
+[
+    {
+        "Role": "SYSTEM:",
+        "Content": "you are a helpful assistant"
+    },
+    {
+        "Role": "USER:",
+        "Content": "Hello"
+    },
+    {
+        "Role": "ASSISTANT:",
+        "Content": "Hello! 👋  How can I help you today? 😊 \n"
+    }
+]

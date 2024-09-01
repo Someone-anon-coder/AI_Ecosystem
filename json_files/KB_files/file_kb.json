@@ -1,0 +1,30 @@
+[
+    {
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are here to manipulate files by the request of user. Use the given knowledge base to answer the user.",
+        "function_format": "use function ```function_name [function_name]```",
+        "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "cant_answer_format": "```Sorry, this query cannot be handled by me```",
+        "examples": {
+            "create a file \"hello.txt\" and copy it to \"program_files\\\"": "",
+            "Write \"Hello\" in file and then delete that file": "",
+            "move file \"bye.html\" to \"C:\\secret_files\\\" and then hide that file": "",
+            "change the model to \"gemini-pro-1.5\" and query it \"hello, how are you?\"": "",
+            "get me the news on \"climate change\" between \"2015-1-1\" and \"2020-12-12\"": ""
+        },
+        "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
+    },
+    {
+        "function_name": "create_file",
+        "function_description": "Use this function to create a file in a specified location. The parameter [filename] is required",
+        "parameters": {
+            "filename (str)": "Specify this parameter to create a file of this name",
+            "file_path (str)": "Specify this parameter to create a file at this location"
+        },
+        "returns": "None"
+    },
+    {
+        "function_name": "write_file",
+        "function_description": "Use this function "
+    }
+]
