@@ -1,8 +1,8 @@
-AI Ecosystem: A Hierarchal AI Environment for NLP to TASK
+# AI Ecosystem: A Hierarchal AI Environment for NLP to TASK
 
 This project aims to develop an AI Ecosystem, a comprehensive and hierarchical environment where Natural Language Processing (NLP) powers efficient task completion. The vision is to enable a system that can understand human instructions, break down complex tasks into smaller manageable components, and execute them autonomously on a computer.
 
-Project Goal:
+## Project Goal:
 
 To create a robust AI environment capable of performing a wide range of tasks, mimicking human capabilities on a computer. This includes:
 
@@ -14,7 +14,7 @@ To create a robust AI environment capable of performing a wide range of tasks, m
 
     Learning and Adaptation: Continuously learning and adapting from user interactions and feedback, improving performance and expanding its task repertoire.
 
-Project Components:
+## Project Components:
 
 The AI Ecosystem will be built upon a hierarchical structure of AI models, each specializing in a specific area:
 
@@ -26,7 +26,7 @@ The AI Ecosystem will be built upon a hierarchical structure of AI models, each 
 
     Learning and Adaptation: A model that learns from user feedback, analyzes past task executions, and adapts its strategies for better performance.
 
-Potential Applications:
+## Potential Applications:
 
 This AI Ecosystem has the potential to revolutionize various areas:
 
@@ -38,7 +38,7 @@ This AI Ecosystem has the potential to revolutionize various areas:
 
     Accessibility: Enable individuals with disabilities to interact with computers more easily, bridging the gap between humans and technology.
 
-Project Roadmap:
+## Project Roadmap:
 
 The project will be developed in phases:
 
