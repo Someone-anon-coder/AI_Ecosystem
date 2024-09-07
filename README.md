@@ -28,7 +28,7 @@ Contributions are welcome! If you're interested in contributing to the developme
 
 ## Disclaimer
 
-This project is still under active development. Features and functionality may be subject to change. Right Gemini API key is used for nlp to task convergence, but will change in the future to operate smaller local models to ensure privacy and latency free task completions
+This project is still under active development. Features and functionality may be subject to change. Right now Gemini API key is used for nlp to task convergence, but will change in the future to operate smaller local models to ensure privacy and latency free task completions
 
 ## Future Plans
 
