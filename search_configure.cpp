@@ -554,8 +554,4 @@ class GoogleSearch{
             if (types[0] == date_restrict_type[0] || types[1] == date_restrict_type[0] || types[2] == date_restrict_type[0] || types[3] == date_restrict_type[0])
                 this->_date_restrict_type = date_restrict_type;
         }
-
-        /// @
-
-        
 };
