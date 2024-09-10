@@ -1,4 +1,5 @@
 #include <vector>
+#include <curl/curl.h>
 #include "cpp_files/program_files/read_dotenv.cpp"
 
 /// @brief Class to implement Google Custom JSON Search
@@ -40,6 +41,24 @@ class GoogleSearch{
 
             this->__api_key = get_env_value(environment_variables, "SEARCH_API_KEY");
             this->__cx_key = get_env_value(environment_variables, "SEARCH_CSE_KEY");
+        }
+
+        /// @brief Get the total size of the downloaded data
+        /// @param contents pointer to buffer containing the downloaded data
+        /// @param size size of the downloaded data
+        /// @param nmemb number of elements in the downloaded data
+        /// @param output Pointer to user defined data
+        /// @return Total size of the downloaded data
+        static size_t __WriteCallBack(
+            void* contents, // pointer to buffer containing the downloaded data
+            size_t size, // size of the downloaded data
+            size_t nmemb, // number of elements in the downloaded data
+            std::string* output // Pointer to user defined data
+        ){
+            size_t total_size = size * nmemb; // Total size of the data
+            output->append((char*)contents, total_size);
+            
+            return total_size;
         }
 
         /// @brief Create search url used to search on google,
@@ -85,6 +104,7 @@ class GoogleSearch{
             search_url += this->_img_dominant_color != "" ? "&imgDominantColor=" + this->_img_dominant_color : "";
 
             this->_search_url = search_url;
+            std::cout << search_url << std::endl;
         }
         
     public:
@@ -712,6 +732,35 @@ class GoogleSearch{
             this->_search_terms = query;
             this->__construct_search_url();
 
+            CURL* curl;
+
+            curl_global_init(CURL_GLOBAL_DEFAULT);
+            curl = curl_easy_init();
+            if (!curl)
+                return;
+
+            curl_easy_setopt(curl, CURLOPT_URL, this->_search_url.c_str());
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, __WriteCallBack);
             
+            std::string json_content;
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &json_content);
+
+            CURLcode res = curl_easy_perform(curl);
+            if (res != CURLE_OK){
+                curl_easy_cleanup(curl);
+                return;
+            }
+
+            std::cout << json_content << std::endl;
+
+            curl_easy_cleanup(curl);
         }
 };
+
+int main(){
+    GoogleSearch google = GoogleSearch();
+
+    google._search_google("Cat");
+
+    return 0;
+}
