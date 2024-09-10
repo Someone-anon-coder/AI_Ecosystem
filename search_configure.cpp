@@ -524,9 +524,10 @@ class GoogleSearch{
         void _set_site_search_filter(
             const char site_search_filter // value specifying to include or exclude a site
         ){
-            const auto filter = this->__site_search_filter;
-            if (filter[0] == site_search_filter || filter[1] == site_search_filter)
-                this->_site_search_filter = site_search_filter;
+            for (auto filter : this->__site_search_filter){
+                if (filter == site_search_filter)
+                    this->_site_search_filter = filter;
+            }
         }
 
         /// @brief Set the link to include in each search result
@@ -550,8 +551,167 @@ class GoogleSearch{
         void _set_date_restrict_type(
             const std::string date_restrict_type // date restrict type to restrict search results
         ){
-            const auto types = this->__date_restrict;
-            if (types[0] == date_restrict_type[0] || types[1] == date_restrict_type[0] || types[2] == date_restrict_type[0] || types[3] == date_restrict_type[0])
-                this->_date_restrict_type = date_restrict_type;
+            for (auto types : this->__date_restrict){
+                if (types == date_restrict_type[0])
+                    this->_date_restrict_type = date_restrict_type;
+            }
+        }
+
+        /// @brief Set the query appended to before the search query
+        /// @param low_range String of query appended to before the search query
+        void _set_low_range(
+            const std::string low_range // query appended to before the search query
+        ){
+            this->_low_range = low_range;
+        }
+
+        /// @brief Set the query appended to after the search query
+        /// @param high_range String of query appended to after the search query
+        void _set_high_range(
+            const std::string high_range // query appended to after the search query
+        ){
+            this->_high_range = high_range;
+        }
+
+        /// @brief Set the search type of the query
+        /// @param search_type String of search type of the query
+        void _set_search_type(
+            const std::string search_type // search type of the query
+        ){
+            for (auto search_types : this->__search_type){
+                if (search_types == search_type)
+                    this->_search_type = search_type;
+            }
+        }
+
+        /// @brief Set the filetype of the query
+        /// @param filetype String of filetype of the query
+        void _set_filetype(
+            const std::string filetype // filetype of the query;
+        ){
+            for (auto filetypes : this->__available_filetypes){
+                if (filetypes == filetype)
+                    this->_filetype = filetype;
+            }
+        }
+
+        /// @brief Set the licensing of the query
+        /// @param rights String of licensing of the query
+        void _set_rights(
+            const std::string right // licensing of the query
+        ){
+            for (auto rights : this->__rights){
+                if (rights == right)
+                    this->_rights = right;
+            }
+        }
+
+        /// @brief Set the size of the image
+        /// @param img_size String of size of the image
+        void _set_img_size(
+            const std::string img_size // size of the image
+        ){
+            for (auto sizes : this->__image_sizes){
+                if (sizes == img_size)
+                    this->_img_size = img_size;
+            }
+        }
+
+        /// @brief Set the type of the image
+        /// @param img_type String of type of the image
+        void _set_img_type(
+            const std::string img_type // type of the image
+        ){
+            for (auto types : this->__image_types){
+                if (types == img_type)
+                    this->_img_type = img_type;
+            }
+        }
+
+        /// @brief Set the color type of the image
+        /// @param img_color_type String of color type of the image
+        void _set_img_color_type(
+            const std::string img_color_type // color type of the image
+        ){
+            for (auto colors : this->__image_color_types){
+                if (colors == img_color_type)
+                    this->_img_color_type = img_color_type;
+            }
+        }
+
+        /// @brief Set the dominant color of the image
+        /// @param img_dominant_color String of dominant color of the image
+        void _set_img_dominant_color(
+            const std::string img_dominant_color // dominant color of the image
+        ){
+            for (auto colors : this->__image_dominant_color_types){
+                if (colors == img_dominant_color)
+                    this->_img_dominant_color = img_dominant_color;
+            }
+        }
+
+        /// @brief Set the language to search google
+        /// @param language String of language to search google
+        void _set_language(
+            const std::string language // language to search google
+        ){
+            this->_language = language;
+        }
+
+        /// @brief Set the user interface language
+        /// @param interface_language String of user interface language
+        void _set_interface_language(
+            const std::string interface_language // user interface language
+        ){
+            this->_interface_language = interface_language;
+        }
+
+        /// @brief Set the country to search from in google
+        /// @param user_country String of country to search from in google
+        void _set_user_country(
+            const std::string user_country // country to search from in google
+        ){
+            this->_user_country = user_country;
+        }
+
+        /// @brief Set the country to search for in google
+        /// @param result_country String of country to search for in google
+        void _set_result_country(
+            const std::string result_country // country to search for in google
+        ){
+            this->_result_country = result_country;
+        }
+
+        /// @brief Set the safe search
+        /// @param safe String of safe search
+        void _set_safe(
+            const std::string safe // safe search
+        ){
+            for (auto safes : this->__safe){
+                if (safes == safe)
+                    this->_safe = safe;
+            }
+        }
+
+        /// @brief Set the sort order
+        /// @param sort String of sort order
+        void _set_sort(
+            const std::string sort // sort order
+        ){
+            for (auto sorts : this->__sort){
+                if (sorts == sort)
+                    this->_sort = sort;
+            }
+        }
+
+        /// @brief Search the google based on given query
+        /// @param query Query to search on google
+        void _search_google(
+            const std::string query // Query to search Google
+        ){
+            this->_search_terms = query;
+            this->__construct_search_url();
+
+            
         }
 };
