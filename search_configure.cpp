@@ -1,5 +1,6 @@
 #include <vector>
 #include <curl/curl.h>
+#include <nlohmann/json.hpp>
 #include "cpp_files/program_files/read_dotenv.cpp"
 
 /// @brief Class to implement Google Custom JSON Search
@@ -61,6 +62,47 @@ class GoogleSearch{
             return total_size;
         }
 
+        /// @brief Get json data from the given google custom search url
+        /// @param url Url to get data from
+        /// @return String of json data
+        std::string __fetch_json_data(
+            const std::string& url // Url to fetch data from
+        ){
+            CURL* curl = curl_easy_init(); // Curl object to get result string
+            CURLcode res; // Response for curl
+            std::string response_string; // String to store response
+
+            curl = curl_easy_init();
+            if (curl) {
+                curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+                curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, __WriteCallBack);
+                curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response_string);
+                
+                res = curl_easy_perform(curl);
+                if (res != CURLE_OK) {
+                    return "";
+                }
+
+                curl_easy_cleanup(curl);
+            }
+
+            return response_string;
+        }
+
+        /// @brief Save the result json data to a json file
+        /// @param filename Name of the file to save json data in
+        /// @param json_data Json data to save
+        void __save_json_data(
+            const std::string filename, // Name of the file to save json data in
+            const std::string json_data // Json data to save
+        ){
+            auto json = nlohmann::json::parse(json_data);
+
+            std::ofstream json_file(filename); // Json file to save data
+            json_file << std::setw(4) << json << std::endl;
+            json_file.close();
+        }
+
         /// @brief Create search url used to search on google,
         /// @brief Omiting and Adding appropriate parameters only
         void __construct_search_url(){
@@ -104,7 +146,7 @@ class GoogleSearch{
             search_url += this->_img_dominant_color != "" ? "&imgDominantColor=" + this->_img_dominant_color : "";
 
             this->_search_url = search_url;
-            std::cout << search_url << std::endl;
+            // std::cout << search_url << std::endl;
         }
         
     public:
@@ -727,40 +769,77 @@ class GoogleSearch{
         /// @brief Search the google based on given query
         /// @param query Query to search on google
         void _search_google(
-            const std::string query // Query to search Google
+            const std::string query, // Query to search Google
+            const std::string json_file = "json_files/search_results.json" // Name of the file to save response data
         ){
             this->_search_terms = query;
             this->__construct_search_url();
 
-            CURL* curl;
+            std::string json_data = this->__fetch_json_data(this->_search_url); // Json data from the result
+            this->__save_json_data(json_file, json_data);
+        }
 
-            curl_global_init(CURL_GLOBAL_DEFAULT);
-            curl = curl_easy_init();
-            if (!curl)
-                return;
-
-            curl_easy_setopt(curl, CURLOPT_URL, this->_search_url.c_str());
-            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, __WriteCallBack);
+        /// @brief Parse Json file and retrive relevant information
+        /// @param result_index Index of individual result to parse
+        /// @param title Get Title
+        /// @param snippet Get Snippet
+        /// @param link Get Link
+        /// @param image Get Image
+        /// @param filename Name of the file to retrive response data from
+        void _get_result(
+            const int result_index = 0, // Index of individual result to parse
             
-            std::string json_content;
-            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, &json_content);
+            const bool title = false, // Get Title
+            const bool snippet = false, // Get Snippet
+            const bool link = false, // Get Link
+            const bool image = false, // Get Image
+            
+            const std::string filename = "json_files/search_results.json" // Name of the file to retrive response data from
+        ){
+            std::ifstream json_file(filename); // Json file to retrive data
+            nlohmann::json json_data; // nlohmann object to parse json data
+            json_file >> json_data;
 
-            CURLcode res = curl_easy_perform(curl);
-            if (res != CURLE_OK){
-                curl_easy_cleanup(curl);
-                return;
+            json_file.close();
+
+            if (json_data.contains("items") && json_data["items"].is_array()){
+                if (result_index < json_data["items"].size() && result_index >= 0){
+                    auto result = json_data["items"][result_index];
+
+                    if (title && result.contains("title"))
+                        std::cout << "Title: " << result["title"] << std::endl;
+                    if (snippet && result.contains("snippet"))
+                        std::cout << "Snippet: " << result["snippet"] << std::endl;
+                    if (link && result.contains("link"))
+                        std::cout << "Link: " << result["link"] << std::endl;
+                    if (image && result.contains("pagemap") && result["pagemap"].contains("cse_image") && result["pagemap"]["cse_image"].is_array())
+                        std::cout << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
+                }
+
+                if (result_index == -1){
+                    auto results = json_data["items"];
+
+                    for (auto result : results){
+                        std::cout << "Title: " << result["title"] << std::endl;
+                        std::cout << "Snippet: " << result["snippet"] << std::endl;
+                        std::cout << "Link: " << result["link"] << std::endl;
+                        std::cout << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
+
+                        std::cout << std::endl;
+                    }
+                }
             }
-
-            std::cout << json_content << std::endl;
-
-            curl_easy_cleanup(curl);
         }
 };
 
-int main(){
-    GoogleSearch google = GoogleSearch();
+// int main(){
+//     GoogleSearch google = GoogleSearch();
+//     google._search_google("Cat");
 
-    google._search_google("Cat");
+//     google._get_result(0, true, true, true, true);
+    
+//     std::cout << std::endl << std::endl;
+//     google._get_result(-1, true, true, true, true);
 
-    return 0;
-}
+//     return 0;
+// }

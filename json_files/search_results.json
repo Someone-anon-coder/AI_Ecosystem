@@ -1,0 +1,479 @@
+{
+    "context": {
+        "title": "AI Ecosystem"
+    },
+    "items": [
+        {
+            "displayLink": "www.cat.com",
+            "formattedUrl": "https://www.cat.com/",
+            "htmlFormattedUrl": "https://www.<b>cat</b>.com/",
+            "htmlSnippet": "Select your region and language for www.<b>cat</b>.com to view the most relevant products and services in your area of the world.",
+            "htmlTitle": "<b>Cat</b>.com Global Selector: Language &amp; Region | <b>Cat</b> | Caterpillar",
+            "kind": "customsearch#result",
+            "link": "https://www.cat.com/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "225",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMuZWsByBt5B0BH-Gwplr6ES6sffe8Qy6ToUjLNdbZfwO7-SpJ1KQhlbB&s",
+                        "width": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
+                        "og:title": "Cat.com",
+                        "template": "admin-template",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image:src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
+                        "twitter:title": "Cat.com",
+                        "viewport": "width=device-width, initial-scale=1.0"
+                    }
+                ]
+            },
+            "snippet": "Select your region and language for www.cat.com to view the most relevant products and services in your area of the world.",
+            "title": "Cat.com Global Selector: Language & Region | Cat | Caterpillar"
+        },
+        {
+            "displayLink": "www.cat.com",
+            "formattedUrl": "https://www.cat.com/en_US.html",
+            "htmlFormattedUrl": "https://www.<b>cat</b>.com/en_US.html",
+            "htmlSnippet": "<b>Cat</b>® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and&nbsp;...",
+            "htmlTitle": "Caterpillar: Products &amp; Services – North America | <b>Cat</b>",
+            "kind": "customsearch#result",
+            "link": "https://www.cat.com/en_US.html",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "225",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMuZWsByBt5B0BH-Gwplr6ES6sffe8Qy6ToUjLNdbZfwO7-SpJ1KQhlbB&s",
+                        "width": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:description": "Cat® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and support.",
+                        "og:image": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
+                        "og:site_name": "https://www.cat.com/en_US.html",
+                        "og:title": "Products & Services – North America",
+                        "template": "cat-com-homepage-template",
+                        "twitter:card": "summary_large_image",
+                        "twitter:description": "Cat® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and support.",
+                        "twitter:image:src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
+                        "twitter:title": "Products & Services – North America",
+                        "viewport": "width=device-width, initial-scale=1.0"
+                    }
+                ]
+            },
+            "snippet": "Cat® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and ...",
+            "title": "Caterpillar: Products & Services – North America | Cat"
+        },
+        {
+            "displayLink": "en.wikipedia.org",
+            "formattedUrl": "https://en.wikipedia.org/wiki/Cat",
+            "htmlFormattedUrl": "https://en.wikipedia.org/wiki/<b>Cat</b>",
+            "htmlSnippet": "The <b>cat</b> (Felis catus), also referred to as domestic <b>cat</b> or house <b>cat</b>, is a small domesticated carnivorous mammal. It is the only domesticated species of the&nbsp;...",
+            "htmlTitle": "<b>Cat</b> - Wikipedia",
+            "kind": "customsearch#result",
+            "link": "https://en.wikipedia.org/wiki/Cat",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "format-detection": "telephone=no",
+                        "og:image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1200px-Cat_August_2010-4.jpg",
+                        "og:image:height": "734",
+                        "og:image:width": "1200",
+                        "og:title": "Cat - Wikipedia",
+                        "og:type": "website",
+                        "referrer": "origin",
+                        "theme-color": "#eaecf0",
+                        "viewport": "width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"
+                    }
+                ]
+            },
+            "snippet": "The cat (Felis catus), also referred to as domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the ...",
+            "title": "Cat - Wikipedia"
+        },
+        {
+            "displayLink": "www.caterpillar.com",
+            "formattedUrl": "https://www.caterpillar.com/",
+            "htmlFormattedUrl": "https://www.<b>cat</b>erpillar.com/",
+            "htmlSnippet": "<b>Cat</b> is the flagship brand in the Caterpillar portfolio. The products are engineered to perform and designed to last and come with support from the largest, most&nbsp;...",
+            "htmlTitle": "Caterpillar Inc",
+            "kind": "customsearch#result",
+            "link": "https://www.caterpillar.com/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://s7d2.scene7.com/is/image/Caterpillar/CM20240813-48c18-e3a2f"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "128",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA7hGNFUmPns4Gs4pCtPQ7Ssa5YM2BpXhvao0L_haRMcHlK7rkTl6ch_E&s",
+                        "width": "394"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:site_name": "https://www.caterpillar.com/en.html",
+                        "template": "subsidiary-homepage-template",
+                        "twitter:card": "summary_large_image",
+                        "viewport": "width=device-width, initial-scale=1.0"
+                    }
+                ]
+            },
+            "snippet": "Cat is the flagship brand in the Caterpillar portfolio. The products are engineered to perform and designed to last and come with support from the largest, most ...",
+            "title": "Caterpillar Inc"
+        },
+        {
+            "displayLink": "www.catfootwear.com",
+            "formattedUrl": "http://www.catfootwear.com/en/home",
+            "htmlFormattedUrl": "http://www.<b>cat</b>footwear.com/en/home",
+            "htmlSnippet": "Official <b>Cat</b> Footwear Site - Shop Caterpillar work boots, steel toe work boots &amp; shoes along with casual shoes &amp; casual boots. Free shipping!",
+            "htmlTitle": "Caterpillar Work Boots - Comfortable Work Shoes | <b>Cat</b> Footwear",
+            "kind": "customsearch#result",
+            "link": "http://www.catfootwear.com/en/home",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://s7d4.scene7.com/is/image/WolverineWorldWide/logo-persistent_Cat?fmt=png-alpha&hei=300&wid=300"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "225",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQloCfCOhZ4C19osg0k7g_nnJ7cagRNzug9Y7ZAui62MesnVape5vZwQQc&s",
+                        "width": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "mcafeesecure-site-verification": "41856dd1150f95247e2522f5e1124cdd",
+                        "msvalidate.01": "AEBAA6E09D7C8EE5F88B52B7469AA7DB",
+                        "og:description": "Official Cat Footwear Site - Shop Caterpillar work boots, steel toe work boots & shoes along with casual shoes & casual boots. Free shipping!",
+                        "og:image": "https://s7d4.scene7.com/is/image/WolverineWorldWide/logo-persistent_Cat?fmt=png-alpha&hei=300&wid=300",
+                        "og:image:alt": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
+                        "og:site_name": "CAT Footwear",
+                        "og:title": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
+                        "og:type": "website",
+                        "og:url": "https://www.catfootwear.com/US/en/home",
+                        "p:domain_verify": "725b0bfb2f4e23b350bf13403b008121",
+                        "twitter:card": "summary",
+                        "twitter:description": "Official Cat Footwear Site - Shop Caterpillar work boots, steel toe work boots & shoes along with casual shoes & casual boots. Free shipping!",
+                        "twitter:image": "https://s7d4.scene7.com/is/image/WolverineWorldWide/logo-persistent_Cat?fmt=png-alpha&hei=300&wid=300",
+                        "twitter:image:alt": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
+                        "twitter:title": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
+                        "twitter:url": "https://www.catfootwear.com/US/en/home",
+                        "viewport": "width=321px"
+                    }
+                ],
+                "organization": [
+                    {
+                        "logo": "https://www.catfootwear.com/on/demandware.static/Sites-catfootwear_us-Site/-/default/dw0da528ca/images/logo.svg",
+                        "url": "CAT Footwear"
+                    },
+                    {
+                        "logo": "https://www.catfootwear.com/on/demandware.static/Sites-catfootwear_us-Site/-/default/dw0da528ca/images/logo.svg",
+                        "url": "https://www.catfootwear.com/US/en/home"
+                    },
+                    {
+                        "logo": "https://www.catfootwear.com/on/demandware.static/Sites-catfootwear_us-Site/-/default/dwaea1873e/images/mobile/logo.svg",
+                        "url": "CAT Footwear"
+                    },
+                    {
+                        "sameas": "https://www.facebook.com/catfootwear",
+                        "url": "https://www.catfootwear.com/en/home"
+                    }
+                ]
+            },
+            "snippet": "Official Cat Footwear Site - Shop Caterpillar work boots, steel toe work boots & shoes along with casual shoes & casual boots. Free shipping!",
+            "title": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear"
+        },
+        {
+            "displayLink": "www.ohchr.org",
+            "formattedUrl": "https://www.ohchr.org/en/treaty-bodies/cat",
+            "htmlFormattedUrl": "https://www.ohchr.org/en/treaty-bodies/<b>cat</b>",
+            "htmlSnippet": "About treaty bodies ... The <b>Committee against Torture</b> (<b>CAT</b>) is the body of 10 independent experts that monitors implementation of the Convention against Torture&nbsp;...",
+            "htmlTitle": "<b>Committee against Torture</b> | OHCHR",
+            "kind": "customsearch#result",
+            "link": "https://www.ohchr.org/en/treaty-bodies/cat",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "225",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-gxVM6ZFxea3dcbn5ZXSb2egOKPc6J2RwJddqmrXupWMVdNyyg1jlhA&s",
+                        "width": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "handheldfriendly": "true",
+                        "mobileoptimized": "width",
+                        "og:image": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg",
+                        "og:image:url": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg",
+                        "og:site_name": "OHCHR",
+                        "og:title": "Committee against Torture",
+                        "og:url": "https://www.ohchr.org/en/treaty-bodies/cat",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg",
+                        "twitter:site": "@UNHumanRights",
+                        "twitter:title": "Committee against Torture",
+                        "twitter:url": "https://www.ohchr.org/en/treaty-bodies/cat",
+                        "viewport": "width=device-width, initial-scale=1.0"
+                    }
+                ]
+            },
+            "snippet": "About treaty bodies ... The Committee against Torture (CAT) is the body of 10 independent experts that monitors implementation of the Convention against Torture ...",
+            "title": "Committee against Torture | OHCHR"
+        },
+        {
+            "displayLink": "www.instagram.com",
+            "formattedUrl": "https://www.instagram.com/nala_cat/?hl=en",
+            "htmlFormattedUrl": "https://www.instagram.com/nala_<b>cat</b>/?hl=en",
+            "htmlSnippet": "5M Followers, 870 Following, 7283 Posts - Nala <b>Cat</b> ™ (@nala_cat) on Instagram: &quot;  My premium <b>cat</b> food brand @lovenalaco Guinness World Record Holder&nbsp;...",
+            "htmlTitle": "Nala <b>Cat</b> ™ (@nala_cat) • Instagram photos and videos",
+            "kind": "customsearch#result",
+            "link": "https://www.instagram.com/nala_cat/?hl=en",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=2446111876919374132"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "225",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pgFvbAej7lSmAfSnCWne3-jBjsFSu8JOp4Oid2h6GCU5IbE7FtCNM3g&s",
+                        "width": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "al:android:app_name": "Instagram",
+                        "al:android:package": "com.instagram.android",
+                        "al:android:url": "https://instagram.com/_u/nala_cat/",
+                        "al:ios:app_name": "Instagram",
+                        "al:ios:app_store_id": "389801252",
+                        "al:ios:url": "instagram://user?username=nala_cat",
+                        "apple-mobile-web-app-status-bar-style": "default",
+                        "bingbot": "noarchive",
+                        "color-scheme": "light",
+                        "mobile-web-app-capable": "yes",
+                        "og:description": "5M Followers, 870 Following, 7,283 Posts - See Instagram photos and videos from Nala Cat ™ (@nala_cat)",
+                        "og:image": "https://scontent-atl3-2.cdninstagram.com/v/t51.2885-19/12716885_1036043873124983_921931635_a.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=fcb8ef&_nc_ohc=eXahEzHu9q4Q7kNvgGpdLv6&_nc_ht=scontent-atl3-2.cdninstagram.com&oh=00_AYASEo66tgvLbBHibxiHXxNbVl22A7fqknTrQf_2blcncA&oe=66E6B91C",
+                        "og:title": "Nala Cat ™ (@nala_cat) • Instagram photos and videos",
+                        "og:type": "profile",
+                        "og:url": "https://www.instagram.com/nala_cat/",
+                        "theme-color": "#ffffff",
+                        "viewport": "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+                    }
+                ]
+            },
+            "snippet": "5M Followers, 870 Following, 7283 Posts - Nala Cat ™ (@nala_cat) on Instagram: \" My premium cat food brand @lovenalaco Guinness World Record Holder ...",
+            "title": "Nala Cat ™ (@nala_cat) • Instagram photos and videos"
+        },
+        {
+            "displayLink": "catcora.com",
+            "formattedUrl": "https://catcora.com/",
+            "htmlFormattedUrl": "https://<b>cat</b>cora.com/",
+            "htmlSnippet": "<b>Cat</b> Cora is a world-renowned celebrity chef, author, restaurateur, contributing editor, television host and personality, actress, avid philanthropist,&nbsp;...",
+            "htmlTitle": "<b>Cat</b> Cora - 1st Female Iron Chef",
+            "kind": "customsearch#result",
+            "link": "https://catcora.com/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://cdn.shopify.com/s/files/1/0158/6210/4128/files/CatCora_black-01_ec65c23a-2af5-41d6-9ef4-57b6ccf384e8.png?height=628&pad_color=ffffff&v=1613181583&width=1200"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "162",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS8aA6Ih-IMYTYw-IacAq8lN1P_DM4gE8Y_Kj9nGJAKmTxrG_J-bLXjlvk&s",
+                        "width": "311"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "author": "Global Chef Enterprises",
+                        "fo-verify": "3264f959-c965-4084-8066-9b5ce9f9669d",
+                        "handheldfriendly": "True",
+                        "mobileoptimized": "320",
+                        "og:description": "Cat Cora is a world-renowned celebrity chef, author, restaurateur, contributing editor, television host and personality, actress, avid philanthropist, health and fitness expert, lifestyle entrepreneur and proud mother of six. Cat continues to shatter glass ceilings, inspire millions and be a leader in her industry.",
+                        "og:image": "https://cdn.shopify.com/s/files/1/0158/6210/4128/files/CatCora_black-01_ec65c23a-2af5-41d6-9ef4-57b6ccf384e8.png?height=628&pad_color=ffffff&v=1613181583&width=1200",
+                        "og:image:height": "628",
+                        "og:image:secure_url": "https://cdn.shopify.com/s/files/1/0158/6210/4128/files/CatCora_black-01_ec65c23a-2af5-41d6-9ef4-57b6ccf384e8.png?height=628&pad_color=ffffff&v=1613181583&width=1200",
+                        "og:image:width": "1200",
+                        "og:site_name": "Global Chef Enterprises",
+                        "og:title": "Cat Cora - 1st Female Iron Chef",
+                        "og:type": "website",
+                        "og:url": "https://catcora.com/",
+                        "p:domain_verify": "c2059ccdb75de780cd704247684e596c",
+                        "shopify-checkout-api-token": "0729e69d9bfaa608a0dffd522f5b06c8",
+                        "shopify-digital-wallet": "/15862104128/digital_wallets/dialog",
+                        "theme-color": "#ffffff",
+                        "twitter:card": "summary",
+                        "twitter:site": "@catcora",
+                        "viewport": "width=device-width,initial-scale=1"
+                    }
+                ]
+            },
+            "snippet": "Cat Cora is a world-renowned celebrity chef, author, restaurateur, contributing editor, television host and personality, actress, avid philanthropist, ...",
+            "title": "Cat Cora - 1st Female Iron Chef"
+        },
+        {
+            "displayLink": "www.merriam-webster.com",
+            "formattedUrl": "https://www.merriam-webster.com/dictionary/cat",
+            "htmlFormattedUrl": "https://www.merriam-webster.com/dictionary/<b>cat</b>",
+            "htmlSnippet": "The meaning of <b>CAT</b> is a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice. How to use <b>cat</b> in a sentence.",
+            "htmlTitle": "<b>Cat</b> Definition &amp; Meaning - Merriam-Webster",
+            "kind": "customsearch#result",
+            "link": "https://www.merriam-webster.com/dictionary/cat",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "225",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKksTSKYwpW8It403nrjw5t1_a8pLO2PI6ImEG7uvFrNfacgiziPZgG-_O&s",
+                        "width": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "fb:app_id": "178450008855735",
+                        "msapplication-tilecolor": "#2b5797",
+                        "og:aria-text": "Post the Definition of cat to Facebook",
+                        "og:description": "a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice; any of a family (Felidae) of carnivorous usually solitary and nocturnal mammals (such as the domestic cat, lion, tiger, leopard, jaguar, cougar, wildcat, lynx, and cheetah); guy… See the full definition",
+                        "og:image": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png",
+                        "og:title": "Definition of CAT",
+                        "og:url": "https://www.merriam-webster.com/dictionary/cat",
+                        "referrer": "unsafe-url",
+                        "theme-color": "#ffffff",
+                        "twitter:aria-text": "Share the Definition of cat on Twitter",
+                        "twitter:card": "summary",
+                        "twitter:description": "a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice… See the full definition",
+                        "twitter:image": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png",
+                        "twitter:site": "@MerriamWebster",
+                        "twitter:title": "Definition of CAT",
+                        "twitter:url": "https://www.merriam-webster.com/dictionary/cat",
+                        "viewport": "width=device-width, initial-scale=1.0"
+                    }
+                ]
+            },
+            "snippet": "The meaning of CAT is a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice. How to use cat in a sentence.",
+            "title": "Cat Definition & Meaning - Merriam-Webster"
+        },
+        {
+            "displayLink": "www.reddit.com",
+            "formattedUrl": "https://www.reddit.com/r/cat/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/<b>cat</b>/",
+            "htmlSnippet": "r/<b>cat</b>: Welcome to r/<b>cat</b>, the subreddit for anything <b>cat</b> related! ฅ^•ﻌ•^ฅ OC ONLY.",
+            "htmlTitle": "<b>Cat</b>",
+            "kind": "customsearch#result",
+            "link": "https://www.reddit.com/r/cat/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://styles.redditmedia.com/t5_2qnlf/styles/communityIcon_u50u7c5mbdyc1.png"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "225",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu-qZ9Nb1Yl1q4wOsil1n5OqEX5YQk0cYByicRvlImILuqgiYSeTxk9qbk&s",
+                        "width": "225"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "apple-mobile-web-app-capable": "yes",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "bingbot": "noarchive",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Welcome to r/cat, the subreddit for anything cat related! ฅ^•ﻌ•^ฅ \nOC ONLY",
+                        "og:image": "https://styles.redditmedia.com/t5_2qnlf/styles/communityIcon_u50u7c5mbdyc1.png",
+                        "og:image:height": "256",
+                        "og:image:width": "256",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/cat",
+                        "og:ttl": "600",
+                        "og:type": "website",
+                        "og:url": "https://www.reddit.com/r/cat/",
+                        "theme-color": "#000000",
+                        "twitter:card": "summary",
+                        "twitter:image": "https://styles.redditmedia.com/t5_2qnlf/styles/communityIcon_u50u7c5mbdyc1.png",
+                        "twitter:site": "@reddit",
+                        "twitter:title": "r/cat",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+                    }
+                ]
+            },
+            "snippet": "r/cat: Welcome to r/cat, the subreddit for anything cat related! ฅ^•ﻌ•^ฅ OC ONLY.",
+            "title": "Cat"
+        }
+    ],
+    "kind": "customsearch#search",
+    "queries": {
+        "nextPage": [
+            {
+                "count": 10,
+                "cx": "074ce0e6c068849b1",
+                "disableCnTwTranslation": "0",
+                "filter": "0",
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "searchTerms": "Cat",
+                "startIndex": 11,
+                "title": "Google Custom Search - Cat",
+                "totalResults": "5550000000"
+            }
+        ],
+        "request": [
+            {
+                "count": 10,
+                "cx": "074ce0e6c068849b1",
+                "disableCnTwTranslation": "0",
+                "filter": "0",
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "searchTerms": "Cat",
+                "startIndex": 1,
+                "title": "Google Custom Search - Cat",
+                "totalResults": "5550000000"
+            }
+        ]
+    },
+    "searchInformation": {
+        "formattedSearchTime": "0.20",
+        "formattedTotalResults": "5,550,000,000",
+        "searchTime": 0.195735,
+        "totalResults": "5550000000"
+    },
+    "url": {
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json",
+        "type": "application/json"
+    }
+}
