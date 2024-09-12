@@ -264,4 +264,3 @@ class GeminiModel():
         load_dotenv("secret_files/.env")
         
         genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-        print("katraj sucks")
