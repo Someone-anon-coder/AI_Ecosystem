@@ -20,7 +20,39 @@ AI Ecosystem is an evolving project that aims to build a hierarchical model stru
 
 ## Usage
 
-**Note:** As the project is still under development, usage instructions will be provided in future updates.
+The project has been updated to provide individual classes for specific tasks. You can now use these classes to perform their intended operations, such as file manipulation or performing Google searches. Below is a brief overview of the available classes and their usage:
+
+### File Class
+- Use the `File` class for file manipulation tasks like creating or reading files.
+  
+### GoogleSearch Class
+- The `GoogleSearch` class allows you to perform searches on Google and store the results in a file.
+
+### Example Usage
+
+Here’s an example of how to use the `File` and `GoogleSearch` classes together:
+
+```python
+from modules.angel_configure import GoogleSearch, File
+
+file = File()
+google = GoogleSearch()
+
+json_directory = "json_files/"
+json_file = "search_result.json"
+
+# Create a file to store the search result
+file.create_file(json_file, json_directory)
+
+# Perform a Google search and save the result in the created file
+google._search_google("Something", json_directory + json_file)
+```
+
+In this example:
+- A file is created in the specified directory using the `File` class.
+- The `GoogleSearch` class is used to perform a Google search and store the search results in the created file.
+
+**Note:** Further updates and instructions will be provided as the project evolves.
 
 ## Contributing
 
