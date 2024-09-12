@@ -664,7 +664,7 @@
                 "searchTerms": "Something",
                 "startIndex": 11,
                 "title": "Google Custom Search - Something",
-                "totalResults": "11070000000"
+                "totalResults": "11050000000"
             }
         ],
         "request": [
@@ -679,15 +679,15 @@
                 "searchTerms": "Something",
                 "startIndex": 1,
                 "title": "Google Custom Search - Something",
-                "totalResults": "11070000000"
+                "totalResults": "11050000000"
             }
         ]
     },
     "searchInformation": {
-        "formattedSearchTime": "0.21",
-        "formattedTotalResults": "11,070,000,000",
-        "searchTime": 0.206124,
-        "totalResults": "11070000000"
+        "formattedSearchTime": "0.14",
+        "formattedTotalResults": "11,050,000,000",
+        "searchTime": 0.141769,
+        "totalResults": "11050000000"
     },
     "url": {
         "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json",
