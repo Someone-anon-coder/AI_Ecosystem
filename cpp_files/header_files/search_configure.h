@@ -64,7 +64,7 @@ class GoogleSearch{
         /// @brief Function to load API and CX keys from a file
         /// @param env_filename Name of the file that contains API and CX keys
         void __get_api_cx(
-            std::string env_filename = "secret_files/.env" // Name of the file that contains API and CX keys
+            std::string env_filename // Name of the file that contains API and CX keys
         );
 
         /// @brief Get the total size of the downloaded data
@@ -92,7 +92,7 @@ class GoogleSearch{
         /// @param filename Name of the file to save json data in
         void __save_json_data(
             const std::string json_data, // Json data to save
-            const std::string filename = "json_files/search_result.json" // Name of the file to save json data in
+            const std::string filename // Name of the file to save json data in
         );
 
         /// @brief Encode Url
@@ -178,40 +178,40 @@ class GoogleSearch{
         /// @param json_file Name of the json file to store search result
         /// @param env_file Name of the env file that contains Google Search API and CX Keys
         GoogleSearch(
-            const std::string search_terms = "", // Query to search for on google
+            const std::string search_terms, // Query to search for on google
 
-            const int num_results = 0, // Results to return for the search
-            const int start_index = -1, // Position to start from when getting search results
-            const int filter = 0, // turn on or off duplicate content
-            const int c2coff = 0, // turn on or off Simplified and Traditional Chinese Search
-            const int date_restrict = 0, // Whether to restrict search based on dates. "1" for yes and "0" for no
+            const int num_results, // Results to return for the search
+            const int start_index, // Position to start from when getting search results
+            const int filter, // turn on or off duplicate content
+            const int c2coff, // turn on or off Simplified and Traditional Chinese Search
+            const int date_restrict, // Whether to restrict search based on dates. "1" for yes and "0" for no
             
-            const std::string extra_query = "", // Extra queries to include in the search terms
-            const std::string exact_terms = "", // A phrase that all documents in the search results must contain
-            const std::string exclude_terms = "", // A word or phrase that should not appear in any documents in the search results
-            const std::string site_search = "", // A given site which should always be included or excluded from results. Based on *_site_search_filter*
-            const std::string site_search_filter = "", // Whether to Include or exclude the sites specified in *_site_search*
-            const std::string link_site = "", // Specifies that all search results should contain a link to a particular URL
-            const std::string or_terms = "", // Provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional search terms
-            const std::string date_restrict_type = "", // Restricts results to URLs based on date. In format dateType[number]. Example: m3 restricts to past 3 months
-            const std::string low_range = "", // query terms to append before the search query
-            const std::string high_range = "", // query terms to append after the search query
-            const std::string search_type = "", // Specifies the search type: image. If unspecified, results are limited to webpages
-            const std::string filetype = "", // Restricts results to files of a specified extension
-            const std::string rights = "", // Filters based on licensing
-            const std::string img_size = "", // Returns images of a specified size
-            const std::string img_type = "", // Returns images of a type
-            const std::string img_color_type = "", // Returns black and white, grayscale, transparent, or color images
-            const std::string img_dominant_color = "", // Returns images of a specific dominant color
-            const std::string language = "", // Language to search google in. Defualt is 'English'
-            const std::string interface_language = "", // Sets the user interface language
-            const std::string user_country = "", // Country to search from in google
-            const std::string result_country = "", // Country to search for in google
-            const std::string safe = "", // Whether to show explicit results.
-            const std::string sort = "", // Return results in specific order
+            const std::string extra_query, // Extra queries to include in the search terms
+            const std::string exact_terms, // A phrase that all documents in the search results must contain
+            const std::string exclude_terms, // A word or phrase that should not appear in any documents in the search results
+            const std::string site_search, // A given site which should always be included or excluded from results. Based on *_site_search_filter*
+            const std::string site_search_filter, // Whether to Include or exclude the sites specified in *_site_search*
+            const std::string link_site, // Specifies that all search results should contain a link to a particular URL
+            const std::string or_terms, // Provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional search terms
+            const std::string date_restrict_type, // Restricts results to URLs based on date. In format dateType[number]. Example: m3 restricts to past 3 months
+            const std::string low_range, // query terms to append before the search query
+            const std::string high_range, // query terms to append after the search query
+            const std::string search_type, // Specifies the search type: image. If unspecified, results are limited to webpages
+            const std::string filetype, // Restricts results to files of a specified extension
+            const std::string rights, // Filters based on licensing
+            const std::string img_size, // Returns images of a specified size
+            const std::string img_type, // Returns images of a type
+            const std::string img_color_type, // Returns black and white, grayscale, transparent, or color images
+            const std::string img_dominant_color, // Returns images of a specific dominant color
+            const std::string language, // Language to search google in. Defualt is 'English'
+            const std::string interface_language, // Sets the user interface language
+            const std::string user_country, // Country to search from in google
+            const std::string result_country, // Country to search for in google
+            const std::string safe, // Whether to show explicit results.
+            const std::string sort, // Return results in specific order
 
-            const std::string json_file = "json_files/search_result.json", // Name of the json file to store search result
-            const std::string env_file = "secret_files/.env" // Name of the env that contains Google Search API and CX Keys
+            const std::string json_file, // Name of the json file to store search result
+            const std::string env_file // Name of the env that contains Google Search API and CX Keys
         );
 
         /// @brief Class Destructor. Deinitializes the class variables
@@ -534,7 +534,7 @@ class GoogleSearch{
         /// @param json_file Name of the file to save response data
         void _search_google(
             const std::string query, // Query to search Google
-            const std::string json_file = "json_files/search_result.json" // Name of the file to save response data
+            const std::string json_file // Name of the file to save response data
         );
 
         /// @brief Parse Json file and retrive relevant information
@@ -545,14 +545,14 @@ class GoogleSearch{
         /// @param image Get Image
         /// @param filename Name of the file to retrive response data from
         void _get_result(
-            const int result_index = 0, // Index of individual result to parse
+            const int result_index, // Index of individual result to parse
             
-            const bool title = false, // Get Title
-            const bool snippet = false, // Get Snippet
-            const bool link = false, // Get Link
-            const bool image = false, // Get Image
+            const bool title, // Get Title
+            const bool snippet, // Get Snippet
+            const bool link, // Get Link
+            const bool image, // Get Image
             
-            const std::string filename = "json_files/search_result.json" // Name of the file to retrive response data from
+            const std::string filename // Name of the file to retrive response data from
         );
 };
 
