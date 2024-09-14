@@ -13,6 +13,6 @@ ext_modules = [
 
 setup(
     name='angel_configure',
-    version='0.2',
+    version='0.3',
     ext_modules=ext_modules,
 )

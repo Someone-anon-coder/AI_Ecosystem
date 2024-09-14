@@ -1,11 +1,12 @@
-from modules.angel_configure import GoogleSearch, File
+from modules.angel_configure import GoogleSearch
 
-file = File()
 google = GoogleSearch()
 
-json_directory = "json_files/"
-json_file = "search_result.json"
+google._search_google("Cat")
+google._get_result(title = True, snippet = True)
 
-file.create_file(json_file, json_directory)
+print()
+google._get_result(2, title = True, snippet = True)
 
-google._search_google("Something", json_directory + json_file)
+print()
+google._get_result(title = True, snippet = True, result_index = 3)
