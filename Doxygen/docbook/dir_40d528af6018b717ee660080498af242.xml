@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_40d528af6018b717ee660080498af242" xml:lang="en-US">
+<title>program_files Directory Reference</title>
+<indexterm><primary>program_files Directory Reference</primary></indexterm>
+Directory dependency graph for program_files:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_40d528af6018b717ee660080498af242_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_application__configure_8cpp">application_configure.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_file__configure_8cpp">file_configure.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_folder__configure_8cpp">folder_configure.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_news__configure_8cpp">news_configure.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_search__configure_8cpp">search_configure.cpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

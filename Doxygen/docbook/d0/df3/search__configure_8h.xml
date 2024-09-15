@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_search__configure_8h" xml:lang="en-US">
+<title>search_configure.h File Reference</title>
+<indexterm><primary>search_configure.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &lt;curl/curl.h&gt;<?linebreak?>#include &lt;unordered_map&gt;<?linebreak?>#include &lt;nlohmann/json.hpp&gt;<?linebreak?></programlisting>Include dependency graph for search_configure.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dd/d83/search__configure_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/d6f/search__configure_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classGoogleSearch">GoogleSearch</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -237,7 +237,7 @@ class GoogleNews{
         );
 
         /// @brief Function to set the end date
-        /// @param start_date Ending date till when news is presented
+        /// @param end_date Ending date till when news is presented
         /// @return True if start date and end date are different
         bool _set_end_date(
             const std::string end_date // Ending date till when news is presented

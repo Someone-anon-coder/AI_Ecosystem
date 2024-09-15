@@ -3,6 +3,73 @@
 File::File(){}
 File::~File(){}
 
+std::map<std::string, std::string> _class_info(){
+    std::string __name__ = "File";
+    std::string __discription__ = "Class for file manipulation";
+
+    std::string __constuctor_paramters__[] = {};
+
+    std::string __class_functions__[] = {
+        "_create_file", "_write_file", "_read_file", "_delete_file", 
+        "_rename_file", "_move_file", "_copy_file", "_check_file", 
+        "_hide_file", "_unhide_file"
+    };
+
+    std::map<std::string, std::string> __function_info__ = {
+        {"_create_file", "Function to create a file"},
+        {"_write_file", "Function to write to a file"},
+        {"_read_file", "Function to read a file"},
+        {"_delete_file", "Function to delete a file"},
+        {"_rename_file", "Function to rename a file"},
+        {"_move_file", "Function to move a file"},
+        {"_copy_file", "Function to copy a file"},
+        {"_check_file", "Function to check if it is a file"},
+        {"_hide_file", "Function to hide a file"},
+        {"_unhide_file", "Function to unhide a file"}
+    };
+
+    std::map<std::string, std::string> __function_parameters__ = {
+        {"_create_file", "filename, file_path"}, 
+        {"_write_file", "filename, content, file_path"}, 
+        {"_read_file", "filename, file_path"}, 
+        {"_delete_file", "filename, file_path"}, 
+        {"_rename_file", "filename, new_filename, file_path"}, 
+        {"_move_file", "filename, new_path, file_path"}, 
+        {"_copy_file", "filename, new_path, file_path"}, 
+        {"_check_file", "filename, file_path"}, 
+        {"_hide_file", "filename, file_path"}, 
+        {"_unhide_file", "filename, file_path"}
+    };
+
+    std::map<std::string, std::map<std::string, std::string>> __function_parameters_description__ = {
+        {
+            "_create_file", {
+                {"filename", "Name of the file"},
+                {"file_path", "Path of the file"}
+            }
+        },
+        {
+            "_write_file", {
+                {"filename", "Name of the file"},
+                {"content", "Content of the file"},
+                {"file_path", "Path of the file"}
+            }
+        }
+    };
+
+    std::map<std::string, std::string> __function_return_types__ = {
+        {"_create_file", "void"}, 
+        {"_write_file", "void"}, 
+        {"_read_file", "std::string"}, 
+        {"_delete_file", "void"}, 
+        {"_rename_file", "void"}, 
+        {"_move_file", "void"}, 
+        {"_copy_file", "void"}, 
+        {"_check_file", "bool"}, 
+        {"_hide_file", "void"}, 
+    };
+}
+
 void File::_create_file(
     const std::string filename, // Name of the file
     const std::string file_path = "" // Path of the file

@@ -1,0 +1,144 @@
+\doxysection{Application Class Reference}
+\hypertarget{classApplication}{}\label{classApplication}\index{Application@{Application}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}} ()
+\item 
+\mbox{\hyperlink{classApplication_a748bca84fefb9c12661cfaa2f623748d}{\texorpdfstring{$\sim$}{\string~}\+Application}} ()
+\item 
+void \mbox{\hyperlink{classApplication_acbbd227002cec7a54de598c303c12a6f}{start\+\_\+app}} (const std\+::string app\+\_\+name, const std\+::vector$<$ std\+::string $>$ arguments)
+\item 
+void \mbox{\hyperlink{classApplication_a84fd4a7d08041d8175bab4f4cfeb4e87}{stop\+\_\+app}} (const pid\+\_\+t pid=0, const bool force=false)
+\item 
+void \mbox{\hyperlink{classApplication_adb798815e37895fedbae4efb2f6c9f19}{get\+\_\+status}} (pid\+\_\+t pid=0, const std\+::string filename="{}status\+\_\+file.\+txt"{}, const std\+::string file\+\_\+path="{}log\+\_\+files/"{})
+\item 
+void \mbox{\hyperlink{classApplication_a6c6ea3676480bafb2d75a1507586130d}{get\+\_\+window\+\_\+handle}} (pid\+\_\+t pid=0)
+\item 
+void \mbox{\hyperlink{classApplication_a26810c72e58fc358c1b6a2932a6c5fea}{window\+\_\+foreground}} (Window window=0)
+\item 
+void \mbox{\hyperlink{classApplication_af688f3e167b1c63d184ade900fa6bf04}{minimize\+\_\+window}} (Window window=0)
+\item 
+void \mbox{\hyperlink{classApplication_aeb02209c8f6034530861b7569950944b}{maximize\+\_\+window}} (Window window=0)
+\item 
+void \mbox{\hyperlink{classApplication_a1f542308c8a5b210fad57b0e80993e3b}{restore\+\_\+window}} (Window window=0)
+\item 
+void \mbox{\hyperlink{classApplication_a9b88f3fe410d12677dcf7be565ade365}{resize\+\_\+or\+\_\+move\+\_\+window}} (const int x, const int y, const int width, const int height, Window window=0)
+\item 
+bool \mbox{\hyperlink{classApplication_aa08e75068b91a2ae2765c9affb725ad0}{is\+\_\+window\+\_\+in\+\_\+focus}} (Window window=0)
+\item 
+bool \mbox{\hyperlink{classApplication_acae99d4f3eb7c2b619df3e0f2f1c3b0b}{check\+\_\+for\+\_\+updates}} ()
+\item 
+bool \mbox{\hyperlink{classApplication_ad0fc9783e98e20ffc61af30c60f0fc84}{install\+\_\+updates}} ()
+\item 
+bool \mbox{\hyperlink{classApplication_aaebdc2221c976766afa5cd3f8818d8f7}{install\+\_\+application}} (const std\+::string package\+\_\+name)
+\item 
+bool \mbox{\hyperlink{classApplication_a60a68db32149ba3b5908f99959a5aea9}{uninstall\+\_\+application}} (const std\+::string package\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classApplication_afa8cc05ce6b6092be5ecdfdae44e05f8}\label{classApplication_afa8cc05ce6b6092be5ecdfdae44e05f8} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_a748bca84fefb9c12661cfaa2f623748d}\label{classApplication_a748bca84fefb9c12661cfaa2f623748d} 
+\index{Application@{Application}!````~Application@{\texorpdfstring{$\sim$}{\string~}Application}}
+\index{````~Application@{\texorpdfstring{$\sim$}{\string~}Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Application()}{\string~Application()}}
+{\footnotesize\ttfamily Application\+::\texorpdfstring{$\sim$}{\string~}\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classApplication_acae99d4f3eb7c2b619df3e0f2f1c3b0b}\label{classApplication_acae99d4f3eb7c2b619df3e0f2f1c3b0b} 
+\index{Application@{Application}!check\_for\_updates@{check\_for\_updates}}
+\index{check\_for\_updates@{check\_for\_updates}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{check\_for\_updates()}{check\_for\_updates()}}
+{\footnotesize\ttfamily bool Application\+::check\+\_\+for\+\_\+updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_adb798815e37895fedbae4efb2f6c9f19}\label{classApplication_adb798815e37895fedbae4efb2f6c9f19} 
+\index{Application@{Application}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{get\_status()}{get\_status()}}
+{\footnotesize\ttfamily void Application\+::get\+\_\+status (\begin{DoxyParamCaption}\item[{pid\+\_\+t}]{pid = {\ttfamily 0},  }\item[{const std\+::string}]{filename = {\ttfamily "{}status\+\_\+file.txt"{}},  }\item[{const std\+::string}]{file\+\_\+path = {\ttfamily "{}log\+\_\+files/"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_a6c6ea3676480bafb2d75a1507586130d}\label{classApplication_a6c6ea3676480bafb2d75a1507586130d} 
+\index{Application@{Application}!get\_window\_handle@{get\_window\_handle}}
+\index{get\_window\_handle@{get\_window\_handle}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{get\_window\_handle()}{get\_window\_handle()}}
+{\footnotesize\ttfamily void Application\+::get\+\_\+window\+\_\+handle (\begin{DoxyParamCaption}\item[{pid\+\_\+t}]{pid = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_aaebdc2221c976766afa5cd3f8818d8f7}\label{classApplication_aaebdc2221c976766afa5cd3f8818d8f7} 
+\index{Application@{Application}!install\_application@{install\_application}}
+\index{install\_application@{install\_application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{install\_application()}{install\_application()}}
+{\footnotesize\ttfamily bool Application\+::install\+\_\+application (\begin{DoxyParamCaption}\item[{const std\+::string}]{package\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_ad0fc9783e98e20ffc61af30c60f0fc84}\label{classApplication_ad0fc9783e98e20ffc61af30c60f0fc84} 
+\index{Application@{Application}!install\_updates@{install\_updates}}
+\index{install\_updates@{install\_updates}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{install\_updates()}{install\_updates()}}
+{\footnotesize\ttfamily bool Application\+::install\+\_\+updates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_aa08e75068b91a2ae2765c9affb725ad0}\label{classApplication_aa08e75068b91a2ae2765c9affb725ad0} 
+\index{Application@{Application}!is\_window\_in\_focus@{is\_window\_in\_focus}}
+\index{is\_window\_in\_focus@{is\_window\_in\_focus}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{is\_window\_in\_focus()}{is\_window\_in\_focus()}}
+{\footnotesize\ttfamily bool Application\+::is\+\_\+window\+\_\+in\+\_\+focus (\begin{DoxyParamCaption}\item[{Window}]{window = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_aeb02209c8f6034530861b7569950944b}\label{classApplication_aeb02209c8f6034530861b7569950944b} 
+\index{Application@{Application}!maximize\_window@{maximize\_window}}
+\index{maximize\_window@{maximize\_window}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{maximize\_window()}{maximize\_window()}}
+{\footnotesize\ttfamily void Application\+::maximize\+\_\+window (\begin{DoxyParamCaption}\item[{Window}]{window = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_af688f3e167b1c63d184ade900fa6bf04}\label{classApplication_af688f3e167b1c63d184ade900fa6bf04} 
+\index{Application@{Application}!minimize\_window@{minimize\_window}}
+\index{minimize\_window@{minimize\_window}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{minimize\_window()}{minimize\_window()}}
+{\footnotesize\ttfamily void Application\+::minimize\+\_\+window (\begin{DoxyParamCaption}\item[{Window}]{window = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_a9b88f3fe410d12677dcf7be565ade365}\label{classApplication_a9b88f3fe410d12677dcf7be565ade365} 
+\index{Application@{Application}!resize\_or\_move\_window@{resize\_or\_move\_window}}
+\index{resize\_or\_move\_window@{resize\_or\_move\_window}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{resize\_or\_move\_window()}{resize\_or\_move\_window()}}
+{\footnotesize\ttfamily void Application\+::resize\+\_\+or\+\_\+move\+\_\+window (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y,  }\item[{const int}]{width,  }\item[{const int}]{height,  }\item[{Window}]{window = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_a1f542308c8a5b210fad57b0e80993e3b}\label{classApplication_a1f542308c8a5b210fad57b0e80993e3b} 
+\index{Application@{Application}!restore\_window@{restore\_window}}
+\index{restore\_window@{restore\_window}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{restore\_window()}{restore\_window()}}
+{\footnotesize\ttfamily void Application\+::restore\+\_\+window (\begin{DoxyParamCaption}\item[{Window}]{window = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_acbbd227002cec7a54de598c303c12a6f}\label{classApplication_acbbd227002cec7a54de598c303c12a6f} 
+\index{Application@{Application}!start\_app@{start\_app}}
+\index{start\_app@{start\_app}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{start\_app()}{start\_app()}}
+{\footnotesize\ttfamily void Application\+::start\+\_\+app (\begin{DoxyParamCaption}\item[{const std\+::string}]{app\+\_\+name,  }\item[{const std\+::vector$<$ std\+::string $>$}]{arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_a84fd4a7d08041d8175bab4f4cfeb4e87}\label{classApplication_a84fd4a7d08041d8175bab4f4cfeb4e87} 
+\index{Application@{Application}!stop\_app@{stop\_app}}
+\index{stop\_app@{stop\_app}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{stop\_app()}{stop\_app()}}
+{\footnotesize\ttfamily void Application\+::stop\+\_\+app (\begin{DoxyParamCaption}\item[{const pid\+\_\+t}]{pid = {\ttfamily 0},  }\item[{const bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_a60a68db32149ba3b5908f99959a5aea9}\label{classApplication_a60a68db32149ba3b5908f99959a5aea9} 
+\index{Application@{Application}!uninstall\_application@{uninstall\_application}}
+\index{uninstall\_application@{uninstall\_application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{uninstall\_application()}{uninstall\_application()}}
+{\footnotesize\ttfamily bool Application\+::uninstall\+\_\+application (\begin{DoxyParamCaption}\item[{const std\+::string}]{package\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classApplication_a26810c72e58fc358c1b6a2932a6c5fea}\label{classApplication_a26810c72e58fc358c1b6a2932a6c5fea} 
+\index{Application@{Application}!window\_foreground@{window\_foreground}}
+\index{window\_foreground@{window\_foreground}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{window\_foreground()}{window\_foreground()}}
+{\footnotesize\ttfamily void Application\+::window\+\_\+foreground (\begin{DoxyParamCaption}\item[{Window}]{window = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application__configure_8cpp}{application\+\_\+configure.\+cpp}}\end{DoxyCompactItemize}

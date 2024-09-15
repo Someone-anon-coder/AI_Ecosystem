@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dd/dc4/namespacesetup" kind="namespace" language="Python">
+    <compoundname>setup</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="dd/dc4/namespacesetup_1a1bf56ea61d1e9865f316116dca2fbfea" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>setup.ext_modules</definition>
+        <argsstring></argsstring>
+        <name>ext_modules</name>
+        <qualifiedname>setup.ext_modules</qualifiedname>
+        <initializer>=  [
+    Extension(
+        &apos;angel_configure&apos;,
+        sources=[&apos;cpp_files/binding_files/bindings.cpp&apos;, &apos;cpp_files/program_files/file_configure.cpp&apos;, &apos;cpp_files/program_files/folder_configure.cpp&apos;, &apos;cpp_files/program_files/news_configure.cpp&apos;, &apos;cpp_files/program_files/search_configure.cpp&apos;],
+        include_dirs=[pybind11.get_include()],
+        libraries=[&apos;curl&apos;, &apos;tinyxml2&apos;, &apos;nlohmann/json&apos;],
+        language=&apos;c++&apos;
+    ),
+]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/setup_files/setup.py" line="4" column="1" bodyfile="python_files/setup_files/setup.py" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dc4/namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>setup.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>setup.name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/setup_files/setup.py" line="15" column="1" bodyfile="python_files/setup_files/setup.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dc4/namespacesetup_1a2aa722b36a933088812b50ea79b97a5c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>setup.version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>setup.version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/setup_files/setup.py" line="16" column="1" bodyfile="python_files/setup_files/setup.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python_files/setup_files/setup.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

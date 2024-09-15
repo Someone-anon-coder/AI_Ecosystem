@@ -1,0 +1,304 @@
+\doxysection{gemini\+\_\+configure.\+Gemini\+Model Class Reference}
+\hypertarget{classgemini__configure_1_1GeminiModel}{}\label{classgemini__configure_1_1GeminiModel}\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_ab70c974de38858e0931cf13700b5c9f8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+str \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a664bf85b555a3b0c0568cc706faee86a}{query\+\_\+model}} (self, str query, False verbose)
+\item 
+list \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a06ebd7a74eaf9cfdbae1e5af529536ea}{get\+\_\+available\+\_\+models}} (self)
+\item 
+None \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a316dc5f4950a24cc19232eb53aed08a1}{modify\+\_\+safety\+\_\+settings}} (self, Harm\+Category.\+name safety, Harm\+Block\+Threshold.\+name setting=Harm\+Block\+Threshold.\+BLOCK\+\_\+\+LOW\+\_\+\+AND\+\_\+\+ABOVE)
+\item 
+object \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a29a06981bfa91da925e205535ebe570a}{get\+\_\+current\+\_\+configuration}} (self)
+\item 
+None \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_afaaac0b7a860db3297bf29f993186651}{set\+\_\+configuration}} (self, int\texorpdfstring{$\vert$}{|}None candidate\+\_\+count=None, Iterable\mbox{[}str\mbox{]}\texorpdfstring{$\vert$}{|}None stop\+\_\+sequences=None, int\texorpdfstring{$\vert$}{|}None max\+\_\+output\+\_\+tokens=None, float\texorpdfstring{$\vert$}{|}None temperature=None, float\texorpdfstring{$\vert$}{|}None top\+\_\+p=None, int\texorpdfstring{$\vert$}{|}None top\+\_\+k=None, str\texorpdfstring{$\vert$}{|}None response\+\_\+mime\+\_\+type=None, Mapping\mbox{[}str, Any\mbox{]}\texorpdfstring{$\vert$}{|}None response\+\_\+schema=None)
+\item 
+genai.\+Generative\+Model \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_ad56997959a2d771cf794099c116bd5f8}{get\+\_\+model}} (self)
+\item 
+None \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a72920fa184ca6486e02e381b62cf0999}{set\+\_\+model}} (self, str model\+\_\+name, str\texorpdfstring{$\vert$}{|}None system\+\_\+message=None, Mapping\mbox{[}Harm\+Category\+:\+Harm\+Block\+Threshold\mbox{]}\texorpdfstring{$\vert$}{|}None safety\+\_\+settings=None)
+\item 
+list \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a829cb355bf75a1b9345e9aa2bcbbedbd}{load\+\_\+history}} (self, str filename="{}json\+\_\+files/gemini\+\_\+history.\+json"{})
+\item 
+None \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a6ac0f58a60c76ccf54f5e32177d66522}{clear\+\_\+history}} (self, str filename="{}json\+\_\+files/gemini\+\_\+history.\+json"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_ad6119223f7d781167ffb84f79af73698}{\+\_\+get\+\_\+previous\+\_\+messages}} (self)
+\item 
+None \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_ad10db6fc80e6ce9ce02e2cecf404483a}{\+\_\+save\+\_\+history}} (self, str filename="{}json\+\_\+files/gemini\+\_\+history.\+json"{})
+\item 
+None \mbox{\hyperlink{classgemini__configure_1_1GeminiModel_aea1fe8b579ffb33853a30f1b71d00f81}{\+\_\+configure\+\_\+model}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a736f58af983d00b96da063f85f980445}{\+\_\+model\+\_\+name}}
+\item 
+\mbox{\hyperlink{classgemini__configure_1_1GeminiModel_ae9f30a80c6746d95bb7c0285335d60b9}{\+\_\+context}}
+\item 
+\mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a4b9235a659640841aab62ff83bb37c20}{\+\_\+history}}
+\item 
+\mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a43aa3bef291c4697592b2730e86318e1}{\+\_\+safety\+\_\+settings}}
+\item 
+\mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a1a76ae28a8edd8722430ebec1c81d739}{\+\_\+configuration}}
+\item 
+\mbox{\hyperlink{classgemini__configure_1_1GeminiModel_a302e1f6234c0a8cd68bce35078e4df1e}{\+\_\+model}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgemini__configure_1_1GeminiModel_ab70c974de38858e0931cf13700b5c9f8}\label{classgemini__configure_1_1GeminiModel_ab70c974de38858e0931cf13700b5c9f8} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None gemini\+\_\+configure.\+Gemini\+Model.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Initializes the GeminiModel class.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgemini__configure_1_1GeminiModel_aea1fe8b579ffb33853a30f1b71d00f81}\label{classgemini__configure_1_1GeminiModel_aea1fe8b579ffb33853a30f1b71d00f81} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_configure\_model@{\_configure\_model}}
+\index{\_configure\_model@{\_configure\_model}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_configure\_model()}{\_configure\_model()}}
+{\footnotesize\ttfamily  None gemini\+\_\+configure.\+Gemini\+Model.\+\_\+configure\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Configures the model with the given configuration
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_ad6119223f7d781167ffb84f79af73698}\label{classgemini__configure_1_1GeminiModel_ad6119223f7d781167ffb84f79af73698} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_get\_previous\_messages@{\_get\_previous\_messages}}
+\index{\_get\_previous\_messages@{\_get\_previous\_messages}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_get\_previous\_messages()}{\_get\_previous\_messages()}}
+{\footnotesize\ttfamily  str gemini\+\_\+configure.\+Gemini\+Model.\+\_\+get\+\_\+previous\+\_\+messages (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}    Args:
+        None
+    
+    Returns:
+        String of the previous messages by USER and ASSISTANT
+    
+    Summary:
+        Returns the previous messages by USER and ASSISTANT
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_ad10db6fc80e6ce9ce02e2cecf404483a}\label{classgemini__configure_1_1GeminiModel_ad10db6fc80e6ce9ce02e2cecf404483a} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_save\_history@{\_save\_history}}
+\index{\_save\_history@{\_save\_history}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_save\_history()}{\_save\_history()}}
+{\footnotesize\ttfamily  None gemini\+\_\+configure.\+Gemini\+Model.\+\_\+save\+\_\+history (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename = {\ttfamily "{}json\+\_\+files/gemini\+\_\+history.json"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}    Args:
+        filename: Name of the file to save the history to
+    
+    Returns:
+        None
+    
+    Summary:
+        Saves the history to the given file
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_a6ac0f58a60c76ccf54f5e32177d66522}\label{classgemini__configure_1_1GeminiModel_a6ac0f58a60c76ccf54f5e32177d66522} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!clear\_history@{clear\_history}}
+\index{clear\_history@{clear\_history}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{clear\_history()}{clear\_history()}}
+{\footnotesize\ttfamily  None gemini\+\_\+configure.\+Gemini\+Model.\+clear\+\_\+history (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename = {\ttfamily "{}json\+\_\+files/gemini\+\_\+history.json"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        filename: Name of the file to clear the history from
+    
+    Returns:
+        None
+    
+    Summary:
+        Clears the history from the given file
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_a06ebd7a74eaf9cfdbae1e5af529536ea}\label{classgemini__configure_1_1GeminiModel_a06ebd7a74eaf9cfdbae1e5af529536ea} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!get\_available\_models@{get\_available\_models}}
+\index{get\_available\_models@{get\_available\_models}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{get\_available\_models()}{get\_available\_models()}}
+{\footnotesize\ttfamily  list gemini\+\_\+configure.\+Gemini\+Model.\+get\+\_\+available\+\_\+models (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        None
+    
+    Returns
+        List of model names
+    
+    Summary:
+        Returns a list of model names available with the current api
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_a29a06981bfa91da925e205535ebe570a}\label{classgemini__configure_1_1GeminiModel_a29a06981bfa91da925e205535ebe570a} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!get\_current\_configuration@{get\_current\_configuration}}
+\index{get\_current\_configuration@{get\_current\_configuration}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{get\_current\_configuration()}{get\_current\_configuration()}}
+{\footnotesize\ttfamily  object gemini\+\_\+configure.\+Gemini\+Model.\+get\+\_\+current\+\_\+configuration (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Returns the current configuration of the model.
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_ad56997959a2d771cf794099c116bd5f8}\label{classgemini__configure_1_1GeminiModel_ad56997959a2d771cf794099c116bd5f8} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!get\_model@{get\_model}}
+\index{get\_model@{get\_model}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{get\_model()}{get\_model()}}
+{\footnotesize\ttfamily  genai.\+Generative\+Model gemini\+\_\+configure.\+Gemini\+Model.\+get\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Returns the current model being used.
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_a829cb355bf75a1b9345e9aa2bcbbedbd}\label{classgemini__configure_1_1GeminiModel_a829cb355bf75a1b9345e9aa2bcbbedbd} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!load\_history@{load\_history}}
+\index{load\_history@{load\_history}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{load\_history()}{load\_history()}}
+{\footnotesize\ttfamily  list gemini\+\_\+configure.\+Gemini\+Model.\+load\+\_\+history (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{filename = {\ttfamily "{}json\+\_\+files/gemini\+\_\+history.json"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        filename: Name of the file to load the history from
+    
+    Returns:
+        None
+    
+    Summary:
+        Loads the history from the given file
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_a316dc5f4950a24cc19232eb53aed08a1}\label{classgemini__configure_1_1GeminiModel_a316dc5f4950a24cc19232eb53aed08a1} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!modify\_safety\_settings@{modify\_safety\_settings}}
+\index{modify\_safety\_settings@{modify\_safety\_settings}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{modify\_safety\_settings()}{modify\_safety\_settings()}}
+{\footnotesize\ttfamily  None gemini\+\_\+configure.\+Gemini\+Model.\+modify\+\_\+safety\+\_\+settings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Harm\+Category.\+name}]{safety,  }\item[{Harm\+Block\+Threshold.\+name }]{setting = {\ttfamily HarmBlockThreshold.BLOCK\+\_\+LOW\+\_\+AND\+\_\+ABOVE} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        safety: Safety Category to change
+        setting: Content level to block for the category
+    
+    Returns:
+        None
+    
+    Summary:
+        Changes the safety settings for the content generated by the model
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_a664bf85b555a3b0c0568cc706faee86a}\label{classgemini__configure_1_1GeminiModel_a664bf85b555a3b0c0568cc706faee86a} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!query\_model@{query\_model}}
+\index{query\_model@{query\_model}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{query\_model()}{query\_model()}}
+{\footnotesize\ttfamily  str gemini\+\_\+configure.\+Gemini\+Model.\+query\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{query,  }\item[{False}]{verbose }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        query: The prompt you wish to ask gemini
+        verbose: Whether to print the responce in verbose mode
+    
+    Returns:
+        String of responce given by gemini
+    
+    Summary:
+        Asks the gemini model the given prompt with the previous history and returns the responce.
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_afaaac0b7a860db3297bf29f993186651}\label{classgemini__configure_1_1GeminiModel_afaaac0b7a860db3297bf29f993186651} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!set\_configuration@{set\_configuration}}
+\index{set\_configuration@{set\_configuration}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{set\_configuration()}{set\_configuration()}}
+{\footnotesize\ttfamily  None gemini\+\_\+configure.\+Gemini\+Model.\+set\+\_\+configuration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int \texorpdfstring{$\vert$}{|} None }]{candidate\+\_\+count = {\ttfamily None},  }\item[{Iterable\mbox{[}str\mbox{]} \texorpdfstring{$\vert$}{|} None }]{stop\+\_\+sequences = {\ttfamily None},  }\item[{int \texorpdfstring{$\vert$}{|} None }]{max\+\_\+output\+\_\+tokens = {\ttfamily None},  }\item[{float \texorpdfstring{$\vert$}{|} None }]{temperature = {\ttfamily None},  }\item[{float \texorpdfstring{$\vert$}{|} None }]{top\+\_\+p = {\ttfamily None},  }\item[{int \texorpdfstring{$\vert$}{|} None }]{top\+\_\+k = {\ttfamily None},  }\item[{str \texorpdfstring{$\vert$}{|} None }]{response\+\_\+mime\+\_\+type = {\ttfamily None},  }\item[{Mapping\mbox{[}str, Any\mbox{]} \texorpdfstring{$\vert$}{|} None }]{response\+\_\+schema = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        candidate_count: The number of candidate
+        stop_sequences: List of string to stop the generation at
+        max_output_tokens: How many token's output must gemini model give
+        temperature: Controls the randomness of the output.
+        top_p: The maximum cumulative probability of tokens to consider when sampling.
+        top_k: The maximum number of tokens to consider when sampling.
+        response_mime_type: Output response mimetype of the generated candidate text.
+        response_schema: Specifies the format of the JSON requested if response_mime_type is application/json.
+    
+    Returns:
+        None
+    
+    Summary:
+        Sets the configuration of the model.
+\end{DoxyVerb}
+ \Hypertarget{classgemini__configure_1_1GeminiModel_a72920fa184ca6486e02e381b62cf0999}\label{classgemini__configure_1_1GeminiModel_a72920fa184ca6486e02e381b62cf0999} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!set\_model@{set\_model}}
+\index{set\_model@{set\_model}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{set\_model()}{set\_model()}}
+{\footnotesize\ttfamily  None gemini\+\_\+configure.\+Gemini\+Model.\+set\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{model\+\_\+name,  }\item[{str \texorpdfstring{$\vert$}{|} None }]{system\+\_\+message = {\ttfamily None},  }\item[{Mapping\mbox{[}Harm\+Category\+: Harm\+Block\+Threshold\mbox{]} \texorpdfstring{$\vert$}{|} None }]{safety\+\_\+settings = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Args:
+        model_name: Name of the model you want to use
+        system_message: System message for the model
+
+    Returns:
+        None
+    
+    Summary:
+        Sets the new model name and system message if given
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classgemini__configure_1_1GeminiModel_a1a76ae28a8edd8722430ebec1c81d739}\label{classgemini__configure_1_1GeminiModel_a1a76ae28a8edd8722430ebec1c81d739} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_configuration@{\_configuration}}
+\index{\_configuration@{\_configuration}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_configuration}{\_configuration}}
+{\footnotesize\ttfamily gemini\+\_\+configure.\+Gemini\+Model.\+\_\+configuration\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgemini__configure_1_1GeminiModel_ae9f30a80c6746d95bb7c0285335d60b9}\label{classgemini__configure_1_1GeminiModel_ae9f30a80c6746d95bb7c0285335d60b9} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_context@{\_context}}
+\index{\_context@{\_context}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_context}{\_context}}
+{\footnotesize\ttfamily gemini\+\_\+configure.\+Gemini\+Model.\+\_\+context\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgemini__configure_1_1GeminiModel_a4b9235a659640841aab62ff83bb37c20}\label{classgemini__configure_1_1GeminiModel_a4b9235a659640841aab62ff83bb37c20} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_history@{\_history}}
+\index{\_history@{\_history}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_history}{\_history}}
+{\footnotesize\ttfamily gemini\+\_\+configure.\+Gemini\+Model.\+\_\+history\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgemini__configure_1_1GeminiModel_a302e1f6234c0a8cd68bce35078e4df1e}\label{classgemini__configure_1_1GeminiModel_a302e1f6234c0a8cd68bce35078e4df1e} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_model@{\_model}}
+\index{\_model@{\_model}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_model}{\_model}}
+{\footnotesize\ttfamily gemini\+\_\+configure.\+Gemini\+Model.\+\_\+model\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgemini__configure_1_1GeminiModel_a736f58af983d00b96da063f85f980445}\label{classgemini__configure_1_1GeminiModel_a736f58af983d00b96da063f85f980445} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_model\_name@{\_model\_name}}
+\index{\_model\_name@{\_model\_name}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_model\_name}{\_model\_name}}
+{\footnotesize\ttfamily gemini\+\_\+configure.\+Gemini\+Model.\+\_\+model\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgemini__configure_1_1GeminiModel_a43aa3bef291c4697592b2730e86318e1}\label{classgemini__configure_1_1GeminiModel_a43aa3bef291c4697592b2730e86318e1} 
+\index{gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}!\_safety\_settings@{\_safety\_settings}}
+\index{\_safety\_settings@{\_safety\_settings}!gemini\_configure.GeminiModel@{gemini\_configure.GeminiModel}}
+\doxysubsubsection{\texorpdfstring{\_safety\_settings}{\_safety\_settings}}
+{\footnotesize\ttfamily gemini\+\_\+configure.\+Gemini\+Model.\+\_\+safety\+\_\+settings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gemini__configure_8py}{gemini\+\_\+configure.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_abc0de0cd098f0831a07b832ef4d3b22" xml:lang="en-US">
+<title>configuration_files Directory Reference</title>
+<indexterm><primary>configuration_files Directory Reference</primary></indexterm>
+Directory dependency graph for configuration_files:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_abc0de0cd098f0831a07b832ef4d3b22_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_gemini__configure_8py">gemini_configure.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

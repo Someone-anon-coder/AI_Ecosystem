@@ -1,0 +1,179 @@
+\doxysection{news\+\_\+configure.\+h}
+\hypertarget{news__configure_8h_source}{}\label{news__configure_8h_source}\index{news\_configure.h@{news\_configure.h}}
+\mbox{\hyperlink{news__configure_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NEWS\_CONFIGURE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NEWS\_CONFIGURE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <curl/curl.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}tinyxml2.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGoogleNews}{GoogleNews}}\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Class\ Private\ Variables}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::string\ \_\_news\_url=\textcolor{stringliteral}{"{}https://news.google.com/rss"{}};\ \textcolor{comment}{//\ Url\ for\ google\ news\ search}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_\_start\_year;\ \textcolor{comment}{//\ Year\ at\ which\ the\ news\ search\ should\ start}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_\_start\_month;\ \textcolor{comment}{//\ Month\ at\ which\ the\ news\ search\ should\ start}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_\_start\_day;\ \textcolor{comment}{//\ Day\ at\ which\ the\ news\ search\ should\ start}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_\_end\_year;\ \textcolor{comment}{//\ Year\ at\ which\ the\ news\ search\ should\ end}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_\_end\_month;\ \textcolor{comment}{//\ Month\ at\ which\ the\ news\ search\ should\ end}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_\_end\_day;\ \textcolor{comment}{//\ Day\ at\ which\ the\ news\ search\ should\ end}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \_\_available\_countries\ =\ \{\textcolor{stringliteral}{"{}AU"{}},\ \textcolor{stringliteral}{"{}BW"{}},\ \textcolor{stringliteral}{"{}CA"{}},\ \textcolor{stringliteral}{"{}ET"{}},\ \textcolor{stringliteral}{"{}GH"{}},\ \textcolor{stringliteral}{"{}IN"{}},\ \textcolor{stringliteral}{"{}ID"{}},\ \textcolor{stringliteral}{"{}IE"{}},\ \textcolor{stringliteral}{"{}IL"{}},\ \textcolor{stringliteral}{"{}KE"{}},\ \textcolor{stringliteral}{"{}LV"{}},\ \textcolor{stringliteral}{"{}MY"{}},\ \textcolor{stringliteral}{"{}NA"{}},\ \textcolor{stringliteral}{"{}NZ"{}},\ \textcolor{stringliteral}{"{}NG"{}},\ \textcolor{stringliteral}{"{}PK"{}},\ \textcolor{stringliteral}{"{}PH"{}},\ \textcolor{stringliteral}{"{}SG"{}},\ \textcolor{stringliteral}{"{}ZA"{}},\ \textcolor{stringliteral}{"{}TZ"{}},\ \textcolor{stringliteral}{"{}UG"{}},\ \textcolor{stringliteral}{"{}GB"{}},\ \textcolor{stringliteral}{"{}US"{}},\ \textcolor{stringliteral}{"{}ZW"{}},\ \textcolor{stringliteral}{"{}CZ"{}},\ \textcolor{stringliteral}{"{}DE"{}},\ \textcolor{stringliteral}{"{}AT"{}},\ \textcolor{stringliteral}{"{}CH"{}},\ \textcolor{stringliteral}{"{}AR"{}},\ \textcolor{stringliteral}{"{}CL"{}},\ \textcolor{stringliteral}{"{}CO"{}},\ \textcolor{stringliteral}{"{}CU"{}},\ \textcolor{stringliteral}{"{}MX"{}},\ \textcolor{stringliteral}{"{}PE"{}},\ \textcolor{stringliteral}{"{}VE"{}},\ \textcolor{stringliteral}{"{}BE"{}},\ \textcolor{stringliteral}{"{}FR"{}},\ \textcolor{stringliteral}{"{}MA"{}},\ \textcolor{stringliteral}{"{}SN"{}},\ \textcolor{stringliteral}{"{}IT"{}},\ \textcolor{stringliteral}{"{}LT"{}},\ \textcolor{stringliteral}{"{}HU"{}},\ \textcolor{stringliteral}{"{}NL"{}},\ \textcolor{stringliteral}{"{}NO"{}},\ \textcolor{stringliteral}{"{}PL"{}},\ \textcolor{stringliteral}{"{}BR"{}},\ \textcolor{stringliteral}{"{}PT"{}},\ \textcolor{stringliteral}{"{}RO"{}},\ \textcolor{stringliteral}{"{}SK"{}},\ \textcolor{stringliteral}{"{}SI"{}},\ \textcolor{stringliteral}{"{}SE"{}},\ \textcolor{stringliteral}{"{}VN"{}},\ \textcolor{stringliteral}{"{}TR"{}},\ \textcolor{stringliteral}{"{}GR"{}},\ \textcolor{stringliteral}{"{}BG"{}},\ \textcolor{stringliteral}{"{}RU"{}},\ \textcolor{stringliteral}{"{}UA"{}},\ \textcolor{stringliteral}{"{}RS"{}},\ \textcolor{stringliteral}{"{}AE"{}},\ \textcolor{stringliteral}{"{}SA"{}},\ \textcolor{stringliteral}{"{}LB"{}},\ \textcolor{stringliteral}{"{}EG"{}},\ \textcolor{stringliteral}{"{}BD"{}},\ \textcolor{stringliteral}{"{}TH"{}},\ \textcolor{stringliteral}{"{}CN"{}},\ \textcolor{stringliteral}{"{}TW"{}},\ \textcolor{stringliteral}{"{}HK"{}},\ \textcolor{stringliteral}{"{}JP"{}},\ \textcolor{stringliteral}{"{}KR"{}}\};\ \textcolor{comment}{//\ Availble\ countries\ to\ search\ news\ for}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \_\_available\_languages\ =\ \{\textcolor{stringliteral}{"{}en"{}},\ \textcolor{stringliteral}{"{}id"{}},\ \textcolor{stringliteral}{"{}cs"{}},\ \textcolor{stringliteral}{"{}de"{}},\ \textcolor{stringliteral}{"{}es-\/419"{}},\ \textcolor{stringliteral}{"{}fr"{}},\ \textcolor{stringliteral}{"{}it"{}},\ \textcolor{stringliteral}{"{}lv"{}},\ \textcolor{stringliteral}{"{}lt"{}},\ \textcolor{stringliteral}{"{}hu"{}},\ \textcolor{stringliteral}{"{}nl"{}},\ \textcolor{stringliteral}{"{}no"{}},\ \textcolor{stringliteral}{"{}pl"{}},\ \textcolor{stringliteral}{"{}pt-\/419"{}},\ \textcolor{stringliteral}{"{}pt-\/150"{}},\ \textcolor{stringliteral}{"{}ro"{}},\ \textcolor{stringliteral}{"{}sk"{}},\ \textcolor{stringliteral}{"{}sl"{}},\ \textcolor{stringliteral}{"{}sv"{}},\ \textcolor{stringliteral}{"{}vi"{}},\ \textcolor{stringliteral}{"{}tr"{}},\ \textcolor{stringliteral}{"{}el"{}},\ \textcolor{stringliteral}{"{}bg"{}},\ \textcolor{stringliteral}{"{}ru"{}},\ \textcolor{stringliteral}{"{}sr"{}},\ \textcolor{stringliteral}{"{}uk"{}},\ \textcolor{stringliteral}{"{}he"{}},\ \textcolor{stringliteral}{"{}ar"{}},\ \textcolor{stringliteral}{"{}mr"{}},\ \textcolor{stringliteral}{"{}hi"{}},\ \textcolor{stringliteral}{"{}bn"{}},\ \textcolor{stringliteral}{"{}ta"{}},\ \textcolor{stringliteral}{"{}te"{}},\ \textcolor{stringliteral}{"{}ml"{}},\ \textcolor{stringliteral}{"{}th"{}},\ \textcolor{stringliteral}{"{}zh-\/Hans"{}},\ \textcolor{stringliteral}{"{}zh-\/Hant"{}},\ \textcolor{stringliteral}{"{}ja"{}},\ \textcolor{stringliteral}{"{}ko"{}}\};\ \textcolor{comment}{//\ Availble\ languages\ to\ search\ news\ for}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \_\_available\_topics\ =\ \{\textcolor{stringliteral}{"{}WORLD"{}},\ \textcolor{stringliteral}{"{}NATION"{}},\ \textcolor{stringliteral}{"{}BUSINESS"{}},\ \textcolor{stringliteral}{"{}TECHNOLOGY"{}},\ \textcolor{stringliteral}{"{}ENTERTAINMENT"{}},\ \textcolor{stringliteral}{"{}SPORTS"{}},\ \textcolor{stringliteral}{"{}SCIENCE"{}},\ \textcolor{stringliteral}{"{}HEALTH"{}}\};\ \textcolor{comment}{//\ Availble\ topics\ to\ search\ news\ for}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \_\_available\_periods\ =\ \{\textcolor{stringliteral}{"{}hour"{}},\ \textcolor{stringliteral}{"{}day"{}},\ \textcolor{stringliteral}{"{}week"{}},\ \textcolor{stringliteral}{"{}month"{}},\ \textcolor{stringliteral}{"{}year"{}},\ \textcolor{stringliteral}{"{}any\_time"{}}\};\ \textcolor{comment}{//\ Availble\ periods\ to\ search\ news\ for}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Class\ Private\ Functions}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \_\_WriteCallback(}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ contents,\ \textcolor{comment}{//\ pointer\ to\ buffer\ containing\ the\ downloaded\ data}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{comment}{//\ size\ of\ the\ downloaded\ data}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ nmemb,\ \textcolor{comment}{//\ number\ of\ elements\ in\ the\ downloaded\ data}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ userp\ \textcolor{comment}{//\ pointer\ to\ the\ user-\/defined\ data}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_\_contains(}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ vec,\ \textcolor{comment}{//\ Vector\ to\ search\ for\ the\ given\ value}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ value\ \textcolor{comment}{//\ Value\ to\ search\ for\ in\ the\ vector}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_\_is\_date\_different(\ \textcolor{comment}{//\ Checks\ if\ the\ start\ and\ end\ dates\ are\ different}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ start\_year,\ \textcolor{comment}{//\ Start\ year\ for\ news\ search}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ start\_month,\ \textcolor{comment}{//\ Start\ month\ for\ news\ search}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ start\_day,\ \textcolor{comment}{//\ Start\ day\ for\ news\ search}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ end\_year,\ \textcolor{comment}{//\ End\ year\ for\ news\ search\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ end\_month,\ \textcolor{comment}{//\ End\ month\ for\ news\ search\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ end\_day\ \textcolor{comment}{//\ End\ day\ for\ news\ search}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::string\ \_\_url\_parameters();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ std::string\ \_\_full\_url(}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ keyword\ \textcolor{comment}{//\ Keyword\ used\ for\ searching\ the\ news}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::string\ \_\_get\_rss\_content(}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ url\ \textcolor{comment}{//\ URL\ for\ news\ search}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ std::vector<std::unordered\_map<std::string,\ std::string>>\ \_\_parse\_rss\_content(}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ xmlContent\ \textcolor{comment}{//\ XML\ content\ to\ be\ parsed}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_\_get\_news(}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ keyword,\ \textcolor{comment}{//\ query\ used\ to\ get\ news}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ article\_file\ \textcolor{comment}{//\ file\ to\ save\ articles\ in}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Class\ Public\ Variables}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGoogleNews_ab6124f84e31a150bb8a610290606338e}{\_max\_results}};\ \textcolor{comment}{//\ Max\ results\ to\ return\ for\ news\ search}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_aa3304912ba70f5939785b3f92d354240}{\_language}};\ \textcolor{comment}{//\ Language\ to\ use\ to\ search\ news}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_acd148c22d137fb6d4740b52d0217ab65}{\_country}};\ \textcolor{comment}{//\ Country\ to\ use\ to\ search\ news}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_aec3c5d1c4039b4a16a68974eaaea1f9b}{\_period}};\ \textcolor{comment}{//\ Period\ to\ use\ to\ search\ news}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_a025ae1d5aed680321026405aa8b13355}{\_start\_date}};\ \textcolor{comment}{//\ Start\ date\ to\ use\ to\ search\ news\ from\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_a4b8c0b77d0aa179eb83e9d8c89842724}{\_end\_date}};\ \textcolor{comment}{//\ End\ date\ to\ use\ to\ search\ news\ till}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classGoogleNews_a3c7a018ed33131d0e15d6ae103b48302}{\_exclude\_websites}};\ \textcolor{comment}{//\ Websites\ to\ exclude\ when\ searching\ for\ the\ news}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGoogleNews}{GoogleNews}}(}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ language,\ \textcolor{comment}{//\ Languge\ you\ want\ to\ get\ the\ news\ in}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ country,\ \textcolor{comment}{//\ Country\ you\ want\ to\ get\ the\ news\ from}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ period,\ \textcolor{comment}{//\ Time\ period\ to\ get\ news\ from}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ start\_date,\ \textcolor{comment}{//\ Starting\ date\ for\ when\ to\ get\ news\ from}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ end\_date,\ \textcolor{comment}{//\ Ending\ date\ for\ when\ to\ get\ the\ news\ till.\ End\ date\ should\ be\ atleast\ 1\ day\ after\ start\ date}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ max\_results,\ \textcolor{comment}{//\ Max\ number\ of\ results\ to\ be\ returned\ for\ the\ news}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ exclude\_websites\ \textcolor{comment}{//\ Websites\ to\ exclude\ when\ searching\ for\ the\ news}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGoogleNews_a7d3967f251d27ce1f862288757c976e0}{\string~GoogleNews}}();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Class\ Public\ Functions}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_a25a1e21711c8fc0760a99e2fdab3eb55}{\_get\_language}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_a4131dfff2de824d36a9b1828e26b840a}{\_get\_country}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_a92738667ed591803bfb4f3dc00828784}{\_get\_period}}();}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_ad7d26b76fbaf7b5606d1e767f1bd4f02}{\_get\_start\_date}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classGoogleNews_a382e35fb369776812408c984f6a57995}{\_get\_end\_date}}();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGoogleNews_aaa631e969239edde8949cada981b2437}{\_get\_max\_results}}();}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classGoogleNews_a1bf65c22f59ccc6a9c40735897991d33}{\_get\_exclude\_websites}}();}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_a4bd971ceb7df3329a6ed6cd3956e44ed}{\_get\_news}}(}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ keyword,\ \textcolor{comment}{//\ Keyword\ used\ to\ search\ news}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ filename\ \textcolor{comment}{//\ File\ to\ save\ articles\ in}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_ae5d2af359699c224b8c50490aeece744}{\_get\_latest\_topics}}(}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ filename\ \textcolor{comment}{//\ File\ to\ save\ articles\ in}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_a33c977752f385413915172b6fe6a24b4}{\_get\_news\_by\_topic}}(}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ topic,\ \textcolor{comment}{//\ Search\ the\ news\ on\ this\ topic}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ filename\ \textcolor{comment}{//\ File\ to\ save\ articles\ in}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_afc47ae362ddfb99c0b3e856b436a836d}{\_get\_news\_by\_country}}(}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ country,\ \textcolor{comment}{//\ Search\ the\ news\ on\ this\ country}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ filename\ \textcolor{comment}{//\ File\ to\ save\ articles\ in}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_a3485157061bb4fb3f1cfa9f793c532c4}{\_get\_news\_by\_site}}(}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ site,\ \textcolor{comment}{//\ Search\ the\ news\ on\ this\ site}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ filename\ \textcolor{comment}{//\ File\ to\ save\ articles\ in}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_a0d4c8b3f5e3c2316d3852ab5db119674}{\_set\_language}}(}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ language\ \textcolor{comment}{//\ Languge\ you\ want\ to\ get\ the\ news\ in}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_a6b103989a088bb0c6a9fec7bf697011b}{\_set\_country}}(}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ country}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_ada8d16cc4876c105730534bef3907728}{\_set\_period}}(}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ period\ \textcolor{comment}{//\ Time\ period\ to\ get\ news\ from}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGoogleNews_a1cb58f8fcabd0d0c6da8301e6d5df2ba}{\_set\_start\_date}}(}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ start\_date\ \textcolor{comment}{//\ Starting\ date\ for\ when\ to\ get\ news\ from}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGoogleNews_ae7cb80e0d863e6453e2fc78b10323917}{\_set\_end\_date}}(}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ end\_date\ \textcolor{comment}{//\ Ending\ date\ till\ when\ news\ is\ presented}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_a9431e69a625cb37e29d4b4f78cd88806}{\_set\_max\_results}}(}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ max\_results\ \textcolor{comment}{//\ Max\ number\ of\ results\ for\ the\ news}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGoogleNews_abf98b137b4aa1457487af94aee93b115}{\_set\_excluded\_websites}}(}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ excluded\_websites\ \textcolor{comment}{//\ Websites\ to\ exclude\ from\ the\ results}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00257\ \};}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

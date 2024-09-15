@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_folder__configure_8h_source" xml:lang="en-US">
+<title>folder_configure.h</title>
+<indexterm><primary>folder_configure.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;FOLDER_CONFIGURE_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;FOLDER_CONFIGURE_H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;filesystem&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+8 
+10 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classFolder">Folder</link>&#32;{
+11 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+13 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classFolder_1a8af69fd19ba86816c60b4c2291311eb1">Folder</link>();
+14 
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classFolder_1a7b9eaf0f340d5275809494685b0a3e1d">~Folder</link>();
+17 
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1a8bcb38a928af1a0d96a9ff644b98df49">_create_folder</link>(
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+25 
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1a44b00fd74b1acf564bca15a0b9e4a462">_delete_folder</link>(
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+33 
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1ad544b0154fb21e00817d758756e83d88">_list_folder</link>(
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;list_filename,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;list&#32;file&#32;</emphasis>
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;list_file_path,&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;list&#32;file</emphasis>
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+45 
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1ae1550ce683d2fa681792cde7c8479dcd">_rename_folder</link>(
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;new_folder_name,&#32;<emphasis role="comment">//&#32;New&#32;name&#32;of&#32;the&#32;folder</emphasis>
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+55 
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1acf4907b6c4b7e5b69e436b033931a25a">_move_folder</link>(
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;new_path,&#32;<emphasis role="comment">//&#32;New&#32;path&#32;of&#32;the&#32;folder</emphasis>
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+65 
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1a9e21df366f1f5c2f7b1f61d21c6e273d">_copy_folder</link>(
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;new_path,&#32;<emphasis role="comment">//&#32;New&#32;path&#32;of&#32;the&#32;folder</emphasis>
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+75 
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classFolder_1a3171b55faafcc80af43f940282d9eca8">_check_folder</link>(
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+84 
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1a74a369ee4b6e99367fe24a026af8295a">_hide_folder</link>(
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+92 
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classFolder_1a0f1d7843485db28659b03b28ad1aed62">_unhide_folder</link>(
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_name,&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;folder</emphasis>
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;folder_path&#32;<emphasis role="comment">//&#32;Path&#32;of&#32;the&#32;folder</emphasis>
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+100 };
+101 
+102 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

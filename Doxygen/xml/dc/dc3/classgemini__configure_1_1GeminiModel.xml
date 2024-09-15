@@ -1,0 +1,572 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dc/dc3/classgemini__configure_1_1GeminiModel" kind="class" language="Python" prot="public">
+    <compoundname>gemini_configure::GeminiModel</compoundname>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a736f58af983d00b96da063f85f980445" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>gemini_configure.GeminiModel::_model_name</definition>
+        <argsstring></argsstring>
+        <name>_model_name</name>
+        <qualifiedname>gemini_configure.GeminiModel._model_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="21" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/dc3/classgemini__configure_1_1GeminiModel_1ae9f30a80c6746d95bb7c0285335d60b9" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>gemini_configure.GeminiModel::_context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <qualifiedname>gemini_configure.GeminiModel._context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="22" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a4b9235a659640841aab62ff83bb37c20" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>gemini_configure.GeminiModel::_history</definition>
+        <argsstring></argsstring>
+        <name>_history</name>
+        <qualifiedname>gemini_configure.GeminiModel._history</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="24" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a43aa3bef291c4697592b2730e86318e1" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>gemini_configure.GeminiModel::_safety_settings</definition>
+        <argsstring></argsstring>
+        <name>_safety_settings</name>
+        <qualifiedname>gemini_configure.GeminiModel._safety_settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="29" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a1a76ae28a8edd8722430ebec1c81d739" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>gemini_configure.GeminiModel::_configuration</definition>
+        <argsstring></argsstring>
+        <name>_configuration</name>
+        <qualifiedname>gemini_configure.GeminiModel._configuration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="38" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a302e1f6234c0a8cd68bce35078e4df1e" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>gemini_configure.GeminiModel::_model</definition>
+        <argsstring></argsstring>
+        <name>_model</name>
+        <qualifiedname>gemini_configure.GeminiModel._model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="39" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1ab70c974de38858e0931cf13700b5c9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None gemini_configure.GeminiModel.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>gemini_configure.GeminiModel.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Initializes the GeminiModel class.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="9" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="9" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a664bf85b555a3b0c0568cc706faee86a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str gemini_configure.GeminiModel.query_model</definition>
+        <argsstring>(self, str query, False verbose)</argsstring>
+        <name>query_model</name>
+        <qualifiedname>gemini_configure.GeminiModel.query_model</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>query</declname>
+        </param>
+        <param>
+          <type>False</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        query: The prompt you wish to ask gemini
+        verbose: Whether to print the responce in verbose mode
+    
+    Returns:
+        String of responce given by gemini
+    
+    Summary:
+        Asks the gemini model the given prompt with the previous history and returns the responce.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="41" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="41" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a06ebd7a74eaf9cfdbae1e5af529536ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>list</type>
+        <definition> list gemini_configure.GeminiModel.get_available_models</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_available_models</name>
+        <qualifiedname>gemini_configure.GeminiModel.get_available_models</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        None
+    
+    Returns
+        List of model names
+    
+    Summary:
+        Returns a list of model names available with the current api
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="69" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="69" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a316dc5f4950a24cc19232eb53aed08a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None gemini_configure.GeminiModel.modify_safety_settings</definition>
+        <argsstring>(self, HarmCategory.name safety, HarmBlockThreshold.name setting=HarmBlockThreshold.BLOCK_LOW_AND_ABOVE)</argsstring>
+        <name>modify_safety_settings</name>
+        <qualifiedname>gemini_configure.GeminiModel.modify_safety_settings</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>HarmCategory.name</type>
+          <declname>safety</declname>
+        </param>
+        <param>
+          <type>HarmBlockThreshold.name</type>
+          <declname>setting</declname>
+          <defval>HarmBlockThreshold.BLOCK_LOW_AND_ABOVE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        safety: Safety Category to change
+        setting: Content level to block for the category
+    
+    Returns:
+        None
+    
+    Summary:
+        Changes the safety settings for the content generated by the model
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="83" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="83" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a29a06981bfa91da925e205535ebe570a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>object</type>
+        <definition> object gemini_configure.GeminiModel.get_current_configuration</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_current_configuration</name>
+        <qualifiedname>gemini_configure.GeminiModel.get_current_configuration</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Returns the current configuration of the model.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="99" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="99" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1afaaac0b7a860db3297bf29f993186651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None gemini_configure.GeminiModel.set_configuration</definition>
+        <argsstring>(self, int|None candidate_count=None, Iterable[str]|None stop_sequences=None, int|None max_output_tokens=None, float|None temperature=None, float|None top_p=None, int|None top_k=None, str|None response_mime_type=None, Mapping[str, Any]|None response_schema=None)</argsstring>
+        <name>set_configuration</name>
+        <qualifiedname>gemini_configure.GeminiModel.set_configuration</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>int|None</type>
+          <declname>candidate_count</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>Iterable|None</type>
+          <declname>stop_sequences</declname>
+          <array>[str]</array>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>int|None</type>
+          <declname>max_output_tokens</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>float|None</type>
+          <declname>temperature</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>float|None</type>
+          <declname>top_p</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>int|None</type>
+          <declname>top_k</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str|None</type>
+          <declname>response_mime_type</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>Mapping|None</type>
+          <declname>response_schema</declname>
+          <array>[str, Any]</array>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        candidate_count: The number of candidate
+        stop_sequences: List of string to stop the generation at
+        max_output_tokens: How many token&apos;s output must gemini model give
+        temperature: Controls the randomness of the output.
+        top_p: The maximum cumulative probability of tokens to consider when sampling.
+        top_k: The maximum number of tokens to consider when sampling.
+        response_mime_type: Output response mimetype of the generated candidate text.
+        response_schema: Specifies the format of the JSON requested if response_mime_type is application/json.
+    
+    Returns:
+        None
+    
+    Summary:
+        Sets the configuration of the model.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="113" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="122" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1ad56997959a2d771cf794099c116bd5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>genai.GenerativeModel</type>
+        <definition> genai.GenerativeModel gemini_configure.GeminiModel.get_model</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_model</name>
+        <qualifiedname>gemini_configure.GeminiModel.get_model</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Returns the current model being used.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="152" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="152" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a72920fa184ca6486e02e381b62cf0999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None gemini_configure.GeminiModel.set_model</definition>
+        <argsstring>(self, str model_name, str|None system_message=None, Mapping[HarmCategory:HarmBlockThreshold]|None safety_settings=None)</argsstring>
+        <name>set_model</name>
+        <qualifiedname>gemini_configure.GeminiModel.set_model</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>model_name</declname>
+        </param>
+        <param>
+          <type>str|None</type>
+          <declname>system_message</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>Mapping|None</type>
+          <declname>safety_settings</declname>
+          <array>[HarmCategory:HarmBlockThreshold]</array>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        model_name: Name of the model you want to use
+        system_message: System message for the model
+
+    Returns:
+        None
+    
+    Summary:
+        Sets the new model name and system message if given
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="166" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="166" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a829cb355bf75a1b9345e9aa2bcbbedbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>list</type>
+        <definition> list gemini_configure.GeminiModel.load_history</definition>
+        <argsstring>(self, str filename=&quot;json_files/gemini_history.json&quot;)</argsstring>
+        <name>load_history</name>
+        <qualifiedname>gemini_configure.GeminiModel.load_history</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>filename</declname>
+          <defval>&quot;json_files/gemini_history.json&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        filename: Name of the file to load the history from
+    
+    Returns:
+        None
+    
+    Summary:
+        Loads the history from the given file
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="183" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="183" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1a6ac0f58a60c76ccf54f5e32177d66522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None gemini_configure.GeminiModel.clear_history</definition>
+        <argsstring>(self, str filename=&quot;json_files/gemini_history.json&quot;)</argsstring>
+        <name>clear_history</name>
+        <qualifiedname>gemini_configure.GeminiModel.clear_history</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>filename</declname>
+          <defval>&quot;json_files/gemini_history.json&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        filename: Name of the file to clear the history from
+    
+    Returns:
+        None
+    
+    Summary:
+        Clears the history from the given file
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="200" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="200" bodyend="216"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1ad6119223f7d781167ffb84f79af73698" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str gemini_configure.GeminiModel._get_previous_messages</definition>
+        <argsstring>(self)</argsstring>
+        <name>_get_previous_messages</name>
+        <qualifiedname>gemini_configure.GeminiModel._get_previous_messages</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        None
+    
+    Returns:
+        String of the previous messages by USER and ASSISTANT
+    
+    Summary:
+        Returns the previous messages by USER and ASSISTANT
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="217" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="217" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1ad10db6fc80e6ce9ce02e2cecf404483a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None gemini_configure.GeminiModel._save_history</definition>
+        <argsstring>(self, str filename=&quot;json_files/gemini_history.json&quot;)</argsstring>
+        <name>_save_history</name>
+        <qualifiedname>gemini_configure.GeminiModel._save_history</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>filename</declname>
+          <defval>&quot;json_files/gemini_history.json&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        filename: Name of the file to save the history to
+    
+    Returns:
+        None
+    
+    Summary:
+        Saves the history to the given file
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="236" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="236" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dc3/classgemini__configure_1_1GeminiModel_1aea1fe8b579ffb33853a30f1b71d00f81" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None gemini_configure.GeminiModel._configure_model</definition>
+        <argsstring>(self)</argsstring>
+        <name>_configure_model</name>
+        <qualifiedname>gemini_configure.GeminiModel._configure_model</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Args:
+        None
+    
+    Returns:
+        None
+    
+    Summary:
+        Configures the model with the given configuration
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python_files/configuration_files/gemini_configure.py" line="251" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="251" bodyend="267"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python_files/configuration_files/gemini_configure.py" line="8" column="1" bodyfile="python_files/configuration_files/gemini_configure.py" bodystart="8" bodyend="267"/>
+    <listofallmembers>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1ab70c974de38858e0931cf13700b5c9f8" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>__init__</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a1a76ae28a8edd8722430ebec1c81d739" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_configuration</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1aea1fe8b579ffb33853a30f1b71d00f81" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_configure_model</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1ae9f30a80c6746d95bb7c0285335d60b9" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_context</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1ad6119223f7d781167ffb84f79af73698" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_get_previous_messages</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a4b9235a659640841aab62ff83bb37c20" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_history</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a302e1f6234c0a8cd68bce35078e4df1e" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_model</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a736f58af983d00b96da063f85f980445" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_model_name</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a43aa3bef291c4697592b2730e86318e1" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_safety_settings</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1ad10db6fc80e6ce9ce02e2cecf404483a" prot="protected" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>_save_history</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a6ac0f58a60c76ccf54f5e32177d66522" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>clear_history</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a06ebd7a74eaf9cfdbae1e5af529536ea" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>get_available_models</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a29a06981bfa91da925e205535ebe570a" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>get_current_configuration</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1ad56997959a2d771cf794099c116bd5f8" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>get_model</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a829cb355bf75a1b9345e9aa2bcbbedbd" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>load_history</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a316dc5f4950a24cc19232eb53aed08a1" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>modify_safety_settings</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a664bf85b555a3b0c0568cc706faee86a" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>query_model</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1afaaac0b7a860db3297bf29f993186651" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>set_configuration</name></member>
+      <member refid="dc/dc3/classgemini__configure_1_1GeminiModel_1a72920fa184ca6486e02e381b62cf0999" prot="public" virt="non-virtual"><scope>gemini_configure::GeminiModel</scope><name>set_model</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

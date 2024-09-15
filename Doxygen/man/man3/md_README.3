@@ -1,0 +1,83 @@
+.TH "md_README" 3 "AI Ecosystem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_README \- AI Ecosystem: A Framework for NLP-driven Task Completion 
+.PP
+ \fC\fP
+.SH "Description"
+.PP
+AI Ecosystem is an evolving project that aims to build a hierarchical model structure capable of efficiently completing human-like tasks on a computer using natural language processing (NLP)\&. It tackles the challenge of bridging the gap between complex human instructions and automated task execution by developing a system that understands, interprets, and translates natural language commands into actionable steps\&.
+.SH "Features"
+.PP
+.IP "\(bu" 2
+\fBHierarchical Model Structure\fP: The project is structured as a hierarchy of models, allowing for increasingly complex tasks to be broken down into smaller, more manageable subtasks\&.
+.IP "\(bu" 2
+\fBNatural Language Understanding\fP: Models are trained to understand natural language instructions, including nuances, context, and implicit information\&.
+.IP "\(bu" 2
+\fBTask Decomposition\fP: Complex tasks are automatically decomposed into a series of smaller, executable steps\&.
+.IP "\(bu" 2
+\fBMulti-Modal Capabilities\fP: The system will eventually support interaction with various data sources and interfaces, including files, websites, and APIs\&.
+.IP "\(bu" 2
+\fBModular Design\fP: The project is designed to be modular, allowing for easy addition and customization of new models and task functionalities\&.
+.PP
+.SH "Installation"
+.PP
+\fBNote:\fP AI Ecosystem is currently in its early stages of development, and the installation process is not yet finalized\&. This README will be updated with instructions once the project is more mature\&.
+.SH "Usage"
+.PP
+The project has been updated to provide individual classes for specific tasks\&. You can now use these classes to perform their intended operations, such as file manipulation or performing Google searches\&. Below is a brief overview of the available classes and their usage:
+.SS "File Class"
+.IP "\(bu" 2
+Use the \fC\fBFile\fP\fP class for file manipulation tasks like creating or reading files\&.
+.PP
+.SS "GoogleSearch Class"
+.IP "\(bu" 2
+The \fC\fBGoogleSearch\fP\fP class allows you to perform searches on Google and store the results in a file\&.
+.PP
+.SS "Example Usage"
+Here’s an example of how to use the \fC\fBFile\fP\fP and \fC\fBGoogleSearch\fP\fP classes together:
+.PP
+.PP
+.nf
+from modules\&.angel_configure import GoogleSearch, File
+
+file = File()
+google = GoogleSearch()
+
+json_directory = "json_files/"
+json_file = "search_result\&.json"
+
+# Create a file to store the search result
+file\&.create_file(json_file, json_directory)
+
+# Perform a Google search and save the result in the created file
+google\&._search_google("Something", json_directory + json_file)
+.fi
+.PP
+.PP
+In this example:
+.IP "\(bu" 2
+A file is created in the specified directory using the \fC\fBFile\fP\fP class\&.
+.IP "\(bu" 2
+The \fC\fBGoogleSearch\fP\fP class is used to perform a Google search and store the search results in the created file\&.
+.PP
+.PP
+\fBNote:\fP Further updates and instructions will be provided as the project evolves\&.
+.SH "Contributing"
+.PP
+Contributions are welcome! If you're interested in contributing to the development of AI Ecosystem, please feel free to reach out to the project maintainers or submit a pull request\&.
+.SH "Disclaimer"
+.PP
+This project is still under active development\&. Features and functionality may be subject to change\&. Right now Gemini API key is used for nlp to task convergence, but will change in the future to operate smaller local models to ensure privacy and latency free task completions
+.SH "Future Plans"
+.PP
+.IP "\(bu" 2
+\fBExpansion of Model Capabilities\fP: The project will continuously expand the capabilities of its models to handle a broader range of tasks and scenarios\&.
+.IP "\(bu" 2
+\fBIntegration with External APIs\fP: Integration with external APIs will enhance the project's ability to interact with real-world data and systems\&.
+.IP "\(bu" 2
+\fBUser-Friendly Interface\fP: The project will strive to provide a user-friendly interface for interacting with the system and specifying tasks\&.
+.PP
+.PP
+We believe AI Ecosystem has the potential to revolutionize how humans interact with computers, enabling seamless automation of complex tasks through natural language\&. 

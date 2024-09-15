@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacesetup" xml:lang="en-US">
+<title>setup Namespace Reference</title>
+<indexterm><primary>setup</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>list <link linkend="_namespacesetup_1a1bf56ea61d1e9865f316116dca2fbfea">ext_modules</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f">name</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacesetup_1a2aa722b36a933088812b50ea79b97a5c">version</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacesetup_1a1bf56ea61d1e9865f316116dca2fbfea"/><section>
+    <title>ext_modules</title>
+<indexterm><primary>ext_modules</primary><secondary>setup</secondary></indexterm>
+<indexterm><primary>setup</primary><secondary>ext_modules</secondary></indexterm>
+<para><computeroutput>setup.ext_modules</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;[
+2 &#32;&#32;&#32;&#32;Extension(
+3 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;angel_configure&apos;</emphasis>,
+4 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sources=[<emphasis role="stringliteral">&apos;cpp_files/binding_files/bindings.cpp&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;cpp_files/program_files/file_configure.cpp&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;cpp_files/program_files/folder_configure.cpp&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;cpp_files/program_files/news_configure.cpp&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;cpp_files/program_files/search_configure.cpp&apos;</emphasis>],
+5 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;include_dirs=[pybind11.get_include()],
+6 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;libraries=[<emphasis role="stringliteral">&apos;curl&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;tinyxml2&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;nlohmann/json&apos;</emphasis>],
+7 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;language=<emphasis role="stringliteral">&apos;c++&apos;</emphasis>
+8 &#32;&#32;&#32;&#32;),
+9 ]
+</programlisting></section>
+<anchor xml:id="_namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>setup</secondary></indexterm>
+<indexterm><primary>setup</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>setup.name</computeroutput></para></section>
+<anchor xml:id="_namespacesetup_1a2aa722b36a933088812b50ea79b97a5c"/><section>
+    <title>version</title>
+<indexterm><primary>version</primary><secondary>setup</secondary></indexterm>
+<indexterm><primary>setup</primary><secondary>version</secondary></indexterm>
+<para><computeroutput>setup.version</computeroutput></para></section>
+</section>
+</section>

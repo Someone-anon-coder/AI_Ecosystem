@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_application__configure_8cpp" xml:lang="en-US">
+<title>application_configure.cpp File Reference</title>
+<indexterm><primary>application_configure.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;X11/Xatom.h&gt;<?linebreak?>#include &lt;X11/Xlib.h&gt;<?linebreak?>#include &lt;sys/select.h&gt;<?linebreak?>#include &lt;sys/stat.h&gt;<?linebreak?>#include &lt;sys/types.h&gt;<?linebreak?>#include &lt;sys/wait.h&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;fcntl.h&gt;<?linebreak?>#include &lt;pwd.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?>#include &lt;ctime&gt;<?linebreak?>#include &quot;../header_files/file_configure.h&quot;<?linebreak?></programlisting>Include dependency graph for application_configure.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d5b/application__configure_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classApplication">Application</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

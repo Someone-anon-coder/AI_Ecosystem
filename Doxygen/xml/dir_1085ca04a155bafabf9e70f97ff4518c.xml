@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_1085ca04a155bafabf9e70f97ff4518c" kind="dir">
+    <compoundname>binding_files</compoundname>
+    <innerfile refid="dd/d3e/bindings_8cpp">bindings.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cpp_files/binding_files/"/>
+  </compounddef>
+</doxygen>

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <map>
 
 /// @brief Class for file manipulation
 class File {
@@ -12,6 +13,8 @@ class File {
 
         /// @brief Class Destructor
         ~File();
+
+        std::map<std::string, std::string> _class_info();
 
         /// @brief Function to create a file
         /// @param filename Name of the file

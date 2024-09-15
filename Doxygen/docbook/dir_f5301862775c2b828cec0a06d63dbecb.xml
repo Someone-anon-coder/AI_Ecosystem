@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_f5301862775c2b828cec0a06d63dbecb" xml:lang="en-US">
+<title>header_files Directory Reference</title>
+<indexterm><primary>header_files Directory Reference</primary></indexterm>
+Directory dependency graph for header_files:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_f5301862775c2b828cec0a06d63dbecb_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_file__configure_8h">file_configure.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_folder__configure_8h">folder_configure.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_news__configure_8h">news_configure.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_search__configure_8h">search_configure.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

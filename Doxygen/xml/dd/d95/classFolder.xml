@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dd/d95/classFolder" kind="class" language="C++" prot="public">
+    <compoundname>Folder</compoundname>
+    <includes refid="dc/d8e/folder__configure_8h" local="no">folder_configure.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d95/classFolder_1a8af69fd19ba86816c60b4c2291311eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Folder::Folder</definition>
+        <argsstring>()</argsstring>
+        <name>Folder</name>
+        <qualifiedname>Folder::Folder</qualifiedname>
+        <briefdescription>
+<para>Class Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="13" column="9" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="3" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1a7b9eaf0f340d5275809494685b0a3e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Folder::~Folder</definition>
+        <argsstring>()</argsstring>
+        <name>~Folder</name>
+        <qualifiedname>Folder::~Folder</qualifiedname>
+        <briefdescription>
+<para>Class Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="16" column="9" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="4" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1a8bcb38a928af1a0d96a9ff644b98df49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_create_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string folder_path)</argsstring>
+        <name>_create_folder</name>
+        <qualifiedname>Folder::_create_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to create a folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="21" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="6" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1a44b00fd74b1acf564bca15a0b9e4a462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_delete_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string folder_path)</argsstring>
+        <name>_delete_folder</name>
+        <qualifiedname>Folder::_delete_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to delete a folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="29" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1ad544b0154fb21e00817d758756e83d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_list_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string list_filename, const std::string list_file_path, const std::string folder_path)</argsstring>
+        <name>_list_folder</name>
+        <qualifiedname>Folder::_list_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>list_filename</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>list_file_path</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to list a folder contents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>list_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the list file to store folder content list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>list_file_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the list file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="39" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="55" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1ae1550ce683d2fa681792cde7c8479dcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_rename_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string new_folder_name, const std::string folder_path)</argsstring>
+        <name>_rename_folder</name>
+        <qualifiedname>Folder::_rename_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>new_folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to rename a folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="50" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="22" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1acf4907b6c4b7e5b69e436b033931a25a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_move_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string new_path, const std::string folder_path)</argsstring>
+        <name>_move_folder</name>
+        <qualifiedname>Folder::_move_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>new_path</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to move a folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New path of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="60" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="33" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1a9e21df366f1f5c2f7b1f61d21c6e273d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_copy_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string new_path, const std::string folder_path)</argsstring>
+        <name>_copy_folder</name>
+        <qualifiedname>Folder::_copy_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>new_path</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to copy a folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New path of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="70" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="44" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1a3171b55faafcc80af43f940282d9eca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Folder::_check_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string folder_path)</argsstring>
+        <name>_check_folder</name>
+        <qualifiedname>Folder::_check_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if folder exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if folder exists, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="80" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="74" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1a74a369ee4b6e99367fe24a026af8295a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_hide_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string folder_path)</argsstring>
+        <name>_hide_folder</name>
+        <qualifiedname>Folder::_hide_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to hide a folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="88" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="82" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d95/classFolder_1a0f1d7843485db28659b03b28ad1aed62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Folder::_unhide_folder</definition>
+        <argsstring>(const std::string folder_name, const std::string folder_path)</argsstring>
+        <name>_unhide_folder</name>
+        <qualifiedname>Folder::_unhide_folder</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>folder_path</declname>
+        </param>
+        <briefdescription>
+<para>Function to hide a folder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>folder_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the folder </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>folder_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the folder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp_files/header_files/folder_configure.h" line="96" column="14" bodyfile="cpp_files/program_files/folder_configure.cpp" bodystart="92" bodyend="100"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class for folder manipulation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cpp_files/header_files/folder_configure.h" line="10" column="1" bodyfile="cpp_files/header_files/folder_configure.h" bodystart="10" bodyend="100"/>
+    <listofallmembers>
+      <member refid="dd/d95/classFolder_1a3171b55faafcc80af43f940282d9eca8" prot="public" virt="non-virtual"><scope>Folder</scope><name>_check_folder</name></member>
+      <member refid="dd/d95/classFolder_1a9e21df366f1f5c2f7b1f61d21c6e273d" prot="public" virt="non-virtual"><scope>Folder</scope><name>_copy_folder</name></member>
+      <member refid="dd/d95/classFolder_1a8bcb38a928af1a0d96a9ff644b98df49" prot="public" virt="non-virtual"><scope>Folder</scope><name>_create_folder</name></member>
+      <member refid="dd/d95/classFolder_1a44b00fd74b1acf564bca15a0b9e4a462" prot="public" virt="non-virtual"><scope>Folder</scope><name>_delete_folder</name></member>
+      <member refid="dd/d95/classFolder_1a74a369ee4b6e99367fe24a026af8295a" prot="public" virt="non-virtual"><scope>Folder</scope><name>_hide_folder</name></member>
+      <member refid="dd/d95/classFolder_1ad544b0154fb21e00817d758756e83d88" prot="public" virt="non-virtual"><scope>Folder</scope><name>_list_folder</name></member>
+      <member refid="dd/d95/classFolder_1acf4907b6c4b7e5b69e436b033931a25a" prot="public" virt="non-virtual"><scope>Folder</scope><name>_move_folder</name></member>
+      <member refid="dd/d95/classFolder_1ae1550ce683d2fa681792cde7c8479dcd" prot="public" virt="non-virtual"><scope>Folder</scope><name>_rename_folder</name></member>
+      <member refid="dd/d95/classFolder_1a0f1d7843485db28659b03b28ad1aed62" prot="public" virt="non-virtual"><scope>Folder</scope><name>_unhide_folder</name></member>
+      <member refid="dd/d95/classFolder_1a8af69fd19ba86816c60b4c2291311eb1" prot="public" virt="non-virtual"><scope>Folder</scope><name>Folder</name></member>
+      <member refid="dd/d95/classFolder_1a7b9eaf0f340d5275809494685b0a3e1d" prot="public" virt="non-virtual"><scope>Folder</scope><name>~Folder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

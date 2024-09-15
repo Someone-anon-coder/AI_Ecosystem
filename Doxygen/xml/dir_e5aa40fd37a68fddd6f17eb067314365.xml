@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_e5aa40fd37a68fddd6f17eb067314365" kind="dir">
+    <compoundname>setup_files</compoundname>
+    <innerfile refid="da/dab/setup_8py">setup.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python_files/setup_files/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md_README" xml:lang="en-US">
+<title>AI Ecosystem: A Framework for NLP-driven Task Completion</title>
+<indexterm><primary>AI Ecosystem: A Framework for NLP-driven Task Completion</primary></indexterm>
+
+<para><anchor xml:id="_md_README_1autotoc_md12"/> <link xlink:href="https://opensource.org/licenses/MIT"></link></para>
+<section xml:id="_md_README_1autotoc_md13">
+<title>Description</title>
+
+<para>AI Ecosystem is an evolving project that aims to build a hierarchical model structure capable of efficiently completing human-like tasks on a computer using natural language processing (NLP). It tackles the challenge of bridging the gap between complex human instructions and automated task execution by developing a system that understands, interprets, and translates natural language commands into actionable steps.</para>
+</section>
+<section xml:id="_md_README_1autotoc_md14">
+<title>Features</title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Hierarchical Model Structure</emphasis>: The project is structured as a hierarchy of models, allowing for increasingly complex tasks to be broken down into smaller, more manageable subtasks.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Natural Language Understanding</emphasis>: Models are trained to understand natural language instructions, including nuances, context, and implicit information.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Task Decomposition</emphasis>: Complex tasks are automatically decomposed into a series of smaller, executable steps.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Multi-Modal Capabilities</emphasis>: The system will eventually support interaction with various data sources and interfaces, including files, websites, and APIs.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Modular Design</emphasis>: The project is designed to be modular, allowing for easy addition and customization of new models and task functionalities.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md_README_1autotoc_md15">
+<title>Installation</title>
+
+<para><emphasis role="bold">Note:</emphasis> AI Ecosystem is currently in its early stages of development, and the installation process is not yet finalized. This README will be updated with instructions once the project is more mature.</para>
+</section>
+<section xml:id="_md_README_1autotoc_md16">
+<title>Usage</title>
+
+<para>The project has been updated to provide individual classes for specific tasks. You can now use these classes to perform their intended operations, such as file manipulation or performing Google searches. Below is a brief overview of the available classes and their usage:</para>
+<section xml:id="_md_README_1autotoc_md17">
+<title>File Class</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Use the <computeroutput><link linkend="_classFile">File</link></computeroutput> class for file manipulation tasks like creating or reading files.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md_README_1autotoc_md18">
+<title>GoogleSearch Class</title>
+
+<para><itemizedlist>
+<listitem>
+<para>The <computeroutput><link linkend="_classGoogleSearch">GoogleSearch</link></computeroutput> class allows you to perform searches on Google and store the results in a file.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md_README_1autotoc_md19">
+<title>Example Usage</title>
+
+<para>Here’s an example of how to use the <computeroutput><link linkend="_classFile">File</link></computeroutput> and <computeroutput><link linkend="_classGoogleSearch">GoogleSearch</link></computeroutput> classes together:</para>
+
+<para><literallayout><computeroutput>from&#32;modules.angel_configure&#32;import&#32;GoogleSearch,&#32;File
+
+file&#32;=&#32;File()
+google&#32;=&#32;GoogleSearch()
+
+json_directory&#32;=&#32;&quot;json_files/&quot;
+json_file&#32;=&#32;&quot;search_result.json&quot;
+
+#&#32;Create&#32;a&#32;file&#32;to&#32;store&#32;the&#32;search&#32;result
+file.create_file(json_file,&#32;json_directory)
+
+#&#32;Perform&#32;a&#32;Google&#32;search&#32;and&#32;save&#32;the&#32;result&#32;in&#32;the&#32;created&#32;file
+google._search_google(&quot;Something&quot;,&#32;json_directory&#32;+&#32;json_file)
+</computeroutput></literallayout></para>
+
+<para>In this example:<itemizedlist>
+<listitem>
+<para>A file is created in the specified directory using the <computeroutput><link linkend="_classFile">File</link></computeroutput> class.</para>
+</listitem><listitem>
+<para>The <computeroutput><link linkend="_classGoogleSearch">GoogleSearch</link></computeroutput> class is used to perform a Google search and store the search results in the created file.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><emphasis role="bold">Note:</emphasis> Further updates and instructions will be provided as the project evolves.</para>
+</section>
+</section>
+<section xml:id="_md_README_1autotoc_md20">
+<title>Contributing</title>
+
+<para>Contributions are welcome! If you&apos;re interested in contributing to the development of AI Ecosystem, please feel free to reach out to the project maintainers or submit a pull request.</para>
+</section>
+<section xml:id="_md_README_1autotoc_md21">
+<title>Disclaimer</title>
+
+<para>This project is still under active development. Features and functionality may be subject to change. Right now Gemini API key is used for nlp to task convergence, but will change in the future to operate smaller local models to ensure privacy and latency free task completions</para>
+</section>
+<section xml:id="_md_README_1autotoc_md22">
+<title>Future Plans</title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Expansion of Model Capabilities</emphasis>: The project will continuously expand the capabilities of its models to handle a broader range of tasks and scenarios.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Integration with External APIs</emphasis>: Integration with external APIs will enhance the project&apos;s ability to interact with real-world data and systems.</para>
+</listitem><listitem>
+<para><emphasis role="bold">User-Friendly Interface</emphasis>: The project will strive to provide a user-friendly interface for interacting with the system and specifying tasks.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>We believe AI Ecosystem has the potential to revolutionize how humans interact with computers, enabling seamless automation of complex tasks through natural language. </para>
+</section>
+</section>

@@ -1,0 +1,210 @@
+.TH "Folder" 3 "AI Ecosystem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Folder \- Class for folder manipulation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <folder_configure\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFolder\fP ()"
+.br
+.RI "Class Constructor\&. "
+.ti -1c
+.RI "\fB~Folder\fP ()"
+.br
+.RI "Class Destructor\&. "
+.ti -1c
+.RI "void \fB_create_folder\fP (const std::string folder_name, const std::string folder_path)"
+.br
+.RI "Function to create a folder\&. "
+.ti -1c
+.RI "void \fB_delete_folder\fP (const std::string folder_name, const std::string folder_path)"
+.br
+.RI "Function to delete a folder\&. "
+.ti -1c
+.RI "void \fB_list_folder\fP (const std::string folder_name, const std::string list_filename, const std::string list_file_path, const std::string folder_path)"
+.br
+.RI "Function to list a folder contents\&. "
+.ti -1c
+.RI "void \fB_rename_folder\fP (const std::string folder_name, const std::string new_folder_name, const std::string folder_path)"
+.br
+.RI "Function to rename a folder\&. "
+.ti -1c
+.RI "void \fB_move_folder\fP (const std::string folder_name, const std::string new_path, const std::string folder_path)"
+.br
+.RI "Function to move a folder\&. "
+.ti -1c
+.RI "void \fB_copy_folder\fP (const std::string folder_name, const std::string new_path, const std::string folder_path)"
+.br
+.RI "Function to copy a folder\&. "
+.ti -1c
+.RI "bool \fB_check_folder\fP (const std::string folder_name, const std::string folder_path)"
+.br
+.RI "Function to check if folder exists\&. "
+.ti -1c
+.RI "void \fB_hide_folder\fP (const std::string folder_name, const std::string folder_path)"
+.br
+.RI "Function to hide a folder\&. "
+.ti -1c
+.RI "void \fB_unhide_folder\fP (const std::string folder_name, const std::string folder_path)"
+.br
+.RI "Function to hide a folder\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class for folder manipulation\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Folder::Folder ()"
+
+.PP
+Class Constructor\&. 
+.SS "Folder::~Folder ()"
+
+.PP
+Class Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Folder::_check_folder (const std::string folder_name, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to check if folder exists\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if folder exists, false otherwise 
+.RE
+.PP
+
+.SS "void Folder::_copy_folder (const std::string folder_name, const std::string new_path, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to copy a folder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fInew_path\fP New path of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+.SS "void Folder::_create_folder (const std::string folder_name, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to create a folder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+.SS "void Folder::_delete_folder (const std::string folder_name, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to delete a folder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+.SS "void Folder::_hide_folder (const std::string folder_name, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to hide a folder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+.SS "void Folder::_list_folder (const std::string folder_name, const std::string list_filename = \fC'folder_list_file\&.txt'\fP, const std::string list_file_path = \fC'log_files/'\fP, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to list a folder contents\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fIlist_filename\fP Name of the list file to store folder content list 
+.br
+\fIlist_file_path\fP Path of the list file 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+.SS "void Folder::_move_folder (const std::string folder_name, const std::string new_path, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to move a folder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fInew_path\fP New path of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+.SS "void Folder::_rename_folder (const std::string folder_name, const std::string new_folder_name, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to rename a folder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fInew_folder_name\fP New Name of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+.SS "void Folder::_unhide_folder (const std::string folder_name, const std::string folder_path = \fC''\fP)"
+
+.PP
+Function to hide a folder\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolder_name\fP Name of the folder 
+.br
+\fIfolder_path\fP Path of the folder 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AI Ecosystem from the source code\&.

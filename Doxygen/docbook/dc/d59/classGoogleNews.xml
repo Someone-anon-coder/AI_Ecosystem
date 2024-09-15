@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classGoogleNews" xml:lang="en-US">
+<title>GoogleNews Class Reference</title>
+<indexterm><primary>GoogleNews</primary></indexterm>
+<para>
+
+<para>Class to Search News on Google News. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;news_configure.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classGoogleNews_1a2af3abe86210ffdd3ba34591be2ab7d0">GoogleNews</link> (const std::string language, const std::string country, const std::string period, const std::string start_date, const std::string end_date, const int max_results, const std::vector&lt; std::string &gt; exclude_websites)</para>
+
+<para>Initialize google news constructor with default parameters. </para>
+</listitem>
+            <listitem><para><link linkend="_classGoogleNews_1a7d3967f251d27ce1f862288757c976e0">~GoogleNews</link> ()</para>
+
+<para>Class Destructor. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1a25a1e21711c8fc0760a99e2fdab3eb55">_get_language</link> ()</para>
+
+<para>Function to get the language. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1a4131dfff2de824d36a9b1828e26b840a">_get_country</link> ()</para>
+
+<para>Function to get the country. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1a92738667ed591803bfb4f3dc00828784">_get_period</link> ()</para>
+
+<para>Function to get the period. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1ad7d26b76fbaf7b5606d1e767f1bd4f02">_get_start_date</link> ()</para>
+
+<para>Function to get the start date. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1a382e35fb369776812408c984f6a57995">_get_end_date</link> ()</para>
+
+<para>Function to get the end date. </para>
+</listitem>
+            <listitem><para>int <link linkend="_classGoogleNews_1aaa631e969239edde8949cada981b2437">_get_max_results</link> ()</para>
+
+<para>Function to get the max results. </para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_classGoogleNews_1a1bf65c22f59ccc6a9c40735897991d33">_get_exclude_websites</link> ()</para>
+
+<para>Function to get the excluded websites. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1a4bd971ceb7df3329a6ed6cd3956e44ed">_get_news</link> (const std::string keyword, const std::string filename)</para>
+
+<para>Function to get the news. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1ae5d2af359699c224b8c50490aeece744">_get_latest_topics</link> (const std::string filename)</para>
+
+<para>Function to get the news on latest topics. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1a33c977752f385413915172b6fe6a24b4">_get_news_by_topic</link> (const std::string topic, const std::string filename)</para>
+
+<para>Function to get the news on the given topic. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1afc47ae362ddfb99c0b3e856b436a836d">_get_news_by_country</link> (const std::string country, const std::string filename)</para>
+
+<para>Function to get the news on the given country. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1a3485157061bb4fb3f1cfa9f793c532c4">_get_news_by_site</link> (const std::string site, const std::string filename)</para>
+
+<para>Function to get the news from the given site. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1a0d4c8b3f5e3c2316d3852ab5db119674">_set_language</link> (const std::string language)</para>
+
+<para>Function to set the language. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1a6b103989a088bb0c6a9fec7bf697011b">_set_country</link> (const std::string country)</para>
+
+<para>Function to set the country. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1ada8d16cc4876c105730534bef3907728">_set_period</link> (const std::string period)</para>
+
+<para>Function to set the time period. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classGoogleNews_1a1cb58f8fcabd0d0c6da8301e6d5df2ba">_set_start_date</link> (const std::string start_date)</para>
+
+<para>Function to set the start date. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classGoogleNews_1ae7cb80e0d863e6453e2fc78b10323917">_set_end_date</link> (const std::string end_date)</para>
+
+<para>Function to set the end date. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1a9431e69a625cb37e29d4b4f78cd88806">_set_max_results</link> (const int max_results)</para>
+
+<para>Function to set the max results. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classGoogleNews_1abf98b137b4aa1457487af94aee93b115">_set_excluded_websites</link> (std::vector&lt; std::string &gt; excluded_websites)</para>
+
+<para>Function to set the excluded websites. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classGoogleNews_1ab6124f84e31a150bb8a610290606338e">_max_results</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1aa3304912ba70f5939785b3f92d354240">_language</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1acd148c22d137fb6d4740b52d0217ab65">_country</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1aec3c5d1c4039b4a16a68974eaaea1f9b">_period</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1a025ae1d5aed680321026405aa8b13355">_start_date</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classGoogleNews_1a4b8c0b77d0aa179eb83e9d8c89842724">_end_date</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; std::string &gt; <link linkend="_classGoogleNews_1a3c7a018ed33131d0e15d6ae103b48302">_exclude_websites</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class to Search News on Google News. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classGoogleNews_1a2af3abe86210ffdd3ba34591be2ab7d0"/><section>
+    <title>GoogleNews()</title>
+<indexterm><primary>GoogleNews</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>GoogleNews</secondary></indexterm>
+<para><computeroutput>GoogleNews::GoogleNews (const std::string language = <computeroutput>&quot;en&quot;</computeroutput>
+, const std::string country = <computeroutput>&quot;US&quot;</computeroutput>
+, const std::string period = <computeroutput>&quot;anytime&quot;</computeroutput>
+, const std::string start_date = <computeroutput>&quot;&quot;</computeroutput>
+, const std::string end_date = <computeroutput>&quot;&quot;</computeroutput>
+, const int max_results = <computeroutput>10</computeroutput>
+, const std::vector&lt; std::string &gt; exclude_websites = <computeroutput>{}</computeroutput>
+)</computeroutput></para><para>
+
+<para>Initialize google news constructor with default parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>language</entry><entry>
+<para>Languge you want to get the news in </para>
+</entry>
+                            </row>
+                            <row>
+<entry>country</entry><entry>
+<para>Country you want to get the news from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>period</entry><entry>
+<para>Time period to get news from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start_date</entry><entry>
+<para>Starting date for when to get news from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>end_date</entry><entry>
+<para>Ending date for when to get the news till. End date should be atleast 1 day after start date </para>
+</entry>
+                            </row>
+                            <row>
+<entry>max_results</entry><entry>
+<para>Max number of results to be returned for the news </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exclude_websites</entry><entry>
+<para>Websites to exclude when searching for the news </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1a7d3967f251d27ce1f862288757c976e0"/><section>
+    <title>~GoogleNews()</title>
+<indexterm><primary>~GoogleNews</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>~GoogleNews</secondary></indexterm>
+<para><computeroutput>GoogleNews::~GoogleNews ( )</computeroutput></para><para>
+
+<para>Class Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classGoogleNews_1a4131dfff2de824d36a9b1828e26b840a"/><section>
+    <title>_get_country()</title>
+<indexterm><primary>_get_country</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_country</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_get_country ( )</computeroutput></para><para>
+
+<para>Function to get the country. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String of the country </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1a382e35fb369776812408c984f6a57995"/><section>
+    <title>_get_end_date()</title>
+<indexterm><primary>_get_end_date</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_end_date</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_get_end_date ( )</computeroutput></para><para>
+
+<para>Function to get the end date. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String of the date </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1a1bf65c22f59ccc6a9c40735897991d33"/><section>
+    <title>_get_exclude_websites()</title>
+<indexterm><primary>_get_exclude_websites</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_exclude_websites</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::string &gt; GoogleNews::_get_exclude_websites ( )</computeroutput></para><para>
+
+<para>Function to get the excluded websites. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Vector of excluded websites </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1a25a1e21711c8fc0760a99e2fdab3eb55"/><section>
+    <title>_get_language()</title>
+<indexterm><primary>_get_language</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_language</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_get_language ( )</computeroutput></para><para>
+
+<para>Function to get the language. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String of the language </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1ae5d2af359699c224b8c50490aeece744"/><section>
+    <title>_get_latest_topics()</title>
+<indexterm><primary>_get_latest_topics</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_latest_topics</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_get_latest_topics (const std::string filename = <computeroutput>&quot;text_files/news_articles.txt&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>Function to get the news on latest topics. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para><link linkend="_classFile">File</link> to save articles in </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1aaa631e969239edde8949cada981b2437"/><section>
+    <title>_get_max_results()</title>
+<indexterm><primary>_get_max_results</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_max_results</secondary></indexterm>
+<para><computeroutput>int GoogleNews::_get_max_results ( )</computeroutput></para><para>
+
+<para>Function to get the max results. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Number of max results </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1a4bd971ceb7df3329a6ed6cd3956e44ed"/><section>
+    <title>_get_news()</title>
+<indexterm><primary>_get_news</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_news</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_get_news (const std::string keyword, const std::string filename = <computeroutput>&quot;text_files/news_articles.txt&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>Function to get the news. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>keyword</entry><entry>
+<para>Keyword used to search news </para>
+</entry>
+                            </row>
+                            <row>
+<entry>filename</entry><entry>
+<para><link linkend="_classFile">File</link> to save articles in </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1afc47ae362ddfb99c0b3e856b436a836d"/><section>
+    <title>_get_news_by_country()</title>
+<indexterm><primary>_get_news_by_country</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_news_by_country</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_get_news_by_country (const std::string country, const std::string filename = <computeroutput>&quot;text_files/news_articles.txt&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>Function to get the news on the given country. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>country</entry><entry>
+<para>Search the news on this country </para>
+</entry>
+                            </row>
+                            <row>
+<entry>filename</entry><entry>
+<para><link linkend="_classFile">File</link> to save articles in </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1a3485157061bb4fb3f1cfa9f793c532c4"/><section>
+    <title>_get_news_by_site()</title>
+<indexterm><primary>_get_news_by_site</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_news_by_site</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_get_news_by_site (const std::string site, const std::string filename = <computeroutput>&quot;text_files/news_articles.txt&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>Function to get the news from the given site. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>site</entry><entry>
+<para>Search the news from this site </para>
+</entry>
+                            </row>
+                            <row>
+<entry>filename</entry><entry>
+<para><link linkend="_classFile">File</link> to save articles in </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1a33c977752f385413915172b6fe6a24b4"/><section>
+    <title>_get_news_by_topic()</title>
+<indexterm><primary>_get_news_by_topic</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_news_by_topic</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_get_news_by_topic (const std::string topic, const std::string filename = <computeroutput>&quot;text_files/news_articles.txt&quot;</computeroutput>
+)</computeroutput></para><para>
+
+<para>Function to get the news on the given topic. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>topic</entry><entry>
+<para>Search the news on this topic </para>
+</entry>
+                            </row>
+                            <row>
+<entry>filename</entry><entry>
+<para><link linkend="_classFile">File</link> to save articles in </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1a92738667ed591803bfb4f3dc00828784"/><section>
+    <title>_get_period()</title>
+<indexterm><primary>_get_period</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_period</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_get_period ( )</computeroutput></para><para>
+
+<para>Function to get the period. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String of the period </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1ad7d26b76fbaf7b5606d1e767f1bd4f02"/><section>
+    <title>_get_start_date()</title>
+<indexterm><primary>_get_start_date</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_get_start_date</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_get_start_date ( )</computeroutput></para><para>
+
+<para>Function to get the start date. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String of the date </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1a6b103989a088bb0c6a9fec7bf697011b"/><section>
+    <title>_set_country()</title>
+<indexterm><primary>_set_country</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_set_country</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_set_country (const std::string country)</computeroutput></para><para>
+
+<para>Function to set the country. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>country</entry><entry>
+<para>Country you want to get the news from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1ae7cb80e0d863e6453e2fc78b10323917"/><section>
+    <title>_set_end_date()</title>
+<indexterm><primary>_set_end_date</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_set_end_date</secondary></indexterm>
+<para><computeroutput>bool GoogleNews::_set_end_date (const std::string end_date)</computeroutput></para><para>
+
+<para>Function to set the end date. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>end_date</entry><entry>
+<para>Ending date till when news is presented </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if start date and end date are different </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classGoogleNews_1abf98b137b4aa1457487af94aee93b115"/><section>
+    <title>_set_excluded_websites()</title>
+<indexterm><primary>_set_excluded_websites</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_set_excluded_websites</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_set_excluded_websites (std::vector&lt; std::string &gt; excluded_websites)</computeroutput></para><para>
+
+<para>Function to set the excluded websites. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>excluded_websites</entry><entry>
+<para>Websites to exclude from the results </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1a0d4c8b3f5e3c2316d3852ab5db119674"/><section>
+    <title>_set_language()</title>
+<indexterm><primary>_set_language</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_set_language</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_set_language (const std::string language)</computeroutput></para><para>
+
+<para>Function to set the language. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>language</entry><entry>
+<para>Languge you want to get the news in </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1a9431e69a625cb37e29d4b4f78cd88806"/><section>
+    <title>_set_max_results()</title>
+<indexterm><primary>_set_max_results</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_set_max_results</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_set_max_results (const int max_results)</computeroutput></para><para>
+
+<para>Function to set the max results. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>max_results</entry><entry>
+<para>Max number of results for the news </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1ada8d16cc4876c105730534bef3907728"/><section>
+    <title>_set_period()</title>
+<indexterm><primary>_set_period</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_set_period</secondary></indexterm>
+<para><computeroutput>void GoogleNews::_set_period (const std::string period)</computeroutput></para><para>
+
+<para>Function to set the time period. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>period</entry><entry>
+<para>Time period to get news from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classGoogleNews_1a1cb58f8fcabd0d0c6da8301e6d5df2ba"/><section>
+    <title>_set_start_date()</title>
+<indexterm><primary>_set_start_date</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_set_start_date</secondary></indexterm>
+<para><computeroutput>bool GoogleNews::_set_start_date (const std::string start_date)</computeroutput></para><para>
+
+<para>Function to set the start date. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start_date</entry><entry>
+<para>Starting date for when to get news from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if start date and end date are different </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classGoogleNews_1acd148c22d137fb6d4740b52d0217ab65"/><section>
+    <title>_country</title>
+<indexterm><primary>_country</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_country</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_country</computeroutput></para></section>
+<anchor xml:id="_classGoogleNews_1a4b8c0b77d0aa179eb83e9d8c89842724"/><section>
+    <title>_end_date</title>
+<indexterm><primary>_end_date</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_end_date</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_end_date</computeroutput></para></section>
+<anchor xml:id="_classGoogleNews_1a3c7a018ed33131d0e15d6ae103b48302"/><section>
+    <title>_exclude_websites</title>
+<indexterm><primary>_exclude_websites</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_exclude_websites</secondary></indexterm>
+<para><computeroutput>std::vector&lt;std::string&gt; GoogleNews::_exclude_websites</computeroutput></para></section>
+<anchor xml:id="_classGoogleNews_1aa3304912ba70f5939785b3f92d354240"/><section>
+    <title>_language</title>
+<indexterm><primary>_language</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_language</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_language</computeroutput></para></section>
+<anchor xml:id="_classGoogleNews_1ab6124f84e31a150bb8a610290606338e"/><section>
+    <title>_max_results</title>
+<indexterm><primary>_max_results</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_max_results</secondary></indexterm>
+<para><computeroutput>int GoogleNews::_max_results</computeroutput></para></section>
+<anchor xml:id="_classGoogleNews_1aec3c5d1c4039b4a16a68974eaaea1f9b"/><section>
+    <title>_period</title>
+<indexterm><primary>_period</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_period</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_period</computeroutput></para></section>
+<anchor xml:id="_classGoogleNews_1a025ae1d5aed680321026405aa8b13355"/><section>
+    <title>_start_date</title>
+<indexterm><primary>_start_date</primary><secondary>GoogleNews</secondary></indexterm>
+<indexterm><primary>GoogleNews</primary><secondary>_start_date</secondary></indexterm>
+<para><computeroutput>std::string GoogleNews::_start_date</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="_news__configure_8h">news_configure.h</link><link linkend="_news__configure_8cpp">news_configure.cpp</link></section>
+</section>

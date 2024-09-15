@@ -1,0 +1,44 @@
+.TH "setup" 3 "AI Ecosystem" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+setup
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "list \fBext_modules\fP"
+.br
+.ti -1c
+.RI "\fBname\fP"
+.br
+.ti -1c
+.RI "\fBversion\fP"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "setup\&.ext_modules"
+\fBInitial value:\fP.PP
+.nf
+1 =  [
+2     Extension(
+3         'angel_configure',
+4         sources=['cpp_files/binding_files/bindings\&.cpp', 'cpp_files/program_files/file_configure\&.cpp', 'cpp_files/program_files/folder_configure\&.cpp', 'cpp_files/program_files/news_configure\&.cpp', 'cpp_files/program_files/search_configure\&.cpp'],
+5         include_dirs=[pybind11\&.get_include()],
+6         libraries=['curl', 'tinyxml2', 'nlohmann/json'],
+7         language='c++'
+8     ),
+9 ]
+.fi
+
+.SS "setup\&.name"
+
+.SS "setup\&.version"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AI Ecosystem from the source code\&.
