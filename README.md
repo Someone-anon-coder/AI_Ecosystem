@@ -99,7 +99,7 @@ Here's a snippet of a knowledge base (`file_kb.json`) for file manipulation:
         },
         "returns": "None"
     },
-    `...`
+    ...,
     {
         "name": "_write_file",
         "description": "Function to write to a file",
