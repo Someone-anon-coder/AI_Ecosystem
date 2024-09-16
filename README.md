@@ -1,4 +1,4 @@
-# AI Ecosystem: A Framework for NLP-driven Task Completion
+## AI Ecosystem: A Framework for NLP-driven Task Completion
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -53,6 +53,67 @@ In this example:
 - The `GoogleSearch` class is used to perform a Google search and store the search results in the created file.
 
 **Note:** Further updates and instructions will be provided as the project evolves.
+
+## Knowledge Base Structure
+
+The core of AI Ecosystem's understanding and task execution lies in its knowledge bases. These are JSON files containing information about available functions and their parameters. Each function represents an action that can be performed, while parameters define the inputs required for that action.
+
+Here's a snippet of a knowledge base (`file_kb.json`) for file manipulation:
+
+```json
+[
+    {
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. Gemini. Use the given knowledge base to answer the user.",
+        "function_format": "use function ```function_name [function_name]```",
+        "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "cant_answer_format": "```Sorry, this query cannot be handled by me```",
+        "examples": {},
+        "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
+    },
+    {
+        "name": "_check_file",
+        "description": "Function to check if it is a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_copy_file",
+        "description": "Function to copy a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "new_path (str)": "Specify this parameter to New path of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_create_file",
+        "description": "Function to create a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    `...`
+    {
+        "name": "_write_file",
+        "description": "Function to write to a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "content (str)": "Specify this parameter to Content of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    }
+]
+```
+
+This structure provides a clear and organized way for the system to understand and execute commands related to file operations.
 
 ## Contributing
 
