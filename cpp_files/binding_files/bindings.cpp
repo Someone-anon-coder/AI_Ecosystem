@@ -10,6 +10,7 @@ namespace py = pybind11;
 PYBIND11_MODULE(angel_configure, m) {
     py::class_<File>(m, "File")
         .def(py::init<>())
+        .def("__class_info__", &File::__class_info__)
         .def("_create_file", &File::_create_file, py::arg("filename"), py::arg("file_path") = "")
         .def("_write_file", &File::_write_file, py::arg("filename"), py::arg("content"), py::arg("file_path") = "")
         .def("_read_file", &File::_read_file, py::arg("filename"), py::arg("file_path") = "")

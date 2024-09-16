@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <map>
+#include <vector>
 
 /// @brief Class for file manipulation
 class File {
@@ -14,7 +15,9 @@ class File {
         /// @brief Class Destructor
         ~File();
 
-        std::map<std::string, std::string> _class_info();
+        /// @brief Function to get the class information
+        /// @return Vector of maps containing the class information
+        std::map<std::string, std::map<std::string, std::string>> __class_info__();
 
         /// @brief Function to create a file
         /// @param filename Name of the file

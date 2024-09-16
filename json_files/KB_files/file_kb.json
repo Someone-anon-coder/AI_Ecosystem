@@ -1,30 +1,105 @@
 [
     {
-        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are here to manipulate files by the request of user. Use the given knowledge base to answer the user.",
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. Gemini. Use the given knowledge base to answer the user.",
         "function_format": "use function ```function_name [function_name]```",
         "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "cant_answer_format": "```Sorry, this query cannot be handled by me```",
-        "examples": {
-            "create a file \"hello.txt\" and copy it to \"program_files\\\"": "",
-            "Write \"Hello\" in file and then delete that file": "",
-            "move file \"bye.html\" to \"C:\\secret_files\\\" and then hide that file": "",
-            "change the model to \"gemini-pro-1.5\" and query it \"hello, how are you?\"": "",
-            "get me the news on \"climate change\" between \"2015-1-1\" and \"2020-12-12\"": ""
-        },
+        "examples": {},
         "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
     },
     {
-        "function_name": "create_file",
-        "function_description": "Use this function to create a file in a specified location. The parameter [filename] is required",
+        "name": "_check_file",
+        "description": "Function to check if it is a file",
         "parameters": {
-            "filename (str)": "Specify this parameter to create a file of this name",
-            "file_path (str)": "Specify this parameter to create a file at this location"
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
         },
         "returns": "None"
     },
     {
-        "function_name": "write_file",
-        "function_description": "Use this function "
+        "name": "_copy_file",
+        "description": "Function to copy a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "new_path (str)": "Specify this parameter to New path of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_create_file",
+        "description": "Function to create a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_delete_file",
+        "description": "Function to delete a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_hide_file",
+        "description": "Function to hide a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_move_file",
+        "description": "Function to move a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "new_path (str)": "Specify this parameter to New path of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_read_file",
+        "description": "Function to read a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "Content of the file"
+    },
+    {
+        "name": "_rename_file",
+        "description": "Function to rename a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "new_filename (str)": "Specify this parameter to New name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_unhide_file",
+        "description": "Function to unhide a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_write_file",
+        "description": "Function to write to a file",
+        "parameters": {
+            "filename (str)": "Specify this parameter to Name of the file",
+            "content (str)": "Specify this parameter to Content of the file",
+            "file_path (str)": "Specify this parameter to Path of the file"
+        },
+        "returns": "None"
     }
 ]
