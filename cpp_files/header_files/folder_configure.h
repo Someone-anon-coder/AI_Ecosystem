@@ -5,6 +5,7 @@
 #include <iostream>
 #include <filesystem>
 #include <fstream>
+#include <map>
 
 /// @brief Class for folder manipulation
 class Folder {
@@ -14,6 +15,10 @@ class Folder {
 
         /// @brief Class Destructor
         ~Folder();
+
+        /// @brief Function to get the class information
+        /// @return Vector of maps containing the class information
+        std::map<std::string, std::map<std::string, std::string>> __class_info__();
 
         /// @brief Function to create a folder
         /// @param folder_name Name of the folder

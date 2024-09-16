@@ -24,6 +24,7 @@ PYBIND11_MODULE(angel_configure, m) {
 
     py::class_<Folder>(m, "Folder")
         .def(py::init<>())
+        .def("__class_info__", &Folder::__class_info__)
         .def("_create_folder", &Folder::_create_folder, py::arg("folder_name"), py::arg("folder_path") = "")
         .def("_list_folder", &Folder::_list_folder, py::arg("folder_name"), py::arg("list_filename") = "folder_list_file.txt", py::arg("list_file_path") = "log_files/", py::arg("folder_path") = "")
         .def("_delete_folder", &Folder::_delete_folder, py::arg("folder_name"), py::arg("folder_path") = "")

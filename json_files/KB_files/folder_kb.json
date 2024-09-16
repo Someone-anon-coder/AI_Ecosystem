@@ -1,0 +1,97 @@
+[
+    {
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. [to specify]. Use the given knowledge base to answer the user.",
+        "function_format": "use function ```function_name [function_name]```",
+        "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "cant_answer_format": "```Sorry, this query cannot be handled by me```",
+        "examples": {},
+        "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
+    },
+    {
+        "name": "_check_folder",
+        "description": "Function to check if it is a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_copy_folder",
+        "description": "Function to copy a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "new_path (str)": "Specify this parameter to New path of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_create_folder",
+        "description": "Function to create a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_delete_folder",
+        "description": "Function to delete a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_hide_folder",
+        "description": "Function to hide a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_list_folder",
+        "description": "Function to list a folder contents",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "list_filename (str)": "Specify this parameter to Name of the list file to store folder content list",
+            "list_file_path (str)": "Specify this parameter to Path of the list file",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_move_folder",
+        "description": "Function to move a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "new_path (str)": "Specify this parameter to New path of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_rename_folder",
+        "description": "Function to rename a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "new_folder_name (str)": "Specify this parameter to New name of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_unhide_folder",
+        "description": "Function to unhide a folder",
+        "parameters": {
+            "folder_name (str)": "Specify this parameter to Name of the folder",
+            "folder_path (str)": "Specify this parameter to Path of the folder"
+        },
+        "returns": "None"
+    }
+]
