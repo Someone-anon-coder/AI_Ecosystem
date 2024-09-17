@@ -36,7 +36,8 @@ PYBIND11_MODULE(angel_configure, m) {
         .def("_unhide_folder", &Folder::_unhide_folder, py::arg("folder_name"), py::arg("folder_path") = "");
     
     py::class_<GoogleNews>(m, "GoogleNews")
-        .def(py::init<const std::string, const std::string, const std::string, const std::string, const std::string, const int, std::vector<std::string>>(), py::arg("language") = "", py::arg("country") = "", py::arg("period") = "", py::arg("start_date") = "", py::arg("end_date") = "", py::arg("max_results") = 0, py::arg("exclude_websites") = {})
+        .def(py::init<const std::string, const std::string, const std::string, const std::string, const std::string, const int, std::vector<std::string>>(), py::arg("language") = "en", py::arg("country") = "US", py::arg("period") = "anytime", py::arg("start_date") = "", py::arg("end_date") = "", py::arg("max_results") = 0, py::arg("exclude_websites") = std::vector<std::string>{})
+        .def("__class_info__", &GoogleNews::__class_info__)
         .def("_get_language", &GoogleNews::_get_language)
         .def("_get_country", &GoogleNews::_get_country)
         .def("_get_period", &GoogleNews::_get_period)

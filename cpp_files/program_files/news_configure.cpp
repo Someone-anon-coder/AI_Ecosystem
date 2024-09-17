@@ -28,6 +28,119 @@ GoogleNews::~GoogleNews(){
     this->_exclude_websites = {};
 }
 
+std::map<std::string, std::map<std::string, std::string>> GoogleNews::__class_info__(){
+    std::map<std::string, std::string> __name_discription__ = { // Name and description of the class
+        {"GoogleNews", "Class for searching news on Google News"}
+    };
+
+    std::map<std::string, std::string> __constuctor_paramters__ = { // Constructor paramter names and descriptions
+        {"language", "Languge you want to get the news in"},
+        {"country", "Country you want to get the news from"},
+        {"period", "Time period to get news from"},
+        {"start_date", "Starting date for when to get news from"},
+        {"end_date", "Ending date for when to get the news till. End date should be atleast 1 day after start date"},
+        {"max_results", "Max number of results to be returned for the news"},
+        {"exclude_websites", "Websites to exclude when searching for the news"}
+    };
+
+    std::map<std::string, std::string> __function_info__ = { // Function names and descriptions
+        {"_get_language", "Function to get the language"},
+        {"_get_country", "Function to get the country"},
+        {"_get_period", "Function to get the period"},
+        {"_get_start_date", "Function to get the start date"},
+        {"_get_end_date", "Function to get the end date"},
+        {"_get_max_results", "Function to get the max results"},
+        {"_get_exclude_websites", "Function to get the excluded websites"},
+        {"_get_news", "Function to get the news"},
+        {"_get_latest_topics", "Function to get the news on latest topics"},
+        {"_get_news_by_topic", "Function to get the news on the given topic"},
+        {"_get_news_by_country", "Function to get the news on the given country"},
+        {"_get_news_by_site", "Function to get the news from the given site"},
+        {"_set_language", "Function to set the language"},
+        {"_set_country", "Function to set the country"},
+        {"_set_period", "Function to set the time period"},
+        {"_set_start_date", "Function to set the start date"},
+        {"_set_end_date", "Function to set the end date"},
+        {"_set_max_results", "Function to set the max results"},
+        {"_set_excluded_websites", "Function to set the excluded websites"}
+    };
+
+    std::map<std::string, std::string> __function_parameters__ = { // Function names and parameters
+        {"_get_language", "Not used"},
+        {"_get_country", "Not used"},
+        {"_get_period", "Not used"},
+        {"_get_start_date", "Not used"},
+        {"_get_end_date", "Not used"},
+        {"_get_max_results", "Not used"},
+        {"_get_exclude_websites", "Not used"},
+        {"_get_news", "keyword (str)\nfilename (str)"},
+        {"_get_latest_topics", "filename (str)"},
+        {"_get_news_by_topic", "topic (str)\nfilename (str)"},
+        {"_get_news_by_country", "country (str)\nfilename (str)"},
+        {"_get_news_by_site", "site (str)\nfilename (str)"},
+        {"_set_language", "language (str)"},
+        {"_set_country", "country (str)"},
+        {"_set_period", "period (str)"},
+        {"_set_start_date", "start_date (str)"},
+        {"_set_end_date", "end_date (str)"},
+        {"_set_max_results", "max_results (int)"},
+        {"_set_excluded_websites", "excluded_websites (list)"}
+    };
+
+    std::map<std::string, std::string> __function_parameters_description__ = { // Function names, parameters and descriptions
+        {"_get_language", "Not used"},
+        {"_get_country", "Not used"},
+        {"_get_period", "Not used"},
+        {"_get_start_date", "Not used"},
+        {"_get_end_date", "Not used"},
+        {"_get_max_results", "Not used"},
+        {"_get_exclude_websites", "Not used"},
+        {"_get_news", "keyword: Keyword used to search news\nfilename: File to save articles in"},
+        {"_get_latest_topics", "filename: File to save articles in"},
+        {"_get_news_by_topic", "topic: Search the news on this topic\nfilename: File to save articles in"},
+        {"_get_news_by_country", "country: Search the news on this country\nfilename: File to save articles in"},
+        {"_get_news_by_site", "site: Search the news from this site\nfilename: File to save articles in"},
+        {"_set_language", "language: Languge you want to get the news in"},
+        {"_set_country", "country: Country you want to get the news from"},
+        {"_set_period", "period: Time period to get news from"},
+        {"_set_start_date", "start_date: Starting date for when to get news from"},
+        {"_set_end_date", "end_date: Ending date till when news is presented"},
+        {"_set_max_results", "max_results: Max number of results for the news"},
+        {"_set_excluded_websites", "excluded_websites: Websites to exclude from the results"}
+    };
+
+    std::map<std::string, std::string> __function_return_types__ = { // Function names and return types
+        {"_get_language", "String of the language"},
+        {"_get_country", "String of the country"},
+        {"_get_period", "String of the period"},
+        {"_get_start_date", "String of the date"},
+        {"_get_end_date", "String of the date"},
+        {"_get_max_results", "Number of max results"},
+        {"_get_exclude_websites", "Vector of excluded websites"},
+        {"_get_news", "None"},
+        {"_get_latest_topics", "None"},
+        {"_get_news_by_topic", "None"},
+        {"_get_news_by_country", "None"},
+        {"_get_news_by_site", "None"},
+        {"_set_language", "None"},
+        {"_set_country", "None"},
+        {"_set_period", "None"},
+        {"_set_start_date", "True if start date and end date are different"},
+        {"_set_end_date", "True if start date and end date are different"},
+        {"_set_max_results", "None"},
+        {"_set_excluded_websites", "None"}
+    };
+
+    return { // Vector of maps containing the class information
+        {"Name_Description", __name_discription__},
+        {"Constructor_Parameters", __constuctor_paramters__},
+        {"Function_Info", __function_info__},
+        {"Function_Parameters", __function_parameters__},
+        {"Parameter_Description", __function_parameters_description__},
+        {"Function_Return", __function_return_types__}
+    };
+}
+
 size_t GoogleNews::__WriteCallback(
     void* contents, // pointer to buffer containing the downloaded data
     size_t size, // size of the downloaded data

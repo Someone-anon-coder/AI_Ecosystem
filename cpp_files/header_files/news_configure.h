@@ -141,6 +141,11 @@ class GoogleNews{
         ~GoogleNews();
 
         // Class Public Functions
+
+        /// @brief Function to get the class information
+        /// @return Vector of maps containing the class information
+        std::map<std::string, std::map<std::string, std::string>> __class_info__();
+
         // Getters
 
         /// @brief Function to get the language

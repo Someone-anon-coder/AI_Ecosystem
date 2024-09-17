@@ -3,7 +3,7 @@ import os
 import json
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
-from modules.angel_configure import Folder 
+from modules.angel_configure import GoogleNews
 
 def create_system_message(model_type: str = "[to specify]", ex: dict = {}) -> dict:
     """Create system message for the model
@@ -67,11 +67,20 @@ def create_parameter(paramters_disc: str, parameter_type: str) -> dict:
     """
     
     parameters = {}
+    try: 
+        parameters_in_disc = paramters_disc.split('\n')
+    except ValueError:
+        parameters_in_disc = parameter_disc
     
-    parameters_in_disc = paramters_disc.split('\n')
-    parameters_in_type = parameter_type.split('\n')
+    try:
+        parameters_in_type = parameter_type.split('\n')
+    except ValueError:
+        parameters_in_type = parameter_type
     
     for para_in_disc, para_in_type in zip(parameters_in_disc, parameters_in_type):
+        if para_in_disc == "Not used":
+            continue
+        
         _, para_type = para_in_type.split(':')
         
         parameters[para_in_disc.strip()] = "Specify this parameter to " + para_type.strip()
@@ -79,21 +88,21 @@ def create_parameter(paramters_disc: str, parameter_type: str) -> dict:
     return parameters
     
 if __name__ == "__main__":
-    file = Folder()
+    google = GoogleNews()
     
     knowledge_base = []
     knowledge_base.append(create_system_message())
     
-    functions = file.__class_info__()['Function_Info']
-    return_types = file.__class_info__()['Function_Return']
+    functions = google.__class_info__()['Function_Info']
+    return_types = google.__class_info__()['Function_Return']
     
     for function_name, function_description in functions.items():
     
-        parameter_disc = file.__class_info__()['Function_Parameters'][function_name]
-        parameter_type = file.__class_info__()['Parameter_Description'][function_name]
+        parameter_disc = google.__class_info__()['Function_Parameters'][function_name]
+        parameter_type = google.__class_info__()['Parameter_Description'][function_name]
         return_type = return_types[function_name]
         
         knowledge_base.append(create_function(function_name=function_name, function_description=function_description, parameters=create_parameter(paramters_disc=parameter_disc, parameter_type=parameter_type), returns=return_type))
     
-    with open('json_files/KB_files/folder_kb.json', 'w', encoding='utf8') as kb_file:
+    with open('json_files/KB_files/news_kb.json', 'w', encoding='utf8') as kb_file:
         json.dump(knowledge_base, kb_file, ensure_ascii=False, indent=4)

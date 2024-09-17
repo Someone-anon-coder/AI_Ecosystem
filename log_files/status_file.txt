@@ -1,8 +1,0 @@
-Process ID (PID): 30511
-State: 	R (running)
-CPU Usage: -nan%
-Memory Usage: Unknown
-Uptime: 0 seconds
-Command Line: 
-Owner: Unknown
-
