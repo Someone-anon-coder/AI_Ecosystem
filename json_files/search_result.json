@@ -4,96 +4,181 @@
     },
     "items": [
         {
-            "displayLink": "www.cat.com",
-            "formattedUrl": "https://www.cat.com/",
-            "htmlFormattedUrl": "https://www.<b>cat</b>.com/",
-            "htmlSnippet": "Select your region and language for www.<b>cat</b>.com to view the most relevant products and services in your area of the world.",
-            "htmlTitle": "<b>Cat</b>.com Global Selector: Language &amp; Region | <b>Cat</b> | Caterpillar",
+            "displayLink": "developers.google.com",
+            "formattedUrl": "https://developers.google.com/focus/ai-development",
+            "htmlFormattedUrl": "https://developers.google.com/focus/<b>ai</b>-<b>development</b>",
+            "htmlSnippet": "Access cutting-edge <b>AI</b> models and open source tools for machine learning. Explore Google&#39;s <b>AI</b> solutions built to simplify app and web <b>development</b> for&nbsp;...",
+            "htmlTitle": "<b>AI</b> Based Solutions for Developers - Google for Developers",
             "kind": "customsearch#result",
-            "link": "https://www.cat.com/",
+            "link": "https://developers.google.com/focus/ai-development",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362"
+                        "src": "https://developers.google.com/static/site-assets/images/home/developers-social-media.png"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "225",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMuZWsByBt5B0BH-Gwplr6ES6sffe8Qy6ToUjLNdbZfwO7-SpJ1KQhlbB&s",
-                        "width": "225"
+                        "height": "168",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbi-yKh0wOtPKRyyUksopFkrW0GbQc8ZnVYv-WPpDVyZq1Fv5YgUXWgMo&s",
+                        "width": "300"
                     }
+                ],
+                "document": [
+                    {}
                 ],
                 "metatags": [
                     {
-                        "og:image": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
-                        "og:title": "Cat.com",
-                        "template": "admin-template",
-                        "twitter:card": "summary_large_image",
-                        "twitter:image:src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
-                        "twitter:title": "Cat.com",
-                        "viewport": "width=device-width, initial-scale=1.0"
+                        "google-signin-client-id": "721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com",
+                        "google-signin-scope": "profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award",
+                        "og:description": "Access cutting-edge AI models and open source tools for machine learning. Explore Google's AI solutions built to simplify app and web development for developers.",
+                        "og:image": "https://developers.google.com/static/site-assets/images/home/developers-social-media.png",
+                        "og:image:height": "675",
+                        "og:image:width": "1200",
+                        "og:locale": "en",
+                        "og:site_name": "Google for Developers",
+                        "og:title": "AI Based Solutions for Developers - Google for Developers",
+                        "og:type": "website",
+                        "og:url": "https://developers.google.com/focus/ai-development",
+                        "theme-color": "#fff",
+                        "twitter:card": "summary",
+                        "twitter:image": "https://developers.google.com/static/site-assets/images/home/developers-social-media.png",
+                        "viewport": "width=device-width, initial-scale=1"
                     }
                 ]
             },
-            "snippet": "Select your region and language for www.cat.com to view the most relevant products and services in your area of the world.",
-            "title": "Cat.com Global Selector: Language & Region | Cat | Caterpillar"
+            "snippet": "Access cutting-edge AI models and open source tools for machine learning. Explore Google's AI solutions built to simplify app and web development for ...",
+            "title": "AI Based Solutions for Developers - Google for Developers"
         },
         {
-            "displayLink": "www.cat.com",
-            "formattedUrl": "https://www.cat.com/en_US.html",
-            "htmlFormattedUrl": "https://www.<b>cat</b>.com/en_US.html",
-            "htmlSnippet": "<b>Cat</b>® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and&nbsp;...",
-            "htmlTitle": "Caterpillar: Products &amp; Services – North America | <b>Cat</b>",
+            "displayLink": "www.intel.com",
+            "formattedUrl": "https://www.intel.com/content/www/us/en/developer/.../overview.html",
+            "htmlFormattedUrl": "https://www.intel.com/content/www/us/en/developer/.../overview.html",
+            "htmlSnippet": "Deploy Powerful Apps Anywhere. Get the most out of your <b>AI</b> projects with Intel&#39;s <b>AI</b> PC. Discover tools, workflows, frameworks, and <b>developer</b> kits that include&nbsp;...",
+            "htmlTitle": "<b>AI Development</b>",
             "kind": "customsearch#result",
-            "link": "https://www.cat.com/en_US.html",
+            "link": "https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/overview.html",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362"
+                        "src": "https://www.intel.com/etc.clientlibs/settings/wcm/designs/intel/us/en/images/resources/printlogo.png"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "225",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMuZWsByBt5B0BH-Gwplr6ES6sffe8Qy6ToUjLNdbZfwO7-SpJ1KQhlbB&s",
-                        "width": "225"
+                        "height": "168",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9NceVCLNwuL25XyyNmlNa9D0sWlmhYMSTqs7cU8wVleISIwVkCmcCqjY&s",
+                        "width": "299"
                     }
                 ],
                 "metatags": [
                     {
-                        "og:description": "Cat® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and support.",
-                        "og:image": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
-                        "og:site_name": "https://www.cat.com/en_US.html",
-                        "og:title": "Products & Services – North America",
-                        "template": "cat-com-homepage-template",
-                        "twitter:card": "summary_large_image",
-                        "twitter:description": "Cat® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and support.",
-                        "twitter:image:src": "http://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362",
-                        "twitter:title": "Products & Services – North America",
-                        "viewport": "width=device-width, initial-scale=1.0"
+                        "contentpath": "/content/www/us/en/developer/topic-technology/artificial-intelligence/overview",
+                        "emtaudience": "Audience|Business|Technical Decision Maker (TDM)|Developer;",
+                        "emtcontenttype": "Content Type|Sales and Marketing Materials|Marketing Tools|Topic Overviews;",
+                        "emtsubject": "Subject|Information Technology (IT)|Artificial Intelligence (AI);",
+                        "excludefromviews": "false",
+                        "fb:admins": "267985180046218",
+                        "format": "udel1l2page",
+                        "generic1": "true",
+                        "intelkeywords": "AI, machine learning, development tools, AI Tools, AI development, Intel Distribution of OpenVINO toolkit, OpenVINO toolkit",
+                        "language": "en",
+                        "lastmodifieddate": "2024-09-09T22:55:37.411Z",
+                        "localecode": "en_US",
+                        "localizedtagname": "Topic Overviews",
+                        "location": "us",
+                        "menu": "Developer Sub Navigation Breadcrumb",
+                        "mime": "text/html",
+                        "og:description": "Prepare, build, deploy, and scale your AI solutions with Intel® development tools and resources.",
+                        "og:image": "https://www.intel.com/etc.clientlibs/settings/wcm/designs/intel/us/en/images/resources/printlogo.png",
+                        "og:site_name": "Intel",
+                        "og:title": "AI Development",
+                        "og:type": "company",
+                        "og:url": "https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/overview.html",
+                        "reimaginefilters": "Subject|Information Technology (IT)|Artificial Intelligence (AI);",
+                        "reimaginetoplevelcategory": "Audience|Business|Technical Decision Maker (TDM)|Developer;",
+                        "taxonomy": "etm-b543349dfd0747fa99ab2673f4042144;etm-b21347d4d9474d5081968efe45da1418;",
+                        "title": "AI Development",
+                        "twitter:card": "summary",
+                        "twitter:image": "https://www.intel.com/content/dam/logos/logo-energyblue-1x1.png",
+                        "viewport": "width=device-width, initial-scale=1.0",
+                        "x-server": "INTE-80"
                     }
                 ]
             },
-            "snippet": "Cat® equipment and services are backed by the largest, most experienced dealer network in the world. Get the job done with our products, technology and ...",
-            "title": "Caterpillar: Products & Services – North America | Cat"
+            "snippet": "Deploy Powerful Apps Anywhere. Get the most out of your AI projects with Intel's AI PC. Discover tools, workflows, frameworks, and developer kits that include ...",
+            "title": "AI Development"
+        },
+        {
+            "displayLink": "www.state.gov",
+            "formattedUrl": "https://www.state.gov/artificial-intelligence/",
+            "htmlFormattedUrl": "https://www.state.gov/artificial-intelligence/",
+            "htmlSnippet": "The world&#39;s leading powers are racing to <b>develop</b> and deploy new technologies like <b>artificial intelligence</b> and quantum computing that could shape everything&nbsp;...",
+            "htmlTitle": "<b>Artificial Intelligence</b> (<b>AI</b>) - United States Department of State",
+            "kind": "customsearch#result",
+            "link": "https://www.state.gov/artificial-intelligence/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://www.state.gov/wp-content/uploads/2021/07/Artificial-Intelligence-AI-scaled.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "165",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjoxv76QdBT2IJjM5M9F6enhd5RjzGY8wLeQkycA1jgPbMGU4goNm0fPd4&s",
+                        "width": "306"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "article:modified_time": "2024-07-11T16:43:47+00:00",
+                        "msapplication-tap-highlight": "no",
+                        "msapplication-tileimage": "https://www.state.gov/wp-content/uploads/2022/04/cropped-dos_seal-270x270.png",
+                        "og:description": "Together with our allies and partners, the Department of State promotes an international policy environment and works to build partnerships that further our capabilities in AI technologies, protect our national and economic security, and promote our values.",
+                        "og:image": "https://www.state.gov/wp-content/uploads/2021/07/Artificial-Intelligence-AI-scaled.jpg",
+                        "og:image:height": "1378",
+                        "og:image:type": "image/jpeg",
+                        "og:image:width": "2560",
+                        "og:locale": "en_US",
+                        "og:site_name": "United States Department of State",
+                        "og:title": "Artificial Intelligence (AI) - United States Department of State",
+                        "og:type": "article",
+                        "og:url": "https://www.state.gov/artificial-intelligence/",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://www.state.gov/wp-content/uploads/2021/07/Artificial-Intelligence-AI-scaled.jpg",
+                        "viewport": "width=device-width, initial-scale=1"
+                    }
+                ]
+            },
+            "snippet": "The world's leading powers are racing to develop and deploy new technologies like artificial intelligence and quantum computing that could shape everything ...",
+            "title": "Artificial Intelligence (AI) - United States Department of State"
         },
         {
             "displayLink": "en.wikipedia.org",
-            "formattedUrl": "https://en.wikipedia.org/wiki/Cat",
-            "htmlFormattedUrl": "https://en.wikipedia.org/wiki/<b>Cat</b>",
-            "htmlSnippet": "The <b>cat</b> (Felis catus), also referred to as domestic <b>cat</b> or house <b>cat</b>, is a small domesticated carnivorous mammal. It is the only domesticated species of the&nbsp;...",
-            "htmlTitle": "<b>Cat</b> - Wikipedia",
+            "formattedUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+            "htmlFormattedUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+            "htmlSnippet": "<b>Artificial intelligence</b> was founded as an academic discipline in 1956, and the field went through multiple cycles of optimism, followed by periods of&nbsp;...",
+            "htmlTitle": "<b>Artificial intelligence</b> - Wikipedia",
             "kind": "customsearch#result",
-            "link": "https://en.wikipedia.org/wiki/Cat",
+            "link": "https://en.wikipedia.org/wiki/Artificial_intelligence",
             "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/General_Formal_Ontology.svg/260px-General_Formal_Ontology.svg.png"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "112",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuOGU1guihmYhEKjoxlVyG1u6qQs65nNsta_GPRjl-kr8GhLuh-8WX&s=0",
+                        "width": "112"
+                    }
+                ],
                 "metatags": [
                     {
                         "format-detection": "telephone=no",
-                        "og:image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1200px-Cat_August_2010-4.jpg",
-                        "og:image:height": "734",
-                        "og:image:width": "1200",
-                        "og:title": "Cat - Wikipedia",
+                        "og:title": "Artificial intelligence - Wikipedia",
                         "og:type": "website",
                         "referrer": "origin",
                         "theme-color": "#eaecf0",
@@ -101,335 +186,263 @@
                     }
                 ]
             },
-            "snippet": "The cat (Felis catus), also referred to as domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the ...",
-            "title": "Cat - Wikipedia"
+            "snippet": "Artificial intelligence was founded as an academic discipline in 1956, and the field went through multiple cycles of optimism, followed by periods of ...",
+            "title": "Artificial intelligence - Wikipedia"
         },
         {
-            "displayLink": "www.catfootwear.com",
-            "formattedUrl": "http://www.catfootwear.com/en/home",
-            "htmlFormattedUrl": "http://www.<b>cat</b>footwear.com/en/home",
-            "htmlSnippet": "Official <b>Cat</b> Footwear Site - Shop Caterpillar work boots, steel toe work boots &amp; shoes along with casual shoes &amp; casual boots. Free shipping!",
-            "htmlTitle": "Caterpillar Work Boots - Comfortable Work Shoes | <b>Cat</b> Footwear",
+            "displayLink": "cloud.google.com",
+            "formattedUrl": "https://cloud.google.com/vertex-ai",
+            "htmlFormattedUrl": "https://cloud.google.com/vertex-<b>ai</b>",
+            "htmlSnippet": "Try Vertex AI, a fully-managed <b>AI development</b> platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
+            "htmlTitle": "Vertex <b>AI</b> with Gemini 1.5 Pro and Gemini 1.5 Flash | Google Cloud",
             "kind": "customsearch#result",
-            "link": "http://www.catfootwear.com/en/home",
+            "link": "https://cloud.google.com/vertex-ai",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://s7d4.scene7.com/is/image/WolverineWorldWide/logo-persistent_Cat?fmt=png-alpha&hei=300&wid=300"
+                        "src": "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "225",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQloCfCOhZ4C19osg0k7g_nnJ7cagRNzug9Y7ZAui62MesnVape5vZwQQc&s",
-                        "width": "225"
+                        "height": "163",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVQyWs5Uso3eBwGJxz7yY-ItXN2aDgKeFgK1iz7jf83Vnzzf6TBA60Pv8&s",
+                        "width": "310"
                     }
                 ],
                 "metatags": [
                     {
-                        "mcafeesecure-site-verification": "41856dd1150f95247e2522f5e1124cdd",
-                        "msvalidate.01": "AEBAA6E09D7C8EE5F88B52B7469AA7DB",
-                        "og:description": "Official Cat Footwear Site - Shop Caterpillar work boots, steel toe work boots & shoes along with casual shoes & casual boots. Free shipping!",
-                        "og:image": "https://s7d4.scene7.com/is/image/WolverineWorldWide/logo-persistent_Cat?fmt=png-alpha&hei=300&wid=300",
-                        "og:image:alt": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
-                        "og:site_name": "CAT Footwear",
-                        "og:title": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
+                        "og:description": "Try Vertex AI, a fully-managed AI development platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
+                        "og:image": "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png",
+                        "og:site_name": "Google Cloud",
+                        "og:title": "Vertex AI with Gemini 1.5 Pro and Gemini 1.5 Flash",
                         "og:type": "website",
-                        "og:url": "https://www.catfootwear.com/US/en/home",
-                        "p:domain_verify": "725b0bfb2f4e23b350bf13403b008121",
-                        "twitter:card": "summary",
-                        "twitter:description": "Official Cat Footwear Site - Shop Caterpillar work boots, steel toe work boots & shoes along with casual shoes & casual boots. Free shipping!",
-                        "twitter:image": "https://s7d4.scene7.com/is/image/WolverineWorldWide/logo-persistent_Cat?fmt=png-alpha&hei=300&wid=300",
-                        "twitter:image:alt": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
-                        "twitter:title": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear",
-                        "twitter:url": "https://www.catfootwear.com/US/en/home",
-                        "viewport": "width=321px"
-                    }
-                ],
-                "organization": [
-                    {
-                        "logo": "https://www.catfootwear.com/on/demandware.static/Sites-catfootwear_us-Site/-/default/dwd0e6f53b/images/logo.svg",
-                        "url": "CAT Footwear"
-                    },
-                    {
-                        "logo": "https://www.catfootwear.com/on/demandware.static/Sites-catfootwear_us-Site/-/default/dwd0e6f53b/images/logo.svg",
-                        "url": "https://www.catfootwear.com/US/en/home"
-                    },
-                    {
-                        "logo": "https://www.catfootwear.com/on/demandware.static/Sites-catfootwear_us-Site/-/default/dw72d894fb/images/mobile/logo.svg",
-                        "url": "CAT Footwear"
-                    },
-                    {
-                        "sameas": "https://www.facebook.com/catfootwear",
-                        "url": "https://www.catfootwear.com/en/home"
-                    }
-                ]
-            },
-            "snippet": "Official Cat Footwear Site - Shop Caterpillar work boots, steel toe work boots & shoes along with casual shoes & casual boots. Free shipping!",
-            "title": "Caterpillar Work Boots - Comfortable Work Shoes | Cat Footwear"
-        },
-        {
-            "displayLink": "www.caterpillar.com",
-            "formattedUrl": "https://www.caterpillar.com/",
-            "htmlFormattedUrl": "https://www.<b>cat</b>erpillar.com/",
-            "htmlSnippet": "<b>Cat</b> is the flagship brand in the Caterpillar portfolio. The products are engineered to perform and designed to last and come with support from the largest, most&nbsp;...",
-            "htmlTitle": "Caterpillar Inc",
-            "kind": "customsearch#result",
-            "link": "https://www.caterpillar.com/",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://s7d2.scene7.com/is/image/Caterpillar/CM20240520-c07d9-5b9bd"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "147",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-BGn5AfZRBVcPTi8RpxXpQ-KI6yt8dC_tjEDVSrbA159uXh-AKTd76ydW&s",
-                        "width": "343"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "og:site_name": "https://www.caterpillar.com/en.html",
-                        "template": "subsidiary-homepage-template",
+                        "og:url": "/vertex-ai",
+                        "referrer": "origin",
+                        "theme-color": "#039be5",
+                        "track-metadata-page_hosting_platform": "cgc_boq",
+                        "track-metadata-page_publishing_platform": "bricks",
+                        "track-metadata-page_template": "PAGE_TEMPLATE_TYPE_PRODUCT_V3",
                         "twitter:card": "summary_large_image",
-                        "viewport": "width=device-width, initial-scale=1.0"
+                        "twitter:description": "Try Vertex AI, a fully-managed AI development platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
+                        "twitter:image": "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png",
+                        "twitter:site": "@googlecloud",
+                        "twitter:title": "Vertex AI with Gemini 1.5 Pro and Gemini 1.5 Flash",
+                        "twitter:url": "/vertex-ai",
+                        "viewport": "initial-scale=1, width=device-width"
                     }
                 ]
             },
-            "snippet": "Cat is the flagship brand in the Caterpillar portfolio. The products are engineered to perform and designed to last and come with support from the largest, most ...",
-            "title": "Caterpillar Inc"
+            "snippet": "Try Vertex AI, a fully-managed AI development platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
+            "title": "Vertex AI with Gemini 1.5 Pro and Gemini 1.5 Flash | Google Cloud"
         },
         {
-            "displayLink": "www.instagram.com",
-            "formattedUrl": "https://www.instagram.com/nala_cat/?hl=en",
-            "htmlFormattedUrl": "https://www.instagram.com/nala_<b>cat</b>/?hl=en",
-            "htmlSnippet": "5M Followers, 871 Following, 7286 Posts - Nala <b>Cat</b> ™ (@nala_cat) on Instagram: &quot;  My premium <b>cat</b> food brand @lovenalaco Guinness World Record Holder&nbsp;...",
-            "htmlTitle": "Nala <b>Cat</b> ™ (@nala_cat) • Instagram photos and videos",
+            "displayLink": "www.reddit.com",
+            "formattedUrl": "https://www.reddit.com/r/.../am_i_misunderstanding_research_with_ai/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/.../am_i_misunderstanding_research_with_<b>ai</b>/",
+            "htmlSnippet": "Feb 9, 2021 <b>...</b> They already start with one red tech and one yellow tech, so researching <b>AI Development</b> Algorithm first gives them a second red tech and then&nbsp;...",
+            "htmlTitle": "Am I misunderstanding research with <b>AI Development</b> Algorithm? : r ...",
             "kind": "customsearch#result",
-            "link": "https://www.instagram.com/nala_cat/?hl=en",
+            "link": "https://www.reddit.com/r/twilightimperium/comments/lgdi8q/am_i_misunderstanding_research_with_ai/",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://scontent-dfw5-1.cdninstagram.com/v/t51.2885-19/12716885_1036043873124983_921931635_a.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=fcb8ef&_nc_ohc=j8BLh63DXGoQ7kNvgEeSIpm&_nc_ht=scontent-dfw5-1.cdninstagram.com&oh=00_AYDogccsm6Z-zYVbQgcKFTl9NMHR3uPvuyc-rmqMGAZitQ&oe=66EE69DC"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "100",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd-wa3yswh-UdTassZdIMZw0G1_SFwSiFJtXpKTXORPlutKSSnWSU&s",
-                        "width": "100"
+                        "src": "https://share.redd.it/preview/post/lgdi8q"
                     }
                 ],
                 "metatags": [
                     {
-                        "al:android:app_name": "Instagram",
-                        "al:android:package": "com.instagram.android",
-                        "al:android:url": "https://instagram.com/_u/nala_cat/",
-                        "al:ios:app_name": "Instagram",
-                        "al:ios:app_store_id": "389801252",
-                        "al:ios:url": "instagram://user?username=nala_cat",
-                        "apple-mobile-web-app-status-bar-style": "default",
-                        "bingbot": "noarchive",
-                        "color-scheme": "light",
-                        "mobile-web-app-capable": "yes",
-                        "og:description": "5M Followers, 871 Following, 7,286 Posts - See Instagram photos and videos from Nala Cat ™ (@nala_cat)",
-                        "og:image": "https://scontent-dfw5-1.cdninstagram.com/v/t51.2885-19/12716885_1036043873124983_921931635_a.jpg?stp=dst-jpg_s100x100&_nc_cat=1&ccb=1-7&_nc_sid=fcb8ef&_nc_ohc=j8BLh63DXGoQ7kNvgEeSIpm&_nc_ht=scontent-dfw5-1.cdninstagram.com&oh=00_AYDogccsm6Z-zYVbQgcKFTl9NMHR3uPvuyc-rmqMGAZitQ&oe=66EE69DC",
-                        "og:title": "Nala Cat ™ (@nala_cat) • Instagram photos and videos",
-                        "og:type": "profile",
-                        "og:url": "https://www.instagram.com/nala_cat/",
-                        "theme-color": "#FFFFFF",
-                        "viewport": "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+                        "apple-mobile-web-app-capable": "yes",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/atlvf - 7 votes and 6 comments",
+                        "og:image": "https://share.redd.it/preview/post/lgdi8q",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "og:image:height": "630",
+                        "og:image:width": "1200",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/twilightimperium on Reddit: Am I misunderstanding research with AI Development Algorithm?",
+                        "og:ttl": "600",
+                        "og:type": "website",
+                        "og:url": "https://www.reddit.com/r/twilightimperium/comments/lgdi8q/am_i_misunderstanding_research_with_ai/",
+                        "theme-color": "#000000",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://share.redd.it/preview/post/lgdi8q",
+                        "twitter:site": "@reddit",
+                        "twitter:title": "r/twilightimperium on Reddit: Am I misunderstanding research with AI Development Algorithm?",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
                     }
                 ]
             },
-            "snippet": "5M Followers, 871 Following, 7286 Posts - Nala Cat ™ (@nala_cat) on Instagram: \" My premium cat food brand @lovenalaco Guinness World Record Holder ...",
-            "title": "Nala Cat ™ (@nala_cat) • Instagram photos and videos"
+            "snippet": "Feb 9, 2021 ... They already start with one red tech and one yellow tech, so researching AI Development Algorithm first gives them a second red tech and then ...",
+            "title": "Am I misunderstanding research with AI Development Algorithm? : r ..."
         },
         {
-            "displayLink": "www.ohchr.org",
-            "formattedUrl": "https://www.ohchr.org/en/treaty-bodies/cat",
-            "htmlFormattedUrl": "https://www.ohchr.org/en/treaty-bodies/<b>cat</b>",
-            "htmlSnippet": "About treaty bodies ... The <b>Committee against Torture</b> (<b>CAT</b>) is the body of 10 independent experts that monitors implementation of the Convention against Torture&nbsp;...",
-            "htmlTitle": "<b>Committee against Torture</b> | OHCHR",
+            "displayLink": "arxiv.org",
+            "formattedUrl": "https://arxiv.org/abs/2004.07213",
+            "htmlFormattedUrl": "https://arxiv.org/abs/2004.07213",
+            "htmlSnippet": "Apr 15, 2020 <b>...</b> In order for <b>AI</b> developers to earn trust from system users, customers, civil society, governments, and other stakeholders that they are building&nbsp;...",
+            "htmlTitle": "Toward Trustworthy <b>AI Development</b>: Mechanisms for Supporting ...",
             "kind": "customsearch#result",
-            "link": "https://www.ohchr.org/en/treaty-bodies/cat",
+            "link": "https://arxiv.org/abs/2004.07213",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg"
+                        "src": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "225",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-gxVM6ZFxea3dcbn5ZXSb2egOKPc6J2RwJddqmrXupWMVdNyyg1jlhA&s",
-                        "width": "225"
+                        "height": "150",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStsc5IszP_UC7vkymrk7PhjHGOFQhTh862xtJcQkxDem2IteJQXpob6_Vb&s",
+                        "width": "336"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "citation_author": "Brundage, Miles",
+                        "citation_title": "Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims",
+                        "msapplication-tilecolor": "#da532c",
+                        "og:description": "With the recent wave of progress in artificial intelligence (AI) has come a growing awareness of the large-scale impacts of AI systems, and recognition that existing regulations and norms in industry and academia are insufficient to ensure responsible AI development. In order for AI developers to earn trust from system users, customers, civil society, governments, and other stakeholders that they are building AI responsibly, they will need to make verifiable claims to which they can be held accountable. Those outside of a given organization also need effective means of scrutinizing such claims. This report suggests various steps that different stakeholders can take to improve the verifiability of claims made about AI systems and their associated development processes, with a focus on providing evidence about the safety, security, fairness, and privacy protection of AI systems. We analyze ten mechanisms for this purpose--spanning institutions, software, and hardware--and make recommendations aimed at implement",
+                        "og:image": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+                        "og:image:alt": "arXiv logo",
+                        "og:image:height": "700",
+                        "og:image:secure_url": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+                        "og:image:width": "1200",
+                        "og:site_name": "arXiv.org",
+                        "og:title": "Toward Trustworthy AI Development: Mechanisms for Supporting Verifiable Claims",
+                        "og:type": "website",
+                        "og:url": "https://arxiv.org/abs/2004.07213v2",
+                        "theme-color": "#ffffff",
+                        "twitter:card": "summary",
+                        "twitter:description": "With the recent wave of progress in artificial intelligence (AI) has come a growing awareness of the large-scale impacts of AI systems, and recognition that existing regulations and norms in...",
+                        "twitter:image": "https://static.arxiv.org/icons/twitter/arxiv-logo-twitter-square.png",
+                        "twitter:image:alt": "arXiv logo",
+                        "twitter:site": "@arxiv",
+                        "twitter:title": "Toward Trustworthy AI Development: Mechanisms for Supporting...",
+                        "viewport": "width=device-width, initial-scale=1"
+                    }
+                ]
+            },
+            "snippet": "Apr 15, 2020 ... In order for AI developers to earn trust from system users, customers, civil society, governments, and other stakeholders that they are building ...",
+            "title": "Toward Trustworthy AI Development: Mechanisms for Supporting ..."
+        },
+        {
+            "displayLink": "www.reddit.com",
+            "formattedUrl": "https://www.reddit.com/.../why_has_ai_development_slowed_down_signifi...",
+            "htmlFormattedUrl": "https://www.reddit.com/.../why_has_<b>ai</b>_<b>development</b>_slowed_down_signifi...",
+            "htmlSnippet": "Jun 11, 2024 <b>...</b> Still <b>developing</b> tech, collecting data, buying hardware, burning a ton of energy, finding use cases. My hope is nob-llm takes off next.",
+            "htmlTitle": "Why has <b>AI development</b> slowed down significantly all of a sudden ...",
+            "kind": "customsearch#result",
+            "link": "https://www.reddit.com/r/ArtificialInteligence/comments/1dd0lzs/why_has_ai_development_slowed_down_significantly/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://preview.redd.it/why-has-ai-development-slowed-down-significantly-all-of-a-v0-1gc7jtqlvw5d1.png?width=500&format=png&auto=webp&s=d761aafde619c0361c964f816698e74845e32aae"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "227",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5CmlqtPBgBNVeokCIEH0SFBXq-kOiw1x1PFkNhg91M_S2dWEvwKhkaZs&s",
+                        "width": "222"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "apple-mobile-web-app-capable": "yes",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "msapplication-navbutton-color": "#000000",
+                        "theme-color": "#000000",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+                    }
+                ]
+            },
+            "snippet": "Jun 11, 2024 ... Still developing tech, collecting data, buying hardware, burning a ton of energy, finding use cases. My hope is nob-llm takes off next.",
+            "title": "Why has AI development slowed down significantly all of a sudden ..."
+        },
+        {
+            "displayLink": "builtin.com",
+            "formattedUrl": "https://builtin.com/artificial-intelligence",
+            "htmlFormattedUrl": "https://builtin.com/artificial-intelligence",
+            "htmlSnippet": "<b>AI</b> systems learn how to do so by processing massive amounts of data and looking for patterns to model in their own decision-making. In many cases, humans will&nbsp;...",
+            "htmlTitle": "What Is <b>Artificial Intelligence</b> (<b>AI</b>)? | Built In",
+            "kind": "customsearch#result",
+            "link": "https://builtin.com/artificial-intelligence",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/what-is-artificial-intelligence-ai.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "159",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQur2hnnOsK8MKGvRF54kfyLo325ZZQjT52MWBWqguOTnN-ek6Xq8teyUuM&s",
+                        "width": "318"
                     }
                 ],
                 "metatags": [
                     {
                         "handheldfriendly": "true",
                         "mobileoptimized": "width",
-                        "og:image": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg",
-                        "og:image:url": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg",
-                        "og:site_name": "OHCHR",
-                        "og:title": "Committee against Torture",
-                        "og:url": "https://www.ohchr.org/en/treaty-bodies/cat",
-                        "twitter:card": "summary_large_image",
-                        "twitter:image": "https://www.ohchr.org/sites/default/files/2021-07/Honduras-55300969-EPA.jpg",
-                        "twitter:site": "@UNHumanRights",
-                        "twitter:title": "Committee against Torture",
-                        "twitter:url": "https://www.ohchr.org/en/treaty-bodies/cat",
-                        "viewport": "width=device-width, initial-scale=1.0"
+                        "theme-color": "#04003F",
+                        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5"
                     }
                 ]
             },
-            "snippet": "About treaty bodies ... The Committee against Torture (CAT) is the body of 10 independent experts that monitors implementation of the Convention against Torture ...",
-            "title": "Committee against Torture | OHCHR"
+            "snippet": "AI systems learn how to do so by processing massive amounts of data and looking for patterns to model in their own decision-making. In many cases, humans will ...",
+            "title": "What Is Artificial Intelligence (AI)? | Built In"
         },
         {
-            "displayLink": "catcora.com",
-            "formattedUrl": "https://catcora.com/",
-            "htmlFormattedUrl": "https://<b>cat</b>cora.com/",
-            "htmlSnippet": "<b>Cat</b> Cora is a world-renowned celebrity chef, author, restaurateur, contributing editor, television host and personality, actress, avid philanthropist,&nbsp;...",
-            "htmlTitle": "<b>Cat</b> Cora - 1st Female Iron Chef",
+            "displayLink": "www.ibm.com",
+            "formattedUrl": "https://www.ibm.com/topics/artificial-intelligence",
+            "htmlFormattedUrl": "https://www.ibm.com/topics/artificial-intelligence",
+            "htmlSnippet": "Aug 16, 2024 <b>...</b> Generative <b>AI</b> code generation tools and automation tools can streamline repetitive coding tasks associated with application <b>development</b>, and&nbsp;...",
+            "htmlTitle": "What Is <b>Artificial Intelligence</b> (<b>AI</b>)? | IBM",
             "kind": "customsearch#result",
-            "link": "https://catcora.com/",
+            "link": "https://www.ibm.com/topics/artificial-intelligence",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://cdn.shopify.com/s/files/1/0158/6210/4128/files/CatCora_black-01_ec65c23a-2af5-41d6-9ef4-57b6ccf384e8.png?height=628&pad_color=ffffff&v=1613181583&width=1200"
+                        "src": "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/creative-assets/s-migr/ul/g/64/ea/content-hub-analytic-page-leadspace-short.component.xl.ts=1724697969568.png/content/adobe-cms/us/en/topics/artificial-intelligence/_jcr_content/root/leadspace"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "162",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS8aA6Ih-IMYTYw-IacAq8lN1P_DM4gE8Y_Kj9nGJAKmTxrG_J-bLXjlvk&s",
-                        "width": "311"
+                        "height": "142",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWzttwaIcP5dQ0M_E6eFIK60SWr-9RUaVu6CpYagy2odX49RAai0CJWfgF&s",
+                        "width": "355"
                     }
                 ],
                 "metatags": [
                     {
-                        "author": "Global Chef Enterprises",
-                        "fo-verify": "3264f959-c965-4084-8066-9b5ce9f9669d",
-                        "handheldfriendly": "True",
-                        "mobileoptimized": "320",
-                        "og:description": "Cat Cora is a world-renowned celebrity chef, author, restaurateur, contributing editor, television host and personality, actress, avid philanthropist, health and fitness expert, lifestyle entrepreneur and proud mother of six. Cat continues to shatter glass ceilings, inspire millions and be a leader in her industry.",
-                        "og:image": "https://cdn.shopify.com/s/files/1/0158/6210/4128/files/CatCora_black-01_ec65c23a-2af5-41d6-9ef4-57b6ccf384e8.png?height=628&pad_color=ffffff&v=1613181583&width=1200",
-                        "og:image:height": "628",
-                        "og:image:secure_url": "https://cdn.shopify.com/s/files/1/0158/6210/4128/files/CatCora_black-01_ec65c23a-2af5-41d6-9ef4-57b6ccf384e8.png?height=628&pad_color=ffffff&v=1613181583&width=1200",
-                        "og:image:width": "1200",
-                        "og:site_name": "Global Chef Enterprises",
-                        "og:title": "Cat Cora - 1st Female Iron Chef",
+                        "countrycode": "us",
+                        "dcterms.date": "2024-08-09T00:00:00.000",
+                        "focusarea": "Cloud - Automation - All",
+                        "ibm.com.search.appid": "thinkhub",
+                        "ibm.com.search.scopes": "thinkhub",
+                        "ibm.search.facet.field_hierarchy_01": "taxonomy : Topics / AI and ML / Artificial intelligence / Enterprise AI",
+                        "ibm.search.facet.field_hierarchy_03": "taxonomy : Content Format / Article",
+                        "ibm.search.facet.field_hierarchy_04": "taxonomy : Content Type / Explainer",
+                        "ibm.search.facet.field_keyword_01": "Enterprise AI",
+                        "ibm.search.facet.field_keyword_09": "https://prod-cloud-publish.aem.ibm.net/content/dam/connectedassets-adobe-cms/worldwide-content/creative-assets/s-migr/ul/g/64/ea/content-hub-analytic-page-leadspace-short.component.crop-thumbnail-16-by-9-retina.ts=0.png/content/adobe-cms/us/en/topics/artificial-intelligence/jcr:content/root/leadspace",
+                        "ibm.search.facet.field_text_01": "09 August 2024",
+                        "ibm.search.facet.field_text_03": "Explainer",
+                        "languagecode": "en",
+                        "og:description": "Artificial intelligence (AI) is technology that enables computers and machines to simulate human learning, comprehension, problem solving, decision-making, creativity and autonomy.",
+                        "og:image": "https://assets.ibm.com/is/image/ibm/ibm-8bar-logo-2560x2560?$original$",
+                        "og:title": "What Is Artificial Intelligence (AI)? | IBM",
                         "og:type": "website",
-                        "og:url": "https://catcora.com/",
-                        "p:domain_verify": "c2059ccdb75de780cd704247684e596c",
-                        "shopify-checkout-api-token": "0729e69d9bfaa608a0dffd522f5b06c8",
-                        "shopify-digital-wallet": "/15862104128/digital_wallets/dialog",
-                        "theme-color": "#ffffff",
-                        "twitter:card": "summary",
-                        "twitter:site": "@catcora",
-                        "viewport": "width=device-width,initial-scale=1"
-                    }
-                ]
-            },
-            "snippet": "Cat Cora is a world-renowned celebrity chef, author, restaurateur, contributing editor, television host and personality, actress, avid philanthropist, ...",
-            "title": "Cat Cora - 1st Female Iron Chef"
-        },
-        {
-            "displayLink": "www.merriam-webster.com",
-            "formattedUrl": "https://www.merriam-webster.com/dictionary/cat",
-            "htmlFormattedUrl": "https://www.merriam-webster.com/dictionary/<b>cat</b>",
-            "htmlSnippet": "The meaning of <b>CAT</b> is a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice. How to use <b>cat</b> in a sentence.",
-            "htmlTitle": "<b>Cat</b> Definition &amp; Meaning - Merriam-Webster",
-            "kind": "customsearch#result",
-            "link": "https://www.merriam-webster.com/dictionary/cat",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "225",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKksTSKYwpW8It403nrjw5t1_a8pLO2PI6ImEG7uvFrNfacgiziPZgG-_O&s",
-                        "width": "225"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "fb:app_id": "178450008855735",
-                        "msapplication-tilecolor": "#2b5797",
-                        "og:aria-text": "Post the Definition of cat to Facebook",
-                        "og:description": "a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice; any of a family (Felidae) of carnivorous usually solitary and nocturnal mammals (such as the domestic cat, lion, tiger, leopard, jaguar, cougar, wildcat, lynx, and cheetah); guy… See the full definition",
-                        "og:image": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png",
-                        "og:title": "Definition of CAT",
-                        "og:url": "https://www.merriam-webster.com/dictionary/cat",
-                        "referrer": "unsafe-url",
-                        "theme-color": "#ffffff",
-                        "twitter:aria-text": "Share the Definition of cat on Twitter",
-                        "twitter:card": "summary",
-                        "twitter:description": "a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice… See the full definition",
-                        "twitter:image": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png",
-                        "twitter:site": "@MerriamWebster",
-                        "twitter:title": "Definition of CAT",
-                        "twitter:url": "https://www.merriam-webster.com/dictionary/cat",
-                        "viewport": "width=device-width, initial-scale=1.0"
-                    }
-                ]
-            },
-            "snippet": "The meaning of CAT is a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice. How to use cat in a sentence.",
-            "title": "Cat Definition & Meaning - Merriam-Webster"
-        },
-        {
-            "displayLink": "www.catphones.com",
-            "formattedUrl": "https://www.catphones.com/",
-            "htmlFormattedUrl": "https://www.<b>cat</b>phones.com/",
-            "htmlSnippet": "Reliable, rugged and ready for anything, the <b>Cat</b> S75 keeps out sand, dust, dirt, works in extremes of temperature and humidity, and shrug off whatever life&nbsp;...",
-            "htmlTitle": "<b>Cat</b> phones: Made Mighty",
-            "kind": "customsearch#result",
-            "link": "https://www.catphones.com/",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://www.catphones.com/wp-content/uploads/2023/04/IMG-1.png"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "181",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2HHKMA3RfAXn5miENAKx6q6Mz30CYeH9S_xc6rOx9QpQCD4fFC8nESQ_S&s",
-                        "width": "278"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "article:modified_time": "2023-08-17T13:51:41+00:00",
-                        "facebook-domain-verification": "ahi1ogptvd5etwusga8uaz4owgdfkw",
-                        "msapplication-tileimage": "https://www.catphones.com/en-gb/wp-content/themes/wp5/assets/brand/cat/img/logo.png",
-                        "og:description": "Our most reliable phone ever.Introducing the Cat® S75 – The phone that shrugs off anything that life throws at it, even loss of signal! Buy from a retail partner RELIABILITY: UNEQUALLED.​ Choose a phone that won’t let you down. Ever. Reliable, rugged and ready for anything, the Cat S75 keeps out sand, dust, dirt, works...",
-                        "og:image": "https://www.catphones.com/wp-content/uploads/2020/06/Cat-S42-Tough.jpg",
-                        "og:image:height": "480",
-                        "og:image:type": "image/jpeg",
-                        "og:image:width": "1096",
-                        "og:locale": "en_GB",
-                        "og:site_name": "Cat phones",
-                        "og:title": "Made Mighty | Cat phones",
-                        "og:type": "website",
-                        "og:url": "https://www.catphones.com/en-gb/",
-                        "p:domain_verify": "594966bf088b7e014c75ba165015daf8",
-                        "twitter:card": "summary_large_image",
-                        "twitter:data1": "8 minutes",
-                        "twitter:label1": "Est. reading time",
+                        "og:url": "https://www.ibm.com/topics/artificial-intelligence",
+                        "searchtitle": "What Is Artificial Intelligence (AI)?",
+                        "template": "learn",
                         "viewport": "width=device-width, initial-scale=1"
                     }
                 ]
             },
-            "snippet": "Reliable, rugged and ready for anything, the Cat S75 keeps out sand, dust, dirt, works in extremes of temperature and humidity, and shrug off whatever life ...",
-            "title": "Cat phones: Made Mighty"
+            "snippet": "Aug 16, 2024 ... Generative AI code generation tools and automation tools can streamline repetitive coding tasks associated with application development, and ...",
+            "title": "What Is Artificial Intelligence (AI)? | IBM"
         }
     ],
     "kind": "customsearch#search",
@@ -443,10 +456,10 @@
                 "inputEncoding": "utf8",
                 "outputEncoding": "utf8",
                 "safe": "off",
-                "searchTerms": "Cat",
+                "searchTerms": "AI Development",
                 "startIndex": 11,
-                "title": "Google Custom Search - Cat",
-                "totalResults": "5450000000"
+                "title": "Google Custom Search - AI Development",
+                "totalResults": "3090000000"
             }
         ],
         "request": [
@@ -458,18 +471,18 @@
                 "inputEncoding": "utf8",
                 "outputEncoding": "utf8",
                 "safe": "off",
-                "searchTerms": "Cat",
+                "searchTerms": "AI Development",
                 "startIndex": 1,
-                "title": "Google Custom Search - Cat",
-                "totalResults": "5450000000"
+                "title": "Google Custom Search - AI Development",
+                "totalResults": "3090000000"
             }
         ]
     },
     "searchInformation": {
-        "formattedSearchTime": "0.44",
-        "formattedTotalResults": "5,450,000,000",
-        "searchTime": 0.443876,
-        "totalResults": "5450000000"
+        "formattedSearchTime": "0.53",
+        "formattedTotalResults": "3,090,000,000",
+        "searchTime": 0.525233,
+        "totalResults": "3090000000"
     },
     "url": {
         "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json",

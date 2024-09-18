@@ -52,6 +52,38 @@ In this example:
 - A file is created in the specified directory using the `File` class.
 - The `GoogleSearch` class is used to perform a Google search and store the search results in the created file.
 
+```python
+from modules.angel_configure import GoogleSearch
+
+search = GoogleSearch()
+search._search_google("AI Development")
+
+search._get_result(0, title=True, snippet=True, link=True)
+print("\n")
+
+search._get_result(1, title=True, snippet=True, link=True)
+print("\n")
+
+search._get_result(2, title=True, snippet=True, link=True)
+print("\n")
+```
+
+```Output
+Title: "AI Based Solutions for Developers - Google for Developers"
+Snippet: "Access cutting-edge AI models and open source tools for machine learning. Explore Google's AI solutions built to simplify app and web development for ..."
+Link: "https://developers.google.com/focus/ai-development"
+
+
+Title: "AI Development"
+Snippet: "Deploy Powerful Apps Anywhere. Get the most out of your AI projects with Intel's AI PC. Discover tools, workflows, frameworks, and developer kits that include ..."
+Link: "https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/overview.html"
+
+
+Title: "Artificial Intelligence (AI) - United States Department of State"
+Snippet: "The world's leading powers are racing to develop and deploy new technologies like artificial intelligence and quantum computing that could shape everything ..."
+Link: "https://www.state.gov/artificial-intelligence/"
+```
+
 **Note:** Further updates and instructions will be provided as the project evolves.
 
 ## Knowledge Base Structure
