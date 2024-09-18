@@ -7,9 +7,10 @@
 #include <fstream>
 #include <sstream>
 #include <curl/curl.h>
-#include <unordered_map>
+#include <map>
 #include <nlohmann/json.hpp>
 
+/// @brief Class for searching Google
 class GoogleSearch{
     private:
         // Class Private Variables
@@ -217,6 +218,10 @@ class GoogleSearch{
         /// @brief Class Destructor. Deinitializes the class variables
         ~GoogleSearch();
 
+        /// @brief Function to get the class information
+        /// @return Vector of maps containing the class information
+        std::map<std::string, std::map<std::string, std::string>> __class_info__();
+
         // Getters
 
         /// @brief Number of results to be returned by google search
@@ -251,7 +256,7 @@ class GoogleSearch{
         /// @return String of extra queries in the search
         std::string _get_extra_query();
 
-        /// @brief Get the extra terms each document will include when searching
+        /// @brief Get the exact terms each document will include when searching
         /// @return String of extra terms
         std::string _get_exact_terms();
 
@@ -263,7 +268,7 @@ class GoogleSearch{
         /// @return String of site which is always included or excluded
         std::string _get_site_search();
 
-        /// @brief Get the value specifying is site should always be included or excluded when searching
+        /// @brief Get the value specifying if site should always be included or excluded when searching
         /// @return String of filter specifying whether site is included or excluded
         std::string _get_site_search_filter();
 
@@ -361,7 +366,7 @@ class GoogleSearch{
             const int start_index // index at which search result starts
         );
 
-        /// @brief Set the check whether duplicate is turned On or Off
+        /// @brief Set to check whether duplicate is turned On or Off
         /// @param filter Integer specifying if duplicate content is on or off
         void _set_filter(
             const int filter // check whether duplicate is turned On or Off
@@ -537,7 +542,7 @@ class GoogleSearch{
             const std::string json_file // Name of the file to save response data
         );
 
-        /// @brief Parse Json file and retrive relevant information
+        /// @brief Parse Json file and retrive relevant information of specified index
         /// @param result_index Index of individual result to parse
         /// @param title Get Title
         /// @param snippet Get Snippet
