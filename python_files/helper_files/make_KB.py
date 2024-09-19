@@ -16,7 +16,7 @@ def create_system_message(model_type: str = "[to specify]", ex: dict = {}) -> di
         dict: System message for the model
     """
     
-    system_message: str = f"You are a helpful assisstant given to the user to aid with their tasks. {model_type}. Use the given knowledge base to answer the user." # System Message for the model
+    system_message: str = f"You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant {model_type} according to user queries. Use the given knowledge base to answer the user." # System Message for the model
     function_format: str = "use function ```function_name [function_name]```" # Function creation format
     parameter_format: str = "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```" # Parameter assignment format
     answer_format: str = "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```" # Answer format by the model
@@ -91,11 +91,13 @@ if __name__ == "__main__":
     google = GoogleSearch()
     
     knowledge_base = []
-    knowledge_base.append(create_system_message())
+    
+    class_description = [description for _,description in google.__class_info__()['Name_Description'].items()][0].replace("Class ", "")
     
     functions = google.__class_info__()['Function_Info']
     return_types = google.__class_info__()['Function_Return']
     
+    knowledge_base.append(create_system_message(model_type=class_description))
     for function_name, function_description in functions.items():
     
         parameter_disc = google.__class_info__()['Function_Parameters'][function_name]

@@ -1,11 +1,17 @@
 [
     {
-        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. [to specify]. Use the given knowledge base to answer the user.",
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant for searching Google according to user queries. Use the given knowledge base to answer the user.",
         "function_format": "use function ```function_name [function_name]```",
         "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "cant_answer_format": "```Sorry, this query cannot be handled by me```",
-        "examples": {},
+        "examples": {
+            "Search google for \"What are LLMs?\" and get 5 results and show me title and snippet of the 2nd result": "To search google for \"What are LLMs?\" and get 5 results and then show 2nd result use function ```function_name _set_num_results``` with parameters ```parameters { num_results = 1 }``` then use function ```function_name _search_google``` with parameters ```parameters { query = \"What are LLMs?\" }``` then use function ```function_name _get_result``` with parameters ```parameters { result_index = 1 }, { title = True }, { snippet = True }```",
+            "Search google for \"Cats\" and get me \"pdf\" files but restrict words: \"large\", \"spotted\"": "To search google for \"Cats\" and get only \"pdf\" files and restrict words: \"large\", \"spotted\" use function ```function_name _set_filetype``` with parameters ```parameters { filetype = \"pdf\" }``` then use function ```function_name _set_exclude_terms``` with parameters ```parameters { exclude_terms = \"large, spotted\" }",
+            "Turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years": "To turn off \"simplified chinese\" and search for \"Great wall of China\" and restrict results to past 2 years use function ```function_name _set_c2coff``` with parameters ```parameters { c2coff = 0 }``` then use function ```function_name _search_google``` with parameters ```parameters { query = \"Great wall of China\" }``` then use function ```function_name _set_date_restrict``` with parameters ```parameters { date_restrict = 1 }``` then use function ```function_name _set_date_restrict_type``` with parameters ```parameters { date_restrict_type = \"y2\" }```",
+            "Create file \"hello.txt\" and write \"hello\" in it then hide the file": "```Sorry, this query cannot be handled by me```",
+            "Search the news for \"USA elections\" and give me 22 results but search only the site \"bbc.com\"": "```Sorry, this query cannot be handled by me```"
+        },
         "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
     },
     {
