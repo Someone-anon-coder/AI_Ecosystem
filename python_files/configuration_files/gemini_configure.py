@@ -6,16 +6,72 @@ from typing import Any, Iterable, Mapping
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 class GeminiModel():
+    """Class for querying gemini model
+    """
+    
+    def __class_info__(self) -> dict:
+        __name_discription__ = {"GeminiModel": "Class for querying gemini model"} # Name and description of the class
+        __constuctor_paramters__ = {"Not used": "Not used"} # Constructor parameters of the class
+        
+        __function_info__ = { # Function names and their description
+            "_query_model": "Query the model with the given query",
+            "_get_available_models": "Get a list of available models",
+            "_modify_safety_settings": "Change the safety settings of the model",
+            "_get_current_configuration": "Get the current configuration of the model",
+            "_set_configuration": "Set the configuration of the model",
+            "_get_model": "Get the model object",
+            "_set_model": "Set the model to use",
+            "_load_history": "Load the history from the given file",
+            "_clear_history": "Clear the history and save it to the given file"
+        }
+        
+        __function_parameters__ = { # Function names and their parameter
+            "_query_model": "query (str)\nverbose (False)",
+            "_get_available_models": "Not used",
+            "_modify_safety_settings": "safety (HarmCategory.name)\nsetting (HarmBlockThreshold.name)",
+            "_get_current_configuration": "Not used",
+            "_set_configuration": "candidate_count (int | None)\nstop_sequences (Iterable[str] | None)\nmax_output_tokens (int | None)\ntemperature (float | None)\ntop_p (float | None)\ntop_k (int | None)\nresponse_mime_type (str | None)\nresponse_schema (Mapping[str, Any] | None)",
+            "_get_model": "Not used",
+            "_set_model": "model_name (str)\nsystem_message (str | None)\nsafety_settings (Mapping[HarmCategory: HarmBlockThreshold] | None)",
+            "_load_history": "filename (str)",
+            "_clear_history": "filename (str)"
+        }
+        
+        __function_parameters_description__ = { # Function Parameter names and their description
+            "_query_model": "query: Query to ask the model\nverbose: Include extra information with result",
+            "_get_available_models": "Not used",
+            "_modify_safety_settings": "safety: Harm category to change the safety settings of\nsetting: Block threshold to change the safety settings to",
+            "_get_current_configuration": "Not used",
+            "_set_configuration": "candidate_count: Number of candidates to return\nstop_sequences: Words to stop the generation\nmax_output_tokens: Maximum number of tokens to generate\ntemperature: Temperature of the generation\ntop_p: Top p of the generation\ntop_k: Top k of the generation\nresponse_mime_type: Mime type of the response\nresponse_schema: Schema of the response",
+            "_get_model": "Not used",
+            "_set_model": "model_name: Name of the model to use\nsystem_message: System message to use\nsafety_settings: Safety settings to use",
+            "_load_history": "filename: Name of the file to load the history from",
+            "_clear_history": "filename: Name of the file to save the history to"
+        }
+        
+        __function_return_types__ = { # Function names and their return types
+            "_query_model": "Query the model with the given query",
+            "_get_available_models": "Get a list of available models",
+            "_modify_safety_settings": "Change the safety settings of the model",
+            "_get_current_configuration": "Get the current configuration of the model",
+            "_set_configuration": "Set the configuration of the model",
+            "_get_model": "Get the model object",
+            "_set_model": "Set the model to use",
+            "_load_history": "Load the history from the given file",
+            "_clear_history": "Clear the history and save it to the given file"
+        }
+        
+        return {
+            "Name_Description": __name_discription__,
+            "Constructor_Parameters": __constuctor_paramters__,
+            "Function_Info": __function_info__,
+            "Function_Parameters": __function_parameters__,
+            "Parameter_Description": __function_parameters_description__,
+            "Function_Return": __function_return_types__,
+        }
+        
     def __init__(self) -> None:
-        """
-            Args:
-                None
-            
-            Returns:
-                None
-            
-            Summary:
-                Initializes the GeminiModel class.
+        """Initialize GeminiModel and configure model to use
         """
         
         self._model_name = "gemini-1.5-pro"
@@ -33,25 +89,56 @@ class GeminiModel():
             HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
         }
         
-        self._configure_model()
+        self.__configure_model()
         
         self._configuration = genai.GenerationConfig()
         self._model = genai.GenerativeModel(self._model_name, generation_config=self._configuration, system_instruction=self._context, safety_settings=self._safety_settings)
     
-    def query_model(self, query: str, verbose: False) -> str:
-        """
-            Args:
-                query: The prompt you wish to ask gemini
-                verbose: Whether to print the responce in verbose mode
-            
-            Returns:
-                String of responce given by gemini
-            
-            Summary:
-                Asks the gemini model the given prompt with the previous history and returns the responce.
+    def __get_previous_messages(self) -> str:
+        """Get the previous messages in the history
+
+        Returns:
+            str: Previous messages in the history
         """
         
-        history = self._get_previous_messages()
+        history = ""
+        
+        for message in self._history:
+            history += f"{message['Role']}: {message['Content']}\n"
+        
+        return history
+
+    def __save_history(self, filename: str="json_files/gemini_history.json") -> None:
+        """Save the history to the given file
+
+        Args:
+            filename (str, optional): Name of the file to save the history to. Defaults to "json_files/gemini_history.json".
+        """
+        
+        with open(filename, 'w', encoding='utf-8') as file:
+            json.dump(self._history, file, ensure_ascii=False, indent=4)
+
+    def __configure_model(self) -> None:
+        """Load the API key from the .env file and configure the model
+        """
+        
+        from dotenv import load_dotenv
+        load_dotenv("secret_files/.env")
+        
+        genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+    
+    def _query_model(self, query: str, verbose: False) -> str:
+        """Query the model with the given query
+        
+        Args:
+            query (str): Query to ask the model
+            verbose (False): Include extra information with result
+
+        Returns:
+            str: Result of the query
+        """
+        
+        history = self.__get_previous_messages()
         responce = self._model.generate_content(history + "\n\nUser:" + query)
         
         self._history.append({
@@ -62,55 +149,40 @@ class GeminiModel():
             "Role": "ASSISTANT:",
             "Content": responce.text
         })
-        self._save_history()
+        self.__save_history()
         
         return responce._result if verbose else responce.text
     
-    def get_available_models(self) -> list:
-        """
-            Args:
-                None
-            
-            Returns
-                List of model names
-            
-            Summary:
-                Returns a list of model names available with the current api
+    def _get_available_models(self) -> list:
+        """Get a list of available models
+
+        Returns:
+            list: List of available models
         """
         
         return [model.name for model in genai.list_models()]
     
-    def modify_safety_settings(self, safety: HarmCategory.name, setting: HarmBlockThreshold.name = HarmBlockThreshold.BLOCK_LOW_AND_ABOVE) -> None:
-        """
-            Args:
-                safety: Safety Category to change
-                setting: Content level to block for the category
-            
-            Returns:
-                None
-            
-            Summary:
-                Changes the safety settings for the content generated by the model
+    def _modify_safety_settings(self, safety: HarmCategory, setting: HarmBlockThreshold = HarmBlockThreshold.BLOCK_LOW_AND_ABOVE) -> None:
+        """Change the safety settings of the model
+
+        Args:
+            safety (HarmCategory.name): Harm category to change the safety settings of
+            setting (HarmBlockThreshold.name, optional): Block threshold to change the safety settings to. Defaults to HarmBlockThreshold.BLOCK_LOW_AND_ABOVE.
         """
         
         self._safety_settings[safety] = setting
         self._model._safety_settings = self._safety_settings
     
-    def get_current_configuration(self) -> object:
-        """
-            Args:
-                None
-            
-            Returns:
-                None
-            
-            Summary:
-                Returns the current configuration of the model.
+    def _get_current_configuration(self) -> object:
+        """Get the current configuration of the model
+
+        Returns:
+            object: Current configuration of the model
         """
         
         return self._configuration
     
-    def set_configuration(
+    def _set_configuration(
         self,
         candidate_count: int | None = None,
         stop_sequences: Iterable[str] | None = None,
@@ -119,23 +191,19 @@ class GeminiModel():
         top_p: float | None = None,
         top_k: int | None = None,
         response_mime_type: str | None = None,
-        response_schema: Mapping[str, Any] | None = None) -> None:
-        """
-            Args:
-                candidate_count: The number of candidate
-                stop_sequences: List of string to stop the generation at
-                max_output_tokens: How many token's output must gemini model give
-                temperature: Controls the randomness of the output.
-                top_p: The maximum cumulative probability of tokens to consider when sampling.
-                top_k: The maximum number of tokens to consider when sampling.
-                response_mime_type: Output response mimetype of the generated candidate text.
-                response_schema: Specifies the format of the JSON requested if response_mime_type is application/json.
-            
-            Returns:
-                None
-            
-            Summary:
-                Sets the configuration of the model.
+        response_schema: Mapping[str, Any] | None = None
+    ) -> None:
+        """Set the configuration of the model
+
+        Args:
+            candidate_count (int | None, optional): Number of candidates to return. Defaults to None.
+            stop_sequences (Iterable[str] | None, optional): Words to stop the generation. Defaults to None.
+            max_output_tokens (int | None, optional): Maximum number of tokens to generate. Defaults to None.
+            temperature (float | None, optional): Temperature of the generation. Defaults to None.
+            top_p (float | None, optional): Top p of the generation. Defaults to None.
+            top_k (int | None, optional): Top k of the generation. Defaults to None.
+            response_mime_type (str | None, optional): Mime type of the response. Defaults to None.
+            response_schema (Mapping[str, Any] | None, optional): Schema of the response. Defaults to None.
         """
         
         self._configuration.candidate_count = candidate_count
@@ -149,47 +217,36 @@ class GeminiModel():
         
         self._model._generation_config = self._configuration
     
-    def get_model(self) -> genai.GenerativeModel:
-        """
-            Args:
-                None
-            
-            Returns:
-                None
-            
-            Summary:
-                Returns the current model being used.
+    def _get_model(self) -> genai.GenerativeModel:
+        """Get the model object
+
+        Returns:
+            genai.GenerativeModel: Model object
         """
         
         return self._model
 
-    def set_model(self, model_name: str, system_message: str | None = None, safety_settings: Mapping[HarmCategory: HarmBlockThreshold] | None = None) -> None:
-        """
-            Args:
-                model_name: Name of the model you want to use
-                system_message: System message for the model
+    def _set_model(self, model_name: str, system_message: str | None = None, safety_settings: Mapping | None = None) -> None:
+        """Set the model to use
 
-            Returns:
-                None
-            
-            Summary:
-                Sets the new model name and system message if given
+        Args:
+            model_name (str): Name of the model to use
+            system_message (str | None, optional): System message to use. Defaults to None.
+            safety_settings (_type_, optional): Safety settings to use. Defaults to None.
         """
         
         self._model.model_name = model_name
         self._model._system_instruction = self._context if system_message is not None else system_message
         self._model._safety_settings = safety_settings if safety_settings is not None else self._safety_settings
     
-    def load_history(self, filename: str= "json_files/gemini_history.json") -> list:
-        """
-            Args:
-                filename: Name of the file to load the history from
-            
-            Returns:
-                None
-            
-            Summary:
-                Loads the history from the given file
+    def _load_history(self, filename: str= "json_files/gemini_history.json") -> list:
+        """Load the history from the given file
+
+        Args:
+            filename (str, optional): Name of the file to load the history from. Defaults to "json_files/gemini_history.json".
+
+        Returns:
+            list: History loaded from the file
         """
         
         with open(filename, 'r', encoding='utf-8') as file:
@@ -197,70 +254,14 @@ class GeminiModel():
         
         return history
     
-    def clear_history(self, filename: str="json_files/gemini_history.json") -> None:
-        """
-            Args:
-                filename: Name of the file to clear the history from
-            
-            Returns:
-                None
-            
-            Summary:
-                Clears the history from the given file
+    def _clear_history(self, filename: str="json_files/gemini_history.json") -> None:
+        """Clear the history and save it to the given file
+
+        Args:
+            filename (str, optional): Name of the file to save the history to. Defaults to "json_files/gemini_history.json".
         """
         
         with open(filename, 'w', encoding='utf-8') as file:
             json.dump([{"Role": "SYSTEM:", "Content": self._context}], file, ensure_ascii=False, indent=4)
         
         self._history = [{"Role": "SYSTEM:", "Content": self._context}]
-
-    def _get_previous_messages(self) -> str:
-        """
-            Args:
-                None
-            
-            Returns:
-                String of the previous messages by USER and ASSISTANT
-            
-            Summary:
-                Returns the previous messages by USER and ASSISTANT
-        """
-        
-        history = ""
-        
-        for message in self._history:
-            history += f"{message['Role']}: {message['Content']}\n"
-        
-        return history
-
-    def _save_history(self, filename: str="json_files/gemini_history.json") -> None:
-        """
-            Args:
-                filename: Name of the file to save the history to
-            
-            Returns:
-                None
-            
-            Summary:
-                Saves the history to the given file
-        """
-        
-        with open(filename, 'w', encoding='utf-8') as file:
-            json.dump(self._history, file, ensure_ascii=False, indent=4)
-
-    def _configure_model(self) -> None:
-        """
-            Args:
-                None
-            
-            Returns:
-                None
-            
-            Summary:
-                Configures the model with the given configuration
-        """
-        
-        from dotenv import load_dotenv
-        load_dotenv("secret_files/.env")
-        
-        genai.configure(api_key=os.getenv("GEMINI_API_KEY"))

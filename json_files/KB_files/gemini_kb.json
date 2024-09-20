@@ -1,94 +1,94 @@
 [
     {
-        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are here to query \"Gemini\" AI by the request of user. Use the given knowledge base to answer the user.",
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant for querying gemini model according to user queries. Use the given knowledge base to answer the user.",
         "function_format": "use function ```function_name [function_name]```",
         "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "cant_answer_format": "```Sorry, this query cannot be handled by me```",
         "examples": {
-            "get the available models and ask gemini \"Meaning of life\"": "",
-            "change the safety settings of the model to now not block any dangerous content": "",
-            "get the current gemini model being used, query it \"Why is sky blue?\" and then clear the history": "",
-            "create file \"hello.txt\" and copy it to \"C:\\Downloads\\\" folder": "",
-            "get me the news on \"climate change\" between \"2015-1-1\" and \"2020-12-12\"": ""
+            "Set the model to \"gemini-pro\" and ask it \"What is the meaning of life?\" and give me a verbose response": "To set the model to \"gemini-pro\" and ask it \"What is the meaning of life?\" and then provide a verbose response use function ```function_name _set_model``` with parameters ```parameters { model_name = \"gemini-pro\" }``` then use function ```function_name _query_model``` with parameters ```parameters { query = \"What is the meaning of life?\" }, { verbose = True }```",
+            "Modify the safety settings for \"gemini-flash-1.5\" and set \"HARM_CATEGORY_DANGEROUS_CONTENT\" to \"BLOCK_NONE\" and then clear the conversation history": "To modify the safety settings for \"gemini-flash-1.5\" and set \"HARM_CATEGORY_DANGEROUS_CONTENT\" to \"BLOCK_NONE\" use function ```function_name _set_model``` with parameters ```parameters { model_name = \"gemini-flash-1.5\" }``` then use function ```function_name _modify_safety_settings``` with parameters ```parameters { safety = \"HARM_CATEGORY_DANGEROUS_CONTENT\" }, { setting = \"BLOCK_NONE\" }``` then use function ```function_name _clear_history``` with parameters ```parameters { filename = \"history.json\" }",
+            "Change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\"": "To change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\" use function ```function_name _set_model``` with parameters ```parameters { model_name = \"gemini-pro-1.0\" }``` then use function ```function_name _set_configuration``` with parameters ```parameters { candidate_count = 10 }, { temperature = 0.2 }``` then use function ```function_name _query_model``` with parameters ```parameters { query = \"Hello!\" }```",
+            "Change the name of file \"hello.txt\" in directory \"Greetings\\\" to \"hello_world.txt\" and then move it to \"Extra_Greetings\\\"": "```Sorry, this query cannot be handled by me```",
+            "Set the number of results to return to \"22\" and search for \"World Domination\" but only return \"pdf\" files which contains the word \"One World Government\" or \"One World Currency\"": "```Sorry, this query cannot be handled by me```"
         },
         "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
     },
     {
-        "function_name": "query_model",
-        "function_description": "Use this function to ask the gemini model the given prompt with the previous history and returns the responce. The parameter [query] is required",
+        "name": "_query_model",
+        "description": "Query the model with the given query",
         "parameters": {
-            "query (str)": "Specify this parameter to ask the gemini model the query",
-            "verbose (bool)": "Whether to get the whole result returned by the model. The values are [True, False]"
+            "query (str)": "Specify this parameter to Query to ask the model",
+            "verbose (False)": "Specify this parameter to Include extra information with result"
         },
-        "returns": "String of response returned by the gemini model"
+        "returns": "Query the model with the given query"
     },
     {
-        "function_name": "get_available_models",
-        "function_description": "Use this function to get a list of model names usable with the current api usage",
+        "name": "_get_available_models",
+        "description": "Get a list of available models",
         "parameters": {},
-        "returns": "List of model names available for use with the current gemini api"
+        "returns": "Get a list of available models"
     },
     {
-        "function_name": "modify_safety_settings",
-        "function_description": "Use this function to change the safety settings for the content generated by the model. The parameter [safety] is required",
+        "name": "_modify_safety_settings",
+        "description": "Change the safety settings of the model",
         "parameters": {
-            "safety": "Specify this parameter to change the Safety Category. Available categories are [HARM_CATEGORY_DANGEROUS_CONTENT, HARM_CATEGORY_HARASSMENT, HARM_CATEGORY_HATE_SPEECH, HARM_CATEGORY_SEXUALLY_EXPLICIT]",
-            "settings": "Specify this parameter to change Harm Block Threshold. Available Block Thresholds are [HARM_BLOCK_THRESHOLD_UNSPECIFIED, BLOCK_LOW_AND_ABOVE, BLOCK_MEDIUM_AND_ABOVE, BLOCK_ONLY_HIGH, BLOCK_NONE]"
+            "safety (HarmCategory.name)": "Specify this parameter to Harm category to change the safety settings of",
+            "setting (HarmBlockThreshold.name)": "Specify this parameter to Block threshold to change the safety settings to"
         },
-        "returns": "None"
+        "returns": "Change the safety settings of the model"
     },
     {
-        "function_name": "get_current_configuration",
-        "function_description": "Use this function to get the current configuration on the model",
+        "name": "_get_current_configuration",
+        "description": "Get the current configuration of the model",
         "parameters": {},
-        "returns": "Object of the current configuration used by the model"
+        "returns": "Get the current configuration of the model"
     },
     {
-        "function_name": "set_configuration",
-        "function_description": "Use this function to set the configuration for the current model",
+        "name": "_set_configuration",
+        "description": "Set the configuration of the model",
         "parameters": {
-            "candidate_count (int)": "Specify this parameter to get a specific number of response candidates",
-            "stop_sequences (Iterable)": "Specify this parameter to set the sequence to response at",
-            "max_output_tokens": "Specify this parameter to set the max output tokens generated by the model",
-            "temperature (float)": "Specify this parameter to set the randomness of the tokens generated by the model. The values available are [0.0 - 1.0]",
-            "top_p (float)": "Specify this parameter to set the maximum cumulative probability of tokens to consider when sampling",
-            "top_k (float)": "Specify this parameter to set the maximum number of tokens to consider when sampling",
-            "response_mime_type (str)": "Specify this parameter to set the output response mimetype of the generated candidate text",
-            "response_schema (Mapping)": "Specifies the format of the JSON requested if response_mime_type is application/json"
+            "candidate_count (int | None)": "Specify this parameter to Number of candidates to return",
+            "stop_sequences (Iterable[str] | None)": "Specify this parameter to Words to stop the generation",
+            "max_output_tokens (int | None)": "Specify this parameter to Maximum number of tokens to generate",
+            "temperature (float | None)": "Specify this parameter to Temperature of the generation",
+            "top_p (float | None)": "Specify this parameter to Top p of the generation",
+            "top_k (int | None)": "Specify this parameter to Top k of the generation",
+            "response_mime_type (str | None)": "Specify this parameter to Mime type of the response",
+            "response_schema (Mapping[str, Any] | None)": "Specify this parameter to Schema of the response"
         },
-        "returns": "None"
+        "returns": "Set the configuration of the model"
     },
     {
-        "function_name": "get_model",
-        "function_description": "Use this function to get the current model being used",
+        "name": "_get_model",
+        "description": "Get the model object",
         "parameters": {},
-        "returns": "Generative model"
+        "returns": "Get the model object"
     },
     {
-        "function_name": "set_model",
-        "function_description": "Use this function to the set model to use. The parameter [model_name] is required",
+        "name": "_set_model",
+        "description": "Set the model to use",
         "parameters": {
-            "model_name (str)": "Specify this parameter to set the model",
-            "system_message (str)": "Specify this parameter to set the system instruction for the model",
-            "safety_settings (Mapping)": "Specify this parameter to set the safety settings for the model"
+            "model_name (str)": "Specify this parameter to Name of the model to use",
+            "system_message (str | None)": "Specify this parameter to System message to use",
+            "safety_settings (Mapping[HarmCategory: HarmBlockThreshold] | None)": "Specify this parameter to Safety settings to use"
         },
-        "returns": "None"
+        "returns": "Set the model to use"
     },
     {
-        "function_name": "load_history",
-        "function_description": "Use this function to get the chat history with the model",
+        "name": "_load_history",
+        "description": "Load the history from the given file",
         "parameters": {
-            "filename": "Specify this parameter to load the chat history of the model from this file"
+            "filename (str)": "Specify this parameter to Name of the file to load the history from"
         },
-        "returns": "List of back and forth messages of history with the model"
+        "returns": "Load the history from the given file"
     },
     {
-        "function_name": "clear_history",
-        "function_description": "Use this function to clear the chat history file with the model",
+        "name": "_clear_history",
+        "description": "Clear the history and save it to the given file",
         "parameters": {
-            "filename": "Specify this parameter to clear the chat history of the model from this file"
+            "filename (str)": "Specify this parameter to Name of the file to save the history to"
         },
-        "returns": "None"
+        "returns": "Clear the history and save it to the given file"
     }
 ]

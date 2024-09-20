@@ -3,7 +3,8 @@ import os
 import json
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
-from modules.angel_configure import GoogleSearch
+# from modules.angel_configure import GoogleSearch
+from python_files.configuration_files.gemini_configure import GeminiModel
 
 def create_system_message(model_type: str = "[to specify]", ex: dict = {}) -> dict:
     """Create system message for the model
@@ -88,7 +89,7 @@ def create_parameter(paramters_disc: str, parameter_type: str) -> dict:
     return parameters
     
 if __name__ == "__main__":
-    google = GoogleSearch()
+    google = GeminiModel()
     
     knowledge_base = []
     
@@ -106,5 +107,5 @@ if __name__ == "__main__":
         
         knowledge_base.append(create_function(function_name=function_name, function_description=function_description, parameters=create_parameter(paramters_disc=parameter_disc, parameter_type=parameter_type), returns=return_type))
     
-    with open('json_files/KB_files/search_kb.json', 'w', encoding='utf8') as kb_file:
+    with open('json_files/KB_files/gemini_kb.json', 'w', encoding='utf8') as kb_file:
         json.dump(knowledge_base, kb_file, ensure_ascii=False, indent=4)
