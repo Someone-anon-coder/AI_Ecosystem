@@ -1,0 +1,40 @@
+[
+    {
+        "function_name": "function_name _create_file",
+        "parameters": {
+            "filename": "\"Hello.txt\""
+        }
+    },
+    {
+        "function_name": "function_name _write_file",
+        "parameters": {
+            "filename": "\"Hello.txt\"",
+            "content": "\"Hello\""
+        }
+    },
+    {
+        "function_name": "function_name _create_file",
+        "parameters": {
+            "filename": "\"bye.txt\""
+        }
+    },
+    {
+        "function_name": "function_name _write_file",
+        "parameters": {
+            "filename": "\"bye.txt\"",
+            "content": "\"Bye\""
+        }
+    },
+    {
+        "function_name": "function_name _delete_file",
+        "parameters": {
+            "filename": "\"Hello.txt\""
+        }
+    },
+    {
+        "function_name": "function_name _delete_file",
+        "parameters": {
+            "filename": "\"bye.txt\""
+        }
+    }
+]

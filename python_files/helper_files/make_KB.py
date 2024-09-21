@@ -1,11 +1,3 @@
-import sys
-import os
-import json
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
-# from modules.angel_configure import GoogleSearch
-from python_files.configuration_files.gemini_configure import GeminiModel
-
 def create_system_message(model_type: str = "[to specify]", ex: dict = {}) -> dict:
     """Create system message for the model
 
@@ -36,7 +28,7 @@ def create_system_message(model_type: str = "[to specify]", ex: dict = {}) -> di
         "Note": Note
     }
 
-def create_function(function_name: str, function_description: str, parameters: dict | None = None, returns: str = "None") -> dict:
+def create_function(function_name: str, function_description: str, parameters: tuple[dict, list] | None = None, returns: str = "None") -> dict:
     """Create function for the model
 
     Args:
@@ -49,14 +41,22 @@ def create_function(function_name: str, function_description: str, parameters: d
         dict: Function for the model
     """
     
+    if parameters[1] != []:
+        function_description += ". The Parameters ["
+        
+        for para in parameters[1]:
+            function_description += para.split(' ')[0] + ", " if para != parameters[1][-1] else para.split(' ')[0]
+        
+        function_description += "] are required"
+        
     return {
         "name": function_name,
         "description": function_description,
-        "parameters": parameters if parameters is not None else {},
+        "parameters": parameters[0] if parameters[0] is not None else {},
         "returns": returns
     }
 
-def create_parameter(paramters_disc: str, parameter_type: str) -> dict:
+def create_parameter(paramters_disc: str, parameter_type: str) -> tuple[dict, list]:
     """Create parameter for the model
 
     Args:
@@ -65,9 +65,12 @@ def create_parameter(paramters_disc: str, parameter_type: str) -> dict:
 
     Returns:
         dict: Parameter for the model
+        list: Required parameters for the model
     """
     
     parameters = {}
+    required_parameters = []
+    
     try: 
         parameters_in_disc = paramters_disc.split('\n')
     except ValueError:
@@ -82,30 +85,44 @@ def create_parameter(paramters_disc: str, parameter_type: str) -> dict:
         if para_in_disc == "Not used":
             continue
         
+        if " <Required>" in para_in_disc:
+            required_parameters.append(para_in_disc.replace(" <Required>", "").strip())
+        
         _, para_type = para_in_type.split(':')
         
-        parameters[para_in_disc.strip()] = "Specify this parameter to " + para_type.strip()
+        parameters[para_in_disc.replace(" <Required>", "").strip()] = "Specify this parameter to " + para_type.strip()
     
-    return parameters
+    return parameters, required_parameters
     
 if __name__ == "__main__":
-    google = GeminiModel()
+    import sys
+    import os
+    import json
+
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
+
+    from python_files.configuration_files.gemini_configure import GeminiModel
+    # from modules.angel_configure import GoogleSearch
+    
+    class_object = GeminiModel()
     
     knowledge_base = []
+    class_info = class_object.__class_info__()
     
-    class_description = [description for _,description in google.__class_info__()['Name_Description'].items()][0].replace("Class ", "")
+    class_name = list(class_info['Name_Description'].keys())[0].lower()
+    class_description = [description for _,description in class_info['Name_Description'].items()][0].replace("Class ", "")
     
-    functions = google.__class_info__()['Function_Info']
-    return_types = google.__class_info__()['Function_Return']
+    functions = class_info['Function_Info']
+    return_types = class_info['Function_Return']
     
     knowledge_base.append(create_system_message(model_type=class_description))
     for function_name, function_description in functions.items():
     
-        parameter_disc = google.__class_info__()['Function_Parameters'][function_name]
-        parameter_type = google.__class_info__()['Parameter_Description'][function_name]
+        parameter_disc = class_info['Function_Parameters'][function_name]
+        parameter_type = class_info['Parameter_Description'][function_name]
         return_type = return_types[function_name]
         
         knowledge_base.append(create_function(function_name=function_name, function_description=function_description, parameters=create_parameter(paramters_disc=parameter_disc, parameter_type=parameter_type), returns=return_type))
     
-    with open('json_files/KB_files/gemini_kb.json', 'w', encoding='utf8') as kb_file:
+    with open(f'json_files/KB_files/{class_name}_kb.json', 'w', encoding='utf8') as kb_file:
         json.dump(knowledge_base, kb_file, ensure_ascii=False, indent=4)

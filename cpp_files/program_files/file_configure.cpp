@@ -26,16 +26,16 @@ std::map<std::string, std::map<std::string, std::string>> File::__class_info__()
     };
 
     std::map<std::string, std::string> __function_parameters__ = { // Function names and parameters
-        {"_create_file", "filename (str)\nfile_path (str)"}, 
-        {"_write_file", "filename (str)\ncontent (str)\nfile_path (str)"}, 
-        {"_read_file", "filename (str)\nfile_path (str)"}, 
-        {"_delete_file", "filename (str)\nfile_path (str)"}, 
-        {"_rename_file", "filename (str)\nnew_filename (str)\nfile_path (str)"}, 
-        {"_move_file", "filename (str)\nnew_path (str)\nfile_path (str)"}, 
-        {"_copy_file", "filename (str)\nnew_path (str)\nfile_path (str)"}, 
-        {"_check_file", "filename (str)\nfile_path (str)"}, 
-        {"_hide_file", "filename (str)\nfile_path (str)"}, 
-        {"_unhide_file", "filename (str)\nfile_path (str)"}
+        {"_create_file", "filename (str) <Required>\nfile_path (str)"}, 
+        {"_write_file", "filename (str) <Required>\ncontent (str)\nfile_path (str)"}, 
+        {"_read_file", "filename (str) <Required>\nfile_path (str)"}, 
+        {"_delete_file", "filename (str) <Required>\nfile_path (str)"}, 
+        {"_rename_file", "filename (str) <Required>\nnew_filename (str) <Required>\nfile_path (str)"}, 
+        {"_move_file", "filename (str) <Required>\nnew_path (str) <Required>\nfile_path (str)"}, 
+        {"_copy_file", "filename (str) <Required>\nnew_path (str) <Required>\nfile_path (str)"}, 
+        {"_check_file", "filename (str) <Required>\nfile_path (str)"}, 
+        {"_hide_file", "filename (str) <Required>\nfile_path (str)"}, 
+        {"_unhide_file", "filename (str) <Required>\nfile_path (str)"}
     };
 
     std::map<std::string, std::string> __function_parameters_description__ = { // Function names, parameters and descriptions
@@ -197,7 +197,12 @@ void File::_unhide_file(
     const std::string file_path = "" // Path of the file
 ){
     const std::string fullpath = file_path + filename; // Location and Name of the file to unhide
-    const std::string new_fullpath = file_path + filename.substr(0); // New location and Name of the unhidden file
 
+    std::string new_filename = "";
+    for (long unsigned int i = 1; i <= filename.length(); i++){
+        new_filename += filename[i];
+    }
+    
+    const std::string new_fullpath = file_path + new_filename;
     std::rename(fullpath.c_str(), new_fullpath.c_str());
 }

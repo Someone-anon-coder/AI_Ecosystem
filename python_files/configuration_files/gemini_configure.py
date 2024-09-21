@@ -26,13 +26,13 @@ class GeminiModel():
         }
         
         __function_parameters__ = { # Function names and their parameter
-            "_query_model": "query (str)\nverbose (False)",
+            "_query_model": "query (str) <Required>\nverbose (bool)",
             "_get_available_models": "Not used",
-            "_modify_safety_settings": "safety (HarmCategory.name)\nsetting (HarmBlockThreshold.name)",
+            "_modify_safety_settings": "safety (HarmCategory.name) <Required>\nsetting (HarmBlockThreshold.name)",
             "_get_current_configuration": "Not used",
             "_set_configuration": "candidate_count (int | None)\nstop_sequences (Iterable[str] | None)\nmax_output_tokens (int | None)\ntemperature (float | None)\ntop_p (float | None)\ntop_k (int | None)\nresponse_mime_type (str | None)\nresponse_schema (Mapping[str, Any] | None)",
             "_get_model": "Not used",
-            "_set_model": "model_name (str)\nsystem_message (str | None)\nsafety_settings (Mapping[HarmCategory: HarmBlockThreshold] | None)",
+            "_set_model": "model_name (str) <Required>\nsystem_message (str | None)\nsafety_settings (Mapping[HarmCategory: HarmBlockThreshold] | None)",
             "_load_history": "filename (str)",
             "_clear_history": "filename (str)"
         }
@@ -103,6 +103,8 @@ class GeminiModel():
         
         history = ""
         
+        self._history[0]['Content'] = self._context
+        
         for message in self._history:
             history += f"{message['Role']}: {message['Content']}\n"
         
@@ -127,12 +129,12 @@ class GeminiModel():
         
         genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
     
-    def _query_model(self, query: str, verbose: False) -> str:
+    def _query_model(self, query: str, verbose: bool = False) -> str:
         """Query the model with the given query
         
         Args:
             query (str): Query to ask the model
-            verbose (False): Include extra information with result
+            verbose (bool, optional): Include extra information with result. Defaults to False.
 
         Returns:
             str: Result of the query
@@ -226,7 +228,7 @@ class GeminiModel():
         
         return self._model
 
-    def _set_model(self, model_name: str, system_message: str | None = None, safety_settings: Mapping | None = None) -> None:
+    def _set_model(self, model_name: str, system_message: str | None = None, safety_settings: dict | None = None) -> None:
         """Set the model to use
 
         Args:
@@ -235,9 +237,11 @@ class GeminiModel():
             safety_settings (_type_, optional): Safety settings to use. Defaults to None.
         """
         
-        self._model.model_name = model_name
-        self._model._system_instruction = self._context if system_message is not None else system_message
-        self._model._safety_settings = safety_settings if safety_settings is not None else self._safety_settings
+        self._model_name = model_name
+        self._context = system_message if system_message is not None else self._context
+        self._safety_settings = safety_settings if safety_settings is not None else self._safety_settings
+        
+        self._model = genai.GenerativeModel(model_name=self._model_name, safety_settings=self._safety_settings, system_instruction=self._context, generation_config=self._configuration)
     
     def _load_history(self, filename: str= "json_files/gemini_history.json") -> list:
         """Load the history from the given file
@@ -265,3 +269,10 @@ class GeminiModel():
             json.dump([{"Role": "SYSTEM:", "Content": self._context}], file, ensure_ascii=False, indent=4)
         
         self._history = [{"Role": "SYSTEM:", "Content": self._context}]
+        
+if __name__ == "__main__":
+    gemini = GeminiModel()
+    
+    gemini._set_model(model_name="gemini-1.5-flash", system_message="You are a helpful assistant")
+    
+    print(gemini._query_model("What is the meaning of life?"))

@@ -73,18 +73,18 @@ std::map<std::string, std::map<std::string, std::string>> GoogleNews::__class_in
         {"_get_end_date", "Not used"},
         {"_get_max_results", "Not used"},
         {"_get_exclude_websites", "Not used"},
-        {"_get_news", "keyword (str)\nfilename (str)"},
+        {"_get_news", "keyword (str) <Required>\nfilename (str)"},
         {"_get_latest_topics", "filename (str)"},
-        {"_get_news_by_topic", "topic (str)\nfilename (str)"},
-        {"_get_news_by_country", "country (str)\nfilename (str)"},
-        {"_get_news_by_site", "site (str)\nfilename (str)"},
-        {"_set_language", "language (str)"},
-        {"_set_country", "country (str)"},
-        {"_set_period", "period (str)"},
-        {"_set_start_date", "start_date (str)"},
-        {"_set_end_date", "end_date (str)"},
-        {"_set_max_results", "max_results (int)"},
-        {"_set_excluded_websites", "excluded_websites (list)"}
+        {"_get_news_by_topic", "topic (str) <Required>\nfilename (str)"},
+        {"_get_news_by_country", "country (str) <Required>\nfilename (str)"},
+        {"_get_news_by_site", "site (str) <Required>\nfilename (str)"},
+        {"_set_language", "language (str) <Required>"},
+        {"_set_country", "country (str) <Required>"},
+        {"_set_period", "period (str) <Required>"},
+        {"_set_start_date", "start_date (str) <Required>"},
+        {"_set_end_date", "end_date (str) <Required>"},
+        {"_set_max_results", "max_results (int) <Required>"},
+        {"_set_excluded_websites", "excluded_websites (list) <Required>"}
     };
 
     std::map<std::string, std::string> __function_parameters_description__ = { // Function names, parameters and descriptions

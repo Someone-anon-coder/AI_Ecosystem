@@ -25,15 +25,15 @@ std::map<std::string, std::map<std::string, std::string>> Folder::__class_info__
     };
 
     std::map<std::string, std::string> __function_parameters__ = { // Function names and parameters
-        {"_create_folder", "folder_name (str)\nfolder_path (str)"}, 
-        {"_list_folder", "folder_name (str)\nlist_filename (str)\nlist_file_path (str)\nfolder_path (str)"},
-        {"_delete_folder", "folder_name (str)\nfolder_path (str)"}, 
-        {"_rename_folder", "folder_name (str)\nnew_folder_name (str)\nfolder_path (str)"}, 
-        {"_move_folder", "folder_name (str)\nnew_path (str)\nfolder_path (str)"}, 
-        {"_copy_folder", "folder_name (str)\nnew_path (str)\nfolder_path (str)"}, 
-        {"_check_folder", "folder_name (str)\nfolder_path (str)"}, 
-        {"_hide_folder", "folder_name (str)\nfolder_path (str)"}, 
-        {"_unhide_folder", "folder_name (str)\nfolder_path (str)"}
+        {"_create_folder", "folder_name (str) <Required>\nfolder_path (str)"}, 
+        {"_list_folder", "folder_name (str) <Required>\nlist_filename (str)\nlist_file_path (str)\nfolder_path (str)"},
+        {"_delete_folder", "folder_name (str) <Required>\nfolder_path (str)"}, 
+        {"_rename_folder", "folder_name (str) <Required>\nnew_folder_name (str) <Required>\nfolder_path (str)"}, 
+        {"_move_folder", "folder_name (str) <Required>\nnew_path (str) <Required>\nfolder_path (str)"}, 
+        {"_copy_folder", "folder_name (str) <Required>\nnew_path (str) <Required>\nfolder_path (str)"}, 
+        {"_check_folder", "folder_name (str) <Required>\nfolder_path (str)"}, 
+        {"_hide_folder", "folder_name (str) <Required>\nfolder_path (str)"}, 
+        {"_unhide_folder", "folder_name (str) <Required>\nfolder_path (str)"}
     };
 
     std::map<std::string, std::string> __function_parameters_description__ = { // Function names, parameters and descriptions

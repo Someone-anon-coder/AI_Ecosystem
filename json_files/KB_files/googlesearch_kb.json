@@ -1,0 +1,471 @@
+[
+    {
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant for searching Google according to user queries. Use the given knowledge base to answer the user.",
+        "function_format": "use function ```function_name [function_name]```",
+        "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "cant_answer_format": "```Sorry, this query cannot be handled by me```",
+        "examples": {
+            "Search google for \"What are LLMs?\" and get 5 results and show me title and snippet of the 2nd result": "To search google for \"What are LLMs?\" and get 5 results and then show 2nd result use function ```function_name _set_num_results``` with parameters ```parameters { num_results = 1 }``` then use function ```function_name _search_google``` with parameters ```parameters { query = \"What are LLMs?\" }``` then use function ```function_name _get_result``` with parameters ```parameters { result_index = 1 }, { title = True }, { snippet = True }```",
+            "Search google for \"Cats\" and get me \"pdf\" files but restrict words: \"large\", \"spotted\"": "To search google for \"Cats\" and get only \"pdf\" files and restrict words: \"large\", \"spotted\" use function ```function_name _set_filetype``` with parameters ```parameters { filetype = \"pdf\" }``` then use function ```function_name _set_exclude_terms``` with parameters ```parameters { exclude_terms = \"large, spotted\" }",
+            "Turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years": "To turn off \"simplified chinese\" and search for \"Great wall of China\" and restrict results to past 2 years use function ```function_name _set_c2coff``` with parameters ```parameters { c2coff = 0 }``` then use function ```function_name _search_google``` with parameters ```parameters { query = \"Great wall of China\" }``` then use function ```function_name _set_date_restrict``` with parameters ```parameters { date_restrict = 1 }``` then use function ```function_name _set_date_restrict_type``` with parameters ```parameters { date_restrict_type = \"y2\" }```",
+            "Create file \"hello.txt\" and write \"hello\" in it then hide the file": "```Sorry, this query cannot be handled by me```",
+            "Search the news for \"USA elections\" and give me 22 results but search only the site \"bbc.com\"": "```Sorry, this query cannot be handled by me```"
+        },
+        "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
+    },
+    {
+        "name": "_get_c2coff",
+        "description": "Turn on or off Simplified and Traditional Chinese",
+        "parameters": {},
+        "returns": "Integer specifying if Simplified and Traditional Chinese Search is on or off"
+    },
+    {
+        "name": "_get_date_restrict",
+        "description": "Check whether search is restricted by date",
+        "parameters": {},
+        "returns": "Integer specifying if search is restricted by date"
+    },
+    {
+        "name": "_get_date_restrict_type",
+        "description": "Get the date restrict type to restrict search results",
+        "parameters": {},
+        "returns": "String of date restricting the search results"
+    },
+    {
+        "name": "_get_env_file",
+        "description": "Get the name of the file that contains Google Search API and CX Keys",
+        "parameters": {},
+        "returns": "String of env file name"
+    },
+    {
+        "name": "_get_exact_terms",
+        "description": "Get the exact terms each document will include when searching",
+        "parameters": {},
+        "returns": "String of extra terms"
+    },
+    {
+        "name": "_get_exclude_terms",
+        "description": "Get the word which is excluded from appearing in documents from search result",
+        "parameters": {},
+        "returns": "String of excluded terms"
+    },
+    {
+        "name": "_get_extra_query",
+        "description": "Get the extra queries used to search",
+        "parameters": {},
+        "returns": "String of extra queries in the search"
+    },
+    {
+        "name": "_get_filetype",
+        "description": "Get the filetype of the query",
+        "parameters": {},
+        "returns": "String of filetype"
+    },
+    {
+        "name": "_get_filter",
+        "description": "Check whether duplicate is turned On or Off",
+        "parameters": {},
+        "returns": "Integer specifying if duplicate content is on or off"
+    },
+    {
+        "name": "_get_high_range",
+        "description": "Get the query appended after the search query",
+        "parameters": {},
+        "returns": "String of query appended to after the search query"
+    },
+    {
+        "name": "_get_img_color_type",
+        "description": "Get the color type of the image",
+        "parameters": {},
+        "returns": "String of image color type"
+    },
+    {
+        "name": "_get_img_dominant_color",
+        "description": "Get the dominant color of the image",
+        "parameters": {},
+        "returns": "String of image dominant color"
+    },
+    {
+        "name": "_get_img_size",
+        "description": "Get the size of the image",
+        "parameters": {},
+        "returns": "String of image size"
+    },
+    {
+        "name": "_get_img_type",
+        "description": "Get the type of the image",
+        "parameters": {},
+        "returns": "String of image type"
+    },
+    {
+        "name": "_get_interface_language",
+        "description": "Get the user interface language",
+        "parameters": {},
+        "returns": "String of user interface language"
+    },
+    {
+        "name": "_get_json_file",
+        "description": "Get the name of the file to save response data",
+        "parameters": {},
+        "returns": "String of json file name"
+    },
+    {
+        "name": "_get_language",
+        "description": "Get the language to search google in",
+        "parameters": {},
+        "returns": "String of language"
+    },
+    {
+        "name": "_get_link_site",
+        "description": "Get the link to include in each search result",
+        "parameters": {},
+        "returns": "String of link"
+    },
+    {
+        "name": "_get_low_range",
+        "description": "Get the query appended before the search query",
+        "parameters": {},
+        "returns": "String of query appended to before the search query"
+    },
+    {
+        "name": "_get_num_results",
+        "description": "Returns the number of results to return",
+        "parameters": {},
+        "returns": "Integer of number of results"
+    },
+    {
+        "name": "_get_or_terms",
+        "description": "Get the additional terms to include in the document",
+        "parameters": {},
+        "returns": "String of extra terms"
+    },
+    {
+        "name": "_get_query",
+        "description": "Get the query used to search on google",
+        "parameters": {},
+        "returns": "String of search query"
+    },
+    {
+        "name": "_get_result",
+        "description": "Parse Json file and retrive relevant information of specified index",
+        "parameters": {
+            "result_index (int)": "Specify this parameter to Index of individual result to parse",
+            "title (bool)": "Specify this parameter to Get Title",
+            "snippet (bool)": "Specify this parameter to Get Snippet",
+            "link (bool)": "Specify this parameter to Get Link",
+            "image (string)": "Specify this parameter to Get Image",
+            "filename (bool)": "Specify this parameter to Name of the file to retrive response data from"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_get_result_country",
+        "description": "Get the country to search for in google",
+        "parameters": {},
+        "returns": "String of country"
+    },
+    {
+        "name": "_get_rights",
+        "description": "Get the licensing of the query",
+        "parameters": {},
+        "returns": "String of licensing"
+    },
+    {
+        "name": "_get_safe",
+        "description": "Get the safe search",
+        "parameters": {},
+        "returns": "String of safe search"
+    },
+    {
+        "name": "_get_search_type",
+        "description": "Get the search type of the query",
+        "parameters": {},
+        "returns": "String of search type"
+    },
+    {
+        "name": "_get_search_url",
+        "description": "Get the constructed url used to query google",
+        "parameters": {},
+        "returns": "String of constructed url"
+    },
+    {
+        "name": "_get_site_search",
+        "description": "Get the site to always include or exclude when searching a query",
+        "parameters": {},
+        "returns": "String of site which is always included or excluded"
+    },
+    {
+        "name": "_get_site_search_filter",
+        "description": "Get the value specifying to include or exclude a site",
+        "parameters": {},
+        "returns": "String of filter specifying whether site is included or excluded"
+    },
+    {
+        "name": "_get_sort",
+        "description": "Get the sort order",
+        "parameters": {},
+        "returns": "String of sort order"
+    },
+    {
+        "name": "_get_start_index",
+        "description": "Returns the index to start from when getting search results",
+        "parameters": {},
+        "returns": "Integer of start index"
+    },
+    {
+        "name": "_get_user_country",
+        "description": "Get the country to search from in google",
+        "parameters": {},
+        "returns": "String of country"
+    },
+    {
+        "name": "_search_google",
+        "description": "Search the google based on given query. The Parameters [query] are required",
+        "parameters": {
+            "query (string)": "Specify this parameter to Query to search Google",
+            "json_file (string)": "Specify this parameter to Name of the file to save response data"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_c2coff",
+        "description": "Turn on or off Simplified and Traditional Chinese. The Parameters [c2coff] are required",
+        "parameters": {
+            "c2coff (int)": "Specify this parameter to Turn on or off Simplified and Traditional Chinese"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_date_restrict",
+        "description": "Set to check whether search is restricted by date. The Parameters [date_restrict] are required",
+        "parameters": {
+            "date_restrict (int)": "Specify this parameter to Check whether search is restricted by date"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_date_restrict_type",
+        "description": "Set the date restrict type to restrict search results. The Parameters [date_restrict_type] are required",
+        "parameters": {
+            "date_restrict_type (string)": "Specify this parameter to Date restrict type to restrict search results"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_env_file",
+        "description": "Set the file that contains Google Search API and CX Keys. The Parameters [env_file] are required",
+        "parameters": {
+            "env_file (string)": "Specify this parameter to Name of the file that contains Google Search API and CX Keys"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_exact_terms",
+        "description": "Set the phrase to include in document in search results. The Parameters [exact_terms] are required",
+        "parameters": {
+            "exact_terms (string)": "Specify this parameter to Phrase to include in document in search results"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_exclude_terms",
+        "description": "Set the terms to exclude from documents in search result. The Parameters [exclude_terms] are required",
+        "parameters": {
+            "exclude_terms (string)": "Specify this parameter to Terms to exclude from documents in search result"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_extra_query",
+        "description": "Set the extra queries to search for with the search query. The Parameters [extra_query] are required",
+        "parameters": {
+            "extra_query (string)": "Specify this parameter to Extra queries to search for with the search query"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_filetype",
+        "description": "Set the filetype of the query. The Parameters [filetype] are required",
+        "parameters": {
+            "filetype (string)": "Specify this parameter to Filetype of the query"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_filter",
+        "description": "Set to check whether duplicate is turned On or Off. The Parameters [filter] are required",
+        "parameters": {
+            "filter (int)": "Specify this parameter to Turn on or off duplicate content"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_high_range",
+        "description": "Set the query appended after the search query. The Parameters [high_range] are required",
+        "parameters": {
+            "high_range (string)": "Specify this parameter to Query appended to after the search query"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_img_color_type",
+        "description": "Set the color type of the image. The Parameters [img_color_type] are required",
+        "parameters": {
+            "img_color_type (string)": "Specify this parameter to Color type of the image"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_img_dominant_color",
+        "description": "Set the dominant color of the image. The Parameters [img_dominant_color] are required",
+        "parameters": {
+            "img_dominant_color (string)": "Specify this parameter to Dominant color of the image"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_img_size",
+        "description": "Set the size of the image. The Parameters [img_size] are required",
+        "parameters": {
+            "img_size (string)": "Specify this parameter to Size of the image"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_img_type",
+        "description": "Set the type of the image. The Parameters [img_type] are required",
+        "parameters": {
+            "img_type (string)": "Specify this parameter to Type of the image"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_interface_language",
+        "description": "Set the user interface language. The Parameters [interface_language] are required",
+        "parameters": {
+            "interface_language (string)": "Specify this parameter to User interface language"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_language",
+        "description": "Set the language to search google in. The Parameters [language] are required",
+        "parameters": {
+            "language (string)": "Specify this parameter to Language to search google in"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_link_site",
+        "description": "Set the link to include in each search result. The Parameters [link_site] are required",
+        "parameters": {
+            "link_site (string)": "Specify this parameter to Link to include in each search result"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_low_range",
+        "description": "Set the query appended before the search query. The Parameters [low_range] are required",
+        "parameters": {
+            "low_range (string)": "Specify this parameter to Query appended to before the search query"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_num_results",
+        "description": "Set the number of results to return. The Parameters [num_results] are required",
+        "parameters": {
+            "num_results (int)": "Specify this parameter to Number of results to return"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_or_terms",
+        "description": "Set the additional terms to include in the document. The Parameters [or_terms] are required",
+        "parameters": {
+            "or_terms (string)": "Specify this parameter to Additional terms to include in the document"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_response_file",
+        "description": "Set the json file to save search result. The Parameters [json_file] are required",
+        "parameters": {
+            "json_file (string)": "Specify this parameter to Name of the file to save response data"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_result_country",
+        "description": "Set the country to search for in google. The Parameters [result_country] are required",
+        "parameters": {
+            "result_country (string)": "Specify this parameter to Country to search for in google"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_rights",
+        "description": "Set the licensing of the query. The Parameters [rights] are required",
+        "parameters": {
+            "rights (string)": "Specify this parameter to Licensing of the query"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_safe",
+        "description": "Set the safe search. The Parameters [safe] are required",
+        "parameters": {
+            "safe (string)": "Specify this parameter to Safe search"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_search_type",
+        "description": "Set the search type of the query. The Parameters [search_type] are required",
+        "parameters": {
+            "search_type (string)": "Specify this parameter to Search type of the query"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_site_search",
+        "description": "Set the site to always include or exclude from search results. The Parameters [site_search] are required",
+        "parameters": {
+            "site_search (string)": "Specify this parameter to Site to always include or exclude from search results"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_site_search_filter",
+        "description": "Set the value specifying to include or exclude a site. The Parameters [site_search_filter] are required",
+        "parameters": {
+            "site_search_filter (string)": "Specify this parameter to Value specifying to include or exclude a site"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_sort",
+        "description": "Set the sort order. The Parameters [sort] are required",
+        "parameters": {
+            "sort (string)": "Specify this parameter to Sort order"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_start_index",
+        "description": "Set the index to start from when getting search results. The Parameters [start_index] are required",
+        "parameters": {
+            "start_index (int)": "Specify this parameter to Index to start from when getting search results"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_user_country",
+        "description": "Set the country to search from in google. The Parameters [user_country] are required",
+        "parameters": {
+            "user_country (string)": "Specify this parameter to Country to search from in google"
+        },
+        "returns": "None"
+    }
+]

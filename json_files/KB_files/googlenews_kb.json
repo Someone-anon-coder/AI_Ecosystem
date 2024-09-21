@@ -1,0 +1,153 @@
+[
+    {
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant for searching news on Google News according to user queries. Use the given knowledge base to answer the user.",
+        "function_format": "use function ```function_name [function_name]```",
+        "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
+        "cant_answer_format": "```Sorry, this query cannot be handled by me```",
+        "examples": {},
+        "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
+    },
+    {
+        "name": "_get_country",
+        "description": "Function to get the country",
+        "parameters": {},
+        "returns": "String of the country"
+    },
+    {
+        "name": "_get_end_date",
+        "description": "Function to get the end date",
+        "parameters": {},
+        "returns": "String of the date"
+    },
+    {
+        "name": "_get_exclude_websites",
+        "description": "Function to get the excluded websites",
+        "parameters": {},
+        "returns": "Vector of excluded websites"
+    },
+    {
+        "name": "_get_language",
+        "description": "Function to get the language",
+        "parameters": {},
+        "returns": "String of the language"
+    },
+    {
+        "name": "_get_latest_topics",
+        "description": "Function to get the news on latest topics",
+        "parameters": {
+            "filename (str)": "Specify this parameter to File to save articles in"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_get_max_results",
+        "description": "Function to get the max results",
+        "parameters": {},
+        "returns": "Number of max results"
+    },
+    {
+        "name": "_get_news",
+        "description": "Function to get the news. The Parameters [keyword] are required",
+        "parameters": {
+            "keyword (str)": "Specify this parameter to Keyword used to search news",
+            "filename (str)": "Specify this parameter to File to save articles in"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_get_news_by_country",
+        "description": "Function to get the news on the given country. The Parameters [country] are required",
+        "parameters": {
+            "country (str)": "Specify this parameter to Search the news on this country",
+            "filename (str)": "Specify this parameter to File to save articles in"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_get_news_by_site",
+        "description": "Function to get the news from the given site. The Parameters [site] are required",
+        "parameters": {
+            "site (str)": "Specify this parameter to Search the news from this site",
+            "filename (str)": "Specify this parameter to File to save articles in"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_get_news_by_topic",
+        "description": "Function to get the news on the given topic. The Parameters [topic] are required",
+        "parameters": {
+            "topic (str)": "Specify this parameter to Search the news on this topic",
+            "filename (str)": "Specify this parameter to File to save articles in"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_get_period",
+        "description": "Function to get the period",
+        "parameters": {},
+        "returns": "String of the period"
+    },
+    {
+        "name": "_get_start_date",
+        "description": "Function to get the start date",
+        "parameters": {},
+        "returns": "String of the date"
+    },
+    {
+        "name": "_set_country",
+        "description": "Function to set the country. The Parameters [country] are required",
+        "parameters": {
+            "country (str)": "Specify this parameter to Country you want to get the news from"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_end_date",
+        "description": "Function to set the end date. The Parameters [end_date] are required",
+        "parameters": {
+            "end_date (str)": "Specify this parameter to Ending date till when news is presented"
+        },
+        "returns": "True if start date and end date are different"
+    },
+    {
+        "name": "_set_excluded_websites",
+        "description": "Function to set the excluded websites. The Parameters [excluded_websites] are required",
+        "parameters": {
+            "excluded_websites (list)": "Specify this parameter to Websites to exclude from the results"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_language",
+        "description": "Function to set the language. The Parameters [language] are required",
+        "parameters": {
+            "language (str)": "Specify this parameter to Languge you want to get the news in"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_max_results",
+        "description": "Function to set the max results. The Parameters [max_results] are required",
+        "parameters": {
+            "max_results (int)": "Specify this parameter to Max number of results for the news"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_period",
+        "description": "Function to set the time period. The Parameters [period] are required",
+        "parameters": {
+            "period (str)": "Specify this parameter to Time period to get news from"
+        },
+        "returns": "None"
+    },
+    {
+        "name": "_set_start_date",
+        "description": "Function to set the start date. The Parameters [start_date] are required",
+        "parameters": {
+            "start_date (str)": "Specify this parameter to Starting date for when to get news from"
+        },
+        "returns": "True if start date and end date are different"
+    }
+]
