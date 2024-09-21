@@ -52,36 +52,29 @@ In this example:
 - A file is created in the specified directory using the `File` class.
 - The `GoogleSearch` class is used to perform a Google search and store the search results in the created file.
 
+How to query AI and create steps:
+The Functions are defined in `response_steps.py` in `python_files/helper_files/` directory
+
 ```python
-from modules.angel_configure import GoogleSearch
+import re
+import os
+import sys
+import json
 
-search = GoogleSearch()
-search._search_google("AI Development")
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
+from python_files.configuration_files.gemini_configure import GeminiModel
 
-search._get_result(0, title=True, snippet=True, link=True)
-print("\n")
+with open("text_files/KB_files/file_kb.txt", 'r', encoding= 'utf8') as kb_file:
+    kb = kb_file.read()
 
-search._get_result(1, title=True, snippet=True, link=True)
-print("\n")
+gemini = GeminiModel()
+gemini._set_model("gemini-1.5-flash", kb)
 
-search._get_result(2, title=True, snippet=True, link=True)
-print("\n")
-```
+query = "Create a file \"Hello.txt\" write \"Hello\" in it then create a file \"bye.txt\" write \"Bye\" in it and then delete both files."
+response = gemini._query_model(query)
 
-```Output
-Title: "AI Based Solutions for Developers - Google for Developers"
-Snippet: "Access cutting-edge AI models and open source tools for machine learning. Explore Google's AI solutions built to simplify app and web development for ..."
-Link: "https://developers.google.com/focus/ai-development"
-
-
-Title: "AI Development"
-Snippet: "Deploy Powerful Apps Anywhere. Get the most out of your AI projects with Intel's AI PC. Discover tools, workflows, frameworks, and developer kits that include ..."
-Link: "https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/overview.html"
-
-
-Title: "Artificial Intelligence (AI) - United States Department of State"
-Snippet: "The world's leading powers are racing to develop and deploy new technologies like artificial intelligence and quantum computing that could shape everything ..."
-Link: "https://www.state.gov/artificial-intelligence/"
+print(response)
+parse_blocks(*get_blocks(response))
 ```
 
 **Note:** Further updates and instructions will be provided as the project evolves.
@@ -95,17 +88,23 @@ Here's a snippet of a knowledge base (`file_kb.json`) for file manipulation:
 ```json
 [
     {
-        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. Gemini. Use the given knowledge base to answer the user.",
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant for file manipulation according to user queries. Use the given knowledge base to answer the user.",
         "function_format": "use function ```function_name [function_name]```",
         "parameter_format": "with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "answer_format": "To do this use function ```function_name [function_name]``` with parameters ```parameters { parameter_1 = value_1 }, { parameter_2 = value_2 }, ..., { parameter_n = value_n }```",
         "cant_answer_format": "```Sorry, this query cannot be handled by me```",
-        "examples": {},
+        "examples": {
+            "Create file \"hello.txt\" and write \"hello\" in it then hide the file": "To create a file \"hello.txt\" and write \"hello\" in it then hide a file use function ```function_name _create_file``` with parameters ```parameters { filename = \"hello.txt\" }``` then use function ```function_name _write_file``` with parameters ```parameters { filename = \"hello.txt\" }, { content = \"hello\" }``` then use function ```function_name _hide_file``` with parameters ```parameters { filename = \"hello.txt\" }",
+            "Unhide a file \".test.txt\" in directory \"hidden_files\\test_files\\\" and then move it to \"test_files\\\"": "To unhide a file \".test.txt\" in directory \"hidden_files\\test_files\\\" and then move it to \"test_files\\\" use function ```function_name _unhide_file``` with parameters ```parameters { filename = \".test.txt\" }, { file_path = \"hidden_files\\test_files\\\" }``` then use function ```function_name _move_file``` with parameters ```parameters { filename = \"test.txt\" }, { new_path = \"test_files\\\" }, { file_path = \"hidden_files\\test_files\\\" }, { new_path = \"test_files\\\" }```",
+            "Create a file \"pass.csv\" then write \"user, pass\\nabc, test\" in it and then move it to \"secret_files\\\" then hide it": "to create a file \"pass.csv\" then write \"user, pass\\nabc, test\" in it and then move it to \"secret_files\\\" then hide it use function ```function_name _create_file``` with parameters ```parameters { filename = \"pass.csv\" }``` then use function ```function_name _write_file``` with parameters ```parameters { filename = \"pass.csv\" }, { content = \"user, pass\\nabc, test\" }``` then use ```function_name _move_file``` with parameters ```parameters { filename = \"pass.csv\" }, { new_path = \"secret_files\\\" }``` then use function ```function_name _hide_file``` with parameters ```parameters { filename = \"pass.csv\" }, { file_path = \"secret_files\\\" }```",
+            "Set model to \"gemini-1.5-pro\" and set system instruction to \"You are a great philosopher\" and then query it \"Meaning of life\" and then clear the conversation history": "```Sorry, this query cannot be handled by me```",
+            "list folder \"Passwords\" and then copy it to \"Nothing\\\" then delete it": "```Sorry, this query cannot be handled by me```"
+        },
         "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
     },
     {
         "name": "_check_file",
-        "description": "Function to check if it is a file",
+        "description": "Function to check if it is a file. The Parameters [filename] are required",
         "parameters": {
             "filename (str)": "Specify this parameter to Name of the file",
             "file_path (str)": "Specify this parameter to Path of the file"
@@ -114,7 +113,7 @@ Here's a snippet of a knowledge base (`file_kb.json`) for file manipulation:
     },
     {
         "name": "_copy_file",
-        "description": "Function to copy a file",
+        "description": "Function to copy a file. The Parameters [filename, new_path] are required",
         "parameters": {
             "filename (str)": "Specify this parameter to Name of the file",
             "new_path (str)": "Specify this parameter to New path of the file",
@@ -122,19 +121,10 @@ Here's a snippet of a knowledge base (`file_kb.json`) for file manipulation:
         },
         "returns": "None"
     },
-    {
-        "name": "_create_file",
-        "description": "Function to create a file",
-        "parameters": {
-            "filename (str)": "Specify this parameter to Name of the file",
-            "file_path (str)": "Specify this parameter to Path of the file"
-        },
-        "returns": "None"
-    },
     ...,
     {
         "name": "_write_file",
-        "description": "Function to write to a file",
+        "description": "Function to write to a file. The Parameters [filename] are required",
         "parameters": {
             "filename (str)": "Specify this parameter to Name of the file",
             "content (str)": "Specify this parameter to Content of the file",
