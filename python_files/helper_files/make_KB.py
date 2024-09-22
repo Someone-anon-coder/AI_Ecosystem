@@ -101,15 +101,15 @@ if __name__ == "__main__":
 
     sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
 
-    from python_files.configuration_files.gemini_configure import GeminiModel
-    # from modules.angel_configure import GoogleSearch
+    # from python_files.configuration_files.gemini_configure import GeminiModel
+    from modules.angel_configure import Folder
     
-    class_object = GeminiModel()
+    class_object = Folder()
     
     knowledge_base = []
     class_info = class_object.__class_info__()
     
-    class_name = list(class_info['Name_Description'].keys())[0].lower()
+    class_name = list(class_info['Name_Description'].keys())[0]
     class_description = [description for _,description in class_info['Name_Description'].items()][0].replace("Class ", "")
     
     functions = class_info['Function_Info']

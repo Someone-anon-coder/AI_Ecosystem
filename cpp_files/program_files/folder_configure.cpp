@@ -125,8 +125,8 @@ void Folder::_list_folder(
     const std::string list_file_path = "log_files/", // Path of the list folder
     const std::string folder_path = "" // Path of the folder
 ) {
-    std::string fullpath = folder_name + list_filename; // Location and Name of the folder to list
-    std::string list_fullpath = list_file_path + fullpath; // Location and Name of the folder to store folder list
+    std::string fullpath = folder_path + folder_name; // Location and Name of the folder to list
+    std::string list_fullpath = list_file_path + list_filename; // Location and Name of the folder to store folder list
     
     std::ofstream list_file; // folder object to store folder list
     
@@ -161,7 +161,12 @@ void Folder::_unhide_folder(
     const std::string folder_path = "" // Path of the folder
 ) {
     const std::string fullpath = folder_path + folder_name; // Location and Name of the folder to unhide
-    const std::string new_fullpath = folder_path + folder_name.substr(0); // New location and Name of the unhidden folder
     
+    std::string new_folder_name = "";
+    for (long unsigned int i = 1; i <= folder_name.length(); i++){
+        new_folder_name += folder_name[i];
+    }
+
+    const std::string new_fullpath = folder_path + new_folder_name; // New location and Name of the unhidden folder
     std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
 }
