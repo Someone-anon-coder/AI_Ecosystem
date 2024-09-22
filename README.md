@@ -137,6 +137,26 @@ Here's a snippet of a knowledge base (`file_kb.json`) for file manipulation:
 
 This structure provides a clear and organized way for the system to understand and execute commands related to file operations.
 
+## Main Prompt System Message
+
+```json
+    {
+        "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant for selecting a proper Knowledge Base according to user queries. Use the given classes to answer the user",
+        "answer_format": "To do this use kb ```kb_name [kb_name]```",
+        "cant_answer_format": "```Sorry, this knowledge base is not available yet```",
+        "examples": {
+            "Unhide a file \".test.txt\" in directory \"hidden_files\\test_files\\\" and then move it to \"test_files\\\"": "To unhide a file \".test.txt\" in directory \"hidden_files\\test_files\\\" and then move it to \"test_files\\\" use kb ```kb_name File```",
+            "Turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years": "To turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years use kb ```kb_name GoogleSearch",
+            "Change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\"": "To change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\" use kb ```kb_name GeminiModel",
+            "Open camera and click \"5\" photos with a gap of \"3\" seconds each then open the photo": "```Sorry, this knowledge base is not available yet```",
+            "Open word and create a \"blank\" document then write \"hello\" and close it without saving": "Sorry, this knowledge base is not available yet```"
+        },
+        "Note": "Answer the query if and only if it can be done by the knowledge base of the classes available in your knowledge base. DO NOT create new knowledge bases to answer user query"
+    },
+```
+
+This json object describes the prompt to be given to AI for it to decide which knowledge base to use according to user query.
+
 ## Contributing
 
 Contributions are welcome! If you're interested in contributing to the development of AI Ecosystem, please feel free to reach out to the project maintainers or submit a pull request.
