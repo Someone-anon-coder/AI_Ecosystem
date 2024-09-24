@@ -44,7 +44,7 @@ The project has been updated to provide individual classes for specific tasks. Y
 
 ```python
 
-from create_steps import load_class, get_kb_name, get_kb_prompt, get_blocks, parse_blocks, execute_functions
+from python_files.helper_files.create_steps import load_class, get_kb_name, get_kb_prompt, get_blocks, parse_blocks, execute_functions
 
 query = "Create a folder \"Something\\\""
 
