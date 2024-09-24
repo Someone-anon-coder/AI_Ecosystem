@@ -9,6 +9,9 @@
 /// @brief Class for file manipulation
 class File {
     public:
+        std::string _log_filename = "log_files/function_execution_logs.txt"; // Name of the log file
+        std::string _data_log_filename = "log_files/data_logs.txt"; // Name of the data log file
+
         /// @brief Class Constructor
         File();
 

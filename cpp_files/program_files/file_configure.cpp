@@ -83,6 +83,11 @@ void File::_create_file(
 
     file_create.open(fullpath.c_str());
     file_create.close();
+
+    std::string log_content = "File " + filename;
+    log_content += file_path != "" ? " created at " + file_path + " Successfully" : " created Successfully";
+
+    _write_file(File::_log_filename, log_content, "");
 }
 
 void File::_write_file(
@@ -97,6 +102,11 @@ void File::_write_file(
     file_write << content;
     
     file_write.close();
+
+    std::string log_content = "Content writtern to " + filename;
+    log_content += file_path != "" ? " in " + file_path + " Successfully" : " Successfully";
+
+    _write_file(File::_log_filename, log_content, "");
 }
 
 std::string File::_read_file(
@@ -110,6 +120,12 @@ std::string File::_read_file(
     std::string content((std::istreambuf_iterator<char>(file_read)), std::istreambuf_iterator<char>()); // Content from the file
     
     file_read.close();
+
+    std::string log_data_content = "Content from file " + filename;
+    log_data_content += file_path != "" ? " at " + file_path + ":\n\n" + content : ":\n\n" + content;
+
+    _write_file(File::_data_log_filename, log_data_content, "");
+
     return content;
 }
 
@@ -205,4 +221,11 @@ void File::_unhide_file(
     
     const std::string new_fullpath = file_path + new_filename;
     std::rename(fullpath.c_str(), new_fullpath.c_str());
+}
+
+int main(){
+    File file;
+    file._create_file("Test.txt");
+
+    return 0;
 }
