@@ -1,8 +1,17 @@
 [
     {
-        "function_name": "_create_folder",
+        "function_name": "_create_file",
         "parameters": {
-            "folder_name": "\"Something\\\""
+            "filename": "\"test.txt\"",
+            "file_path": "\"text_files/\""
+        }
+    },
+    {
+        "function_name": "_write_file",
+        "parameters": {
+            "filename": "\"test.txt\"",
+            "content": "\"Hello World\"",
+            "file_path": "\"text_files/\""
         }
     }
 ]

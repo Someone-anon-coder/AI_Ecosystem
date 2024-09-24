@@ -46,7 +46,7 @@ The project has been updated to provide individual classes for specific tasks. Y
 
 from python_files.helper_files.create_steps import load_class, get_kb_name, get_kb_prompt, get_blocks, parse_blocks, execute_functions
 
-query = "Create a folder \"Something\\\""
+query = "Create a file \"test.txt\" in \"text_files/\" and write \"Hello World\" in it"
 
 gemini = load_class("GeminiModel")
 kb_name = get_kb_name(query, gemini, "gemini-1.5-flash")
