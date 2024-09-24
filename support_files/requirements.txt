@@ -1,5 +1,4 @@
 google-generativeai
 pybind11
 setuptools
-ollama
-dotenv
+python-dotenv

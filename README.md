@@ -1,4 +1,4 @@
-## AI Ecosystem: A Framework for NLP-driven Task Completion
+# AI Ecosystem: A Framework for NLP-driven Task Completion
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -16,66 +16,56 @@ AI Ecosystem is an evolving project that aims to build a hierarchical model stru
 
 ## Installation
 
+### First Instruction For Installation
+
+- **Set up the Environment**
+  - Clone this repository using: ```bash git clone https://github.com/Someone-anon-coder/AI_Ecosystem.git```
+  - Create virtual environment using: ```python3 -m venv [virtual_env_name]``` eg: `AI_Ecosystem`
+  - Activate the virtual environment using: ```bash source [virutal_env_name/bin/activate]``` eg: `source AI_Ecosystem/bin/activate`
+  - Download the necessary python libraries using: ```pip install -r support_files/requirements.txt```
+  - Download the necessary cpp libraries using: ```bash sudo apt update && sudo xargs -a support_files/requirements_c.txt apt install -y``` Note: you need to be Administrater
+
+- **Get `GEMINI_API_KEY`**
+  - Log in to google ai studio
+  - Get a new api key
+  - Create a new folder `secret_files`
+  - Create a new file `.env` in the `secret_files` folder
+  - Write `GEMINI_API_KEY=` in the `.env` file and paste your API key
+
+- Update the `test.py` file to execute the appropriate commands
+
 **Note:** AI Ecosystem is currently in its early stages of development, and the installation process is not yet finalized. This README will be updated with instructions once the project is more mature.
 
 ## Usage
 
 The project has been updated to provide individual classes for specific tasks. You can now use these classes to perform their intended operations, such as file manipulation or performing Google searches. Below is a brief overview of the available classes and their usage:
 
-### File Class
-- Use the `File` class for file manipulation tasks like creating or reading files.
-  
-### GoogleSearch Class
-- The `GoogleSearch` class allows you to perform searches on Google and store the results in a file.
-
-### Example Usage
-
-Here’s an example of how to use the `File` and `GoogleSearch` classes together:
+### First Usage Example
 
 ```python
-from modules.angel_configure import GoogleSearch, File
 
-file = File()
-google = GoogleSearch()
+from create_steps import load_class, get_kb_name, get_kb_prompt, get_blocks, parse_blocks, execute_functions
 
-json_directory = "json_files/"
-json_file = "search_result.json"
+query = "Create a folder \"Something\\\""
 
-# Create a file to store the search result
-file.create_file(json_file, json_directory)
+gemini = load_class("GeminiModel")
+kb_name = get_kb_name(query, gemini, "gemini-1.5-flash")
 
-# Perform a Google search and save the result in the created file
-google._search_google("Something", json_directory + json_file)
-```
-
-In this example:
-- A file is created in the specified directory using the `File` class.
-- The `GoogleSearch` class is used to perform a Google search and store the search results in the created file.
-
-How to query AI and create steps:
-The Functions are defined in `response_steps.py` in `python_files/helper_files/` directory
-
-```python
-import re
-import os
-import sys
-import json
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
-from python_files.configuration_files.gemini_configure import GeminiModel
-
-with open("text_files/KB_files/file_kb.txt", 'r', encoding= 'utf8') as kb_file:
-    kb = kb_file.read()
-
-gemini = GeminiModel()
+gemini = load_class("GeminiModel")
+kb = get_kb_prompt(kb_name)
 gemini._set_model("gemini-1.5-flash", kb)
 
-query = "Create a file \"Hello.txt\" write \"Hello\" in it then create a file \"bye.txt\" write \"Bye\" in it and then delete both files."
 response = gemini._query_model(query)
 
 print(response)
 parse_blocks(*get_blocks(response))
+
+class_object = load_class(kb_name)
+execute_functions(class_object)
+
 ```
+
+This example creates a folder Something in your current directory. If you want to do something else using other classes, just change the query.
 
 **Note:** Further updates and instructions will be provided as the project evolves.
 
@@ -171,4 +161,4 @@ This project is still under active development. Features and functionality may b
 - **Integration with External APIs**:  Integration with external APIs will enhance the project's ability to interact with real-world data and systems.
 - **User-Friendly Interface**:  The project will strive to provide a user-friendly interface for interacting with the system and specifying tasks.
 
-We believe AI Ecosystem has the potential to revolutionize how humans interact with computers, enabling seamless automation of complex tasks through natural language. 
+We believe AI Ecosystem has the potential to revolutionize how humans interact with computers, enabling seamless automation of complex tasks through natural language.
