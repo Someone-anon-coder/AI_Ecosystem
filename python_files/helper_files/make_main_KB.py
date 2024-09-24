@@ -11,7 +11,7 @@ main_kb = [{
     "answer_format": "To do this use kb ```kb_name [kb_name]```",
     "cant_answer_format": "```Sorry, this knowledge base is not available yet```",
     "examples": {
-        "Unhide a file \".test.txt\" in directory \"hidden_files\\test_files\\\" and then move it to \"test_files\\\"": "To unhide a file \".test.txt\" in directory \"hidden_files\\test_files\\\" and then move it to \"test_files\\\" use kb ```kb_name File```",
+        "Unhide a file \".test.txt\" in directory \"hidden_files\\test_files/\" and then move it to \"test_files/\"": "To unhide a file \".test.txt\" in directory \"hidden_files\\test_files/\" and then move it to \"test_files/\" use kb ```kb_name File```",
         "Turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years": "To turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years use kb ```kb_name GoogleSearch",
         "Change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\"": "To change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\" use kb ```kb_name GeminiModel",
         "Open camera and click \"5\" photos with a gap of \"3\" seconds each then open the photo": "```Sorry, this knowledge base is not available yet```",

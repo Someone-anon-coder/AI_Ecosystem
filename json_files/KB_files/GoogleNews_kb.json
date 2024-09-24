@@ -10,7 +10,7 @@
             "Search News for topic \"presidential Candiates\" and give me \"5\" results in english": "To search news for topic \"presidential Candiates\" and give me \"5\" results in english use function ```function_name _set_language``` with parameters ```parameters { language = \"en\" }``` then use function ```function_name _set_max_results``` with parameters ```parameters { max_results = 5 }``` ```function_name _get_news_by_topic``` with parameters ```parameters { topic = \"presidential Candiates\" }",
             "Get me News by the topic \"Climate Change\" between \"7th January 2015\" and \"20th February 2020\"": "To get the news by the topic \"Climate Change\" between \"7th January 2015\" and \"20th February 2020\" use function ```function_name _set_start_date``` with parameters ```parameters { start_date = \"2015-01-07\" }``` then use function ```function_name _set_end_date``` with parameters ```parameters { end_date = \"2020-02-20\" }``` then use function ```function_name _get_news_by_topic``` with parameters ```parameters { topic = \"Climate Change\" }```",
             "Set the model to \"gemini-pro\" and ask it \"What is the meaning of life?\" and give me a verbose response": "```Sorry, this query cannot be handled by me",
-            "Create a folder \"CSV_files\" then move it to \"Passwords\\\" and then hide it": "```Sorry, this query cannot be handled by me"
+            "Create a folder \"CSV_files\" then move it to \"Passwords/\" and then hide it": "```Sorry, this query cannot be handled by me"
         },
         "Note": "Answer the query if and only if it can be done by the functions available in your knowledge base. DO NOT create new functions or parameters to answer user query"
     },

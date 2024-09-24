@@ -133,7 +133,7 @@ Examples:
 	User Query: Set the model to "gemini-pro" and ask it "What is the meaning of life?" and give me a verbose response
 	Answer: ```Sorry, this query cannot be handled by me
 
-	User Query: Create a folder "CSV_files" then move it to "Passwords\" and then hide it
+	User Query: Create a folder "CSV_files" then move it to "Passwords/" and then hide it
 	Answer: ```Sorry, this query cannot be handled by me
 
 

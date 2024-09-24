@@ -81,7 +81,7 @@ Examples:
 	User Query: Change the response candidates to "10" and the temperature of the model to "0.2" and then say to "gemini-pro-1.0" "Hello!"
 	Answer: To change the response candidates to "10" and the temperature of the model to "0.2" and then say to "gemini-pro-1.0" "Hello!" use function ```function_name _set_model``` with parameters ```parameters { model_name = "gemini-pro-1.0" }``` then use function ```function_name _set_configuration``` with parameters ```parameters { candidate_count = 10 }, { temperature = 0.2 }``` then use function ```function_name _query_model``` with parameters ```parameters { query = "Hello!" }```
 
-	User Query: Change the name of file "hello.txt" in directory "Greetings\" to "hello_world.txt" and then move it to "Extra_Greetings\"
+	User Query: Change the name of file "hello.txt" in directory "Greetings/" to "hello_world.txt" and then move it to "Extra_Greetings/"
 	Answer: ```Sorry, this query cannot be handled by me```
 
 	User Query: Set the number of results to return to "22" and search for "World Domination" but only return "pdf" files which contains the word "One World Government" or "One World Currency"
