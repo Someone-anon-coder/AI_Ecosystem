@@ -74,6 +74,24 @@ std::map<std::string, std::map<std::string, std::string>> File::__class_info__()
     };
 }
 
+void File::__log__(
+    const std::string content // Content to write to log file
+) {
+    std::ifstream previous_log_file; // File object to read from the previous log file
+    previous_log_file.open(this->_log_filename);
+
+    std::string previous_content((std::istreambuf_iterator<char>(previous_log_file)), std::istreambuf_iterator<char>()); // Content from the previous log file
+    previous_log_file.close();
+
+    std::ofstream new_log_file; // File object to write the new log file
+    new_log_file.open(this->_log_filename);
+
+    previous_content += content + "\n";
+    new_log_file << previous_content;
+
+    new_log_file.close();
+}
+
 void File::_create_file(
     const std::string filename, // Name of the file
     const std::string file_path = "" // Path of the file
@@ -84,10 +102,14 @@ void File::_create_file(
     file_create.open(fullpath.c_str());
     file_create.close();
 
-    std::string log_content = "File " + filename;
-    log_content += file_path != "" ? " created at " + file_path + " Successfully" : " created Successfully";
 
-    _write_file(File::_log_filename, log_content, "");
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Created Successfully";
+
+    this->__log__(log_content);
 }
 
 void File::_write_file(
@@ -103,10 +125,14 @@ void File::_write_file(
     
     file_write.close();
 
-    std::string log_content = "Content writtern to " + filename;
-    log_content += file_path != "" ? " in " + file_path + " Successfully" : " Successfully";
 
-    _write_file(File::_log_filename, log_content, "");
+    // Log function
+    std::string log_content = "Content written to " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Successfully";
+
+    this->__log__(log_content);
 }
 
 std::string File::_read_file(
@@ -121,10 +147,14 @@ std::string File::_read_file(
     
     file_read.close();
 
-    std::string log_data_content = "Content from file " + filename;
-    log_data_content += file_path != "" ? " at " + file_path + ":\n\n" + content : ":\n\n" + content;
 
-    _write_file(File::_data_log_filename, log_data_content, "");
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Read Successfully";
+
+    this->__log__(log_content);
 
     return content;
 }
@@ -135,6 +165,15 @@ void File::_delete_file(
 ) {
     std::string fullpath = file_path + filename; // Location and Name of the file to delete
     std::remove(fullpath.c_str());
+
+
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Deleted Successfully";
+
+    this->__log__(log_content);
 }
 
 void File::_rename_file(
@@ -146,6 +185,15 @@ void File::_rename_file(
     std::string new_fullpath = file_path + new_filename; // New location and Name of the file
 
     std::rename(fullpath.c_str(), new_fullpath.c_str());
+
+
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Renamed to " + new_filename;
+
+    this->__log__(log_content);
 }
 
 void File::_move_file(
@@ -157,6 +205,15 @@ void File::_move_file(
     std::string new_fullpath = new_path + filename; // New location and Name of the file
 
     std::rename(fullpath.c_str(), new_fullpath.c_str());
+
+
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Moved to " + new_path;
+
+    this->__log__(log_content);
 }
 
 void File::_copy_file(
@@ -177,6 +234,15 @@ void File::_copy_file(
     
     read_file.close();
     write_file.close();
+
+    
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Copied to " + new_path;
+
+    this->__log__(log_content);
 }
 
 bool File::_check_file(
@@ -186,13 +252,23 @@ bool File::_check_file(
     std::string fullpath = file_path + filename; // Location and Name of the file to check
     std::ifstream read_file; // File object to read from a file
     
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+
     read_file.open(fullpath);
     if (read_file.is_open()) {
         read_file.close();
         
+        log_content += " Checked and it exists";
+        this->__log__(log_content);
+
         return true;
     } else {
         read_file.close();
+
+        log_content += " Checked and it does not exists";
+        this->__log__(log_content);
         
         return false;
     }
@@ -206,6 +282,15 @@ void File::_hide_file(
     const std::string new_fullpath = file_path + "." + filename; // New location and Name of the  hidden file
 
     std::rename(fullpath.c_str(), new_fullpath.c_str());
+
+
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " Hidden Successfully";
+
+    this->__log__(log_content);
 }
 
 void File::_unhide_file(
@@ -221,11 +306,13 @@ void File::_unhide_file(
     
     const std::string new_fullpath = file_path + new_filename;
     std::rename(fullpath.c_str(), new_fullpath.c_str());
-}
 
-int main(){
-    File file;
-    file._create_file("Test.txt");
 
-    return 0;
+    // Log function
+    std::string log_content = "File " + filename;
+    if (file_path != "")
+        log_content += " at " + file_path;
+    log_content += " UnHidden Successfully";
+
+    this->__log__(log_content);
 }
