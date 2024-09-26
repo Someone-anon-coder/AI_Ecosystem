@@ -1,5 +1,2 @@
-File Test.txt Created Successfully
-Content written to Test.txt Successfully
-File Test.txt Hidden Successfully
-File .Test.txt UnHidden Successfully
-File Test.txt Deleted Successfully
+File test.txt Checked and it does not exists
+Content written to test.txt after creation, Successfully

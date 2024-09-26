@@ -16,6 +16,14 @@ class Folder {
         /// @brief Class Destructor
         ~Folder();
 
+        std::string _log_filename = "log_files/function_execution_logs.txt"; // Name of the log file
+
+        /// @brief Function to write to logs to log file
+        /// @param content Content to write to log file
+        void __log__(
+            const std::string content // Content to write to log file
+        );
+
         /// @brief Function to get the class information
         /// @return Vector of maps containing the class information
         std::map<std::string, std::map<std::string, std::string>> __class_info__();
