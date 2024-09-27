@@ -17,6 +17,8 @@ class GoogleSearch{
         std::string __api_key; // Google custom search json API key
         std::string __cx_key; // Google custom search json Search Engine ID
 
+        std::string _log_filename = "log_files/function_execution_logs.txt"; // Name of the log file
+
         const int __filter[2] = {0, 1}; // Controls turning on or off the duplicate content filter.
         const int __c2coff[2] = {0, 1}; // Enables or disables Simplified and Traditional Chinese Search.
 
@@ -38,6 +40,12 @@ class GoogleSearch{
         const std::string __image_dominant_color_types[12] = {"black", "blue", "brown", "gray", "green", "orange", "pink", "purple", "red", "teal", "white", "yellow"}; // Available dominant colors to search for images
 
         // Class Private Functions
+
+        /// @brief Function to write to logs to log file
+        /// @param content Content to write to log file
+        void __log__(
+            const std::string content // Content to write to log file
+        );
 
         /// @brief Function to trim whitespace from a string
         /// @param str The string to be trimmed
@@ -369,19 +377,19 @@ class GoogleSearch{
         /// @brief Set to check whether duplicate is turned On or Off
         /// @param filter Integer specifying if duplicate content is on or off
         void _set_filter(
-            const int filter // check whether duplicate is turned On or Off
+            const int8_t filter // check whether duplicate is turned On or Off
         );
 
         /// @brief Turn on or off Simplified and Traditional Chinese
         /// @param c2coff Integer Specifying to turn on or off Simplified and Traditional Chinese
         void _set_c2coff(
-            const int c2coff // Turn on or off Simplified and Traditional Chinese
+            const int8_t c2coff // Turn on or off Simplified and Traditional Chinese
         );
 
         /// @brief Set whether to restrict search based on date
         /// @param date_restrict Whether to restrict search based on date
         void _set_date_restrict(
-            const int date_restrict // check whether search is restricted by date
+            const int8_t date_restrict // Set whether search is to be restricted by date
         );
 
         /// @brief Set extra queries to search for with the search query
@@ -548,7 +556,8 @@ class GoogleSearch{
         /// @param snippet Get Snippet
         /// @param link Get Link
         /// @param image Get Image
-        /// @param filename Name of the file to retrive response data from
+        /// @param json_filename Name of the json file to retrive response data from
+        /// @param text_filename Name of the text file to store results
         void _get_result(
             const int result_index, // Index of individual result to parse
             
@@ -557,7 +566,8 @@ class GoogleSearch{
             const bool link, // Get Link
             const bool image, // Get Image
             
-            const std::string filename // Name of the file to retrive response data from
+            const std::string json_filename, // Name of the json file to retrive response data from
+            const std::string text_filename // Name of the text file to store results
         );
 };
 

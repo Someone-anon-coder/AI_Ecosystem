@@ -1,4 +1,7 @@
 #include "../header_files/search_configure.h"
+#include <cstdint>
+#include <fstream>
+#include <string>
 
 GoogleSearch::GoogleSearch(
     const std::string search_terms = "", // Query to search for on google
@@ -436,6 +439,24 @@ std::map<std::string, std::map<std::string, std::string>> GoogleSearch::__class_
     };
 }
 
+void GoogleSearch::__log__(
+    const std::string content // Content to write to log file
+){
+    std::ifstream previous_log_file; // File object to read from the previous log file
+    previous_log_file.open(this->_log_filename);
+
+    std::string previous_content((std::istreambuf_iterator<char>(previous_log_file)), std::istreambuf_iterator<char>()); // Content from the previous log file
+    previous_log_file.close();
+
+    std::ofstream new_log_file; // File object to write the new log file
+    new_log_file.open(this->_log_filename);
+
+    previous_content += content + "\n";
+    new_log_file << previous_content;
+
+    new_log_file.close();
+}
+
 std::string GoogleSearch::__trim(
     const std::string& str // String to be trimmed
 ) {
@@ -507,7 +528,7 @@ void GoogleSearch::__get_api_cx(
     std::unordered_map<std::string, std::string> environment_variables = __load_env_file(this->_env_file);
 
     this->__api_key = __get_env_value(environment_variables, "SEARCH_API_KEY");
-    this->__cx_key = __get_env_value(environment_variables, "SEARCH_CSE_KEY");
+    this->__cx_key = __get_env_value(environment_variables, "SEARCH_CX_KEY");
 };
 
 size_t GoogleSearch::__WriteCallBack(
@@ -551,6 +572,10 @@ void GoogleSearch::__save_json_data(
     const std::string filename = "json_files/search_result.json" // Name of the file to save json data in
 ){
     auto json = nlohmann::json::parse(json_data); // nlohmann object to parse json data
+    if (json["queries"]["nextPage"].size() == 1){
+        json["queries"]["nextPage"][0]["cx"] = "[cx?]";
+        json["queries"]["request"][0]["cx"] = "[cx?]";
+    }
 
     std::ofstream json_file(filename); // Json file to save data
     json_file << std::setw(4) << json << std::endl;
@@ -622,130 +647,226 @@ void GoogleSearch::__construct_search_url(){
 };
 
 int GoogleSearch::_get_num_results(){
+    std::string log_content = "Number of results is " + std::to_string(this->_num_results) + " to search google.";
+    this->__log__(log_content);
+
     return this->_num_results;
 };
 
 int GoogleSearch::_get_start_index(){
+    std::string log_content = "Start index is " + std::to_string(this->_start_index) + " to search google.";
+    this->__log__(log_content);
+
     return this->_start_index;
 };
 
 int GoogleSearch::_get_filter(){
+    std::string log_content = "Filter is " + std::to_string(this->_filter) + " to search google.";
+    this->__log__(log_content);
+
     return this->_filter;
 };
 
 int GoogleSearch::_get_c2coff(){
+    std::string log_content = "Simplified and Traditional Chinese is " + std::to_string(this->_c2coff) + " to search google.";
+    this->__log__(log_content);
+
     return this->_c2coff;
 };
 
 int GoogleSearch::_get_date_restrict(){
+    std::string log_content = "Date restrict is " + std::to_string(this->_date_restrict) + " to search google.";
+    this->__log__(log_content);
+
     return this->_date_restrict;
 };
 
 std::string GoogleSearch::_get_query(){
+    std::string log_content = "Query is " + this->_search_terms + " to search google.";
+    this->__log__(log_content);
+
     return this->_search_terms;
 };
 
 std::string GoogleSearch::_get_search_url(){
+    std::string log_content = "Search url is " + this->_search_url + " to search google.";
+    this->__log__(log_content);
+
     return this->_search_url;
 };
 
 std::string GoogleSearch::_get_extra_query(){
+    std::string log_content = "Extra query is " + this->_extra_query + " to search google.";
+    this->__log__(log_content);
+
     return this->_extra_query;
 };
 
 std::string GoogleSearch::_get_exact_terms(){
+    std::string log_content = "Exact terms is " + this->_exact_terms + " to search google.";
+    this->__log__(log_content);
+
     return this->_exact_terms;
 };
 
 std::string GoogleSearch::_get_exclude_terms(){
+    std::string log_content = "Exclude terms is " + this->_exclude_terms + " to search google.";
+    this->__log__(log_content);
+
     return this->_exclude_terms;
 };
 
 std::string GoogleSearch::_get_site_search(){
+    std::string log_content = "Site search is " + this->_site_search + " to search google.";
+    this->__log__(log_content);
+
     return this->_site_search;
 };
 
 std::string GoogleSearch::_get_site_search_filter(){
+    std::string log_content = "Site search filter is " + this->_site_search_filter + " to search google.";
+    this->__log__(log_content);
+
     return this->_site_search_filter;
 };
 
 std::string GoogleSearch::_get_link_site(){
+    std::string log_content = "Link site is " + this->_link_site + " to search google.";
+    this->__log__(log_content);
+
     return this->_link_site;
 };
 
 std::string GoogleSearch::_get_or_terms(){
+    std::string log_content = "Or terms is " + this->_or_terms + " to search google.";
+    this->__log__(log_content);
+
     return this->_or_terms;
 };
 
 std::string GoogleSearch::_get_date_restrict_type(){
+    std::string log_content = "Date restrict type is " + this->_date_restrict_type + " to search google.";
+    this->__log__(log_content);
+
     return this->_date_restrict_type;
 };
 
 std::string GoogleSearch::_get_low_range(){
+    std::string log_content = "Low range is " + this->_low_range + " to search google.";
+    this->__log__(log_content);
+
     return this->_low_range;
 };
 
 std::string GoogleSearch::_get_high_range(){
+    std::string log_content = "High range is " + this->_high_range + " to search google.";
+    this->__log__(log_content);
+
     return this->_high_range;
 };
 
 std::string GoogleSearch::_get_search_type(){
+    std::string log_content = "Search type is " + this->_search_type + " to search google.";
+    this->__log__(log_content);
+
     return this->_search_type;
 };
 
 std::string GoogleSearch::_get_filetype(){
+    std::string log_content = "Filetype is " + this->_filetype + " to search google.";
+    this->__log__(log_content);
+
     return this->_filetype;
 };
 
 std::string GoogleSearch::_get_rights(){
+    std::string log_content = "Rights is " + this->_rights + " to search google.";
+    this->__log__(log_content);
+
     return this->_rights;
 };
 
 std::string GoogleSearch::_get_img_size(){
+    std::string log_content = "Image size is " + this->_img_size + " to search google.";
+    this->__log__(log_content);
+
     return this->_img_size;
 };
 
 std::string GoogleSearch::_get_img_type(){
+    std::string log_content = "Image type is " + this->_img_type + " to search google.";
+    this->__log__(log_content);
+
     return this->_img_type;
 };
 
 std::string GoogleSearch::_get_img_color_type(){
+    std::string log_content = "Image color type is " + this->_img_color_type + " to search google.";
+    this->__log__(log_content);
+
     return this->_img_color_type;
 };
 
 std::string GoogleSearch::_get_img_dominant_color(){
+    std::string log_content = "Image dominant color is " + this->_img_dominant_color + " to search google.";
+    this->__log__(log_content);
+
     return this->_img_dominant_color;
 };
 
 std::string GoogleSearch::_get_language(){
+    std::string log_content = "Language is " + this->_language + " to search google.";
+    this->__log__(log_content);
+
     return this->_language;
 };
 
 std::string GoogleSearch::_get_interface_language(){
+    std::string log_content = "User interface language is " + this->_interface_language + " to search google.";
+    this->__log__(log_content);
+
     return this->_interface_language;
 };
 
 std::string GoogleSearch::_get_user_country(){
+    std::string log_content = "User country is " + this->_user_country + " to search google.";
+    this->__log__(log_content);
+
     return this->_user_country;
 };
 
 std::string GoogleSearch::_get_result_country(){
+    std::string log_content = "Result country is " + this->_result_country + " to search google.";
+    this->__log__(log_content);
+
     return this->_result_country;
 };
 
 std::string GoogleSearch::_get_safe(){
+    std::string log_content = "Safe search is " + this->_safe + " to search google.";
+    this->__log__(log_content);
+
     return this->_safe;
 };
 
 std::string GoogleSearch::_get_sort(){
+    std::string log_content = "Sort order is " + this->_sort + " to search google.";
+    this->__log__(log_content);
+
     return this->_sort;
 };
 
 std::string GoogleSearch::_get_json_file(){
+    std::string log_content = "Json file is " + this->_json_file + " to search google.";
+    this->__log__(log_content);
+
     return this->_json_file;
 };
 
 std::string GoogleSearch::_get_env_file(){
+    std::string log_content = "Env file is " + this->_env_file + " to search google.";
+    this->__log__(log_content);
+
     return this->_env_file;
 };
 
@@ -753,213 +874,562 @@ void GoogleSearch::_set_num_results(
     const int num_results // number of results to return 
 ){
     this->_num_results = num_results;
+
+
+    // Log function
+    std::string log_content = "Number of results set to " + std::to_string(num_results) + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_start_index(
     const int start_index // index at which search result starts
 ){
     this->_start_index = start_index;
+
+
+    // Log function
+    std::string log_content = "Start index set to " + std::to_string(start_index) + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_filter(
-    const int filter // check whether duplicate is turned On or Off
+    const int8_t filter // check whether duplicate is turned On or Off
 ){
-    this->_filter = filter;
+    bool correct_filter = false;
+
+    for (char filter_in_filter: this->__filter){
+        if (filter_in_filter == filter){
+            correct_filter = true;
+            this->_filter = filter;
+            break;
+        }
+    }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_filter)
+        log_content = "Filter set to " + std::to_string(filter) + ".";
+    else
+        log_content = "Filter could not be set to " + std::to_string(filter) + " as it is not a correct filter value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_c2coff(
-    const int c2coff // Turn on or off Simplified and Traditional Chinese
+    const int8_t c2coff // Turn on or off Simplified and Traditional Chinese
 ){
-    this->_c2coff = c2coff;
+    bool correct_c2coff = false;
+
+    for (char c2coff_in_c2coff: this->__c2coff){
+        if (c2coff_in_c2coff == c2coff){
+            correct_c2coff = true;
+            this->_c2coff = c2coff;
+            break;
+        }
+    }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_c2coff)
+        log_content = "Simplified and Traditional Chinese is set to " + std::to_string(c2coff) + ".";
+    else
+        log_content = "Simplified and Traditional Chinese could not be set to " + std::to_string(c2coff) + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_date_restrict(
-    const int date_restrict // check whether search is restricted by date
+    const int8_t date_restrict // Set whether search is to be restricted by date
 ){
-    this->_date_restrict = date_restrict;
+    bool correct_date_restrict = false;
+
+    if (date_restrict == 0 || date_restrict == 1){
+        correct_date_restrict = true;
+        this->_date_restrict = date_restrict;
+    }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_date_restrict)
+        log_content = "Date restrict is set to " + std::to_string(date_restrict) + ".";
+    else
+        log_content = "Date restrict could not be set to " + std::to_string(date_restrict) + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_extra_query(
     const std::string extra_query // extra queries to search for with the search query
 ){
     this->_extra_query = extra_query;
+
+
+    // Log function
+    std::string log_content = "Extra queries set to " + extra_query + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_exact_terms(
     const std::string exact_terms // phrase to include in document in search results
 ){
     this->_exact_terms = exact_terms;
+
+
+    // Log function
+    std::string log_content = "Exact terms set to " + exact_terms + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_exclude_terms(
     const std::string exclude_terms // terms to exclude from documents in search result
 ){
     this->_exclude_terms = exclude_terms;
+
+
+    // Log function
+    std::string log_content = "Exclude terms set to " + exclude_terms + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_site_search(
     const std::string site_search // site to always include or exclude from search results
 ){
     this->_site_search = site_search;
+
+
+    // Log function
+    std::string log_content = "Site search set to " + site_search + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_site_search_filter(
     const char site_search_filter // value specifying to include or exclude a site
 ){
-    for (auto filter : this->__site_search_filter){
-        if (filter == site_search_filter)
-            this->_site_search_filter = filter;
+    bool correct_search_filter = false;
+
+    for (char site_filter: this->__site_search_filter){
+        if (site_filter == site_search_filter){
+            correct_search_filter = true;
+            this->_site_search_filter = site_search_filter;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_search_filter)
+        log_content = "Site search filter set to " + std::to_string(site_search_filter) + ".";
+    else
+        log_content = "Site search filter could not be set to " + std::to_string(site_search_filter) + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_link_site(
     const std::string link_site // link to include in each search result
 ){
     this->_link_site = link_site;
+
+
+    // Log function
+    std::string log_content = "Link site set to " + link_site + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_or_terms(
     const std::string or_terms // additional terms to include in the document
 ){
     this->_or_terms = or_terms;
+
+
+    // Log function
+    std::string log_content = "Or terms set to " + or_terms + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_date_restrict_type(
     const std::string date_restrict_type // date restrict type to restrict search results
 ){
-    for (auto types : this->__date_restrict){
-        if (types == date_restrict_type[0])
+    bool correct_date_type = false;
+
+    for (char date_type: this->__date_restrict){
+        if (date_type == date_restrict_type[0]){
+            correct_date_type = true;
             this->_date_restrict_type = date_restrict_type;
+            
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_date_type)
+        log_content = "Date restrict type set to " + date_restrict_type + ".";
+    else
+        log_content = "Date restrict type could not be set to " + date_restrict_type + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_low_range(
     const std::string low_range // query appended to before the search query
 ){
     this->_low_range = low_range;
+
+
+    // Log function
+    std::string log_content = "Low range set to " + low_range + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_high_range(
     const std::string high_range // query appended to after the search query
 ){
     this->_high_range = high_range;
+
+
+    // Log function
+    std::string log_content = "High range set to " + high_range + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_search_type(
     const std::string search_type // search type of the query
 ){
-    for (auto search_types : this->__search_type){
-        if (search_types == search_type)
+    bool correct_search_type = false;
+
+    for (std::string type : this->__search_type){
+        if (type == search_type){
+            correct_search_type = true;
             this->_search_type = search_type;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_search_type)
+        log_content = "Search type set to " + search_type + ".";
+    else
+        log_content = "Search type could not be set to " + search_type + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_filetype(
     const std::string filetype // filetype of the query;
 ){
-    for (auto filetypes : this->__available_filetypes){
-        if (filetypes == filetype)
+    bool correct_file_type = false;
+
+    for (std::string type : this->__available_filetypes){
+        if (type == filetype){
+            correct_file_type = true;
             this->_filetype = filetype;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_file_type)
+        log_content = "Filetype set to " + filetype + ".";
+    else
+        log_content = "Filetype could not be set to " + filetype + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_rights(
     const std::string right // licensing of the query
 ){
-    for (auto rights : this->__rights){
-        if (rights == right)
+    bool correct_right = false;
+
+    for (std::string right_in_right : this->__rights){
+        if (right_in_right == right){
+            correct_right = true;
             this->_rights = right;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_right)
+        log_content = "Rights set to " + right + ".";
+    else
+        log_content = "Rights could not be set to " + right + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_img_size(
     const std::string img_size // size of the image
 ){
-    for (auto sizes : this->__image_sizes){
-        if (sizes == img_size)
+    bool correct_img_size = false;
+
+    for (std::string size : this->__image_sizes){
+        if (size == img_size){
+            correct_img_size = true;
             this->_img_size = img_size;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_img_size)
+        log_content = "Image size set to " + img_size + ".";
+    else
+        log_content = "Image size could not be set to " + img_size + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_img_type(
     const std::string img_type // type of the image
 ){
-    for (auto types : this->__image_types){
-        if (types == img_type)
+    bool correct_img_type = false;
+
+    for (std::string type : this->__image_types){
+        if (type == img_type){
+            correct_img_type = true;
             this->_img_type = img_type;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_img_type)
+        log_content = "Image type set to " + img_type + ".";
+    else
+        log_content = "Image type could not be set to " + img_type + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_img_color_type(
     const std::string img_color_type // color type of the image
 ){
-    for (auto colors : this->__image_color_types){
-        if (colors == img_color_type)
+    bool correct_img_color_type = false;
+
+    for (std::string color_type : this->__image_color_types){
+        if (color_type == img_color_type){
+            correct_img_color_type = true;
             this->_img_color_type = img_color_type;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_img_color_type)
+        log_content = "Image color type set to " + img_color_type + ".";
+    else
+        log_content = "Image color type could not be set to " + img_color_type + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_img_dominant_color(
     const std::string img_dominant_color // dominant color of the image
 ){
-    for (auto colors : this->__image_dominant_color_types){
-        if (colors == img_dominant_color)
+    bool correct_img_dominant_color = false;
+
+    for (std::string dominant_color : this->__image_dominant_color_types){
+        if (dominant_color == img_dominant_color){
+            correct_img_dominant_color = true;
             this->_img_dominant_color = img_dominant_color;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_img_dominant_color)
+        log_content = "Image dominant color set to " + img_dominant_color + ".";
+    else
+        log_content = "Image dominant color could not be set to " + img_dominant_color + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_language(
     const std::string language // language to search google
 ){
-    this->_language = language;
+    bool correct_language = false;
+
+    for (std::string language_in_language : this->__available_languages){
+        if (language_in_language == language){
+            correct_language = true;
+            this->_language = language;
+            break;
+        }
+    }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_language)
+        log_content = "Language set to " + language + ".";
+    else
+        log_content = "Language could not be set to " + language + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_interface_language(
     const std::string interface_language // user interface language
 ){
-    this->_interface_language = interface_language;
+    bool correct_interface_language = false;
+
+    for (std::string language_in_interface_language : this->__available_languages){
+        if (language_in_interface_language == interface_language){
+            correct_interface_language = true;
+            this->_interface_language = interface_language;
+            break;
+        }
+    }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_interface_language)
+        log_content = "User interface language set to " + interface_language + ".";
+    else
+        log_content = "User interface language could not be set to " + interface_language + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_user_country(
     const std::string user_country // country to search from in google
 ){
-    this->_user_country = user_country;
+    bool correct_user_country = false;
+
+    for (std::string country_in_user_country : this->__available_user_countries){
+        if (country_in_user_country == user_country){
+            correct_user_country = true;
+            this->_user_country = user_country;
+            break;
+        }
+    }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_user_country)
+        log_content = "User country set to " + user_country + ".";
+    else
+        log_content = "User country could not be set to " + user_country + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_result_country(
     const std::string result_country // country to search for in google
 ){
-    this->_result_country = result_country;
+    bool correct_result_country = false;
+
+    for (std::string country_in_result_country : this->__available_result_countries){
+        if (country_in_result_country == result_country){
+            correct_result_country = true;
+            this->_result_country = result_country;
+            break;
+        }
+    }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_result_country)
+        log_content = "Result country set to " + result_country + ".";
+    else
+        log_content = "Result country could not be set to " + result_country + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_safe(
     const std::string safe // safe search
 ){
-    for (auto safes : this->__safe){
-        if (safes == safe)
+    bool correct_safe;
+
+    for (std::string safe_in_safe : this->__safe){
+        if (safe_in_safe == safe){
+            correct_safe = true;
             this->_safe = safe;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_safe)
+        log_content = "Safe search set to " + safe + ".";
+    else
+        log_content = "Safe search could not be set to " + safe + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_sort(
     const std::string sort // sort order
 ){
-    for (auto sorts : this->__sort){
-        if (sorts == sort)
+    bool correct_sort = false;
+
+    for (std::string sort_in_sort : this->__sort){
+        if (sort_in_sort == sort){
+            correct_sort = true;
             this->_sort = sort;
+            break;
+        }
     }
+
+
+    // Log function
+    std::string log_content;
+    if (correct_sort)
+        log_content = "Sort order set to " + sort + ".";
+    else
+        log_content = "Sort order could not be set to " + sort + " as it is not a correct value";
+    
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_response_file(
     const std::string json_file // Name of the file to save response data
 ){
     this->_json_file = json_file;
+
+
+    // Log function
+    std::string log_content = "Json file set to " + json_file + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_set_env_file(
     const std::string env_file // Name of the file that contains Google Search API and CX Keys
 ){
     this->_env_file = env_file;
+
+    
+    // Log function
+    std::string log_content = "Env file set to " + env_file + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_search_google(
@@ -971,6 +1441,11 @@ void GoogleSearch::_search_google(
 
     std::string json_data = this->__fetch_json_data(this->_search_url); // Json data from the result
     this->__save_json_data(json_data, json_file);
+
+
+    // Log function
+    std::string log_content = "Searched google for query " + query + " and stored search results in file " + json_file + ".";
+    this->__log__(log_content);
 };
 
 void GoogleSearch::_get_result(
@@ -981,39 +1456,62 @@ void GoogleSearch::_get_result(
     const bool link = false, // Get Link
     const bool image = false, // Get Image
     
-    const std::string filename = "json_files/search_result.json" // Name of the file to retrive response data from
+    const std::string json_filename = "json_files/search_result.json", // Name of the file to retrive response data from
+    const std::string text_filename = "text_files/search_results.txt" // Name of the text file to store results
 ){
-    std::ifstream json_file(filename); // Json file to retrive data
+    bool results_saved = false;
+
+    std::ifstream json_file(json_filename); // Json file to retrive data
     nlohmann::json json_data; // nlohmann object to parse json data
     json_file >> json_data;
 
     json_file.close();
 
     if (json_data.contains("items") && json_data["items"].is_array()){
+        std::ofstream result_file; // Text file to store results
+        result_file.open(text_filename);
+
         if (result_index < json_data["items"].size() && result_index >= 0){
+            results_saved = true;
             auto result = json_data["items"][result_index];
 
             if (title && result.contains("title"))
-                std::cout << "Title: " << result["title"] << std::endl;
+                result_file << "Title: " << result["title"] << std::endl;
             if (snippet && result.contains("snippet"))
-                std::cout << "Snippet: " << result["snippet"] << std::endl;
+                result_file << "Snippet: " << result["snippet"] << std::endl;
             if (link && result.contains("link"))
-                std::cout << "Link: " << result["link"] << std::endl;
+                result_file << "Link: " << result["link"] << std::endl;
             if (image && result.contains("pagemap") && result["pagemap"].contains("cse_image") && result["pagemap"]["cse_image"].is_array())
-                std::cout << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
+                result_file << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
         }
 
         if (result_index == -1){
+            results_saved = true;
             auto results = json_data["items"];
 
             for (auto result : results){
-                std::cout << "Title: " << result["title"] << std::endl;
-                std::cout << "Snippet: " << result["snippet"] << std::endl;
-                std::cout << "Link: " << result["link"] << std::endl;
-                std::cout << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
+                if (title)
+                    result_file << "Title: " << result["title"] << std::endl;
+                if (snippet)
+                    result_file << "Snippet: " << result["snippet"] << std::endl;
+                if (link)
+                    result_file << "Link: " << result["link"] << std::endl;
+                if (image)
+                    result_file << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
 
-                std::cout << std::endl;
+                result_file << std::endl;
             }
         }
+        result_file.close();
     }
+
+
+    // Log function
+    std::string log_content;
+    if (results_saved)
+        log_content = "Search results saved to file " + text_filename + " Successfully.";
+    else
+        log_content = "Search results could not saved to file " + text_filename;
+
+    this->__log__(log_content);
 };

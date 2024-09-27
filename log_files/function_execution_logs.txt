@@ -1,0 +1,33 @@
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results saved to file text_files/search_results.txt Successfully.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results saved to file text_files/search_results.txt Successfully.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results saved to file text_files/search_results.txt Successfully.
+Number of results set to 10.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results saved to file text_files/search_results.txt Successfully.
+Number of results set to 1000.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results could not saved to file text_files/search_results.txt
+Number of results set to 1000.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results could not saved to file text_files/search_results.txt
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results saved to file text_files/search_results.txt Successfully.
+Number of results set to 10.
+Searched google for query AI Developement and stored search results in file json_files/search_result.json.
+Search results saved to file text_files/search_results.txt Successfully.

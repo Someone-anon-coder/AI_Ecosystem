@@ -4,57 +4,209 @@
     },
     "items": [
         {
-            "displayLink": "developers.google.com",
-            "formattedUrl": "https://developers.google.com/focus/ai-development",
-            "htmlFormattedUrl": "https://developers.google.com/focus/<b>ai</b>-<b>development</b>",
-            "htmlSnippet": "Access cutting-edge <b>AI</b> models and open source tools for machine learning. Explore Google&#39;s <b>AI</b> solutions built to simplify app and web <b>development</b> for&nbsp;...",
-            "htmlTitle": "<b>AI</b> Based Solutions for Developers - Google for Developers",
+            "displayLink": "www.reddit.com",
+            "formattedUrl": "https://www.reddit.com/r/F1Manager/.../ai_development_is_still_broken/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/F1Manager/.../<b>ai</b>_development_is_still_broken/",
+            "htmlSnippet": "Jul 29, 2024 <b>...</b> 151 votes, 60 comments. Today&#39;s patch fixed <b>AI</b> to at least develop every kind of part, but digging into the save database, it becomes clear&nbsp;...",
+            "htmlTitle": "<b>AI development</b> is still broken : r/F1Manager",
             "kind": "customsearch#result",
-            "link": "https://developers.google.com/focus/ai-development",
+            "link": "https://www.reddit.com/r/F1Manager/comments/1efauy6/ai_development_is_still_broken/",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://developers.google.com/static/site-assets/images/home/developers-social-media.png"
+                        "src": "https://share.redd.it/preview/post/1efauy6"
                     }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "168",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbi-yKh0wOtPKRyyUksopFkrW0GbQc8ZnVYv-WPpDVyZq1Fv5YgUXWgMo&s",
-                        "width": "300"
-                    }
-                ],
-                "document": [
-                    {}
                 ],
                 "metatags": [
                     {
-                        "google-signin-client-id": "721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com",
-                        "google-signin-scope": "profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award",
-                        "og:description": "Access cutting-edge AI models and open source tools for machine learning. Explore Google's AI solutions built to simplify app and web development for developers.",
-                        "og:image": "https://developers.google.com/static/site-assets/images/home/developers-social-media.png",
-                        "og:image:height": "675",
+                        "apple-mobile-web-app-capable": "yes",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/TheFlame8 - 151 votes and 60 comments",
+                        "og:image": "https://share.redd.it/preview/post/1efauy6",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "og:image:height": "630",
                         "og:image:width": "1200",
-                        "og:locale": "en",
-                        "og:site_name": "Google for Developers",
-                        "og:title": "AI Based Solutions for Developers - Google for Developers",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/F1Manager on Reddit: AI development is still broken",
+                        "og:ttl": "600",
                         "og:type": "website",
-                        "og:url": "https://developers.google.com/focus/ai-development",
-                        "theme-color": "#fff",
-                        "twitter:card": "summary",
-                        "twitter:image": "https://developers.google.com/static/site-assets/images/home/developers-social-media.png",
+                        "og:url": "https://www.reddit.com/r/F1Manager/comments/1efauy6/ai_development_is_still_broken/",
+                        "theme-color": "#000000",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://share.redd.it/preview/post/1efauy6",
+                        "twitter:site": "@reddit",
+                        "twitter:title": "r/F1Manager on Reddit: AI development is still broken",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+                    }
+                ]
+            },
+            "snippet": "Jul 29, 2024 ... 151 votes, 60 comments. Today's patch fixed AI to at least develop every kind of part, but digging into the save database, it becomes clear ...",
+            "title": "AI development is still broken : r/F1Manager"
+        },
+        {
+            "displayLink": "www.reddit.com",
+            "formattedUrl": "https://www.reddit.com/r/F1Manager/.../ai_development_fix_pc_only/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/F1Manager/.../<b>ai</b>_development_fix_pc_only/",
+            "htmlSnippet": "Jul 31, 2024 <b>...</b> I&#39;ve confirmed that with this fix, the <b>AI</b> will produce up the the number of projects they are supposed to, AND research becomes more common.",
+            "htmlTitle": "<b>AI Development</b> Fix (PC Only) : r/F1Manager",
+            "kind": "customsearch#result",
+            "link": "https://www.reddit.com/r/F1Manager/comments/1egn96h/ai_development_fix_pc_only/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://share.redd.it/preview/post/1egn96h"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "apple-mobile-web-app-capable": "yes",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/TheFlame8 - 85 votes and 84 comments",
+                        "og:image": "https://share.redd.it/preview/post/1egn96h",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "og:image:height": "630",
+                        "og:image:width": "1200",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/F1Manager on Reddit: AI Development Fix (PC Only)",
+                        "og:ttl": "600",
+                        "og:type": "website",
+                        "og:url": "https://www.reddit.com/r/F1Manager/comments/1egn96h/ai_development_fix_pc_only/",
+                        "theme-color": "#000000",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://share.redd.it/preview/post/1egn96h",
+                        "twitter:site": "@reddit",
+                        "twitter:title": "r/F1Manager on Reddit: AI Development Fix (PC Only)",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+                    }
+                ]
+            },
+            "snippet": "Jul 31, 2024 ... I've confirmed that with this fix, the AI will produce up the the number of projects they are supposed to, AND research becomes more common.",
+            "title": "AI Development Fix (PC Only) : r/F1Manager"
+        },
+        {
+            "displayLink": "www.whitehouse.gov",
+            "formattedUrl": "https://www.whitehouse.gov/.../executive-order-on-the-safe-secure-and-trus...",
+            "htmlFormattedUrl": "https://www.whitehouse.gov/.../executive-order-on-the-safe-secure-and-trus...",
+            "htmlSnippet": "Oct 30, 2023 <b>...</b> It is the policy of my Administration to advance and govern the <b>development</b> and use of <b>AI</b> in accordance with eight guiding principles and priorities.",
+            "htmlTitle": "Executive Order on the Safe, Secure, and Trustworthy <b>Development</b> ...",
+            "kind": "customsearch#result",
+            "link": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "apple-mobile-web-app-title": "The White House",
+                        "application-name": "The White House",
+                        "article:modified_time": "2023-10-30T20:39:12+00:00",
+                        "article:published_time": "2023-10-30T20:39:11+00:00",
+                        "article:publisher": "https://www.facebook.com/WhiteHouse/",
+                        "author": "The White House",
+                        "google": "notranslate",
+                        "og:description": "     By the authority vested in me as President by the Constitution and the laws of the United States of America, it is hereby ordered as",
+                        "og:image": "https://www.whitehouse.gov/wp-content/uploads/2023/10/image.gif",
+                        "og:locale": "en_US",
+                        "og:site_name": "The White House",
+                        "og:title": "Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence | The White House",
+                        "og:type": "article",
+                        "og:url": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/",
+                        "twitter:card": "summary_large_image",
+                        "twitter:creator": "@whitehouse",
+                        "twitter:site": "@whitehouse",
                         "viewport": "width=device-width, initial-scale=1"
                     }
                 ]
             },
-            "snippet": "Access cutting-edge AI models and open source tools for machine learning. Explore Google's AI solutions built to simplify app and web development for ...",
-            "title": "AI Based Solutions for Developers - Google for Developers"
+            "snippet": "Oct 30, 2023 ... It is the policy of my Administration to advance and govern the development and use of AI in accordance with eight guiding principles and priorities.",
+            "title": "Executive Order on the Safe, Secure, and Trustworthy Development ..."
+        },
+        {
+            "displayLink": "digichina.stanford.edu",
+            "formattedUrl": "https://digichina.stanford.edu/.../full-translation-chinas-new-generation-artif...",
+            "htmlFormattedUrl": "https://digichina.stanford.edu/.../full-translation-chinas-new-generation-artif...",
+            "htmlSnippet": "Aug 1, 2017 <b>...</b> On July 20[, 2017,] China&#39;s State Council issued a seminal document, entitled A [New] Generation <b>Artificial Intelligence Development</b> Plan. This&nbsp;...",
+            "htmlTitle": "Full Translation: China&#39;s &#39;New Generation <b>Artificial Intelligence</b> ...",
+            "kind": "customsearch#result",
+            "link": "https://digichina.stanford.edu/work/full-translation-chinas-new-generation-artificial-intelligence-development-plan-2017/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://digichina.stanford.edu/wp-content/uploads/2021/09/shutterstock_514969543.width-800.width-800.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "183",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIeZ3I1yAMoeZtKNKha5ghOsP4yZXtpquroMSfjF9SPMZ2H0JzYr21Jls&s",
+                        "width": "275"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "article:modified_time": "2021-10-01T17:37:39+00:00",
+                        "msapplication-tileimage": "https://digichina.stanford.edu/wp-content/uploads/2021/10/cropped-afgf7-8fobk-005-270x270.png",
+                        "og:description": "[The translation below was originally published as a PDF document alongside DigiChina analysis by the translators. It has not been changed except to render the name of the document as “New Generation Artificial Intelligence Development Plan” (AIDP) rather than “Next Generation,” matching other DigiChina analysis on the topic. The feedback e-mail has also been updated […]",
+                        "og:locale": "en_US",
+                        "og:site_name": "DigiChina",
+                        "og:title": "Full Translation: China's 'New Generation Artificial Intelligence Development Plan' (2017) - DigiChina",
+                        "og:type": "article",
+                        "og:url": "https://digichina.stanford.edu/work/full-translation-chinas-new-generation-artificial-intelligence-development-plan-2017/",
+                        "twitter:card": "summary_large_image",
+                        "twitter:data1": "59 minutes",
+                        "twitter:label1": "Est. reading time",
+                        "viewport": "width=device-width, initial-scale=1.0"
+                    }
+                ]
+            },
+            "snippet": "Aug 1, 2017 ... On July 20[, 2017,] China's State Council issued a seminal document, entitled A [New] Generation Artificial Intelligence Development Plan. This ...",
+            "title": "Full Translation: China's 'New Generation Artificial Intelligence ..."
+        },
+        {
+            "displayLink": "www.reddit.com",
+            "formattedUrl": "https://www.reddit.com/r/F1Manager/comments/1efbe60/ai_development/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/F1Manager/comments/1efbe60/<b>ai</b>_development/",
+            "htmlSnippet": "Jul 29, 2024 <b>...</b> How has the <b>a.i development</b> been in today&#39;s update so far? Are they actually competitive now or still crappy.",
+            "htmlTitle": "<b>A.i development</b> : r/F1Manager",
+            "kind": "customsearch#result",
+            "link": "https://www.reddit.com/r/F1Manager/comments/1efbe60/ai_development/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://share.redd.it/preview/post/1efbe60"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "apple-mobile-web-app-capable": "yes",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/Choice_Ad_1766 - 2 votes and 6 comments",
+                        "og:image": "https://share.redd.it/preview/post/1efbe60",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "og:image:height": "630",
+                        "og:image:width": "1200",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/F1Manager on Reddit: A.i development",
+                        "og:ttl": "600",
+                        "og:type": "website",
+                        "og:url": "https://www.reddit.com/r/F1Manager/comments/1efbe60/ai_development/",
+                        "theme-color": "#000000",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://share.redd.it/preview/post/1efbe60",
+                        "twitter:site": "@reddit",
+                        "twitter:title": "r/F1Manager on Reddit: A.i development",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+                    }
+                ]
+            },
+            "snippet": "Jul 29, 2024 ... How has the a.i development been in today's update so far? Are they actually competitive now or still crappy.",
+            "title": "A.i development : r/F1Manager"
         },
         {
             "displayLink": "www.intel.com",
             "formattedUrl": "https://www.intel.com/content/www/us/en/developer/.../overview.html",
             "htmlFormattedUrl": "https://www.intel.com/content/www/us/en/developer/.../overview.html",
-            "htmlSnippet": "Deploy Powerful Apps Anywhere. Get the most out of your <b>AI</b> projects with Intel&#39;s <b>AI</b> PC. Discover tools, workflows, frameworks, and <b>developer</b> kits that include&nbsp;...",
+            "htmlSnippet": "Deploy Powerful Apps Anywhere. Get the most out of your <b>AI</b> projects with Intel&#39;s <b>AI</b> PC. Discover tools, workflows, frameworks, and developer kits that include&nbsp;...",
             "htmlTitle": "<b>AI Development</b>",
             "kind": "customsearch#result",
             "link": "https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/overview.html",
@@ -110,144 +262,24 @@
             "title": "AI Development"
         },
         {
-            "displayLink": "www.state.gov",
-            "formattedUrl": "https://www.state.gov/artificial-intelligence/",
-            "htmlFormattedUrl": "https://www.state.gov/artificial-intelligence/",
-            "htmlSnippet": "The world&#39;s leading powers are racing to <b>develop</b> and deploy new technologies like <b>artificial intelligence</b> and quantum computing that could shape everything&nbsp;...",
-            "htmlTitle": "<b>Artificial Intelligence</b> (<b>AI</b>) - United States Department of State",
-            "kind": "customsearch#result",
-            "link": "https://www.state.gov/artificial-intelligence/",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://www.state.gov/wp-content/uploads/2021/07/Artificial-Intelligence-AI-scaled.jpg"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "165",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjoxv76QdBT2IJjM5M9F6enhd5RjzGY8wLeQkycA1jgPbMGU4goNm0fPd4&s",
-                        "width": "306"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "article:modified_time": "2024-07-11T16:43:47+00:00",
-                        "msapplication-tap-highlight": "no",
-                        "msapplication-tileimage": "https://www.state.gov/wp-content/uploads/2022/04/cropped-dos_seal-270x270.png",
-                        "og:description": "Together with our allies and partners, the Department of State promotes an international policy environment and works to build partnerships that further our capabilities in AI technologies, protect our national and economic security, and promote our values.",
-                        "og:image": "https://www.state.gov/wp-content/uploads/2021/07/Artificial-Intelligence-AI-scaled.jpg",
-                        "og:image:height": "1378",
-                        "og:image:type": "image/jpeg",
-                        "og:image:width": "2560",
-                        "og:locale": "en_US",
-                        "og:site_name": "United States Department of State",
-                        "og:title": "Artificial Intelligence (AI) - United States Department of State",
-                        "og:type": "article",
-                        "og:url": "https://www.state.gov/artificial-intelligence/",
-                        "twitter:card": "summary_large_image",
-                        "twitter:image": "https://www.state.gov/wp-content/uploads/2021/07/Artificial-Intelligence-AI-scaled.jpg",
-                        "viewport": "width=device-width, initial-scale=1"
-                    }
-                ]
-            },
-            "snippet": "The world's leading powers are racing to develop and deploy new technologies like artificial intelligence and quantum computing that could shape everything ...",
-            "title": "Artificial Intelligence (AI) - United States Department of State"
-        },
-        {
-            "displayLink": "en.wikipedia.org",
-            "formattedUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence",
-            "htmlFormattedUrl": "https://en.wikipedia.org/wiki/Artificial_intelligence",
-            "htmlSnippet": "<b>Artificial intelligence</b> was founded as an academic discipline in 1956, and the field went through multiple cycles of optimism, followed by periods of&nbsp;...",
-            "htmlTitle": "<b>Artificial intelligence</b> - Wikipedia",
-            "kind": "customsearch#result",
-            "link": "https://en.wikipedia.org/wiki/Artificial_intelligence",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/General_Formal_Ontology.svg/260px-General_Formal_Ontology.svg.png"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "112",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuOGU1guihmYhEKjoxlVyG1u6qQs65nNsta_GPRjl-kr8GhLuh-8WX&s=0",
-                        "width": "112"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "format-detection": "telephone=no",
-                        "og:title": "Artificial intelligence - Wikipedia",
-                        "og:type": "website",
-                        "referrer": "origin",
-                        "theme-color": "#eaecf0",
-                        "viewport": "width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"
-                    }
-                ]
-            },
-            "snippet": "Artificial intelligence was founded as an academic discipline in 1956, and the field went through multiple cycles of optimism, followed by periods of ...",
-            "title": "Artificial intelligence - Wikipedia"
-        },
-        {
-            "displayLink": "cloud.google.com",
-            "formattedUrl": "https://cloud.google.com/vertex-ai",
-            "htmlFormattedUrl": "https://cloud.google.com/vertex-<b>ai</b>",
-            "htmlSnippet": "Try Vertex AI, a fully-managed <b>AI development</b> platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
-            "htmlTitle": "Vertex <b>AI</b> with Gemini 1.5 Pro and Gemini 1.5 Flash | Google Cloud",
-            "kind": "customsearch#result",
-            "link": "https://cloud.google.com/vertex-ai",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "163",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVQyWs5Uso3eBwGJxz7yY-ItXN2aDgKeFgK1iz7jf83Vnzzf6TBA60Pv8&s",
-                        "width": "310"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "og:description": "Try Vertex AI, a fully-managed AI development platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
-                        "og:image": "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png",
-                        "og:site_name": "Google Cloud",
-                        "og:title": "Vertex AI with Gemini 1.5 Pro and Gemini 1.5 Flash",
-                        "og:type": "website",
-                        "og:url": "/vertex-ai",
-                        "referrer": "origin",
-                        "theme-color": "#039be5",
-                        "track-metadata-page_hosting_platform": "cgc_boq",
-                        "track-metadata-page_publishing_platform": "bricks",
-                        "track-metadata-page_template": "PAGE_TEMPLATE_TYPE_PRODUCT_V3",
-                        "twitter:card": "summary_large_image",
-                        "twitter:description": "Try Vertex AI, a fully-managed AI development platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
-                        "twitter:image": "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png",
-                        "twitter:site": "@googlecloud",
-                        "twitter:title": "Vertex AI with Gemini 1.5 Pro and Gemini 1.5 Flash",
-                        "twitter:url": "/vertex-ai",
-                        "viewport": "initial-scale=1, width=device-width"
-                    }
-                ]
-            },
-            "snippet": "Try Vertex AI, a fully-managed AI development platform for building generative AI apps, with access to 130+ foundation models including Gemini 1.5 models.",
-            "title": "Vertex AI with Gemini 1.5 Pro and Gemini 1.5 Flash | Google Cloud"
-        },
-        {
             "displayLink": "www.reddit.com",
-            "formattedUrl": "https://www.reddit.com/r/.../am_i_misunderstanding_research_with_ai/",
-            "htmlFormattedUrl": "https://www.reddit.com/r/.../am_i_misunderstanding_research_with_<b>ai</b>/",
-            "htmlSnippet": "Feb 9, 2021 <b>...</b> They already start with one red tech and one yellow tech, so researching <b>AI Development</b> Algorithm first gives them a second red tech and then&nbsp;...",
-            "htmlTitle": "Am I misunderstanding research with <b>AI Development</b> Algorithm? : r ...",
+            "formattedUrl": "https://www.reddit.com/.../why_has_ai_development_slowed_down_signifi...",
+            "htmlFormattedUrl": "https://www.reddit.com/.../why_has_<b>ai</b>_development_slowed_down_signifi...",
+            "htmlSnippet": "Jun 11, 2024 <b>...</b> Still developing tech, collecting data, buying hardware, burning a ton of energy, finding use cases. My hope is nob-llm takes off next.",
+            "htmlTitle": "Why has <b>AI development</b> slowed down significantly all of a sudden ...",
             "kind": "customsearch#result",
-            "link": "https://www.reddit.com/r/twilightimperium/comments/lgdi8q/am_i_misunderstanding_research_with_ai/",
+            "link": "https://www.reddit.com/r/ArtificialInteligence/comments/1dd0lzs/why_has_ai_development_slowed_down_significantly/",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://share.redd.it/preview/post/lgdi8q"
+                        "src": "https://preview.redd.it/why-has-ai-development-slowed-down-significantly-all-of-a-v0-1gc7jtqlvw5d1.png?width=500&format=png&auto=webp&s=d761aafde619c0361c964f816698e74845e32aae"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "227",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5CmlqtPBgBNVeokCIEH0SFBXq-kOiw1x1PFkNhg91M_S2dWEvwKhkaZs&s",
+                        "width": "222"
                     }
                 ],
                 "metatags": [
@@ -255,27 +287,13 @@
                         "apple-mobile-web-app-capable": "yes",
                         "apple-mobile-web-app-status-bar-style": "black",
                         "msapplication-navbutton-color": "#000000",
-                        "og:description": "Posted by u/atlvf - 7 votes and 6 comments",
-                        "og:image": "https://share.redd.it/preview/post/lgdi8q",
-                        "og:image:alt": "An image containing a preview of the post",
-                        "og:image:height": "630",
-                        "og:image:width": "1200",
-                        "og:site_name": "Reddit",
-                        "og:title": "r/twilightimperium on Reddit: Am I misunderstanding research with AI Development Algorithm?",
-                        "og:ttl": "600",
-                        "og:type": "website",
-                        "og:url": "https://www.reddit.com/r/twilightimperium/comments/lgdi8q/am_i_misunderstanding_research_with_ai/",
                         "theme-color": "#000000",
-                        "twitter:card": "summary_large_image",
-                        "twitter:image": "https://share.redd.it/preview/post/lgdi8q",
-                        "twitter:site": "@reddit",
-                        "twitter:title": "r/twilightimperium on Reddit: Am I misunderstanding research with AI Development Algorithm?",
                         "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
                     }
                 ]
             },
-            "snippet": "Feb 9, 2021 ... They already start with one red tech and one yellow tech, so researching AI Development Algorithm first gives them a second red tech and then ...",
-            "title": "Am I misunderstanding research with AI Development Algorithm? : r ..."
+            "snippet": "Jun 11, 2024 ... Still developing tech, collecting data, buying hardware, burning a ton of energy, finding use cases. My hope is nob-llm takes off next.",
+            "title": "Why has AI development slowed down significantly all of a sudden ..."
         },
         {
             "displayLink": "arxiv.org",
@@ -329,23 +347,16 @@
         },
         {
             "displayLink": "www.reddit.com",
-            "formattedUrl": "https://www.reddit.com/.../why_has_ai_development_slowed_down_signifi...",
-            "htmlFormattedUrl": "https://www.reddit.com/.../why_has_<b>ai</b>_<b>development</b>_slowed_down_signifi...",
-            "htmlSnippet": "Jun 11, 2024 <b>...</b> Still <b>developing</b> tech, collecting data, buying hardware, burning a ton of energy, finding use cases. My hope is nob-llm takes off next.",
-            "htmlTitle": "Why has <b>AI development</b> slowed down significantly all of a sudden ...",
+            "formattedUrl": "https://www.reddit.com/r/eu4/comments/.../ai_developing_like_crazy/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/eu4/comments/.../<b>ai</b>_developing_like_crazy/",
+            "htmlSnippet": "Jun 29, 2023 <b>...</b> I have noticed that in the newer versions of the game the <b>ai</b>, especially in germany develops to an extremely high extent.",
+            "htmlTitle": "<b>Ai</b> developing like crazy : r/eu4",
             "kind": "customsearch#result",
-            "link": "https://www.reddit.com/r/ArtificialInteligence/comments/1dd0lzs/why_has_ai_development_slowed_down_significantly/",
+            "link": "https://www.reddit.com/r/eu4/comments/14m16vs/ai_developing_like_crazy/",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://preview.redd.it/why-has-ai-development-slowed-down-significantly-all-of-a-v0-1gc7jtqlvw5d1.png?width=500&format=png&auto=webp&s=d761aafde619c0361c964f816698e74845e32aae"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "227",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5CmlqtPBgBNVeokCIEH0SFBXq-kOiw1x1PFkNhg91M_S2dWEvwKhkaZs&s",
-                        "width": "222"
+                        "src": "https://share.redd.it/preview/post/14m16vs"
                     }
                 ],
                 "metatags": [
@@ -353,96 +364,71 @@
                         "apple-mobile-web-app-capable": "yes",
                         "apple-mobile-web-app-status-bar-style": "black",
                         "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/SweetSalt210 - 421 votes and 85 comments",
+                        "og:image": "https://share.redd.it/preview/post/14m16vs",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "og:image:height": "630",
+                        "og:image:width": "1200",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/eu4 on Reddit: Ai developing like crazy",
+                        "og:ttl": "600",
+                        "og:type": "website",
+                        "og:url": "https://www.reddit.com/r/eu4/comments/14m16vs/ai_developing_like_crazy/",
                         "theme-color": "#000000",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://share.redd.it/preview/post/14m16vs",
+                        "twitter:site": "@reddit",
+                        "twitter:title": "r/eu4 on Reddit: Ai developing like crazy",
                         "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
                     }
                 ]
             },
-            "snippet": "Jun 11, 2024 ... Still developing tech, collecting data, buying hardware, burning a ton of energy, finding use cases. My hope is nob-llm takes off next.",
-            "title": "Why has AI development slowed down significantly all of a sudden ..."
+            "snippet": "Jun 29, 2023 ... I have noticed that in the newer versions of the game the ai, especially in germany develops to an extremely high extent.",
+            "title": "Ai developing like crazy : r/eu4"
         },
         {
-            "displayLink": "builtin.com",
-            "formattedUrl": "https://builtin.com/artificial-intelligence",
-            "htmlFormattedUrl": "https://builtin.com/artificial-intelligence",
-            "htmlSnippet": "<b>AI</b> systems learn how to do so by processing massive amounts of data and looking for patterns to model in their own decision-making. In many cases, humans will&nbsp;...",
-            "htmlTitle": "What Is <b>Artificial Intelligence</b> (<b>AI</b>)? | Built In",
+            "displayLink": "www.federalregister.gov",
+            "formattedUrl": "https://www.federalregister.gov/.../01/.../ai-in-global-development-playboo...",
+            "htmlFormattedUrl": "https://www.federalregister.gov/.../01/.../<b>ai</b>-in-global-development-playboo...",
+            "htmlSnippet": "Jan 26, 2024 <b>...</b> An <b>AI</b> in Global <b>Development</b> Playbook that incorporates NIST&#39;s <b>AI</b> Risk Management Framework&#39;s principles, guidelines, and best practices.",
+            "htmlTitle": "AI in Global Development Playbook - Federal Register",
             "kind": "customsearch#result",
-            "link": "https://builtin.com/artificial-intelligence",
+            "link": "https://www.federalregister.gov/documents/2024/01/26/2024-01707/ai-in-global-development-playbook",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/what-is-artificial-intelligence-ai.jpg"
+                        "src": "https://www.federalregister.gov/assets/open_graph_site_banner.png"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "159",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQur2hnnOsK8MKGvRF54kfyLo325ZZQjT52MWBWqguOTnN-ek6Xq8teyUuM&s",
-                        "width": "318"
+                        "height": "110",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyoM5PYH4GhWDdaZ8dYnYt7QDiTgpVc_hTJvnYht4Bk5ert4eDlW7z9nk&s",
+                        "width": "458"
                     }
                 ],
                 "metatags": [
                     {
-                        "handheldfriendly": "true",
-                        "mobileoptimized": "width",
-                        "theme-color": "#04003F",
-                        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5"
+                        "article:published_time": "2024-01-26",
+                        "csrf-param": "authenticity_token",
+                        "csrf-token": "xoJ8z7VesenN028c33mHzP/fuvTo6SEHgej16HiIhvw9cFDKmry7uQgR+7AYDPes/GIIkIQpJjVXfVmGiaiyYQ==",
+                        "format-detection": "telephone=no",
+                        "medium": "news",
+                        "og:description": "The United States Agency for International Development and the U.S. Department of State, in coordination with the National Institute of Standards and Technology (NIST), seek information to assist in carrying out responsibilities under Executive Order 14110 on Safe, Secure, and Trustworthy...",
+                        "og:image": "https://www.federalregister.gov/assets/open_graph_site_banner.png",
+                        "og:image:height": "200",
+                        "og:image:width": "832",
+                        "og:site_name": "Federal Register",
+                        "og:title": "AI in Global Development Playbook",
+                        "og:type": "article",
+                        "og:url": "https://www.federalregister.gov/documents/2024/01/26/2024-01707/ai-in-global-development-playbook",
+                        "title": "AI in Global Development Playbook",
+                        "viewport": "initial-scale=1.0"
                     }
                 ]
             },
-            "snippet": "AI systems learn how to do so by processing massive amounts of data and looking for patterns to model in their own decision-making. In many cases, humans will ...",
-            "title": "What Is Artificial Intelligence (AI)? | Built In"
-        },
-        {
-            "displayLink": "www.ibm.com",
-            "formattedUrl": "https://www.ibm.com/topics/artificial-intelligence",
-            "htmlFormattedUrl": "https://www.ibm.com/topics/artificial-intelligence",
-            "htmlSnippet": "Aug 16, 2024 <b>...</b> Generative <b>AI</b> code generation tools and automation tools can streamline repetitive coding tasks associated with application <b>development</b>, and&nbsp;...",
-            "htmlTitle": "What Is <b>Artificial Intelligence</b> (<b>AI</b>)? | IBM",
-            "kind": "customsearch#result",
-            "link": "https://www.ibm.com/topics/artificial-intelligence",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/creative-assets/s-migr/ul/g/64/ea/content-hub-analytic-page-leadspace-short.component.xl.ts=1724697969568.png/content/adobe-cms/us/en/topics/artificial-intelligence/_jcr_content/root/leadspace"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "142",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWzttwaIcP5dQ0M_E6eFIK60SWr-9RUaVu6CpYagy2odX49RAai0CJWfgF&s",
-                        "width": "355"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "countrycode": "us",
-                        "dcterms.date": "2024-08-09T00:00:00.000",
-                        "focusarea": "Cloud - Automation - All",
-                        "ibm.com.search.appid": "thinkhub",
-                        "ibm.com.search.scopes": "thinkhub",
-                        "ibm.search.facet.field_hierarchy_01": "taxonomy : Topics / AI and ML / Artificial intelligence / Enterprise AI",
-                        "ibm.search.facet.field_hierarchy_03": "taxonomy : Content Format / Article",
-                        "ibm.search.facet.field_hierarchy_04": "taxonomy : Content Type / Explainer",
-                        "ibm.search.facet.field_keyword_01": "Enterprise AI",
-                        "ibm.search.facet.field_keyword_09": "https://prod-cloud-publish.aem.ibm.net/content/dam/connectedassets-adobe-cms/worldwide-content/creative-assets/s-migr/ul/g/64/ea/content-hub-analytic-page-leadspace-short.component.crop-thumbnail-16-by-9-retina.ts=0.png/content/adobe-cms/us/en/topics/artificial-intelligence/jcr:content/root/leadspace",
-                        "ibm.search.facet.field_text_01": "09 August 2024",
-                        "ibm.search.facet.field_text_03": "Explainer",
-                        "languagecode": "en",
-                        "og:description": "Artificial intelligence (AI) is technology that enables computers and machines to simulate human learning, comprehension, problem solving, decision-making, creativity and autonomy.",
-                        "og:image": "https://assets.ibm.com/is/image/ibm/ibm-8bar-logo-2560x2560?$original$",
-                        "og:title": "What Is Artificial Intelligence (AI)? | IBM",
-                        "og:type": "website",
-                        "og:url": "https://www.ibm.com/topics/artificial-intelligence",
-                        "searchtitle": "What Is Artificial Intelligence (AI)?",
-                        "template": "learn",
-                        "viewport": "width=device-width, initial-scale=1"
-                    }
-                ]
-            },
-            "snippet": "Aug 16, 2024 ... Generative AI code generation tools and automation tools can streamline repetitive coding tasks associated with application development, and ...",
-            "title": "What Is Artificial Intelligence (AI)? | IBM"
+            "snippet": "Jan 26, 2024 ... An AI in Global Development Playbook that incorporates NIST's AI Risk Management Framework's principles, guidelines, and best practices.",
+            "title": "AI in Global Development Playbook - Federal Register"
         }
     ],
     "kind": "customsearch#search",
@@ -450,39 +436,43 @@
         "nextPage": [
             {
                 "count": 10,
-                "cx": "074ce0e6c068849b1",
+                "cx": "[cx?]",
                 "disableCnTwTranslation": "0",
                 "filter": "0",
                 "inputEncoding": "utf8",
                 "outputEncoding": "utf8",
                 "safe": "off",
-                "searchTerms": "AI Development",
+                "searchTerms": "AI Developement",
                 "startIndex": 11,
-                "title": "Google Custom Search - AI Development",
-                "totalResults": "3090000000"
+                "title": "Google Custom Search - AI Developement",
+                "totalResults": "20300000"
             }
         ],
         "request": [
             {
                 "count": 10,
-                "cx": "074ce0e6c068849b1",
+                "cx": "[cx?]",
                 "disableCnTwTranslation": "0",
                 "filter": "0",
                 "inputEncoding": "utf8",
                 "outputEncoding": "utf8",
                 "safe": "off",
-                "searchTerms": "AI Development",
+                "searchTerms": "AI Developement",
                 "startIndex": 1,
-                "title": "Google Custom Search - AI Development",
-                "totalResults": "3090000000"
+                "title": "Google Custom Search - AI Developement",
+                "totalResults": "20300000"
             }
         ]
     },
     "searchInformation": {
-        "formattedSearchTime": "0.53",
-        "formattedTotalResults": "3,090,000,000",
-        "searchTime": 0.525233,
-        "totalResults": "3090000000"
+        "formattedSearchTime": "0.45",
+        "formattedTotalResults": "20,300,000",
+        "searchTime": 0.446622,
+        "totalResults": "20300000"
+    },
+    "spelling": {
+        "correctedQuery": "AI Development",
+        "htmlCorrectedQuery": "AI <b><i>Development</i></b>"
     },
     "url": {
         "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json",
