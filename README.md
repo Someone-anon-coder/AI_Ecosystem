@@ -19,11 +19,12 @@ AI Ecosystem is an evolving project that aims to build a hierarchical model stru
 ### First Instruction For Installation
 
 - **Set up the Environment**
-  - Clone this repository using: ```bash git clone https://github.com/Someone-anon-coder/AI_Ecosystem.git```
-  - Create virtual environment using: ```python3 -m venv [virtual_env_name]``` eg: `AI_Ecosystem`
-  - Activate the virtual environment using: ```bash source [virutal_env_name/bin/activate]``` eg: `source AI_Ecosystem/bin/activate`
+  - Open terminal
+  - Clone this repository using: ```git clone https://github.com/Someone-anon-coder/AI_Ecosystem.git```
+  - Create virtual environment using: ```python3 -m venv [virtual_env_name]``` eg: `python3 -m venv AI_Ecosystem`
+  - Activate the virtual environment using: ```source [virutal_env_name/bin/activate]``` eg: `source AI_Ecosystem/bin/activate`
   - Download the necessary python libraries using: ```pip install -r support_files/requirements.txt```
-  - Download the necessary cpp libraries using: ```bash sudo apt update && sudo xargs -a support_files/requirements_c.txt apt install -y``` Note: you need to be Administrater
+  - Download the necessary cpp libraries using: ```sudo apt update && sudo xargs -a support_files/requirements_c.txt apt install -y``` Note: you need to be Administrater
 
 - **Get `GEMINI_API_KEY`**
   - Log in to google ai studio
