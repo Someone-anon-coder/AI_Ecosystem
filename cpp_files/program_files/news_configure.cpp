@@ -1,4 +1,6 @@
 #include "../header_files/news_configure.h"
+#include <iostream>
+#include <string>
 
 GoogleNews::GoogleNews(
     const std::string language = "en", // Languge you want to get the news in
@@ -199,13 +201,13 @@ std::string GoogleNews::__url_parameters(){
     
     if (this->_start_date != "" || this->_end_date != ""){
         if (this->_start_date != ""){
-            time_query += "%20after%3A" + this->_start_date;
+            time_query += " after:" + this->_start_date + "";
         }
         if (this->_end_date != ""){
-            time_query += "%20before%3A" + this->_end_date;
+            time_query += " before:" + this->_end_date + "";
         }
     } else if (this->_period != "anytime"){
-        time_query += "%20when%3A" + this->_period;
+        time_query += " when:" + this->_period;
     }
     
     std::string language = this->_language == "en" ? this->_language + "-US": this->_language; // Languages to used for news search
@@ -288,14 +290,34 @@ std::vector<std::unordered_map<std::string, std::string>> GoogleNews::__parse_rs
     return items;
 }
 
+std::string GoogleNews::__encode_url(
+    const std::string& url // Url to encode
+) {
+    std::ostringstream encoded;
+    for (char c : url) {
+        if (isalnum(static_cast<unsigned char>(c)) || 
+        c == '-' || c == '_' || c == '.' || c == '~' || 
+        c == '&' || c == '$' || c == '+' || c == ',' || 
+        c == '/' || c == ':' || c == ';' || c == '=' || 
+        c == '?' || c == '@' || c == '#' || c == '!' ||
+        c == '*') {
+            encoded << c;
+        } else {
+            encoded << '%' << std::uppercase << std::hex << std::setw(2) << std::setfill('0') << (int)static_cast<unsigned char>(c);
+        }
+    }
+    return encoded.str();
+}
+
 void GoogleNews::__get_news(
     const std::string keyword, // query used to get news
     const std::string article_file = "text_files/news_articles.txt" // file to save articles in
 ){
-    std::string query = this->__news_url + keyword + this->__url_parameters(); // Url query to get news
-    std::cout << query << std::endl;
+    std::string encoded_url = this->__encode_url(this->__full_url(keyword)); // Encoded url query to get news
+
+    std::cout << "Encoded Url: " + encoded_url << std::endl;
     
-    std::string content = this->__get_rss_content(query); // XML Content from the news query
+    std::string content = this->__get_rss_content(encoded_url); // XML Content from the news query
     std::ofstream articles_file; // File object to save articles
     
     auto items = this->__parse_rss_content(content); // Items in the XML content
@@ -372,9 +394,8 @@ void GoogleNews::_get_news(
     const std::string keyword, // Keyword used to search news
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
-    std::string new_keyword = keyword;
 
-    std::string query = "/search?q=" + new_keyword.replace(new_keyword.find_first_of(' '), 1, "%20"); // News Query to search news
+    std::string query = "/search?q=" + keyword; // News Query to search news
     this->__get_news(query, filename);
 
     std::string log_content = "Searched for news for the keyword: " + keyword + ", and saved the results in the file: " + filename + ".";

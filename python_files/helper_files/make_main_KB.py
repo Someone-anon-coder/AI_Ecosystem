@@ -15,7 +15,7 @@ main_kb = [{
         "Turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years": "To turn off \"simplified chinese\" and search for \"Great wall of China\" but restrict results to past 2 years use kb ```kb_name GoogleSearch",
         "Change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\"": "To change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\" use kb ```kb_name GeminiModel",
         "Open camera and click \"5\" photos with a gap of \"3\" seconds each then open the photo": "```Sorry, this knowledge base is not available yet```",
-        "Open word and create a \"blank\" document then write \"hello\" and close it without saving": "Sorry, this knowledge base is not available yet```"
+        "Open word and create a \"blank\" document then write \"hello\" and close it without saving": "```Sorry, this knowledge base is not available yet```"
     },
     "Note": "Answer the query if and only if it can be done by the knowledge base of the classes available in your knowledge base. DO NOT create new knowledge bases to answer user query"
 }]

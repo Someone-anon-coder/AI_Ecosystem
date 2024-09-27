@@ -215,6 +215,6 @@ Examples:
 	Answer: ```Sorry, this knowledge base is not available yet```
 
 	User Query: Open word and create a "blank" document then write "hello" and close it without saving
-	Answer: Sorry, this knowledge base is not available yet```
+	Answer: ```Sorry, this knowledge base is not available yet```
 
 Answer the query if and only if it can be done by the knowledge base of the classes available in your knowledge base. DO NOT create new knowledge bases to answer user query

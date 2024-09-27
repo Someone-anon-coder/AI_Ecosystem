@@ -1,17 +1,14 @@
 [
     {
-        "function_name": "_create_file",
+        "function_name": "_set_max_results",
         "parameters": {
-            "filename": "\"test.txt\"",
-            "file_path": "\"text_files/\""
+            "max_results": 10
         }
     },
     {
-        "function_name": "_write_file",
+        "function_name": "_get_news",
         "parameters": {
-            "filename": "\"test.txt\"",
-            "content": "\"Hello World\"",
-            "file_path": "\"text_files/\""
+            "keyword": "\"Climate Change\""
         }
     }
 ]

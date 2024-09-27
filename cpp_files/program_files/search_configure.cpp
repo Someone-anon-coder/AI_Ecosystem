@@ -1451,10 +1451,10 @@ void GoogleSearch::_search_google(
 void GoogleSearch::_get_result(
     const int result_index = 0, // Index of individual result to parse
             
-    const bool title = true, // Get Title
-    const bool snippet = true, // Get Snippet
-    const bool link = false, // Get Link
-    const bool image = false, // Get Image
+    const std::string title = "True", // Get Title
+    const std::string snippet = "True", // Get Snippet
+    const std::string link = "False", // Get Link
+    const std::string image = "False", // Get Image
     
     const std::string json_filename = "json_files/search_result.json", // Name of the file to retrive response data from
     const std::string text_filename = "text_files/search_results.txt" // Name of the text file to store results
@@ -1475,13 +1475,13 @@ void GoogleSearch::_get_result(
             results_saved = true;
             auto result = json_data["items"][result_index];
 
-            if (title && result.contains("title"))
+            if (title == "True" && result.contains("title"))
                 result_file << "Title: " << result["title"] << std::endl;
-            if (snippet && result.contains("snippet"))
+            if (snippet == "True" && result.contains("snippet"))
                 result_file << "Snippet: " << result["snippet"] << std::endl;
-            if (link && result.contains("link"))
+            if (link == "True" && result.contains("link"))
                 result_file << "Link: " << result["link"] << std::endl;
-            if (image && result.contains("pagemap") && result["pagemap"].contains("cse_image") && result["pagemap"]["cse_image"].is_array())
+            if (image == "True" && result.contains("pagemap") && result["pagemap"].contains("cse_image") && result["pagemap"]["cse_image"].is_array())
                 result_file << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
         }
 
@@ -1490,13 +1490,13 @@ void GoogleSearch::_get_result(
             auto results = json_data["items"];
 
             for (auto result : results){
-                if (title)
+                if (title == "True" && result.contains("title"))
                     result_file << "Title: " << result["title"] << std::endl;
-                if (snippet)
+                if (snippet == "True" && result.contains("snippet"))
                     result_file << "Snippet: " << result["snippet"] << std::endl;
-                if (link)
+                if (link == "True" && result.contains("link"))
                     result_file << "Link: " << result["link"] << std::endl;
-                if (image)
+                if (image == "True" && result.contains("pagemap") && result["pagemap"].contains("cse_image") && result["pagemap"]["cse_image"].is_array())
                     result_file << "Image: " << result["pagemap"]["cse_image"][0]["src"] << std::endl;
 
                 result_file << std::endl;

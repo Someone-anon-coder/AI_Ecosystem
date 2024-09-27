@@ -10,9 +10,11 @@
 
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 #include <curl/curl.h>
 #include "tinyxml2.h"
+#include <nlohmann/json.hpp>
 
 /// @brief Class to Search News on Google News
 class GoogleNews{
@@ -105,6 +107,13 @@ class GoogleNews{
         /// @return Vector of unordered maps containing the parsed content
         std::vector<std::unordered_map<std::string, std::string>> __parse_rss_content(
             const std::string& xmlContent // XML content to be parsed
+        );
+
+        /// @brief Function to encode the URL
+        /// @param url Url to encode
+        /// @return String of the encoded url
+        std::string __encode_url(
+            const std::string& url // Url to encode
         );
 
         /// @brief Function to get the news

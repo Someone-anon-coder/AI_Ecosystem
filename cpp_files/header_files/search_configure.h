@@ -561,10 +561,10 @@ class GoogleSearch{
         void _get_result(
             const int result_index, // Index of individual result to parse
             
-            const bool title, // Get Title
-            const bool snippet, // Get Snippet
-            const bool link, // Get Link
-            const bool image, // Get Image
+            const std::string title, // Get Title
+            const std::string snippet, // Get Snippet
+            const std::string link, // Get Link
+            const std::string image, // Get Image
             
             const std::string json_filename, // Name of the json file to retrive response data from
             const std::string text_filename // Name of the text file to store results

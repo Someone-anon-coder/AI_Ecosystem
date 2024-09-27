@@ -53,6 +53,9 @@ def get_kb_name(prompt: str, gemini_model: object, model_name: str, kb_file: str
     gemini_model._set_model(model_name, system_instruction)
     responce = gemini_model._query_model(prompt)
 
+    if (responce.startswith("```Sorry")):
+        return ""
+
     kb_name = re.findall("kb ```kb_name (.*?)```", responce, re.DOTALL)[0]
     return kb_name
 
@@ -110,7 +113,10 @@ def parse_blocks(function_with_parameters: list, only_functions: list) -> None:
             for parameter in parameters:
                 parameter_name, parameter_value = parameter.split(' = ')
                 
-                parameter_dict[parameter_name] = parameter_value
+                try:
+                    parameter_dict[parameter_name] = int(parameter_value)
+                except:
+                    parameter_dict[parameter_name] = parameter_value
                 
             f_p = {
                 "function_name": function_name.replace("function_name ", ""),
@@ -158,12 +164,13 @@ def execute_function(class_object: object, function_name: str, parameters: dict)
     sanitized_parameters = {param_name: sanitize_value(param_value) for param_name, param_value in parameters.items()}
 
     print(f"Function Name: {function_name}")
-    print(f"Parameters: {sanitized_parameters}")
+    print(f"Parameters: {sanitized_parameters}\n")
 
     if sanitized_parameters == {}:
         getattr(class_object, function_name)()
     else:
-        getattr(class_object, function_name)(**sanitized_parameters)
+        args = list(sanitized_parameters.values())
+        getattr(class_object, function_name)(*args)
 
 def execute_functions(class_object: object, function_file: str = "json_files/query_steps.json") -> None:
     """Execute functions from the json file
