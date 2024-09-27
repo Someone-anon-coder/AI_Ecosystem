@@ -93,14 +93,20 @@ void Folder::_create_folder(
     const std::string folder_path = "" // Path of the folder
 ) {
     std::string fullpath = folder_path + folder_name; // Location and Name of the folder to create
-    std::filesystem::create_directory(fullpath.c_str());
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    
+    if (!folder_exists)
+        std::filesystem::create_directory(fullpath.c_str());
 
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " Created Successfully";
+    if (folder_exists)
+        log_content += " Already exists";
+    else
+        log_content += " Created Successfully";
 
     this->__log__(log_content);
 }
@@ -110,14 +116,20 @@ void Folder::_delete_folder(
     const std::string folder_path = "" // Path of the folder
 ) {
     std::string fullpath = folder_path + folder_name; // Location and Name of the folder to delete
-    std::filesystem::remove_all(fullpath.c_str());
+
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    if (folder_exists)
+        std::filesystem::remove_all(fullpath.c_str());
 
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " Deleted Successfully";
+    if (folder_exists)
+        log_content += " Deleted Successfully";
+    else
+        log_content += " Doesn not Exist so cannot be Deleted";
 
     this->__log__(log_content);
 }
@@ -130,14 +142,19 @@ void Folder::_rename_folder(
     std::string fullpath = folder_path + folder_name; // Location and Name of the folder to rename
     std::string new_fullpath = folder_path + new_folder_name; // New location and Name of the folder
 
-    std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    if (folder_exists)
+        std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
 
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " Renamed to " + new_folder_name + " Successfully";
+    if (folder_exists)
+        log_content += " Renamed to " + new_folder_name + " Successfully";
+    else
+        log_content += " Doesn not Exist so cannot be Renamed";
 
     this->__log__(log_content);
 }
@@ -150,14 +167,19 @@ void Folder::_move_folder(
     const std::string fullpath = folder_path + folder_name; // Location and Name of the folder to move
     const std::string new_fullpath = new_path + folder_name; // New location and Name of the folder
     
-    std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    if (folder_exists)
+        std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
 
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " Moved to " + new_path + " Successfully";
+    if (folder_exists)
+        log_content += " Moved to " + new_path + " Successfully";
+    else
+        log_content += " Doesn not Exist so cannot be Moved";
 
     this->__log__(log_content);
 }
@@ -170,14 +192,19 @@ void Folder::_copy_folder(
     const std::string fullpath = folder_path + folder_name; // Location and Name of the folder to copy
     const std::string new_fullpath = new_path + folder_name; // New location and Name of the folder
     
-    std::filesystem::copy(fullpath.c_str(), new_fullpath.c_str());
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    if (folder_exists)
+        std::filesystem::copy(fullpath.c_str(), new_fullpath.c_str());
 
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " Copied to " + new_path + " Successfully";
+    if (folder_exists)
+        log_content += " Copied to " + new_path + " Successfully";
+    else
+        log_content += " Doesn not Exist so cannot be Copied";
 
     this->__log__(log_content);
 }
@@ -191,21 +218,26 @@ void Folder::_list_folder(
     std::string fullpath = folder_path + folder_name; // Location and Name of the folder to list
     std::string list_fullpath = list_file_path + list_filename; // Location and Name of the folder to store folder list
     
-    std::ofstream list_file; // folder object to store folder list
-    
-    list_file.open(list_fullpath.c_str());
-    for (const auto& entry : std::filesystem::directory_iterator(fullpath)) {
-        list_file << entry.path() << std::endl;
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    if (folder_exists){
+        std::ofstream list_file; // folder object to store folder list
+
+        list_file.open(list_fullpath.c_str());
+        for (const auto& entry : std::filesystem::directory_iterator(fullpath)) {
+            list_file << entry.path() << std::endl;
+        }
+
+        list_file.close();
     }
-
-    list_file.close();
-
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " contents listed in " + list_file_path + list_filename + " Successfully";
+    if (folder_exists)
+        log_content += " contents listed in " + list_file_path + list_filename + " Successfully";
+    else
+        log_content += " Doesn not Exist so cannot be Listed";
 
     this->__log__(log_content);
 }
@@ -242,14 +274,19 @@ void Folder::_hide_folder(
     const std::string fullpath = folder_path + folder_name; // Location and Name of the folder to hide
     const std::string new_fullpath = folder_path + "." + folder_name; // New location and Name of the hidden folder
     
-    std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    if (folder_exists)
+        std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
 
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " Hidden Successfully";
+    if (folder_exists)
+        log_content += " Hidden Successfully";
+    else
+        log_content += " Doesn not Exist so cannot be Hidden";
 
     this->__log__(log_content);
 }
@@ -260,20 +297,25 @@ void Folder::_unhide_folder(
 ) {
     const std::string fullpath = folder_path + folder_name; // Location and Name of the folder to unhide
     
-    std::string new_folder_name = "";
-    for (long unsigned int i = 1; i <= folder_name.length(); i++){
-        new_folder_name += folder_name[i];
+    bool folder_exists = this->_check_folder(folder_name, folder_path);
+    if (folder_exists){
+        std::string new_folder_name = "";
+        for (long unsigned int i = 1; i <= folder_name.length(); i++){
+            new_folder_name += folder_name[i];
+        }
+
+        const std::string new_fullpath = folder_path + new_folder_name; // New location and Name of the unhidden folder
+        std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
     }
-
-    const std::string new_fullpath = folder_path + new_folder_name; // New location and Name of the unhidden folder
-    std::filesystem::rename(fullpath.c_str(), new_fullpath.c_str());
-
 
     // Log function
     std::string log_content = "Folder " + folder_name;
     if (folder_path != "")
         log_content += " at " + folder_path;
-    log_content += " UnHidden Successfully";
+    if (folder_exists)
+        log_content += " UnHidden Successfully";
+    else
+        log_content += " Doesn not Exist so cannot be UnHidden";
 
     this->__log__(log_content);
 }

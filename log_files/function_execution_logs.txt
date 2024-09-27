@@ -1,2 +1,0 @@
-File test.txt Checked and it does not exists
-Content written to test.txt after creation, Successfully
