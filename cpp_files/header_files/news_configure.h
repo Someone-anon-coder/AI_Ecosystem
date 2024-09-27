@@ -19,6 +19,7 @@ class GoogleNews{
     private:
         // Class Private Variables
 
+        std::string _log_filename = "log_files/function_execution_logs.txt"; // Name of the log file
         std::string __news_url="https://news.google.com/rss"; // Url for google news search
 
         int __start_year; // Year at which the news search should start
@@ -35,6 +36,12 @@ class GoogleNews{
         std::vector<std::string> __available_periods = {"hour", "day", "week", "month", "year", "any_time"}; // Availble periods to search news for
 
         // Class Private Functions
+
+        /// @brief Function to write to logs to log file
+        /// @param content Content to write to log file
+        void __log__(
+            const std::string content // Content to write to log file
+        );
 
         /// @brief Callback function to handle the data received
         /// @param contents pointer to buffer containing the downloaded data
@@ -236,15 +243,13 @@ class GoogleNews{
 
         /// @brief Function to set the start date
         /// @param start_date Starting date for when to get news from
-        /// @return True if start date and end date are different
-        bool _set_start_date(
+        void _set_start_date(
             const std::string start_date // Starting date for when to get news from
         );
 
         /// @brief Function to set the end date
         /// @param end_date Ending date till when news is presented
-        /// @return True if start date and end date are different
-        bool _set_end_date(
+        void _set_end_date(
             const std::string end_date // Ending date till when news is presented
         );
 

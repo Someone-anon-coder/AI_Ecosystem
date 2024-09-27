@@ -141,6 +141,24 @@ std::map<std::string, std::map<std::string, std::string>> GoogleNews::__class_in
     };
 }
 
+void GoogleNews::__log__(
+    const std::string content // Content to write to log file
+){
+    std::ifstream previous_log_file; // File object to read from the previous log file
+    previous_log_file.open(this->_log_filename);
+
+    std::string previous_content((std::istreambuf_iterator<char>(previous_log_file)), std::istreambuf_iterator<char>()); // Content from the previous log file
+    previous_log_file.close();
+
+    std::ofstream new_log_file; // File object to write the new log file
+    new_log_file.open(this->_log_filename);
+
+    previous_content += content + "\n";
+    new_log_file << previous_content;
+
+    new_log_file.close();
+}
+
 size_t GoogleNews::__WriteCallback(
     void* contents, // pointer to buffer containing the downloaded data
     size_t size, // size of the downloaded data
@@ -275,7 +293,7 @@ void GoogleNews::__get_news(
     const std::string article_file = "text_files/news_articles.txt" // file to save articles in
 ){
     std::string query = this->__news_url + keyword + this->__url_parameters(); // Url query to get news
-    // std::cout << query << std::endl;
+    std::cout << query << std::endl;
     
     std::string content = this->__get_rss_content(query); // XML Content from the news query
     std::ofstream articles_file; // File object to save articles
@@ -302,30 +320,51 @@ void GoogleNews::__get_news(
 }
 
 std::string GoogleNews::_get_language(){
+    std::string log_content = "The language used to get the news is: " + this->_language;
+    this->__log__(log_content);
+
     return this->_language;
 }
 
 std::string GoogleNews::_get_country(){
+    std::string log_content = "The country used to get the news is: " + this->_country;
+    this->__log__(log_content);
+
     return this->_country;
 }
 
 std::string GoogleNews::_get_period(){
+    std::string log_content = "The period used to get the news is: " + this->_period;
+    this->__log__(log_content);
+
     return this->_period;
 }
 
 std::string GoogleNews::_get_start_date(){
+    std::string log_content = "The start date used to get the news is: " + this->_start_date;
+    this->__log__(log_content);
+
     return this->_start_date;
 }
 
 std::string GoogleNews::_get_end_date(){
+    std::string log_content = "The end date used to get the news is: " + this->_end_date;
+    this->__log__(log_content);
+
     return this->_end_date;
 }
 
 int GoogleNews::_get_max_results(){
+    std::string log_content = "The max results used to get the news is: " + std::to_string(this->_max_results);
+    this->__log__(log_content);
+
     return this->_max_results;
 }
 
 std::vector<std::string> GoogleNews::_get_exclude_websites(){
+    std::string log_content = "The excluded websites used to get the news are: " + std::to_string(this->_exclude_websites.size());
+    this->__log__(log_content);
+
     return this->_exclude_websites;
 }
 
@@ -333,34 +372,62 @@ void GoogleNews::_get_news(
     const std::string keyword, // Keyword used to search news
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
-    std::string query = "/search?q=" + keyword; // News Query to search news
+    std::string new_keyword = keyword;
+
+    std::string query = "/search?q=" + new_keyword.replace(new_keyword.find_first_of(' '), 1, "%20"); // News Query to search news
     this->__get_news(query, filename);
+
+    std::string log_content = "Searched for news for the keyword: " + keyword + ", and saved the results in the file: " + filename + ".";
+    this->__log__(log_content);
 }
 
 void GoogleNews::_get_latest_topics(
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
     this->__get_news("?", filename);
+
+    std::string log_content = "Searched for latest topics and saved the results in the file: " + filename + ".";
+    this->__log__(log_content);
 }
 
 void GoogleNews::_get_news_by_topic(
     const std::string topic, // Search the news on this topic
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
-    if (this->__contains(this->__available_topics, topic)){
+    bool correct_topic = this->__contains(this->__available_topics, topic);
+
+    if (correct_topic){
         std::string query = "headlines/section/topic/" + topic + "?";
         this->__get_news(query, filename);
     }
+
+    std::string log_content = "Searched for news on the topic: " + topic;
+    if (correct_topic)
+        log_content += " and saved the results in the file: " + filename + ".";
+    else
+        log_content += ", but it is not in the list of available topics, so could not get the results.";
+
+    this->__log__(log_content);
 }
 
 void GoogleNews::_get_news_by_country(
     const std::string country, // Search the news on this country
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
-    if (this->__contains(this->__available_countries, country)){
+    bool correct_country = this->__contains(this->__available_countries, country);
+
+    if (correct_country){
         std::string query = "headlines/section/geo/" + country + "?"; // Query with country
         this->__get_news(query, filename);
     }
+
+    std::string log_content = "Searched for news on the country: " + country;
+    if (correct_country)
+        log_content += " and saved the results in the file: " + filename + ".";
+    else
+        log_content += ", but it is not in the list of available countries, so could not get the results.";
+
+    this->__log__(log_content);
 }
 
 void GoogleNews::_get_news_by_site(
@@ -368,70 +435,85 @@ void GoogleNews::_get_news_by_site(
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
     this->__get_news("site:" + site, filename);
+
+    std::string log_content = "Search for news based on site " + site + " and saved results in the file " + filename + ".";
+    this->__log__(log_content);
 }
 
 void GoogleNews::_set_language(
     const std::string language // Languge you want to get the news in
 ){
     this->_language = language;
+
+    std::string log_content = "Language set to " + language + " to search the news.";
+    this->__log__(log_content);
 }
 
 void GoogleNews::_set_country(
     const std::string country // Country you want to get the news from
 ){
     this->_country = country;
+
+    std::string log_content = "Country set to " + country + " to search the news.";
+    this->__log__(log_content);
 }
 
 void GoogleNews::_set_period(
     const std::string period // Time period to get news from
 ){
     this->_period = period;
+
+    std::string log_content = "Period set to " + period + " to search the news.";
+    this->__log__(log_content);
 }
 
-bool GoogleNews::_set_start_date(
+void GoogleNews::_set_start_date(
     const std::string start_date // Starting date for when to get news from
 ){
     this->_start_date = start_date;
     this->__start_year = std::stoi(start_date.substr(0, 4));
     this->__start_month = std::stoi(start_date.substr(5, 2));
     this->__start_day = std::stoi(start_date.substr(8, 2));
-    
-    return this->__is_date_different(
-        this->__start_year,
-        this->__start_month,
-        this->__start_day,
-        this->__end_year,
-        this->__end_month,
-        this->__end_day
-    );
+
+    std::string log_content = "Start date set to " + start_date + " to search the news.";
+    this->__log__(log_content);
 }
 
-bool GoogleNews::_set_end_date(
+void GoogleNews::_set_end_date(
     const std::string end_date // Ending date till when news is presented
 ){
     this->_end_date = end_date;
     this->__end_year = std::stoi(end_date.substr(0, 4));
     this->__end_month = std::stoi(end_date.substr(5, 2));
     this->__end_day = std::stoi(end_date.substr(8, 2));
+
+    bool date_different = this->__is_date_different(this->__start_year, this->__start_month, this->__start_day, this->__end_year, this->__end_month, this->__end_day);
     
-    return this->__is_date_different(
-        this->__start_year,
-        this->__start_month,
-        this->__start_day,
-        this->__end_year,
-        this->__end_month,
-        this->__end_day
-    );
+    std::string log_content;
+    if (date_different)
+        log_content += "End date set to " + end_date + " to search the news.";
+    else
+        log_content += "End date could not be set as the start date and end date difference is less than a day. Please set again";
+    this->__log__(log_content);
 }
 
 void GoogleNews::_set_max_results(
     const int max_results // Max number of results for the news
 ){
     this->_max_results = max_results;
+
+    std::string log_content = "Max results set to " + std::to_string(max_results) + " to search the news.";
+    this->__log__(log_content);
 }
 
 void GoogleNews::_set_excluded_websites(
     std::vector<std::string> excluded_websites // Websites to exclude from the results
 ){
     this->_exclude_websites = excluded_websites;
+
+    std::string log_content = "Excluded websites are: ";
+    for (auto excluded_website: excluded_websites)
+        log_content += excluded_website + ", ";
+
+    this->__log__(log_content);
 }
