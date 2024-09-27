@@ -33,6 +33,20 @@ AI Ecosystem is an evolving project that aims to build a hierarchical model stru
   - Create a new file `.env` in the `secret_files` folder
   - Write `GEMINI_API_KEY=` in the `.env` file and paste your API key
 
+- **Get `SEARCH_CX_KEY`**
+  - Search Programmable Search Engine and log in
+  - Click on `Add` to add a search engine
+  - Name your search engine and other details
+  - Goto your search engine and copy the `cx` id
+  - In the `.env` file, write `SEARCH_CX_KEY=` and paste the `cx` id
+
+- **Get `SEARCH_API_KEY`**
+  - Search google custom search json api
+  - Under `API KEY` click on `Get a key`
+  - Select your search engine
+  - Copy the `api` key
+  - In the `.env` file, write `SEARCH_API_KEY=` and paste the `api` key
+
 - Update the `test.py` file to execute the appropriate commands
 
 **Note:** AI Ecosystem is currently in its early stages of development, and the installation process is not yet finalized. This README will be updated with instructions once the project is more mature.
