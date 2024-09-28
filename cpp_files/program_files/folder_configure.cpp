@@ -60,13 +60,22 @@ std::map<std::string, std::map<std::string, std::string>> Folder::__class_info__
         {"_unhide_folder", "None"}
     };
 
+    std::map<std::string, std::string> __class_examples__ = { // Class usage examples 
+        {"Create a folder \"CSV_files\" then move it to \"Passwords/\" and then hide it", "To create a folder \"CSV_files\" then move it to \"Passwords/\" and then hide it use function ```function_name _create_folder``` with parameters ```parameters { folder_name = \"CSV_files\" }``` then use function ```function_name _move_folder``` with parameters ```parameters { folder_name = \"CSV_files\" }, { new_path = \"Passwords/\" }``` then use function ```function_name _hide_folder``` with parameters ```parameters { folder_name = \"CSV_files\" }, { folder_path = \"Passwords/\" }"},
+        {"Unhide a folder \"Passwords\" in \"Hidden_Folders/\" then list it in file \"List_file.txt\"", "To unhide a folder \"Passwords\" in \"Hidden_Folders\" then list it in file \"List_file.txt\" use function ```function_name _unhide_folder``` with parameters ```parameters { folder_name = \"Passwords\" }, { folder_path = \"Hidden_Folders/\" }``` then use function ```function_name _list_folder``` with parameters ```parameters { folder_name = \"Passwords\" }, { list_filename = \"List_file.txt\" }, { folder_path = \"Hidden_Folders/\" }```"},
+        {"Copy a folder \"No_Need_files\" in directory \"Trash_Folders/\" to \"Necessary_folders/\" then delete the earlier folder", "To copy a folder \"No_Need_files\" in directory \"Trash_Folders/\" to \"Necessary_folders/\" then delete the earlier folder use function ```function_name _copy_folder``` with parameters ```parameters { folder_name = \"No_Need_files\" }, { new_path = \"Necessary_folders/\" }, { folder_path = \"Trash_Folders/\" }``` then use function ```function_name _delete_folder``` with parameters ```parameters { folder_name = \"No_Need_files\" }, { folder_path = \"Trash_Folders/\" }```"},
+        {"Set model to \"gemini-1.5-pro\" and set system instruction to \"You are a great philosopher\" and then query it \"Meaning of life\" and then clear the conversation history", "```Sorry, this query cannot be handled by me```"},
+        {"Search for \"Latest songs\" but restrict the results to past 2 years and give me 10 results", "```Sorry, this query cannot be handled by me```"}
+    };
+
     return { // Vector of maps containing the class information
         {"Name_Description", __name_discription__},
         {"Constructor_Parameters", __constuctor_paramters__},
         {"Function_Info", __function_info__},
         {"Function_Parameters", __function_parameters__},
         {"Parameter_Description", __function_parameters_description__},
-        {"Function_Return", __function_return_types__}
+        {"Function_Return", __function_return_types__},
+        {"Class_Examples", __class_examples__}
     };
 }
 

@@ -18,7 +18,7 @@ for class_info in main_knowledge_base[1:]:
 
     main_prompt += "\tClass Functions: \n"
     for function_info in class_info['Class_Functions']:
-        main_prompt += f"""\t\t{function_info['Function_Name']}: {function_info['Function_Description']}\n"""
+        main_prompt += f"""\t\t{function_info['Function_Name']}: {function_info['Function_Description']}: With parameters {*function_info['Function_Parameters'], }\n"""
 
     main_prompt += "\n\tClass Examples: \n"
     for example_query, example_answer in class_info['Class_Examples'].items():

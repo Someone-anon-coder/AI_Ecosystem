@@ -99,12 +99,12 @@ std::map<std::string, std::map<std::string, std::string>> GoogleNews::__class_in
         {"_get_exclude_websites", "Not used"},
         {"_get_news", "keyword: Keyword used to search news\nfilename: File to save articles in"},
         {"_get_latest_topics", "filename: File to save articles in"},
-        {"_get_news_by_topic", "topic: Search the news on this topic\nfilename: File to save articles in"},
-        {"_get_news_by_country", "country: Search the news on this country\nfilename: File to save articles in"},
+        {"_get_news_by_topic", "topic: Search the news on this topic. Available topics are [\"WORLD\", \"NATION\", \"BUSINESS\", \"TECHNOLOGY\", \"ENTERTAINMENT\", \"SPORTS\", \"SCIENCE\", \"HEALTH\"]\nfilename: File to save articles in"},
+        {"_get_news_by_country", "country: Search the news on this country. Available countries are [\"AU\", \"BW\", \"CA\", \"ET\", \"GH\", \"IN\", \"ID\", \"IE\", \"IL\", \"KE\", \"LV\", \"MY\", \"NA\", \"NZ\", \"NG\", \"PK\", \"PH\", \"SG\", \"ZA\", \"TZ\", \"UG\", \"GB\", \"US\", \"ZW\", \"CZ\", \"DE\", \"AT\", \"CH\", \"AR\", \"CL\", \"CO\", \"CU\", \"MX\", \"PE\", \"VE\", \"BE\", \"FR\", \"MA\", \"SN\", \"IT\", \"LT\", \"HU\", \"NL\", \"NO\", \"PL\", \"BR\", \"PT\", \"RO\", \"SK\", \"SI\", \"SE\", \"VN\", \"TR\", \"GR\", \"BG\", \"RU\", \"UA\", \"RS\", \"AE\", \"SA\", \"LB\", \"EG\", \"BD\", \"TH\", \"CN\", \"TW\", \"HK\", \"JP\", \"KR\"]\nfilename: File to save articles in"},
         {"_get_news_by_site", "site: Search the news from this site\nfilename: File to save articles in"},
-        {"_set_language", "language: Languge you want to get the news in"},
+        {"_set_language", "language: Languge you want to get the news in. Available languages are [\"en\", \"id\", \"cs\", \"de\", \"es-419\", \"fr\", \"it\", \"lv\", \"lt\", \"hu\", \"nl\", \"no\", \"pl\", \"pt-419\", \"pt-150\", \"ro\", \"sk\", \"sl\", \"sv\", \"vi\", \"tr\", \"el\", \"bg\", \"ru\", \"sr\", \"uk\", \"he\", \"ar\", \"mr\", \"hi\", \"bn\", \"ta\", \"te\", \"ml\", \"th\", \"zh-Hans\", \"zh-Hant\", \"ja\", \"ko\"]"},
         {"_set_country", "country: Country you want to get the news from"},
-        {"_set_period", "period: Time period to get news from"},
+        {"_set_period", "period: Time period to get news from. Available periods are [\"hour\", \"day\", \"week\", \"month\", \"year\", \"anytime\"]"},
         {"_set_start_date", "start_date: Starting date for when to get news from"},
         {"_set_end_date", "end_date: Ending date till when news is presented"},
         {"_set_max_results", "max_results: Max number of results for the news"},
@@ -133,13 +133,22 @@ std::map<std::string, std::map<std::string, std::string>> GoogleNews::__class_in
         {"_set_excluded_websites", "None"}
     };
 
+    std::map<std::string, std::string> __class_examples__ = { // Class usage examples
+        {"Search News for \"US presidential debate\" and give me \"10\" results", "To search news for \"US presidential debate\" and give me \"10\" results use function ```function_name _set_max_results``` with parameters ```parameters { max_results = 10 }``` then use function ```function_name _get_news``` with parameters ```parameters { keyword = \"US presidential debate\" }```"},
+        {"Search News for topic \"presidential Candiates\" and give me \"5\" results in english", "To search news for topic \"presidential Candiates\" and give me \"5\" results in english use function ```function_name _set_language``` with parameters ```parameters { language = \"en\" }``` then use function ```function_name _set_max_results``` with parameters ```parameters { max_results = 5 }``` ```function_name _get_news_by_topic``` with parameters ```parameters { topic = \"presidential Candiates\" }"},
+        {"Get me News by the topic \"Climate Change\" between \"7th January 2015\" and \"20th February 2020\"", "To get the news by the topic \"Climate Change\" between \"7th January 2015\" and \"20th February 2020\" use function ```function_name _set_start_date``` with parameters ```parameters { start_date = \"2015-01-07\" }``` then use function ```function_name _set_end_date``` with parameters ```parameters { end_date = \"2020-02-20\" }``` then use function ```function_name _get_news_by_topic``` with parameters ```parameters { topic = \"Climate Change\" }```"},
+        {"Set the model to \"gemini-pro\" and ask it \"What is the meaning of life?\" and give me a verbose response", "```Sorry, this query cannot be handled by me"},
+        {"Create a folder \"CSV_files\" then move it to \"Passwords/\" and then hide it", "```Sorry, this query cannot be handled by me"}
+    };
+
     return { // Vector of maps containing the class information
         {"Name_Description", __name_discription__},
         {"Constructor_Parameters", __constuctor_paramters__},
         {"Function_Info", __function_info__},
         {"Function_Parameters", __function_parameters__},
         {"Parameter_Description", __function_parameters_description__},
-        {"Function_Return", __function_return_types__}
+        {"Function_Return", __function_return_types__},
+        {"Class_Examples", __class_examples__}
     };
 }
 

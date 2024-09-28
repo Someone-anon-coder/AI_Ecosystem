@@ -49,7 +49,7 @@ You have been given the knowledge base below:
 	8: Function Name: _get_news_by_country
 	Function Description: Function to get the news on the given country. The Parameters [country] are required
 	Function Parameters: 
-		country (str): Specify this parameter to Search the news on this country
+		country (str): Specify this parameter to Search the news on this country. Available countries are ["AU", "BW", "CA", "ET", "GH", "IN", "ID", "IE", "IL", "KE", "LV", "MY", "NA", "NZ", "NG", "PK", "PH", "SG", "ZA", "TZ", "UG", "GB", "US", "ZW", "CZ", "DE", "AT", "CH", "AR", "CL", "CO", "CU", "MX", "PE", "VE", "BE", "FR", "MA", "SN", "IT", "LT", "HU", "NL", "NO", "PL", "BR", "PT", "RO", "SK", "SI", "SE", "VN", "TR", "GR", "BG", "RU", "UA", "RS", "AE", "SA", "LB", "EG", "BD", "TH", "CN", "TW", "HK", "JP", "KR"]
 		filename (str): Specify this parameter to File to save articles in
 	Function Returns: None
 
@@ -63,7 +63,7 @@ You have been given the knowledge base below:
 	10: Function Name: _get_news_by_topic
 	Function Description: Function to get the news on the given topic. The Parameters [topic] are required
 	Function Parameters: 
-		topic (str): Specify this parameter to Search the news on this topic
+		topic (str): Specify this parameter to Search the news on this topic. Available topics are ["WORLD", "NATION", "BUSINESS", "TECHNOLOGY", "ENTERTAINMENT", "SPORTS", "SCIENCE", "HEALTH"]
 		filename (str): Specify this parameter to File to save articles in
 	Function Returns: None
 
@@ -98,7 +98,7 @@ You have been given the knowledge base below:
 	16: Function Name: _set_language
 	Function Description: Function to set the language. The Parameters [language] are required
 	Function Parameters: 
-		language (str): Specify this parameter to Languge you want to get the news in
+		language (str): Specify this parameter to Languge you want to get the news in. Available languages are ["en", "id", "cs", "de", "es-419", "fr", "it", "lv", "lt", "hu", "nl", "no", "pl", "pt-419", "pt-150", "ro", "sk", "sl", "sv", "vi", "tr", "el", "bg", "ru", "sr", "uk", "he", "ar", "mr", "hi", "bn", "ta", "te", "ml", "th", "zh-Hans", "zh-Hant", "ja", "ko"]
 	Function Returns: None
 
 	17: Function Name: _set_max_results
@@ -110,7 +110,7 @@ You have been given the knowledge base below:
 	18: Function Name: _set_period
 	Function Description: Function to set the time period. The Parameters [period] are required
 	Function Parameters: 
-		period (str): Specify this parameter to Time period to get news from
+		period (str): Specify this parameter to Time period to get news from. Available periods are ["hour", "day", "week", "month", "year", "anytime"]
 	Function Returns: None
 
 	19: Function Name: _set_start_date
@@ -121,19 +121,19 @@ You have been given the knowledge base below:
 
 
 Examples:
+	User Query: Create a folder "CSV_files" then move it to "Passwords/" and then hide it
+	Answer: ```Sorry, this query cannot be handled by me
+
+	User Query: Get me News by the topic "Climate Change" between "7th January 2015" and "20th February 2020"
+	Answer: To get the news by the topic "Climate Change" between "7th January 2015" and "20th February 2020" use function ```function_name _set_start_date``` with parameters ```parameters { start_date = "2015-01-07" }``` then use function ```function_name _set_end_date``` with parameters ```parameters { end_date = "2020-02-20" }``` then use function ```function_name _get_news_by_topic``` with parameters ```parameters { topic = "Climate Change" }```
+
 	User Query: Search News for "US presidential debate" and give me "10" results
 	Answer: To search news for "US presidential debate" and give me "10" results use function ```function_name _set_max_results``` with parameters ```parameters { max_results = 10 }``` then use function ```function_name _get_news``` with parameters ```parameters { keyword = "US presidential debate" }```
 
 	User Query: Search News for topic "presidential Candiates" and give me "5" results in english
 	Answer: To search news for topic "presidential Candiates" and give me "5" results in english use function ```function_name _set_language``` with parameters ```parameters { language = "en" }``` then use function ```function_name _set_max_results``` with parameters ```parameters { max_results = 5 }``` ```function_name _get_news_by_topic``` with parameters ```parameters { topic = "presidential Candiates" }
 
-	User Query: Get me News by the topic "Climate Change" between "7th January 2015" and "20th February 2020"
-	Answer: To get the news by the topic "Climate Change" between "7th January 2015" and "20th February 2020" use function ```function_name _set_start_date``` with parameters ```parameters { start_date = "2015-01-07" }``` then use function ```function_name _set_end_date``` with parameters ```parameters { end_date = "2020-02-20" }``` then use function ```function_name _get_news_by_topic``` with parameters ```parameters { topic = "Climate Change" }```
-
 	User Query: Set the model to "gemini-pro" and ask it "What is the meaning of life?" and give me a verbose response
-	Answer: ```Sorry, this query cannot be handled by me
-
-	User Query: Create a folder "CSV_files" then move it to "Passwords/" and then hide it
 	Answer: ```Sorry, this query cannot be handled by me
 
 

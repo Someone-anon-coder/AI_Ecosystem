@@ -64,13 +64,22 @@ std::map<std::string, std::map<std::string, std::string>> File::__class_info__()
         {"_unhide_file", "None"}
     };
 
+    std::map<std::string, std::string> __class_examples__ = { // Class usage examples 
+        {"Create file \"hello.txt\" and write \"hello\" in it then hide the file", "To create a file \"hello.txt\" and write \"hello\" in it then hide a file use function ```function_name _create_file``` with parameters ```parameters { filename = \"hello.txt\" }``` then use function ```function_name _write_file``` with parameters ```parameters { filename = \"hello.txt\" }, { content = \"hello\" }``` then use function ```function_name _hide_file``` with parameters ```parameters { filename = \"hello.txt\" }"},
+        {"Unhide a file \".test.txt\" in directory \"hidden_files/test_files/\" and then move it to \"test_files/\"", "To unhide a file \".test.txt\" in directory \"hidden_files/test_files/\" and then move it to \"test_files/\" use function ```function_name _unhide_file``` with parameters ```parameters { filename = \".test.txt\" }, { file_path = \"hidden_files/test_files/\" }``` then use function ```function_name _move_file``` with parameters ```parameters { filename = \"test.txt\" }, { new_path = \"test_files/\" }, { file_path = \"hidden_files/test_files/\" }, { new_path = \"test_files/\" }```"},
+        {"Create a file \"pass.csv\" then write \"user, pass\\nabc, test\" in it and then move it to \"secret_files/\" then hide it", "to create a file \"pass.csv\" then write \"user, pass\\nabc, test\" in it and then move it to \"secret_files/\" then hide it use function ```function_name _create_file``` with parameters ```parameters { filename = \"pass.csv\" }``` then use function ```function_name _write_file``` with parameters ```parameters { filename = \"pass.csv\" }, { content = \"user, pass\\nabc, test\" }``` then use ```function_name _move_file``` with parameters ```parameters { filename = \"pass.csv\" }, { new_path = \"secret_files/\" }``` then use function ```function_name _hide_file``` with parameters ```parameters { filename = \"pass.csv\" }, { file_path = \"secret_files/\" }```"},
+        {"Set model to \"gemini-1.5-pro\" and set system instruction to \"You are a great philosopher\" and then query it \"Meaning of life\" and then clear the conversation history", "```Sorry, this query cannot be handled by me```"},
+        {"list folder \"Passwords\" and then copy it to \"Nothing/\" then delete it", "```Sorry, this query cannot be handled by me```"}
+    };
+
     return { // Vector of maps containing the class information
         {"Name_Description", __name_discription__},
         {"Constructor_Parameters", __constuctor_paramters__},
         {"Function_Info", __function_info__},
         {"Function_Parameters", __function_parameters__},
         {"Parameter_Description", __function_parameters_description__},
-        {"Function_Return", __function_return_types__}
+        {"Function_Return", __function_return_types__},
+        {"Class_Examples", __class_examples__}
     };
 }
 

@@ -41,14 +41,14 @@ for kb_file in kb_files:
         example_count += 1
     
     for function in knowledge_base[1:]:
-        # parameters = []
-        # for parameter_name, _ in function['parameters'].items():
-        #     parameters.append(parameter_name)
+        parameters = []
+        for parameter_name, _ in function['parameters'].items():
+            parameters.append(parameter_name)
         
         knowledge['Class_Functions'].append({
             "Function_Name": function['name'],
             "Function_Description": function['description'],
-            # "Function_Parameters": parameters,
+            "Function_Parameters": parameters,
         })
         
     main_kb.append(knowledge)

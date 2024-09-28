@@ -35,7 +35,7 @@ class GoogleNews{
         std::vector<std::string> __available_countries = {"AU", "BW", "CA", "ET", "GH", "IN", "ID", "IE", "IL", "KE", "LV", "MY", "NA", "NZ", "NG", "PK", "PH", "SG", "ZA", "TZ", "UG", "GB", "US", "ZW", "CZ", "DE", "AT", "CH", "AR", "CL", "CO", "CU", "MX", "PE", "VE", "BE", "FR", "MA", "SN", "IT", "LT", "HU", "NL", "NO", "PL", "BR", "PT", "RO", "SK", "SI", "SE", "VN", "TR", "GR", "BG", "RU", "UA", "RS", "AE", "SA", "LB", "EG", "BD", "TH", "CN", "TW", "HK", "JP", "KR"}; // Availble countries to search news for
         std::vector<std::string> __available_languages = {"en", "id", "cs", "de", "es-419", "fr", "it", "lv", "lt", "hu", "nl", "no", "pl", "pt-419", "pt-150", "ro", "sk", "sl", "sv", "vi", "tr", "el", "bg", "ru", "sr", "uk", "he", "ar", "mr", "hi", "bn", "ta", "te", "ml", "th", "zh-Hans", "zh-Hant", "ja", "ko"}; // Availble languages to search news for
         std::vector<std::string> __available_topics = {"WORLD", "NATION", "BUSINESS", "TECHNOLOGY", "ENTERTAINMENT", "SPORTS", "SCIENCE", "HEALTH"}; // Availble topics to search news for
-        std::vector<std::string> __available_periods = {"hour", "day", "week", "month", "year", "any_time"}; // Availble periods to search news for
+        std::vector<std::string> __available_periods = {"hour", "day", "week", "month", "year", "anytime"}; // Availble periods to search news for
 
         // Class Private Functions
 

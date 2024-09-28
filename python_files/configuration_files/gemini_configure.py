@@ -40,9 +40,9 @@ class GeminiModel():
         __function_parameters_description__ = { # Function Parameter names and their description
             "_query_model": "query: Query to ask the model\nverbose: Include extra information with result",
             "_get_available_models": "Not used",
-            "_modify_safety_settings": "safety: Harm category to change the safety settings of\nsetting: Block threshold to change the safety settings to",
+            "_modify_safety_settings": "safety: Harm category to change the safety settings of. Available options are HARM_CATEGORY_DANGEROUS_CONTENT, HARM_CATEGORY_HARASSMENT, HARM_CATEGORY_HATE_SPEECH, HARM_CATEGORY_SEXUALLY_EXPLICIT\nsetting: Block threshold to change the safety settings to. Available options are BLOCK_LOW_AND_ABOVE, BLOCK_NONE, BLOCK_MEDIUM_AND_ABOVE, BLOCK_ONLY_HIGH",
             "_get_current_configuration": "Not used",
-            "_set_configuration": "candidate_count: Number of candidates to return\nstop_sequences: Words to stop the generation\nmax_output_tokens: Maximum number of tokens to generate\ntemperature: Temperature of the generation\ntop_p: Top p of the generation\ntop_k: Top k of the generation\nresponse_mime_type: Mime type of the response\nresponse_schema: Schema of the response",
+            "_set_configuration": "candidate_count: Number of candidates to return. Available count is between 1 and 5\nstop_sequences: Words to stop the generation\nmax_output_tokens: Maximum number of tokens to generate. Available count is between 1 and 8192\ntemperature: Temperature of the generation. Available count is between 0 and 1\ntop_p: Top p of the generation. Available count is between 0 and 1\ntop_k: Top k of the generation. Available count is between 1 and 40\nresponse_mime_type: Mime type of the response. Available options are application/json, application/octet-stream, text/plain\nresponse_schema: Schema of the response",
             "_get_model": "Not used",
             "_set_model": "model_name: Name of the model to use\nsystem_message: System message to use\nsafety_settings: Safety settings to use",
             "_load_history": "filename: Name of the file to load the history from",
@@ -60,6 +60,14 @@ class GeminiModel():
             "_load_history": "Load the history from the given file",
             "_clear_history": "Clear the history and save it to the given file"
         }
+
+        __class_examples__ = { # Class usage examples
+            "Set the model to \"gemini-pro\" and ask it \"What is the meaning of life?\" and give me a verbose response": "To set the model to \"gemini-pro\" and ask it \"What is the meaning of life?\" and then provide a verbose response use function ```function_name _set_model``` with parameters ```parameters { model_name = \"gemini-pro\" }``` then use function ```function_name _query_model``` with parameters ```parameters { query = \"What is the meaning of life?\" }, { verbose = True }```",
+            "Modify the safety settings for \"gemini-flash-1.5\" and set \"HARM_CATEGORY_DANGEROUS_CONTENT\" to \"BLOCK_NONE\" and then clear the conversation history": "To modify the safety settings for \"gemini-flash-1.5\" and set \"HARM_CATEGORY_DANGEROUS_CONTENT\" to \"BLOCK_NONE\" use function ```function_name _set_model``` with parameters ```parameters { model_name = \"gemini-flash-1.5\" }``` then use function ```function_name _modify_safety_settings``` with parameters ```parameters { safety = \"HARM_CATEGORY_DANGEROUS_CONTENT\" }, { setting = \"BLOCK_NONE\" }``` then use function ```function_name _clear_history```",
+            "Change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\"": "To change the response candidates to \"10\" and the temperature of the model to \"0.2\" and then say to \"gemini-pro-1.0\" \"Hello!\" use function ```function_name _set_model``` with parameters ```parameters { model_name = \"gemini-pro-1.0\" }``` then use function ```function_name _set_configuration``` with parameters ```parameters { candidate_count = 10 }, { temperature = 0.2 }``` then use function ```function_name _query_model``` with parameters ```parameters { query = \"Hello!\" }```",
+            "Change the name of file \"hello.txt\" in directory \"Greetings/\" to \"hello_world.txt\" and then move it to \"Extra_Greetings/\"": "```Sorry, this query cannot be handled by me```",
+            "Set the number of results to return to \"22\" and search for \"World Domination\" but only return \"pdf\" files which contains the word \"One World Government\" or \"One World Currency\"": "```Sorry, this query cannot be handled by me```"
+        }
         
         return {
             "Name_Description": __name_discription__,
@@ -68,6 +76,7 @@ class GeminiModel():
             "Function_Parameters": __function_parameters__,
             "Parameter_Description": __function_parameters_description__,
             "Function_Return": __function_return_types__,
+            "Class_Examples": __class_examples__
         }
         
     def __init__(self) -> None:

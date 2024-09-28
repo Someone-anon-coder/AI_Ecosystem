@@ -102,9 +102,9 @@ if __name__ == "__main__":
     sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
 
     # from python_files.configuration_files.gemini_configure import GeminiModel
-    from modules.angel_configure import Folder
+    from modules.angel_configure import GoogleNews
     
-    class_object = Folder()
+    class_object = GoogleNews()
     
     knowledge_base = []
     class_info = class_object.__class_info__()
@@ -114,8 +114,9 @@ if __name__ == "__main__":
     
     functions = class_info['Function_Info']
     return_types = class_info['Function_Return']
+    examples = class_info['Class_Examples']
     
-    knowledge_base.append(create_system_message(model_type=class_description))
+    knowledge_base.append(create_system_message(model_type=class_description, ex=examples))
     for function_name, function_description in functions.items():
     
         parameter_disc = class_info['Function_Parameters'][function_name]
