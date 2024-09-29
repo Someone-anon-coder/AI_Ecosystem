@@ -1,7 +1,7 @@
 import os
 import json
 
-main_knowledge_base_file = "1_kb.json"
+main_knowledge_base_file = "get_knowledge-base.json"
 kb_directory = "json_files/KB_files"
 kb_files = os.listdir(kb_directory)
 kb_files.remove(main_knowledge_base_file)
@@ -53,5 +53,5 @@ for kb_file in kb_files:
         
     main_kb.append(knowledge)
 
-with open(f"{kb_directory}/{main_knowledge_base_file}", 'w', encoding='utf8') as main_kb_file:
+with open(f"json_files/helper_KB_files/{main_knowledge_base_file}", 'w', encoding='utf8') as main_kb_file:
     json.dump(main_kb, main_kb_file, ensure_ascii=False, indent=4)

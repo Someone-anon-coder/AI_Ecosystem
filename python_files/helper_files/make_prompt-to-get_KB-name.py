@@ -1,6 +1,6 @@
 import json
 
-main_knowledge_base_file = "json_files/KB_files/1_kb.json"
+main_knowledge_base_file = "json_files/helper_KB_files/get_knowledge-base.json"
 with open(main_knowledge_base_file, 'r', encoding='utf8') as main_kb_file:
     main_knowledge_base = json.load(main_kb_file)
 
@@ -33,5 +33,5 @@ for user_query, answer in main_knowledge_base[0]['examples'].items():
 
 main_prompt += main_knowledge_base[0]['Note']
 
-with open("text_files/KB_files/1_kb.txt", 'w', encoding='utf8') as main_kb_file:
+with open("text_files/KB_files/get_knowledge-base_prompt.txt", 'w', encoding='utf8') as main_kb_file:
     main_kb_file.write(main_prompt)
