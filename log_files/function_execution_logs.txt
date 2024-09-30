@@ -1,15 +1,6 @@
-Folder Test Checked and it does not exists
-Folder Test Created Successfully
-File Hello.txt at Test/ Checked and it does not exists
-File Hello.txt at Test/ Created Successfully
-File Bye.txt at Test/ Checked and it does not exists
-File Bye.txt at Test/ Created Successfully
-File Hello.txt at Test/ Checked and it exists
-Content written to Hello.txt at Test/ Successfully
-File Bye.txt at Test/ Checked and it exists
-Content written to Bye.txt at Test/ Successfully
-Number of results set to 5.
-Searched google for query AI Development and stored search results in file json_files/search_result.json.
-Search results saved to file text_files/search_results.txt Successfully.
-Max results set to 10 to search the news.
-Searched for news for the keyword: Climate Change, and saved the results in the file: text_files/news_articles.txt.
+Folder Test/ Checked and it does not exists
+Folder Test/ Created Successfully
+File Pass.csv at Test/ Checked and it does not exists
+File Pass.csv at Test/ Created Successfully
+File Pass.csv at Test/ Checked and it exists
+File Pass.csv at Test/ Hidden Successfully

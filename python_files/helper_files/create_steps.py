@@ -34,14 +34,14 @@ def load_class(class_name: str) -> object:
     
     return instance
 
-def get_kb_name(prompt: str, gemini_model: object, model_name: str, kb_file: str = 'text_files/KB_files/1_kb.txt') -> str:
+def get_kb_name(prompt: str, gemini_model: object, model_name: str, kb_file: str = 'text_files/KB_files/get_knowledge-base_kb.txt') -> str:
     """Get knowledge base name from the prompt response
 
     Args:
         prompt (str): Prompt to ask gemini
         gemini_model (object): Gemini model object
         model_name (str): Name of the model to use
-        kb_file (str, optional): File to load knowledge base from. Defaults to 'text_files/KB_files/1_kb.txt'.
+        kb_file (str, optional): File to load knowledge base from. Defaults to 'text_files/KB_files/get_knowledge-base_kb.txt'.
 
     Returns:
         str: Knowledge base name
@@ -189,11 +189,39 @@ def execute_functions(class_object: object, function_file: str = "json_files/que
 
         execute_function(class_object, function_name, parameters)
 
-if __name__ == "__main__":
-    query = "Create file \"Hello.txt\" in \"text_files/\" and write \"hello\" in it"
+def get_small_steps(query: str) -> list:
+    """Get small steps from the query
+
+    Args:
+        query (str): Query to get small steps from
+
+    Returns:
+        list: List of small steps
+    """
+
+    gemini = load_class("GeminiModel")
+
+    kb_prompt = get_kb_prompt("get_small-steps")
+    gemini._set_model("gemini-1.5-flash", kb_prompt)
+
+    response = gemini._query_model(query)
+    print(response)
+
+    small_steps = re.findall(r'\{(.*?)\}', response, re.DOTALL)
+    return [small_step.strip() for small_step in small_steps]
+
+def small_step(query: str) -> None:
+    """Small Step to execute one by one
+    
+    Args:
+        query (str): Query to execute
+    """
 
     gemini = load_class("GeminiModel")
     kb_name = get_kb_name(query, gemini, "gemini-1.5-flash")
+
+    if kb_name == "":
+        return None
 
     gemini = load_class("GeminiModel")
     kb = get_kb_prompt(kb_name)
@@ -201,8 +229,11 @@ if __name__ == "__main__":
 
     response = gemini._query_model(query)
 
-    print(response)
+    print(response, end="\n")
     parse_blocks(*get_blocks(response))
 
     class_object = load_class(kb_name)
     execute_functions(class_object)
+
+if __name__ == "__main__":
+    pass

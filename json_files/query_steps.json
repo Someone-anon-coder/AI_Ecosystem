@@ -1,14 +1,9 @@
 [
     {
-        "function_name": "_set_max_results",
+        "function_name": "_hide_file",
         "parameters": {
-            "max_results": 10
-        }
-    },
-    {
-        "function_name": "_get_news",
-        "parameters": {
-            "keyword": "\"Climate Change\""
+            "filename": "\"Pass.csv\"",
+            "file_path": "\"Test/\""
         }
     }
 ]
