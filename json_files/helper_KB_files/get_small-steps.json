@@ -10,7 +10,7 @@
             "Open camera and click \"5\" photos with a gap of \"3\" seconds then open word and write \"Latest Photos\" then get the \"5\" lastest photos and paste them in the document": "```Sorry, this instruction cannot be handled yet```",
             "Open browser and visit \"google.com\" then search for \"Advantages of AI\" then take a screenshot of the \"screen\" and save in \"~/Documents\" folder": "```Sorry, this instruction cannot be handled yet```"
         },
-        "Note": "Answer the query if and only if it can be done by the knowledge base of the classes available in your knowledge base. DO NOT create new knowledge bases to answer user query"
+        "Note": "Answer the query if and only if it can be done by the knowledge base of the classes available in your knowledge base. DO NOT create new classes to answer user query"
     },
     {
         "Class_Name": "File",
