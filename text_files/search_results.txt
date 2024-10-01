@@ -1,3 +1,40 @@
-Title: "Artificial intelligence - Wikipedia"
-Snippet: "Artificial intelligence was founded as an academic discipline in 1956, and the field went through multiple cycles of optimism, followed by periods of ..."
-Link: "https://en.wikipedia.org/wiki/Artificial_intelligence"
+Title: "Artificial Intelligence | CISA"
+Snippet: "CISA's whole-of-agency plan to: promote the beneficial uses of AI to enhance cybersecurity capabilities, ensure AI systems are protected from cyber-based ..."
+Link: "https://www.cisa.gov/ai"
+
+Title: "What Is AI in Cybersecurity?"
+Snippet: "AI-powered cybersecurity tools and systems have the ability to support providing even better data protection against threats by quickly recognizing behavior ..."
+Link: "https://www.sophos.com/en-us/cybersecurity-explained/ai-in-cybersecurity"
+
+Title: "AI and Cybersecurity: A New Era | Morgan Stanley"
+Snippet: "AI allows cybercriminals to automate many of the processes used in social-engineering attacks, as well as create more personalized, sophisticated and effective ..."
+Link: "https://www.morganstanley.com/articles/ai-cybersecurity-new-era"
+
+Title: "What Is AI for Cybersecurity? | Microsoft Security"
+Snippet: "AI for cybersecurity defined. AI for cybersecurity uses AI to analyze and correlate event and cyberthreat data across multiple sources, turning it into clear ..."
+Link: "https://www.microsoft.com/en-us/security/business/security-101/what-is-ai-for-cybersecurity"
+
+Title: "4 use cases for AI in cyber security"
+Snippet: "Apr 19, 2024 ... It's being used to analyze logs, predict threats, read source code, identify vulnerabilities and even to create or exploit vulnerabilities."
+Link: "https://www.redhat.com/en/blog/4-use-cases-ai-cyber-security"
+
+Title: "Artificial Intelligence (AI) Cybersecurity | IBM"
+Snippet: "IBM Security® provides transformative, AI-powered solutions that optimize analysts' time—by accelerating ai threat detection and mitigation, expediting ..."
+Link: "https://www.ibm.com/ai-cybersecurity"
+
+Title: "Ideas for AI in cybersecurity : r/cybersecurity"
+Snippet: "Jan 26, 2024 ... - User Behavior Analysis: use Ai to monitor and analyze user behavior patterns within a computer system, detecting anomalous activities that may ..."
+Link: "https://www.reddit.com/r/cybersecurity/comments/1abgm6g/ideas_for_ai_in_cybersecurity/"
+
+Title: "Artificial Intelligence in Cybersecurity | Balbix"
+Snippet: "AI enhances threat intelligence by analyzing large datasets in real time and providing predictive insights. This capability allows cybersecurity teams to ..."
+Link: "https://www.balbix.com/insights/artificial-intelligence-in-cybersecurity/"
+
+Title: "The intersection of cybersecurity and artificial intelligence | Security ..."
+Snippet: "Jan 15, 2024 ... AI has proven to be a valuable asset in the cybersecurity arsenal, but it is not a silver bullet. The cybersecurity landscape is dynamic, with ..."
+Link: "https://www.securitymagazine.com/articles/100312-the-intersection-of-cybersecurity-and-artificial-intelligence"
+
+Title: "A Primer On Artificial Intelligence And Cybersecurity"
+Snippet: "Sep 26, 2023 ... Artificial intelligence acts as a powerful catalyst and enabler for cybersecurity in our connected ecosystem."
+Link: "https://www.forbes.com/sites/chuckbrooks/2023/09/26/a-primer-on-artificial-intelligence-and-cybersecurity/"
+
