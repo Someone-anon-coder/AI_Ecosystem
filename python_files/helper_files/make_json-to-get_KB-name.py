@@ -4,7 +4,6 @@ import json
 main_knowledge_base_file = "get_knowledge-base.json"
 kb_directory = "json_files/KB_files"
 kb_files = os.listdir(kb_directory)
-kb_files.remove(main_knowledge_base_file)
 
 main_kb = [{
     "system_message": "You are a helpful assisstant given to the user to aid with their tasks. You are provided to user as their PC asisstant for selecting a proper Knowledge Base according to user queries. Use the given classes to answer the user",

@@ -30,5 +30,5 @@ for user_query, answer in small_steps[0]['examples'].items():
 
 small_steps_prompt += small_steps[0]['Note']
 
-with open("text_files/KB_files/get_small-steps_prompt.txt", 'w', encoding='utf8') as small_steps_file:
+with open("text_files/KB_files/get_small-steps_kb.txt", 'w', encoding='utf8') as small_steps_file:
     small_steps_file.write(small_steps_prompt)

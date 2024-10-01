@@ -77,8 +77,8 @@ Classes Available to you are:
 
 
 Examples:
-	User Query: Create a folder "Test_1/" in the "Testing/" folder then create a file "Test_253.txt" in the "Test_1/" folder and hide the "Test/" folder
-	Answer: To create a folder "Test_1/" in the "Testing/" folder then create a file "Test_253.txt" in the "Test_1/" folder and hide the "Test/" folder use step ```steps { Create a folder "Test_1/" in the "Testing/" folder }, { create a file "Test_253.txt" in the "Testing/Test_1/" folder }, { hide the "Test/" folder in the "Testing/" folder }```
+	User Query: Create a folder "Test_1/" in the "Testing/" folder then create a file "Test_253.txt" in the "Test_1/" folder and hide the "Test_1/" folder
+	Answer: To create a folder "Test_1/" in the "Testing/" folder then create a file "Test_253.txt" in the "Test_1/" folder and hide the "Test/" folder use step ```steps { Create a folder "Test_1/" in the "Testing/" folder }, { create a file "Test_253.txt" in the "Testing/Test_1/" folder }, { hide the "Test_1/" folder in the "Testing/" folder }```
 
 	User Query: Create a file "search_results.txt" then search for "AI Developement" and get me 5 results and save the results in the "search_results.txt" file then search news for "Climate Change" between "2015-01-01" and "2020-12-12" and get me news in japanese
 	Answer: To Create a file "search_results.txt" then search for "AI Developement" and get me 5 results and save the results in the "search_results.txt" file then search news for "Climate Change" between "2015-01-01" and "2020-12-12" and get me news in japanese use step ```steps { Create a file "search_results.txt" }, { search for "AI Developement" and get me 5 results and save the results in the "search_results.txt" file }, { Search news for "Climate Change" between "2015-01-01" and "2020-12-12" and get me news in japanese }```
@@ -92,4 +92,4 @@ Examples:
 	User Query: Open browser and visit "google.com" then search for "Advantages of AI" then take a screenshot of the "screen" and save in "~/Documents" folder
 	Answer: ```Sorry, this instruction cannot be handled yet```
 
-Answer the query if and only if it can be done by the knowledge base of the classes available in your knowledge base. DO NOT create new classes to answer user query
+Answer the query if and only if it can be done by the knowledge base of the classes available in your knowledge base. Ensure to consider small tasks of same category a single task if they come after one another. DO NOT create new knowledge bases to answer user query
