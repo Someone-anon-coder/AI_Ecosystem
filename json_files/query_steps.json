@@ -1,9 +1,8 @@
 [
     {
-        "function_name": "_hide_file",
+        "function_name": "_create_file",
         "parameters": {
-            "filename": "\"Pass.csv\"",
-            "file_path": "\"Test/\""
+            "filename": "\"Hello.txt\""
         }
     }
 ]

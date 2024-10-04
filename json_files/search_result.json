@@ -4,47 +4,100 @@
     },
     "items": [
         {
-            "displayLink": "www.cisa.gov",
-            "formattedUrl": "https://www.cisa.gov/ai",
-            "htmlFormattedUrl": "https://www.cisa.gov/<b>ai</b>",
-            "htmlSnippet": "CISA&#39;s whole-of-agency plan to: promote the beneficial uses of <b>AI</b> to enhance <b>cybersecurity</b> capabilities, ensure <b>AI</b> systems are protected from cyber-based&nbsp;...",
-            "htmlTitle": "<b>Artificial Intelligence</b> | CISA",
+            "displayLink": "www.geeksforgeeks.org",
+            "formattedUrl": "https://www.geeksforgeeks.org/ai-tools-for-cybersecurity/",
+            "htmlFormattedUrl": "https://www.geeksforgeeks.org/<b>ai</b>-<b>tool</b>s-for-<b>cybersecurity</b>/",
+            "htmlSnippet": "Mar 3, 2024 <b>...</b> Explore 7 best <b>AI tools for Cybersecurity</b> to protect yourself from cyber attacks, phishing, spamming:- 1. Darktrace 2. Cylance 3.",
+            "htmlTitle": "Top 7 <b>AI Tools for Cybersecurity</b> in 2024",
             "kind": "customsearch#result",
-            "link": "https://www.cisa.gov/ai",
+            "link": "https://www.geeksforgeeks.org/ai-tools-for-cybersecurity/",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://www.cisa.gov/sites/default/files/styles/hero_large/public/2023-10/23-1125%20WEB%20-%20CISA%20Roadmap%20to%20AI%20Asset_HEADER-HERO%20IMAGE%20-%201600x600.png?h=e0d9a4bb&itok=umYQoA25"
+                        "src": "https://media.geeksforgeeks.org/wp-content/uploads/20240123154332/Top-7-AI-Tools-for-Cybersecurity-in-2024.webp"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "129",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUcuK3foFQtvpdBrrtetNXtkXOg5kpX6LQJugVXHHRCAwj5MERCYE_g-w&s",
-                        "width": "389"
+                        "height": "154",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6lk4RH8I7FVOVfpsoZwPfG4XdoIf0xM95Mcdn1ouQQFUKV0PtBTV7jvQ&s",
+                        "width": "328"
                     }
                 ],
                 "metatags": [
                     {
-                        "handheldfriendly": "true",
-                        "mobileoptimized": "width",
-                        "og:site_name": "Cybersecurity and Infrastructure Security Agency CISA",
-                        "og:title": "Artificial Intelligence | CISA",
-                        "og:type": "website",
-                        "og:url": "https://www.cisa.gov/ai",
-                        "viewport": "width=device-width, initial-scale=1.0"
+                        "article:modified_time": "2024-03-03T22:01:08+00:00",
+                        "article:published_time": "2024-01-23T15:47:51+00:00",
+                        "article:section": "AI-ML-DS",
+                        "article:tag": "AI Tool Blogs",
+                        "facebook-domain-verification": "xo7t4ve2wn3ywfkjdvwbrk01pvdond",
+                        "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png",
+                        "msapplication-tileimage": "https://www.geeksforgeeks.org/wp-content/uploads/gfg_200X200.png",
+                        "og:description": "Explore 7 best AI tools for Cybersecurity to protect yourself from cyber attacks, phishing, spamming:- 1. Darktrace 2. Cylance 3. Vectra AI 4. SentinelOne Cybereason McAfee MVISION",
+                        "og:image:height": "200",
+                        "og:image:type": "image/png",
+                        "og:image:width": "200",
+                        "og:locale": "en_US",
+                        "og:site_name": "GeeksforGeeks",
+                        "og:title": "Top 7 AI Tools for Cybersecurity in 2024",
+                        "og:type": "article",
+                        "og:updated_time": "2024-03-03T22:01:08+00:00",
+                        "og:url": "https://www.geeksforgeeks.org/ai-tools-for-cybersecurity/",
+                        "theme-color": "#308D46",
+                        "viewport": "width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0"
                     }
                 ]
             },
-            "snippet": "CISA's whole-of-agency plan to: promote the beneficial uses of AI to enhance cybersecurity capabilities, ensure AI systems are protected from cyber-based ...",
-            "title": "Artificial Intelligence | CISA"
+            "snippet": "Mar 3, 2024 ... Explore 7 best AI tools for Cybersecurity to protect yourself from cyber attacks, phishing, spamming:- 1. Darktrace 2. Cylance 3.",
+            "title": "Top 7 AI Tools for Cybersecurity in 2024"
+        },
+        {
+            "displayLink": "www.reddit.com",
+            "formattedUrl": "https://www.reddit.com/r/cybersecurity/.../current_ai_cybersecurity_tools/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/<b>cybersecurity</b>/.../current_<b>ai</b>_<b>cybersecurity</b>_<b>tool</b>s/",
+            "htmlSnippet": "Oct 24, 2023 <b>...</b> I have to make a <b>Cyber security</b> project about upcoming and already existing <b>AI tools</b>, i have already found quite a few good solutions like darktrace NDR but&nbsp;...",
+            "htmlTitle": "Current <b>AI Cybersecurity tools</b> : r/<b>cybersecurity</b>",
+            "kind": "customsearch#result",
+            "link": "https://www.reddit.com/r/cybersecurity/comments/17f89jg/current_ai_cybersecurity_tools/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://share.redd.it/preview/post/17f89jg"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "apple-mobile-web-app-capable": "yes",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/amaham - 10 votes and 14 comments",
+                        "og:image": "https://share.redd.it/preview/post/17f89jg",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "og:image:height": "630",
+                        "og:image:width": "1200",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/cybersecurity on Reddit: Current AI Cybersecurity tools",
+                        "og:ttl": "600",
+                        "og:type": "website",
+                        "og:url": "https://www.reddit.com/r/cybersecurity/comments/17f89jg/current_ai_cybersecurity_tools/",
+                        "theme-color": "#000000",
+                        "twitter:card": "summary_large_image",
+                        "twitter:image": "https://share.redd.it/preview/post/17f89jg",
+                        "twitter:site": "@reddit",
+                        "twitter:title": "r/cybersecurity on Reddit: Current AI Cybersecurity tools",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+                    }
+                ]
+            },
+            "snippet": "Oct 24, 2023 ... I have to make a Cyber security project about upcoming and already existing AI tools, i have already found quite a few good solutions like darktrace NDR but ...",
+            "title": "Current AI Cybersecurity tools : r/cybersecurity"
         },
         {
             "displayLink": "www.sophos.com",
             "formattedUrl": "https://www.sophos.com/en-us/cybersecurity-explained/ai-in-cybersecurity",
-            "htmlFormattedUrl": "https://www.sophos.com/en-us/<b>cybersecurity</b>-explained/<b>ai-in-cybersecurity</b>",
-            "htmlSnippet": "<b>AI</b>-powered <b>cybersecurity</b> tools and systems have the ability to support providing even better data protection against threats by quickly recognizing behavior&nbsp;...",
-            "htmlTitle": "What Is <b>AI in Cybersecurity</b>?",
+            "htmlFormattedUrl": "https://www.sophos.com/en-us/<b>cybersecurity</b>-explained/<b>ai</b>-in-<b>cybersecurity</b>",
+            "htmlSnippet": "<b>AI</b> powered <b>cybersecurity</b> can monitor, analyze detect, and respond to cyber threats in real time. As <b>AI</b> algorithms analyze massive amounts of data to detect&nbsp;...",
+            "htmlTitle": "What Is <b>AI</b> in <b>Cybersecurity</b>?",
             "kind": "customsearch#result",
             "link": "https://www.sophos.com/en-us/cybersecurity-explained/ai-in-cybersecurity",
             "pagemap": {
@@ -67,111 +120,15 @@
                     }
                 ]
             },
-            "snippet": "AI-powered cybersecurity tools and systems have the ability to support providing even better data protection against threats by quickly recognizing behavior ...",
+            "snippet": "AI powered cybersecurity can monitor, analyze detect, and respond to cyber threats in real time. As AI algorithms analyze massive amounts of data to detect ...",
             "title": "What Is AI in Cybersecurity?"
-        },
-        {
-            "displayLink": "www.morganstanley.com",
-            "formattedUrl": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
-            "htmlFormattedUrl": "https://www.morganstanley.com/articles/<b>ai</b>-<b>cybersecurity</b>-new-era",
-            "htmlSnippet": "<b>AI</b> allows cybercriminals to automate many of the processes used in social-engineering attacks, as well as create more personalized, sophisticated and effective&nbsp;...",
-            "htmlTitle": "<b>AI</b> and <b>Cybersecurity</b>: A New Era | Morgan Stanley",
-            "kind": "customsearch#result",
-            "link": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://www.morganstanley.com/content/dam/msdotcom/articles/ai-cybersecurity-new-frontier/tw-ai-cybersecurity-1200x628.jpg"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "162",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA0ewtxsTjBaG3DkM53rwFKPY9iyicMU4S_Tv6H_nrZ8jQfYT0Qu5X9SA&s",
-                        "width": "311"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "og:description": "In the evolving landscape of artificial intelligence (AI), both cybersecurity teams and hackers are using AI to their advantage.",
-                        "og:image": "https://www.morganstanley.com/content/dam/msdotcom/articles/ai-cybersecurity-new-frontier/tw-ai-cybersecurity-1200x628.jpg",
-                        "og:site_name": "Morgan Stanley",
-                        "og:title": "AI and Cybersecurity: A New Era | Morgan Stanley",
-                        "og:url": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
-                        "title": "AI and Cybersecurity: A New Era",
-                        "twitter:card": "summary_large_image",
-                        "twitter:creator": "@MorganStanley",
-                        "twitter:description": "In the evolving landscape of artificial intelligence (AI), both cybersecurity teams and hackers are using AI to their advantage.",
-                        "twitter:image": "https://www.morganstanley.com/content/dam/msdotcom/articles/ai-cybersecurity-new-frontier/tw-ai-cybersecurity-1200x628.jpg",
-                        "twitter:title": "AI and Cybersecurity: A New Era | Morgan Stanley",
-                        "twitter:url": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
-                        "viewport": "width=device-width, initial-scale=1"
-                    }
-                ]
-            },
-            "snippet": "AI allows cybercriminals to automate many of the processes used in social-engineering attacks, as well as create more personalized, sophisticated and effective ...",
-            "title": "AI and Cybersecurity: A New Era | Morgan Stanley"
-        },
-        {
-            "displayLink": "www.microsoft.com",
-            "formattedUrl": "https://www.microsoft.com/en-us/security/.../what-is-ai-for-cybersecurity",
-            "htmlFormattedUrl": "https://www.microsoft.com/en-us/security/.../what-is-<b>ai</b>-for-<b>cybersecurity</b>",
-            "htmlSnippet": "<b>AI</b> for <b>cybersecurity</b> defined. <b>AI</b> for <b>cybersecurity</b> uses <b>AI</b> to analyze and correlate event and cyberthreat data across multiple sources, turning it into clear&nbsp;...",
-            "htmlTitle": "What Is <b>AI</b> for <b>Cybersecurity</b>? | Microsoft Security",
-            "kind": "customsearch#result",
-            "link": "https://www.microsoft.com/en-us/security/business/security-101/what-is-ai-for-cybersecurity",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero%20Slim%20Background%201920x8201?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1920&hei=820&qlt=100&fit=constrain"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "147",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJBwmQaz-NRrd_4i41shL7A6JKwEDQ_KpD0WktegpbQd2cz3va4x1uNUPX&s",
-                        "width": "344"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "awa-canvastype": "web",
-                        "awa-cms": "AEM",
-                        "awa-enabledfeatures": "contentbackfillgenerate;esiproductcards;feature-controlled-mwf;uhf-ms-io-endpoint;uhf-esi-cv;uhf-esi-cache;fraud-greenid;contentsquare;mediapixel;holiday-themer;lazyload-static-components;clientlibDefer;upsellEnabled;contentbackfillpkgdelete;healthcheck;contentbackfillhttpgenerate;perf-tracker-1ds;dynamic-bundle;cvIncrementer;tentingEnabled;chatCookiesImplemented;alertCountDownWithoutServerTime;pdpDynamicRendering;bundlesDynamicRendering;contentbackfillmetadatachangesvideo;contentbackfillmetadatachangesnonvideo;listDynamicRendering;experimentation-without-personalization;generic-list-importer;combinedUHF;cvCallEnabled;m365ProductCatalog;support-unsupported-locales;deferClickTale;videoLazyLoad;prefetchFontsEnabled;enable-code-isolation;imageLinkTag;fetchPriority;contentIngestionAgent;enableClickgroupTelemetry;imageLazyLoad;contentIngestionAgent-dispatcher2westus2Agent;isCacheControlFeatureEnabled;feature-controlled-content-card;lcpPrioritizationPhase1;ocReimagineTelemetry;deferScriptsEnabled;lcpPrioritizationP",
-                        "awa-istented": "false",
-                        "awa-market": "en-us",
-                        "awa-pagetype": "Security",
-                        "cas-exp-at": "/etc.clientlibs/microsoft/components/structure/page/clientlibs/experimentation.min.ACSHASH895e2a12062f1ee44d7d72d266904bde.js",
-                        "cas-exp-visitor": "/etc.clientlibs/microsoft/components/structure/page/clientlibs/visitor.min.ACSHASH30368a72d017e4133bfd3b5d073d06ff.js",
-                        "og:description": "AI for cybersecurity helps organizations automate tasks, detect cyberthreats, and respond to incidents quickly and effectively.",
-                        "og:title": "What Is AI for Cybersecurity? | Microsoft Security",
-                        "og:type": "website",
-                        "og:url": "https://www.microsoft.com/en-us/security/business/security-101/what-is-ai-for-cybersecurity",
-                        "template": "onecloud-marketing-template0",
-                        "twitter:card": "summary",
-                        "twitter:description": "AI for cybersecurity helps organizations automate tasks, detect cyberthreats, and respond to incidents quickly and effectively.",
-                        "twitter:title": "What Is AI for Cybersecurity? | Microsoft Security",
-                        "twitter:url": "https://www.microsoft.com/en-us/security/business/security-101/what-is-ai-for-cybersecurity",
-                        "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no"
-                    }
-                ],
-                "organization": [
-                    {
-                        "logo": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31",
-                        "name": "Microsoft",
-                        "url": "Microsoft"
-                    }
-                ]
-            },
-            "snippet": "AI for cybersecurity defined. AI for cybersecurity uses AI to analyze and correlate event and cyberthreat data across multiple sources, turning it into clear ...",
-            "title": "What Is AI for Cybersecurity? | Microsoft Security"
         },
         {
             "displayLink": "www.redhat.com",
             "formattedUrl": "https://www.redhat.com/en/blog/4-use-cases-ai-cyber-security",
             "htmlFormattedUrl": "https://www.redhat.com/en/blog/4-use-cases-<b>ai</b>-cyber-security",
-            "htmlSnippet": "Apr 19, 2024 <b>...</b> It&#39;s being used to analyze logs, predict threats, read source code, identify vulnerabilities and even to create or exploit vulnerabilities.",
-            "htmlTitle": "4 use cases for <b>AI in cyber security</b>",
+            "htmlSnippet": "Apr 19, 2024 <b>...</b> While leveraging <b>AI</b>/ML to detect and prevent <b>cyber security</b> attacks is valuable, preventing vulnerabilities in software is also hugely important&nbsp;...",
+            "htmlTitle": "4 use cases for <b>AI</b> in <b>cyber security</b>",
             "kind": "customsearch#result",
             "link": "https://www.redhat.com/en/blog/4-use-cases-ai-cyber-security",
             "pagemap": {
@@ -246,15 +203,15 @@
                     }
                 ]
             },
-            "snippet": "Apr 19, 2024 ... It's being used to analyze logs, predict threats, read source code, identify vulnerabilities and even to create or exploit vulnerabilities.",
+            "snippet": "Apr 19, 2024 ... While leveraging AI/ML to detect and prevent cyber security attacks is valuable, preventing vulnerabilities in software is also hugely important ...",
             "title": "4 use cases for AI in cyber security"
         },
         {
             "displayLink": "www.ibm.com",
             "formattedUrl": "https://www.ibm.com/ai-cybersecurity",
             "htmlFormattedUrl": "https://www.ibm.com/<b>ai</b>-<b>cybersecurity</b>",
-            "htmlSnippet": "IBM Security® provides transformative, <b>AI</b>-powered solutions that optimize analysts&#39; time—by accelerating <b>ai</b> threat detection and mitigation, expediting&nbsp;...",
-            "htmlTitle": "Artificial Intelligence (<b>AI</b>) <b>Cybersecurity</b> | IBM",
+            "htmlSnippet": "<b>AI tools</b> can identify shadow data, monitor for abnormalities in data access and alert <b>cybersecurity</b> professionals about potential threats by malicious&nbsp;...",
+            "htmlTitle": "<b>Artificial Intelligence</b> (<b>AI</b>) <b>Cybersecurity</b> | IBM",
             "kind": "customsearch#result",
             "link": "https://www.ibm.com/ai-cybersecurity",
             "pagemap": {
@@ -265,9 +222,9 @@
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "168",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkuUfEDCAD-QAWwU3H7ilcctZ38KfEUTuZ7R7Oarb6Dmq8Mg4hT2Nck2E&s",
-                        "width": "300"
+                        "height": "84",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWqQfJnFw-ejAclEN4Bi-OGDO8vuyKyxXgTs0RvKauC-I8DK_Sa8emwg&s=0",
+                        "width": "150"
                     }
                 ],
                 "metatags": [
@@ -286,228 +243,217 @@
                     }
                 ]
             },
-            "snippet": "IBM Security® provides transformative, AI-powered solutions that optimize analysts' time—by accelerating ai threat detection and mitigation, expediting ...",
+            "snippet": "AI tools can identify shadow data, monitor for abnormalities in data access and alert cybersecurity professionals about potential threats by malicious ...",
             "title": "Artificial Intelligence (AI) Cybersecurity | IBM"
         },
         {
-            "displayLink": "www.reddit.com",
-            "formattedUrl": "https://www.reddit.com/r/cybersecurity/.../ideas_for_ai_in_cybersecurity/",
-            "htmlFormattedUrl": "https://www.reddit.com/r/<b>cybersecurity</b>/.../ideas_for_<b>ai_in_cybersecurity</b>/",
-            "htmlSnippet": "Jan 26, 2024 <b>...</b> - User Behavior Analysis: use <b>Ai</b> to monitor and analyze user behavior patterns within a computer system, detecting anomalous activities that may&nbsp;...",
-            "htmlTitle": "Ideas for <b>AI in cybersecurity</b> : r/cybersecurity",
+            "displayLink": "www.cisa.gov",
+            "formattedUrl": "https://www.cisa.gov/ai",
+            "htmlFormattedUrl": "https://www.cisa.gov/<b>ai</b>",
+            "htmlSnippet": "The security challenges associated with <b>AI</b> parallel <b>cybersecurity</b> challenges associated with previous generations of software that manufacturers did not&nbsp;...",
+            "htmlTitle": "<b>Artificial Intelligence</b> | CISA",
             "kind": "customsearch#result",
-            "link": "https://www.reddit.com/r/cybersecurity/comments/1abgm6g/ideas_for_ai_in_cybersecurity/",
+            "link": "https://www.cisa.gov/ai",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://share.redd.it/preview/post/1abgm6g"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "apple-mobile-web-app-capable": "yes",
-                        "apple-mobile-web-app-status-bar-style": "black",
-                        "msapplication-navbutton-color": "#000000",
-                        "og:description": "Posted by u/jmalk161 - 60 votes and 49 comments",
-                        "og:image": "https://share.redd.it/preview/post/1abgm6g",
-                        "og:image:alt": "An image containing a preview of the post",
-                        "og:image:height": "630",
-                        "og:image:width": "1200",
-                        "og:site_name": "Reddit",
-                        "og:title": "r/cybersecurity on Reddit: Ideas for AI in cybersecurity",
-                        "og:ttl": "600",
-                        "og:type": "website",
-                        "og:url": "https://www.reddit.com/r/cybersecurity/comments/1abgm6g/ideas_for_ai_in_cybersecurity/",
-                        "theme-color": "#000000",
-                        "twitter:card": "summary_large_image",
-                        "twitter:image": "https://share.redd.it/preview/post/1abgm6g",
-                        "twitter:site": "@reddit",
-                        "twitter:title": "r/cybersecurity on Reddit: Ideas for AI in cybersecurity",
-                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
-                    }
-                ]
-            },
-            "snippet": "Jan 26, 2024 ... - User Behavior Analysis: use Ai to monitor and analyze user behavior patterns within a computer system, detecting anomalous activities that may ...",
-            "title": "Ideas for AI in cybersecurity : r/cybersecurity"
-        },
-        {
-            "displayLink": "www.balbix.com",
-            "formattedUrl": "https://www.balbix.com/insights/artificial-intelligence-in-cybersecurity/",
-            "htmlFormattedUrl": "https://www.balbix.com/insights/artificial-intelligence-in-<b>cybersecurity</b>/",
-            "htmlSnippet": "<b>AI</b> enhances threat intelligence by analyzing large datasets in real time and providing predictive insights. This capability allows <b>cybersecurity</b> teams to&nbsp;...",
-            "htmlTitle": "<b>Artificial Intelligence in Cybersecurity</b> | Balbix",
-            "kind": "customsearch#result",
-            "link": "https://www.balbix.com/insights/artificial-intelligence-in-cybersecurity/",
-            "pagemap": {
-                "answer": [
-                    {
-                        "text": "Generative AI can significantly enhance cybersecurity by creating simulations and models to predict and counter cyberattacks. In cybersecurity, various AI types, such as machine learning, neural..."
-                    },
-                    {
-                        "text": "In cybersecurity, various AI types shine brightly, acting as digital sentinels. These include machine learning, which helps predict and detect threats by learning from data patterns. Natural..."
-                    },
-                    {
-                        "text": "AI can automate hacking processes, making cyber attacks more frequent and sophisticated. It can also be used in phishing to create highly convincing fake messages. Additionally, AI can analyze..."
-                    }
-                ],
-                "cse_image": [
-                    {
-                        "src": "https://www.balbix.com/app/uploads/AI-in-Cybersecurity.png"
+                        "src": "https://www.cisa.gov/sites/default/files/styles/hero_large/public/2023-10/23-1125%20WEB%20-%20CISA%20Roadmap%20to%20AI%20Asset_HEADER-HERO%20IMAGE%20-%201600x600.png?h=e0d9a4bb&itok=umYQoA25"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "168",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6YY8FCrgjIlib_-Im03h18jy05-rhn8KwY7qLifWUTlv6R_rT3BM-WfWZ&s",
-                        "width": "300"
+                        "height": "129",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUcuK3foFQtvpdBrrtetNXtkXOg5kpX6LQJugVXHHRCAwj5MERCYE_g-w&s",
+                        "width": "389"
                     }
                 ],
                 "metatags": [
                     {
-                        "article:modified_time": "2024-09-27T18:47+00:00",
-                        "article:published_time": "2024-09-24T20:11+00:00",
                         "handheldfriendly": "true",
                         "mobileoptimized": "width",
-                        "msapplication-tileimage": "/app/uploads/cropped-balbix-logomark-300x300.png",
-                        "og:description": "Discover how AI revolutionizes cybersecurity with advanced threat detection, automated response, and risk management. Explore benefits, challenges, and future trends.",
-                        "og:image": "https://www.balbix.com/app/uploads/AI-in-Cybersecurity.png",
-                        "og:image:alt": "AI in Cybersecurity",
-                        "og:image:height": "720",
-                        "og:image:width": "1280",
-                        "og:locale": "en_US",
-                        "og:site_name": "Balbix",
-                        "og:title": "Artificial Intelligence in Cybersecurity",
-                        "og:type": "article",
-                        "og:updated_time": "2024-09-27T18:47+00:00",
-                        "og:url": "https://www.balbix.com/insights/artificial-intelligence-in-cybersecurity/",
-                        "twitter:card": "summary_large_image",
-                        "twitter:description": "Discover how AI revolutionizes cybersecurity with advanced threat detection, automated response, and risk management. Explore benefits, challenges, and future trends.",
-                        "twitter:image": "https://www.balbix.com/app/uploads/AI-in-Cybersecurity.png",
-                        "twitter:image:alt": "AI in Cybersecurity",
-                        "twitter:site": "@balbixinc",
-                        "twitter:title": "Artificial Intelligence in Cybersecurity",
-                        "viewport": "width=device-width, initial-scale=1.0"
-                    }
-                ],
-                "question": [
-                    {
-                        "name": "How can generative AI be used in cybersecurity?"
-                    },
-                    {
-                        "name": "What types of AI are used in cyber security?"
-                    },
-                    {
-                        "name": "How can AI be used for cybercrime?"
-                    }
-                ]
-            },
-            "snippet": "AI enhances threat intelligence by analyzing large datasets in real time and providing predictive insights. This capability allows cybersecurity teams to ...",
-            "title": "Artificial Intelligence in Cybersecurity | Balbix"
-        },
-        {
-            "displayLink": "www.securitymagazine.com",
-            "formattedUrl": "https://www.securitymagazine.com/.../100312-the-intersection-of-cybersecu...",
-            "htmlFormattedUrl": "https://www.securitymagazine.com/.../100312-the-intersection-of-<b>cybersecu</b>...",
-            "htmlSnippet": "Jan 15, 2024 <b>...</b> <b>AI</b> has proven to be a valuable asset in the <b>cybersecurity</b> arsenal, but it is not a silver bullet. The <b>cybersecurity</b> landscape is dynamic, with&nbsp;...",
-            "htmlTitle": "The intersection of <b>cybersecurity</b> and <b>artificial intelligence</b> | Security ...",
-            "kind": "customsearch#result",
-            "link": "https://www.securitymagazine.com/articles/100312-the-intersection-of-cybersecurity-and-artificial-intelligence",
-            "pagemap": {
-                "cse_image": [
-                    {
-                        "src": "https://www.securitymagazine.com/ext/resources/Issues/2024/01-January/SEC-0124-Cyber-Feat-Slide1-1170x658.jpg?height=635&t=1706290396&width=1200"
-                    }
-                ],
-                "cse_thumbnail": [
-                    {
-                        "height": "168",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_3hLUcghnt-MHx2dNoDcZ9LnqZo2IH5h7NuRBW7VSXCHJOOZPE3a3Fcg&s",
-                        "width": "300"
-                    }
-                ],
-                "metatags": [
-                    {
-                        "csrf-param": "authenticity_token",
-                        "csrf-token": "h7CxKqZYULyxd61JvQrmj5v8SwaQR/pZgzfncTN+Q2I8CiQuAO/+Wj/Ale37enVtJOZqnXlFGYv0ZAqAdpKjXA==",
-                        "has-log-view": "true",
-                        "msapplication-tilecolor": "#FFFFFF",
-                        "msapplication-tileimage": "/images/favicon/mstile-144.png",
-                        "og:author": "Pam Nigro",
-                        "og:description": "Artificial intelligence (AI) is a valuable cybersecurity asset, but it's not a silver bullet. To best leverage AI, we must consider the security teams of the future.",
-                        "og:image": "https://www.securitymagazine.com/ext/resources/Issues/2024/01-January/SEC-0124-Cyber-Feat-Slide1-1170x658.jpg?height=635&t=1706290396&width=1200",
-                        "og:image:height": "635",
-                        "og:image:width": "1129",
-                        "og:title": "The intersection of cybersecurity and artificial intelligence",
-                        "og:type": "Article",
-                        "og:url": "https://www.securitymagazine.com/articles/100312-the-intersection-of-cybersecurity-and-artificial-intelligence",
-                        "twitter:card": "summary_large_image",
-                        "twitter:description": "Artificial intelligence (AI) is a valuable cybersecurity asset, but it's not a silver bullet. To best leverage AI, we must consider the security teams of the future.",
-                        "twitter:image": "https://www.securitymagazine.com/ext/resources/Issues/2024/01-January/SEC-0124-Cyber-Feat-Slide1-1170x658.jpg?height=418&t=1706290396&width=800",
-                        "twitter:site": "@securitymag",
-                        "twitter:title": "The intersection of cybersecurity and artificial intelligence",
+                        "og:site_name": "Cybersecurity and Infrastructure Security Agency CISA",
+                        "og:title": "Artificial Intelligence | CISA",
+                        "og:type": "website",
+                        "og:url": "https://www.cisa.gov/ai",
                         "viewport": "width=device-width, initial-scale=1.0"
                     }
                 ]
             },
-            "snippet": "Jan 15, 2024 ... AI has proven to be a valuable asset in the cybersecurity arsenal, but it is not a silver bullet. The cybersecurity landscape is dynamic, with ...",
-            "title": "The intersection of cybersecurity and artificial intelligence | Security ..."
+            "snippet": "The security challenges associated with AI parallel cybersecurity challenges associated with previous generations of software that manufacturers did not ...",
+            "title": "Artificial Intelligence | CISA"
         },
         {
-            "displayLink": "www.forbes.com",
-            "formattedUrl": "https://www.forbes.com/.../a-primer-on-artificial-intelligence-and-cybersecu...",
-            "htmlFormattedUrl": "https://www.forbes.com/.../a-primer-on-artificial-intelligence-and-<b>cybersecu</b>...",
-            "htmlSnippet": "Sep 26, 2023 <b>...</b> <b>Artificial intelligence</b> acts as a powerful catalyst and enabler for <b>cybersecurity</b> in our connected ecosystem.",
-            "htmlTitle": "A Primer On <b>Artificial Intelligence</b> And <b>Cybersecurity</b>",
+            "displayLink": "www.wiz.io",
+            "formattedUrl": "https://www.wiz.io/academy/ai-security-tools",
+            "htmlFormattedUrl": "https://www.wiz.io/academy/<b>ai</b>-security-<b>tool</b>s",
+            "htmlSnippet": "Feb 16, 2024 <b>...</b> In this blog post, we&#39;ll take a deep dive into the MLSecOps <b>tools</b> landscape by reviewing the five foundational areas of MLSecOps.",
+            "htmlTitle": "<b>AI</b> Security <b>Tools</b>: The Open-Source Toolkit | Wiz",
             "kind": "customsearch#result",
-            "link": "https://www.forbes.com/sites/chuckbrooks/2023/09/26/a-primer-on-artificial-intelligence-and-cybersecurity/",
+            "link": "https://www.wiz.io/academy/ai-security-tools",
             "pagemap": {
                 "cse_image": [
                     {
-                        "src": "https://imageio.forbes.com/specials-images/imageserve/65136cb975f31e8affeb5f3a/Artificial-intelligence-robot/960x0.jpg?format=jpg&width=960"
+                        "src": "https://www.datocms-assets.com/75231/1709572760-12_ai-security-tools.webp?fm=webp"
                     }
                 ],
                 "cse_thumbnail": [
                     {
-                        "height": "188",
-                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3S100fmJG4XQZV_kMNpYfx21JmyXjGYwG0208zGTk54Z9fMyR_Qipqw4&s",
-                        "width": "268"
+                        "height": "158",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMXz_CLEMZ4dwKc5Ba0FA3NCH5zabRxenNO8DaZVsbIn_tqJFPohd2EsI&s",
+                        "width": "318"
                     }
                 ],
                 "metatags": [
                     {
-                        "amp-google-client-id-api": "googleanalytics",
-                        "article:author": "Chuck Brooks",
-                        "article:channel": "Innovation",
-                        "article:id": "blogAndPostId/blog/post/50573-6513625f2e7f3c46553b3140",
-                        "article:modified": "2023-09-29",
-                        "article:published": "2023-09-26",
-                        "article:publisher": "https://www.facebook.com/forbes",
-                        "article:section": "AI",
-                        "article:section_url": "https://www.forbes.com/ai/",
-                        "author": "Chuck Brooks",
-                        "fb:app_id": "123694841080850",
-                        "format-detection": "telephone=no",
-                        "image": "https://imageio.forbes.com/specials-images/imageserve/65136c483c1ec607ff1b2d66/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-                        "news_keywords": "AI,cybersecurity,artificial intelligence,ai,cyber-threats,tech,innovation,information security,emerging tech,security",
-                        "og:description": "In simple terms, artificial intelligence acts as a powerful catalyst and enabler for cybersecurity in our connected ecosystem.",
-                        "og:site_name": "Forbes",
-                        "og:title": "A Primer On Artificial Intelligence And Cybersecurity",
+                        "article:author": "https://www.wiz.io/authors/shaked-rotlevi",
+                        "article:modified_time": "2024-02-16T08:35:18-05:00",
+                        "article:published_time": "2024-02-16T08:35:18-05:00",
+                        "article:tag": "Tools",
+                        "next-head-count": "21",
+                        "og:description": "We explore OSS AI security tools like NB Defense, Adversarial Robustness Toolbox, Garak, Privacy Meter, Audit AI, and ai-exploits.",
+                        "og:image": "https://www.datocms-assets.com/75231/1709572760-12_ai-security-tools.webp?fm=webp",
+                        "og:locale": "en-us",
+                        "og:site_name": "wiz.io",
+                        "og:title": "AI Security Tools: The Open-Source Toolkit | Wiz",
                         "og:type": "article",
-                        "og:updated_time": "2023-09-29T13:18:59.923-04:00",
-                        "og:url": "https://www.forbes.com/sites/chuckbrooks/2023/09/26/a-primer-on-artificial-intelligence-and-cybersecurity/",
+                        "og:url": "https://www.wiz.io/academy/ai-security-tools",
                         "referrer": "no-referrer-when-downgrade",
                         "twitter:card": "summary_large_image",
-                        "twitter:creator": "@@chuckDBrooks",
-                        "twitter:description": "In simple terms, artificial intelligence acts as a powerful catalyst and enabler for cybersecurity in our connected ecosystem.",
-                        "twitter:image": "https://imageio.forbes.com/specials-images/imageserve/65136c483c1ec607ff1b2d66/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds",
-                        "twitter:site": "@forbes",
-                        "twitter:title": "A Primer On Artificial Intelligence And Cybersecurity",
-                        "viewport": "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2,user-scalable=yes"
+                        "twitter:site": "@wiz_io",
+                        "twitter:widgets:csp": "on",
+                        "viewport": "width=device-width"
                     }
                 ]
             },
-            "snippet": "Sep 26, 2023 ... Artificial intelligence acts as a powerful catalyst and enabler for cybersecurity in our connected ecosystem.",
-            "title": "A Primer On Artificial Intelligence And Cybersecurity"
+            "snippet": "Feb 16, 2024 ... In this blog post, we'll take a deep dive into the MLSecOps tools landscape by reviewing the five foundational areas of MLSecOps.",
+            "title": "AI Security Tools: The Open-Source Toolkit | Wiz"
+        },
+        {
+            "displayLink": "www.terranovasecurity.com",
+            "formattedUrl": "https://www.terranovasecurity.com/blog/ai-in-cyber-security",
+            "htmlFormattedUrl": "https://www.terranovasecurity.com/blog/<b>ai</b>-in-cyber-security",
+            "htmlSnippet": "Oct 13, 2023 <b>...</b> <b>AI</b>-based <b>cyber security</b> systems provide improved accuracy and efficiency compared to traditional security solutions. For example, <b>AI</b> can scan&nbsp;...",
+            "htmlTitle": "<b>AI</b> in <b>Cyber Security</b>: Pros and Cons | Terranova Security",
+            "kind": "customsearch#result",
+            "link": "https://www.terranovasecurity.com/blog/ai-in-cyber-security",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://www.terranovasecurity.com/sites/default/files/styles/og_image/public/2024-02/Cybersecurity-and-ai.jpg?itok=L-rnltl2"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "169",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf66n6ojD7uh6qQrbZjn3a8D6zoPF2ty7zHBfHuhIQXaPVIOO0KVJ0hys&s",
+                        "width": "299"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "contentgroup1": "Terranova",
+                        "contentgroup2": "Terranova",
+                        "handheldfriendly": "true",
+                        "mobileoptimized": "width",
+                        "og:description": "AI has been making waves in virtually every industry, and cyber security is no exception. Let's look at the benefits and drawbacks of AI and..",
+                        "og:image": "https://www.terranovasecurity.com/sites/default/files/styles/og_image/public/2024-02/Cybersecurity-and-ai.jpg?itok=L-rnltl2",
+                        "og:image:height": "678",
+                        "og:image:type": "image/jpeg",
+                        "og:image:width": "1200",
+                        "og:title": "AI in Cyber Security: Pros and Cons, and What it Means for Your Business",
+                        "title": "AI in Cyber Security: Pros and Cons, and What it Means for Your Business",
+                        "twitter:card": "summary_large_image",
+                        "twitter:description": "AI has been making waves in virtually every industry, and cyber security is no exception. Let's look at the benefits and drawbacks of AI and..",
+                        "twitter:image": "https://www.terranovasecurity.com/sites/default/files/styles/og_image/public/2024-02/Cybersecurity-and-ai.jpg?itok=L-rnltl2",
+                        "twitter:image:width": "1200",
+                        "twitter:title": "AI in Cyber Security: Pros and Cons, and What it Means for Your Business",
+                        "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no"
+                    }
+                ]
+            },
+            "snippet": "Oct 13, 2023 ... AI-based cyber security systems provide improved accuracy and efficiency compared to traditional security solutions. For example, AI can scan ...",
+            "title": "AI in Cyber Security: Pros and Cons | Terranova Security"
+        },
+        {
+            "displayLink": "www.vectra.ai",
+            "formattedUrl": "https://www.vectra.ai/",
+            "htmlFormattedUrl": "https://www.vectra.<b>ai</b>/",
+            "htmlSnippet": "Vectra <b>AI&#39;s</b> Threat Detection and Response Platform protects your business by detecting cyberattacks in real time and responding instantly.",
+            "htmlTitle": "Stop Advanced Cyberattacks with Vectra <b>AI</b>",
+            "kind": "customsearch#result",
+            "link": "https://www.vectra.ai/",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://cdn.prod.website-files.com/64e36a72d57403710ee5415d/6553b49b93229541d7e21e2e_V_OG%2BSocial_NewPages_111323_Home_OG_1200x630.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "79",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVaYYJPAQ5jygug3nM4ToiU7RIlHpLKmtA6et6uEORG7SsBQrURXWlFA&s=0",
+                        "width": "150"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "google": "notranslate",
+                        "og:description": "Vectra AI's Threat Detection and Response Platform protects your business by detecting cyberattacks in real time and responding instantly.",
+                        "og:image": "https://cdn.prod.website-files.com/64e36a72d57403710ee5415d/6553b49b93229541d7e21e2e_V_OG%2BSocial_NewPages_111323_Home_OG_1200x630.jpg",
+                        "og:title": "Stop Advanced Cyberattacks with Vectra AI",
+                        "og:type": "website",
+                        "twitter:card": "summary_large_image",
+                        "twitter:description": "Vectra AI's Threat Detection and Response Platform protects your business by detecting cyberattacks in real time and responding instantly.",
+                        "twitter:image": "https://cdn.prod.website-files.com/64e36a72d57403710ee5415d/6553b49b93229541d7e21e2e_V_OG%2BSocial_NewPages_111323_Home_OG_1200x630.jpg",
+                        "twitter:title": "Stop Advanced Cyberattacks with Vectra AI",
+                        "viewport": "width=device-width, initial-scale=1"
+                    }
+                ]
+            },
+            "snippet": "Vectra AI's Threat Detection and Response Platform protects your business by detecting cyberattacks in real time and responding instantly.",
+            "title": "Stop Advanced Cyberattacks with Vectra AI"
+        },
+        {
+            "displayLink": "www.morganstanley.com",
+            "formattedUrl": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
+            "htmlFormattedUrl": "https://www.morganstanley.com/articles/<b>ai</b>-<b>cybersecurity</b>-new-era",
+            "htmlSnippet": "<b>AI</b> allows cybercriminals to automate many of the processes used in social-engineering attacks, as well as create more personalized, sophisticated and effective&nbsp;...",
+            "htmlTitle": "<b>AI</b> and <b>Cybersecurity</b>: A New Era | Morgan Stanley",
+            "kind": "customsearch#result",
+            "link": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
+            "pagemap": {
+                "cse_image": [
+                    {
+                        "src": "https://www.morganstanley.com/content/dam/msdotcom/articles/ai-cybersecurity-new-frontier/tw-ai-cybersecurity-1200x628.jpg"
+                    }
+                ],
+                "cse_thumbnail": [
+                    {
+                        "height": "162",
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA0ewtxsTjBaG3DkM53rwFKPY9iyicMU4S_Tv6H_nrZ8jQfYT0Qu5X9SA&s",
+                        "width": "311"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:description": "In the evolving landscape of artificial intelligence (AI), both cybersecurity teams and hackers are using AI to their advantage.",
+                        "og:image": "https://www.morganstanley.com/content/dam/msdotcom/articles/ai-cybersecurity-new-frontier/tw-ai-cybersecurity-1200x628.jpg",
+                        "og:site_name": "Morgan Stanley",
+                        "og:title": "AI and Cybersecurity: A New Era | Morgan Stanley",
+                        "og:url": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
+                        "title": "AI and Cybersecurity: A New Era",
+                        "twitter:card": "summary_large_image",
+                        "twitter:creator": "@MorganStanley",
+                        "twitter:description": "In the evolving landscape of artificial intelligence (AI), both cybersecurity teams and hackers are using AI to their advantage.",
+                        "twitter:image": "https://www.morganstanley.com/content/dam/msdotcom/articles/ai-cybersecurity-new-frontier/tw-ai-cybersecurity-1200x628.jpg",
+                        "twitter:title": "AI and Cybersecurity: A New Era | Morgan Stanley",
+                        "twitter:url": "https://www.morganstanley.com/articles/ai-cybersecurity-new-era",
+                        "viewport": "width=device-width, initial-scale=1"
+                    }
+                ]
+            },
+            "snippet": "AI allows cybercriminals to automate many of the processes used in social-engineering attacks, as well as create more personalized, sophisticated and effective ...",
+            "title": "AI and Cybersecurity: A New Era | Morgan Stanley"
         }
     ],
     "kind": "customsearch#search",
@@ -521,10 +467,10 @@
                 "inputEncoding": "utf8",
                 "outputEncoding": "utf8",
                 "safe": "off",
-                "searchTerms": "AI in CyberSecurity",
+                "searchTerms": "AI as a tool in Cybersecurity",
                 "startIndex": 11,
-                "title": "Google Custom Search - AI in CyberSecurity",
-                "totalResults": "538000000"
+                "title": "Google Custom Search - AI as a tool in Cybersecurity",
+                "totalResults": "309000000"
             }
         ],
         "request": [
@@ -536,18 +482,18 @@
                 "inputEncoding": "utf8",
                 "outputEncoding": "utf8",
                 "safe": "off",
-                "searchTerms": "AI in CyberSecurity",
+                "searchTerms": "AI as a tool in Cybersecurity",
                 "startIndex": 1,
-                "title": "Google Custom Search - AI in CyberSecurity",
-                "totalResults": "538000000"
+                "title": "Google Custom Search - AI as a tool in Cybersecurity",
+                "totalResults": "309000000"
             }
         ]
     },
     "searchInformation": {
-        "formattedSearchTime": "0.74",
-        "formattedTotalResults": "538,000,000",
-        "searchTime": 0.742999,
-        "totalResults": "538000000"
+        "formattedSearchTime": "0.44",
+        "formattedTotalResults": "309,000,000",
+        "searchTime": 0.443798,
+        "totalResults": "309000000"
     },
     "url": {
         "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json",

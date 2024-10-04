@@ -124,5 +124,5 @@ PYBIND11_MODULE(angel_configure, m) {
         .def("_set_response_file", &GoogleSearch::_set_response_file)
         .def("_set_env_file", &GoogleSearch::_set_env_file)
         .def("_search_google", &GoogleSearch::_search_google, py::arg("query"), py::arg("filename") = "json_files/search_result.json")
-        .def("_get_result", &GoogleSearch::_get_result, py::arg("result_index") = 0, py::arg("title") = "True", py::arg("snippet") = "True", py::arg("link") = "True", py::arg("image") = "True", py::arg("json_filename") = "json_files/search_result.json", py::arg("text_filename") = "text_files/search_results.txt");
+        .def("_get_result", &GoogleSearch::_get_result, py::arg("result_index") = 0, py::arg("title") = "True", py::arg("snippet") = "True", py::arg("link") = "False", py::arg("image") = "False", py::arg("json_filename") = "json_files/search_result.json", py::arg("text_filename") = "text_files/search_results.txt");
 }

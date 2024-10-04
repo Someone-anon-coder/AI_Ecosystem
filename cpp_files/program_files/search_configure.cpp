@@ -652,7 +652,7 @@ void GoogleSearch::__construct_search_url(){
     search_url += this->_img_dominant_color != "" ? "&imgDominantColor=" + this->_img_dominant_color : "";
 
     this->_search_url = this->__encode_url(search_url);
-    std::cout << this->_search_url << std::endl << std::endl;
+    // std::cout << this->_search_url << std::endl << std::endl;
 };
 
 int GoogleSearch::_get_num_results(){
