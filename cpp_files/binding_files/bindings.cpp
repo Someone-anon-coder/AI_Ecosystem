@@ -48,7 +48,7 @@ PYBIND11_MODULE(angel_configure, m) {
         .def("_get_news", &GoogleNews::_get_news, py::arg("keyword"), py::arg("filename") = "text_files/news_articles.txt")
         .def("_get_latest_topics", &GoogleNews::_get_latest_topics, py::arg("filename") = "text_files/news_articles.txt")
         .def("_get_news_by_topic", &GoogleNews::_get_news_by_topic, py::arg("topic"), py::arg("filename") = "text_files/news_articles.txt")
-        .def("_get_news_by_country", &GoogleNews::_get_news_by_country, py::arg("country"), py::arg("filename") = "text_files/news_articles.txt")
+        .def("_get_news_by_country", &GoogleNews::_get_news_by_country, py::arg("keyword"), py::arg("country"), py::arg("filename") = "text_files/news_articles.txt")
         .def("_get_news_by_site", &GoogleNews::_get_news_by_site, py::arg("site"), py::arg("filename") = "text_files/news_articles.txt")
         .def("_set_language", &GoogleNews::_set_language)
         .def("_set_country", &GoogleNews::_set_country)

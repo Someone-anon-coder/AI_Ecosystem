@@ -78,7 +78,7 @@ std::map<std::string, std::map<std::string, std::string>> GoogleNews::__class_in
         {"_get_news", "keyword (str) <Required>\nfilename (str)"},
         {"_get_latest_topics", "filename (str)"},
         {"_get_news_by_topic", "topic (str) <Required>\nfilename (str)"},
-        {"_get_news_by_country", "country (str) <Required>\nfilename (str)"},
+        {"_get_news_by_country", "keyword (str) <Required>\ncountry (str) <Required>\nfilename (str)"},
         {"_get_news_by_site", "site (str) <Required>\nfilename (str)"},
         {"_set_language", "language (str) <Required>"},
         {"_set_country", "country (str) <Required>"},
@@ -100,7 +100,7 @@ std::map<std::string, std::map<std::string, std::string>> GoogleNews::__class_in
         {"_get_news", "keyword: Keyword used to search news\nfilename: File to save articles in"},
         {"_get_latest_topics", "filename: File to save articles in"},
         {"_get_news_by_topic", "topic: Search the news on this topic. Available topics are [\"WORLD\", \"NATION\", \"BUSINESS\", \"TECHNOLOGY\", \"ENTERTAINMENT\", \"SPORTS\", \"SCIENCE\", \"HEALTH\"]\nfilename: File to save articles in"},
-        {"_get_news_by_country", "country: Search the news on this country. Available countries are [\"AU\", \"BW\", \"CA\", \"ET\", \"GH\", \"IN\", \"ID\", \"IE\", \"IL\", \"KE\", \"LV\", \"MY\", \"NA\", \"NZ\", \"NG\", \"PK\", \"PH\", \"SG\", \"ZA\", \"TZ\", \"UG\", \"GB\", \"US\", \"ZW\", \"CZ\", \"DE\", \"AT\", \"CH\", \"AR\", \"CL\", \"CO\", \"CU\", \"MX\", \"PE\", \"VE\", \"BE\", \"FR\", \"MA\", \"SN\", \"IT\", \"LT\", \"HU\", \"NL\", \"NO\", \"PL\", \"BR\", \"PT\", \"RO\", \"SK\", \"SI\", \"SE\", \"VN\", \"TR\", \"GR\", \"BG\", \"RU\", \"UA\", \"RS\", \"AE\", \"SA\", \"LB\", \"EG\", \"BD\", \"TH\", \"CN\", \"TW\", \"HK\", \"JP\", \"KR\"]\nfilename: File to save articles in"},
+        {"_get_news_by_country", "keyword: Keyword used to search news\ncountry: Search the news on this country. Available countries are [\"AU\", \"BW\", \"CA\", \"ET\", \"GH\", \"IN\", \"ID\", \"IE\", \"IL\", \"KE\", \"LV\", \"MY\", \"NA\", \"NZ\", \"NG\", \"PK\", \"PH\", \"SG\", \"ZA\", \"TZ\", \"UG\", \"GB\", \"US\", \"ZW\", \"CZ\", \"DE\", \"AT\", \"CH\", \"AR\", \"CL\", \"CO\", \"CU\", \"MX\", \"PE\", \"VE\", \"BE\", \"FR\", \"MA\", \"SN\", \"IT\", \"LT\", \"HU\", \"NL\", \"NO\", \"PL\", \"BR\", \"PT\", \"RO\", \"SK\", \"SI\", \"SE\", \"VN\", \"TR\", \"GR\", \"BG\", \"RU\", \"UA\", \"RS\", \"AE\", \"SA\", \"LB\", \"EG\", \"BD\", \"TH\", \"CN\", \"TW\", \"HK\", \"JP\", \"KR\"]\nfilename: File to save articles in"},
         {"_get_news_by_site", "site: Search the news from this site\nfilename: File to save articles in"},
         {"_set_language", "language: Languge you want to get the news in. Available languages are [\"en\", \"id\", \"cs\", \"de\", \"es-419\", \"fr\", \"it\", \"lv\", \"lt\", \"hu\", \"nl\", \"no\", \"pl\", \"pt-419\", \"pt-150\", \"ro\", \"sk\", \"sl\", \"sv\", \"vi\", \"tr\", \"el\", \"bg\", \"ru\", \"sr\", \"uk\", \"he\", \"ar\", \"mr\", \"hi\", \"bn\", \"ta\", \"te\", \"ml\", \"th\", \"zh-Hans\", \"zh-Hant\", \"ja\", \"ko\"]"},
         {"_set_country", "country: Country you want to get the news from"},
@@ -223,15 +223,15 @@ std::string GoogleNews::__url_parameters(){
     
     return time_query + 
         "&hl=" + language + 
-        "&gl=" + this->_country +
-        "&ceid=" + this->_country + ":" + this->_language;
+        "&gl=" + "US" +
+        "&ceid=" + "US:" + this->_language;
 }
 
 std::string GoogleNews::__full_url(
     std::string keyword = "" // Keyword used for searching the news
 ){
     std::string parameters = this->__url_parameters(); // Constructed parameters for news search
-    return this->__news_url + "/search?q=" + keyword + parameters;
+    return this->__news_url + keyword + parameters;
 }
 
 std::string GoogleNews::__get_rss_content(
@@ -404,8 +404,9 @@ void GoogleNews::_get_news(
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
 
-    std::string query = "/search?q=" + keyword; // News Query to search news
-    this->__get_news(query, filename);
+    // std::string query = "/search?q=" + keyword; // News Query to search news
+    // this->__get_news(query, filename);
+    this->__get_news("/search?q=" + keyword, filename);
 
     std::string log_content = "Searched for news for the keyword: " + keyword + ", and saved the results in the file: " + filename + ".";
     this->__log__(log_content);
@@ -414,7 +415,7 @@ void GoogleNews::_get_news(
 void GoogleNews::_get_latest_topics(
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
-    this->__get_news("?", filename);
+    this->__get_news("/search?q=", filename);
 
     std::string log_content = "Searched for latest topics and saved the results in the file: " + filename + ".";
     this->__log__(log_content);
@@ -427,7 +428,7 @@ void GoogleNews::_get_news_by_topic(
     bool correct_topic = this->__contains(this->__available_topics, topic);
 
     if (correct_topic){
-        std::string query = "headlines/section/topic/" + topic + "?";
+        std::string query = "/headlines/section/topic/" + topic + "?";
         this->__get_news(query, filename);
     }
 
@@ -441,13 +442,14 @@ void GoogleNews::_get_news_by_topic(
 }
 
 void GoogleNews::_get_news_by_country(
+    const std::string keyword, // Keyword used to search news
     const std::string country, // Search the news on this country
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
     bool correct_country = this->__contains(this->__available_countries, country);
 
     if (correct_country){
-        std::string query = "headlines/section/geo/" + country + "?"; // Query with country
+        std::string query = "/search?q=" + keyword + " location:" + country; // Query with country
         this->__get_news(query, filename);
     }
 
@@ -464,7 +466,7 @@ void GoogleNews::_get_news_by_site(
     const std::string site, // Search the news on this site
     const std::string filename = "text_files/news_articles.txt" // File to save articles in
 ){
-    this->__get_news("site:" + site, filename);
+    this->__get_news("/search?q=site:" + site, filename);
 
     std::string log_content = "Search for news based on site " + site + " and saved results in the file " + filename + ".";
     this->__log__(log_content);

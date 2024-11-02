@@ -1,5 +1,0 @@
-Number of results set to 10.
-Searched google for query AI as a tool in Cybersecurity and stored search results in file json_files/search_result.json.
-Search results saved to file text_files/search_results.txt Successfully.
-File Hello.txt Checked and it does not exists
-File Hello.txt Created Successfully

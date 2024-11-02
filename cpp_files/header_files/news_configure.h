@@ -218,6 +218,7 @@ class GoogleNews{
         /// @param country Search the news on this country
         /// @param filename File to save articles in
         void _get_news_by_country(
+            const std::string keyword, // Keyword used to search news
             const std::string country, // Search the news on this country
             const std::string filename // File to save articles in
         );
