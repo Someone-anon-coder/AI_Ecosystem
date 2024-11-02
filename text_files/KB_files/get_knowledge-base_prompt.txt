@@ -69,7 +69,7 @@ You have been given the Knowledge Base of Classes below:
 		_get_latest_topics: Function to get the news on latest topics: With parameters ('filename (str)',)
 		_get_max_results: Function to get the max results: With parameters ()
 		_get_news: Function to get the news. The Parameters [keyword] are required: With parameters ('keyword (str)', 'filename (str)')
-		_get_news_by_country: Function to get the news on the given country. The Parameters [country] are required: With parameters ('country (str)', 'filename (str)')
+		_get_news_by_country: Function to get the news on the given country. The Parameters [keyword, country] are required: With parameters ('keyword (str)', 'country (str)', 'filename (str)')
 		_get_news_by_site: Function to get the news from the given site. The Parameters [site] are required: With parameters ('site (str)', 'filename (str)')
 		_get_news_by_topic: Function to get the news on the given topic. The Parameters [topic] are required: With parameters ('topic (str)', 'filename (str)')
 		_get_period: Function to get the period: With parameters ()

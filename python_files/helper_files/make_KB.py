@@ -101,10 +101,10 @@ if __name__ == "__main__":
 
     sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', '')))
 
-    # from python_files.configuration_files.gemini_configure import GeminiModel
-    from modules.angel_configure import GoogleNews
+    from python_files.configuration_files.gemini_configure import GeminiModel
+    # from modules.angel_configure import GoogleNews
     
-    class_object = GoogleNews()
+    class_object = GeminiModel()
     
     knowledge_base = []
     class_info = class_object.__class_info__()

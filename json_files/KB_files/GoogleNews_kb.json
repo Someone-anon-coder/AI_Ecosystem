@@ -63,8 +63,9 @@
     },
     {
         "name": "_get_news_by_country",
-        "description": "Function to get the news on the given country. The Parameters [country] are required",
+        "description": "Function to get the news on the given country. The Parameters [keyword, country] are required",
         "parameters": {
+            "keyword (str)": "Specify this parameter to Keyword used to search news",
             "country (str)": "Specify this parameter to Search the news on this country. Available countries are [\"AU\", \"BW\", \"CA\", \"ET\", \"GH\", \"IN\", \"ID\", \"IE\", \"IL\", \"KE\", \"LV\", \"MY\", \"NA\", \"NZ\", \"NG\", \"PK\", \"PH\", \"SG\", \"ZA\", \"TZ\", \"UG\", \"GB\", \"US\", \"ZW\", \"CZ\", \"DE\", \"AT\", \"CH\", \"AR\", \"CL\", \"CO\", \"CU\", \"MX\", \"PE\", \"VE\", \"BE\", \"FR\", \"MA\", \"SN\", \"IT\", \"LT\", \"HU\", \"NL\", \"NO\", \"PL\", \"BR\", \"PT\", \"RO\", \"SK\", \"SI\", \"SE\", \"VN\", \"TR\", \"GR\", \"BG\", \"RU\", \"UA\", \"RS\", \"AE\", \"SA\", \"LB\", \"EG\", \"BD\", \"TH\", \"CN\", \"TW\", \"HK\", \"JP\", \"KR\"]",
             "filename (str)": "Specify this parameter to File to save articles in"
         },

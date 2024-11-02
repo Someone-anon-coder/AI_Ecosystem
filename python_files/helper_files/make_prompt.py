@@ -1,6 +1,6 @@
 import json
 
-kb = "GoogleNews"
+kb = "GeminiModel"
 knowledge_base = []
 
 with open(f"json_files/KB_files/{kb}_kb.json", 'r', encoding='utf8') as kb_file:

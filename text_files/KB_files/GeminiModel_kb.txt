@@ -23,8 +23,8 @@ You have been given the knowledge base below:
 	3: Function Name: _modify_safety_settings
 	Function Description: Change the safety settings of the model. The Parameters [safety] are required
 	Function Parameters: 
-		safety (HarmCategory.name): Specify this parameter to Harm category to change the safety settings of
-		setting (HarmBlockThreshold.name): Specify this parameter to Block threshold to change the safety settings to
+		safety (HarmCategory.name): Specify this parameter to Harm category to change the safety settings of. Available options are HARM_CATEGORY_DANGEROUS_CONTENT, HARM_CATEGORY_HARASSMENT, HARM_CATEGORY_HATE_SPEECH, HARM_CATEGORY_SEXUALLY_EXPLICIT
+		setting (HarmBlockThreshold.name): Specify this parameter to Block threshold to change the safety settings to. Available options are BLOCK_LOW_AND_ABOVE, BLOCK_NONE, BLOCK_MEDIUM_AND_ABOVE, BLOCK_ONLY_HIGH
 	Function Returns: Change the safety settings of the model
 
 	4: Function Name: _get_current_configuration
@@ -35,13 +35,13 @@ You have been given the knowledge base below:
 	5: Function Name: _set_configuration
 	Function Description: Set the configuration of the model
 	Function Parameters: 
-		candidate_count (int | None): Specify this parameter to Number of candidates to return
+		candidate_count (int | None): Specify this parameter to Number of candidates to return. Available count is between 1 and 5
 		stop_sequences (Iterable[str] | None): Specify this parameter to Words to stop the generation
-		max_output_tokens (int | None): Specify this parameter to Maximum number of tokens to generate
-		temperature (float | None): Specify this parameter to Temperature of the generation
-		top_p (float | None): Specify this parameter to Top p of the generation
-		top_k (int | None): Specify this parameter to Top k of the generation
-		response_mime_type (str | None): Specify this parameter to Mime type of the response
+		max_output_tokens (int | None): Specify this parameter to Maximum number of tokens to generate. Available count is between 1 and 8192
+		temperature (float | None): Specify this parameter to Temperature of the generation. Available count is between 0 and 1
+		top_p (float | None): Specify this parameter to Top p of the generation. Available count is between 0 and 1
+		top_k (int | None): Specify this parameter to Top k of the generation. Available count is between 1 and 40
+		response_mime_type (str | None): Specify this parameter to Mime type of the response. Available options are application/json, application/octet-stream, text/plain
 		response_schema (Mapping[str, Any] | None): Specify this parameter to Schema of the response
 	Function Returns: Set the configuration of the model
 

@@ -237,8 +237,9 @@
             },
             {
                 "Function_Name": "_get_news_by_country",
-                "Function_Description": "Function to get the news on the given country. The Parameters [country] are required",
+                "Function_Description": "Function to get the news on the given country. The Parameters [keyword, country] are required",
                 "Function_Parameters": [
+                    "keyword (str)",
                     "country (str)",
                     "filename (str)"
                 ]
