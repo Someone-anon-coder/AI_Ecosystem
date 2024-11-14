@@ -2,3 +2,4 @@ google-generativeai
 pybind11
 setuptools
 python-dotenv
+sentence-transformers
