@@ -96,8 +96,8 @@
         "Market-Time": "4:59PM EST",
         "Change": "-5.40",
         "Change %": "-0.21%",
-        "Volume": "114,367",
-        "Open Interest": "45,759"
+        "Volume": "2,827",
+        "Open Interest": "6,975"
     },
     {
         "Symbol": "SI=F",
@@ -212,12 +212,12 @@
     {
         "Symbol": "ZC=F",
         "Name": "Corn Futures,Mar-2025",
-        "Price": "424.00",
+        "Price": "435.00",
         "Market-Time": "2:19PM EST",
-        "Change": "+5.00",
-        "Change %": "+1.19%",
+        "Change": "+4.25",
+        "Change %": "+0.99%",
         "Volume": "144,340",
-        "Open Interest": "455,774"
+        "Open Interest": "592,033"
     },
     {
         "Symbol": "ZO=F",
@@ -237,7 +237,7 @@
         "Change": "+7.75",
         "Change %": "+1.45%",
         "Volume": "35,605",
-        "Open Interest": "65,368"
+        "Open Interest": "126,175"
     },
     {
         "Symbol": "ZR=F",
@@ -266,8 +266,8 @@
         "Market-Time": "2:19PM EST",
         "Change": "+1.02",
         "Change %": "+2.30%",
-        "Volume": "85,109",
-        "Open Interest": "114,429"
+        "Volume": "85,083",
+        "Open Interest": "166,179"
     },
     {
         "Symbol": "ZS=F",
@@ -312,30 +312,30 @@
     {
         "Symbol": "CC=F",
         "Name": "Cocoa Mar 25",
-        "Price": "8,611.00",
-        "Market-Time": "1:26PM EST",
-        "Change": "+4.00",
-        "Change %": "+0.05%",
+        "Price": "8,542.00",
+        "Market-Time": "1:29PM EST",
+        "Change": "+38.00",
+        "Change %": "+0.45%",
         "Volume": "16,705",
-        "Open Interest": "5,607"
+        "Open Interest": "61,743"
     },
     {
         "Symbol": "KC=F",
         "Name": "Coffee Mar 25",
-        "Price": "285.50",
+        "Price": "283.30",
         "Market-Time": "1:29PM EST",
-        "Change": "+2.20",
-        "Change %": "+0.78%",
-        "Volume": "10,317",
+        "Change": "+1.50",
+        "Change %": "+0.53%",
+        "Volume": "27,486",
         "Open Interest": "103,519"
     },
     {
         "Symbol": "CT=F",
         "Name": "Cotton Mar 25",
-        "Price": "68.93",
+        "Price": "66.81",
         "Market-Time": "2:19PM EST",
-        "Change": "+0.02",
-        "Change %": "+0.03%",
+        "Change": "+0.01",
+        "Change %": "+0.01%",
         "Volume": "39,813",
         "Open Interest": "122,897"
     },

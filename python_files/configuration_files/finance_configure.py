@@ -137,7 +137,7 @@ class YahooFinance:
         
         return table_data
     
-    def get_world_indices(self, index: str = "", json_file:str = "json_files/world_indices.json") -> str | None:
+    def get_world_indices(self, index: str = "", json_file:str = "json_files/Y_Finance/world_indices.json") -> str | None:
         """Get the world indices
 
         Args:
@@ -173,7 +173,7 @@ class YahooFinance:
             print(f"Error serializing table data to JSON: {e}")
             raise
     
-    def get_futures(self, index: str = "", json_file:str = "json_files/futures.json") -> str | None:
+    def get_futures(self, index: str = "", json_file:str = "json_files/Y_Finance/futures.json") -> str | None:
         """Get the futures data
         
         Args:
@@ -211,7 +211,7 @@ class YahooFinance:
             print("Error serializing table data to JSON")
             raise
     
-    def get_bonds(self, index: str = "", json_file:str = "json_files/bonds.json") -> str | None:
+    def get_bonds(self, index: str = "", json_file:str = "json_files/Y_Finance/bonds.json") -> str | None:
         """Get the bonds data
         
         Args:
@@ -246,7 +246,7 @@ class YahooFinance:
             print("Error serializing table data to JSON")
             raise
 
-    def get_currencies(self, index: str = "", json_file:str = "json_files/currencies.json") -> str | None:
+    def get_currencies(self, index: str = "", json_file:str = "json_files/Y_Finance/currencies.json") -> str | None:
         """Get the currencies data
         
         Args:
@@ -280,7 +280,62 @@ class YahooFinance:
         except:
             print("Error serializing table data to JSON")
             raise
+    
+    def get_options(self, option_type: str = "", start: int = 0, count: int = 100, json_file:str = "json_files/Y_Finance/options.json") -> str | None:
+        """Get the options data
 
+        Args:
+            option_type (str, optional): Type of the options. Defaults to "".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "options.json".
+
+        Returns:
+            str | None: Data of the options
+        """
+        
+        if option_type not in self.__markets_options__:
+            return None
+        
+        full_url: str = self.__base_url__ + self.__markets_options_url__ + option_type + "?start=" + str(start) + "&count=" + str(count)
+        html_content = self.__get_html__(full_url)
+
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+
+        options = []
+        for i in range(len(table_data["body"])):
+            options.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Underlying-Symbol": table_data['body'][i][2],
+                "Strike": table_data['body'][i][3],
+                "Expiration-Date": table_data['body'][i][4],
+                "Price": table_data['body'][i][5].split("+")[0].split("-")[0],
+                "Change": table_data['body'][i][6],
+                "Change %": table_data['body'][i][7],
+                "Bid": table_data['body'][i][8],
+                "Ask": table_data['body'][i][9],
+                "Volume": table_data['body'][i][10],
+                "Open-Interest": table_data['body'][i][11],
+            })
+        
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(options, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
+    
+    def get_sectors(self, index: str = "", json_file:str = "json_files/Y_Finance/sectors.json") -> str | None:
+        """Get the sectors data
+        
+        Args:
+            index (str, optional): Index to get the data from. Defaults to "".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "sectors.json".
+        
+        Returns:
+            str | None: Data of the sectors
+        """
 
 if __name__ == "__main__":
     yahoo = YahooFinance()
@@ -288,3 +343,4 @@ if __name__ == "__main__":
     yahoo.get_futures()
     yahoo.get_bonds()
     yahoo.get_currencies()
+    yahoo.get_options("highest-implied-volatility")
