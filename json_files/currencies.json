@@ -1,0 +1,163 @@
+[
+    {
+        "Symbol": "EURUSD=X",
+        "Name": "EUR/USD",
+        "Price": "1.0543",
+        "Change": "+0.0009",
+        "Change %": "+0.08%"
+    },
+    {
+        "Symbol": "JPY=X",
+        "Name": "USD/JPY",
+        "Price": "154.3090",
+        "Change": "-1.9250",
+        "Change %": "-1.23%"
+    },
+    {
+        "Symbol": "GBPUSD=X",
+        "Name": "GBP/USD",
+        "Price": "1.2622",
+        "Change": "-0.0044",
+        "Change %": "-0.35%"
+    },
+    {
+        "Symbol": "AUDUSD=X",
+        "Name": "AUD/USD",
+        "Price": "0.6464",
+        "Change": "+0.0004",
+        "Change %": "+0.05%"
+    },
+    {
+        "Symbol": "NZDUSD=X",
+        "Name": "NZD/USD",
+        "Price": "0.5867",
+        "Change": "+0.0015",
+        "Change %": "+0.26%"
+    },
+    {
+        "Symbol": "EURJPY=X",
+        "Name": "EUR/JPY",
+        "Price": "162.7010",
+        "Change": "-1.8170",
+        "Change %": "-1.10%"
+    },
+    {
+        "Symbol": "GBPJPY=X",
+        "Name": "GBP/JPY",
+        "Price": "194.7780",
+        "Change": "-3.1060",
+        "Change %": "-1.57%"
+    },
+    {
+        "Symbol": "EURGBP=X",
+        "Name": "EUR/GBP",
+        "Price": "0.8353",
+        "Change": "+0.0040",
+        "Change %": "+0.48%"
+    },
+    {
+        "Symbol": "EURCAD=X",
+        "Name": "EUR/CAD",
+        "Price": "1.4847",
+        "Change": "+0.0046",
+        "Change %": "+0.31%"
+    },
+    {
+        "Symbol": "EURSEK=X",
+        "Name": "EUR/SEK",
+        "Price": "11.5643",
+        "Change": "-0.0123",
+        "Change %": "-0.11%"
+    },
+    {
+        "Symbol": "EURCHF=X",
+        "Name": "EUR/CHF",
+        "Price": "0.9353",
+        "Change": "-0.0016",
+        "Change %": "-0.17%"
+    },
+    {
+        "Symbol": "EURHUF=X",
+        "Name": "EUR/HUF",
+        "Price": "408.6600",
+        "Change": "+2.6800",
+        "Change %": "+0.66%"
+    },
+    {
+        "Symbol": "CNY=X",
+        "Name": "USD/CNY",
+        "Price": "7.2304",
+        "Change": "+0.0037",
+        "Change %": "+0.05%"
+    },
+    {
+        "Symbol": "HKD=X",
+        "Name": "USD/HKD",
+        "Price": "7.7851",
+        "Change": "+0.0038",
+        "Change %": "+0.05%"
+    },
+    {
+        "Symbol": "SGD=X",
+        "Name": "USD/SGD",
+        "Price": "1.3426",
+        "Change": "-0.0020",
+        "Change %": "-0.15%"
+    },
+    {
+        "Symbol": "INR=X",
+        "Name": "USD/INR",
+        "Price": "84.4040",
+        "Change": "-0.0370",
+        "Change %": "-0.04%"
+    },
+    {
+        "Symbol": "MXN=X",
+        "Name": "USD/MXN",
+        "Price": "20.3040",
+        "Change": "-0.0860",
+        "Change %": "-0.42%"
+    },
+    {
+        "Symbol": "PHP=X",
+        "Name": "USD/PHP",
+        "Price": "58.7300",
+        "Change": "-0.1100",
+        "Change %": "-0.19%"
+    },
+    {
+        "Symbol": "IDR=X",
+        "Name": "USD/IDR",
+        "Price": "15,849.00000.0000(0.00%)",
+        "Change": "0.0000",
+        "Change %": "0.00%"
+    },
+    {
+        "Symbol": "THB=X",
+        "Name": "USD/THB",
+        "Price": "34.8100",
+        "Change": "+0.0310",
+        "Change %": "+0.09%"
+    },
+    {
+        "Symbol": "MYR=X",
+        "Name": "USD/MYR",
+        "Price": "4.4680",
+        "Change": "-0.0100",
+        "Change %": "-0.22%"
+    },
+    {
+        "Symbol": "ZAR=X",
+        "Name": "USD/ZAR",
+        "Price": "18.1900",
+        "Change": "-0.0915",
+        "Change %": "-0.50%"
+    },
+    {
+        "Symbol": "RUB=X",
+        "Name": "USD/RUB",
+        "Price": "99.9750",
+        "Change": "+0.4950",
+        "Change %": "+0.50%"
+    }
+]

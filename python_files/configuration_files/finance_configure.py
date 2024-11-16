@@ -112,31 +112,15 @@ class YahooFinance:
         
         response = requests.get(url)
         return response.text
-    
-    def _get_world_indices(self, index: str = "", html_file: str = "world_indices.html") -> str | None:
-        """Get the world indices
 
-        Args:
-            index (str, optional): Index to get the data from. Defaults to "".
-            html_file (str, optional): Name of the html file to save the data to. Defaults to "world_indices.html".
-
-        Returns:
-            str | None: Data of the world indices
-        """
-        
-        full_url = self.__base_url__ + self.__market_url__ + self.__available_markets__[0]
-        html_content = self.__get_html__(full_url)
-
-        with open(html_file, "w", encoding="utf-8") as file:
-            file.write(html_content)
-
+    def __get_table_data__(self, html_content: str) -> json:
         soup = BeautifulSoup(html_content, "html.parser")
 
         table = soup.find("table", attrs={"data-testid": "table-container"})
         if not table:
             print("Table not found")
             return None
-
+        
         table_data = {}
 
         thead = table.find("thead")
@@ -150,14 +134,157 @@ class YahooFinance:
             table_data["body"] = []
             for row in tbody.find_all("tr"):
                 table_data["body"].append([cell.get_text(strip=True) for cell in row.find_all("td")])
+        
+        return table_data
+    
+    def get_world_indices(self, index: str = "", json_file:str = "json_files/world_indices.json") -> str | None:
+        """Get the world indices
+
+        Args:
+            index (str, optional): Index to get the data from. Defaults to "".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "world_indices.json".
+
+        Returns:
+            str | None: Data of the world indices
+        """
+        
+        full_url = self.__base_url__ + self.__market_url__ + self.__available_markets__[0]
+        html_content = self.__get_html__(full_url)
+        
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+        
+        world_indexes = []
+        for i in range(len(table_data["body"])):
+            world_indexes.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Price": table_data['body'][i][3].split("+")[0].split("-")[0],
+                "Change": table_data['body'][i][4],
+                "Change %": table_data['body'][i][5],
+                "Volume": table_data['body'][i][6],
+            })
 
         try:
-            with open("world_indices.json", "w", encoding="utf-8") as file:
-                json.dump(table_data, file, ensure_ascii=False, indent=4)
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(world_indexes, file, ensure_ascii=False, indent=4)
         except (TypeError, OverflowError) as e:
             print(f"Error serializing table data to JSON: {e}")
             raise
+    
+    def get_futures(self, index: str = "", json_file:str = "json_files/futures.json") -> str | None:
+        """Get the futures data
+        
+        Args:
+            index (str, optional): Index to get the data from. Defaults to "".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "futures.json".
+        
+        Returns:
+            str | None: Data of the futures
+        """
+
+        full_url = self.__base_url__ + self.__market_url__ + self.__available_markets__[1]
+        html_content = self.__get_html__(full_url)
+        
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+        
+        futures = []
+        for i in range(len(table_data["body"])):
+            futures.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Price": table_data['body'][i][3].split("+")[0].split("-")[0],
+                "Market-Time": table_data['body'][i][4],
+                "Change": table_data['body'][i][5],
+                "Change %": table_data['body'][i][6],
+                "Volume": table_data['body'][i][7],
+                "Open Interest": table_data['body'][i][8],
+            })
+
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(futures, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
+    
+    def get_bonds(self, index: str = "", json_file:str = "json_files/bonds.json") -> str | None:
+        """Get the bonds data
+        
+        Args:
+            index (str, optional): Index to get the data from. Defaults to "".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "bonds.json".
+        
+        Returns:
+            str | None: Data of the bonds
+        """
+
+        full_url = self.__base_url__ + self.__market_url__ + self.__available_markets__[2]
+        html_content = self.__get_html__(full_url)
+        
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+        
+        bonds = []
+        for i in range(len(table_data["body"])):
+            bonds.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Price": table_data['body'][i][3].split("+")[0].split("-")[0],
+                "Change": table_data['body'][i][4],
+                "Change %": table_data['body'][i][5],
+            })
+        
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(bonds, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
+
+    def get_currencies(self, index: str = "", json_file:str = "json_files/currencies.json") -> str | None:
+        """Get the currencies data
+        
+        Args:
+            index (str, optional): Index to get the data from. Defaults to "".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "currencies.json".
+        
+        Returns:
+            str | None: Data of the currencies
+        """
+
+        full_url = self.__base_url__ + self.__market_url__ + self.__available_markets__[3]
+        html_content = self.__get_html__(full_url)
+
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+
+        currencies = []
+        for i in range(len(table_data["body"])):
+            currencies.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Price": table_data['body'][i][3].split("+")[0].split("-")[0],
+                "Change": table_data['body'][i][4],
+                "Change %": table_data['body'][i][5],
+            })
+        
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(currencies, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
+
 
 if __name__ == "__main__":
     yahoo = YahooFinance()
-    print(yahoo._get_world_indices())
+    yahoo.get_world_indices()
+    yahoo.get_futures()
+    yahoo.get_bonds()
+    yahoo.get_currencies()
