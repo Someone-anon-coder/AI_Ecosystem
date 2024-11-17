@@ -14,20 +14,6 @@
         "Open-Interest": "13"
     },
     {
-        "Symbol": "ALT241129C00002000",
-        "Name": "ALT Nov 2024 2.000 call",
-        "Underlying-Symbol": "ALT",
-        "Strike": "2.00",
-        "Expiration-Date": "2024-11-28",
-        "Price": "6.270.00(0.00%)",
-        "Change": "0.00",
-        "Change %": "0.00%",
-        "Bid": "4.40",
-        "Ask": "7.70",
-        "Volume": "1",
-        "Open-Interest": "2"
-    },
-    {
         "Symbol": "SCLX241220C00000500",
         "Name": "SCLX Dec 2024 0.500 call",
         "Underlying-Symbol": "SCLX",
