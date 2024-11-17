@@ -548,6 +548,52 @@ class YahooFinance:
         except:
             print("Error serializing table data to JSON")
             raise
+    
+    def get_crypto(self, crypto_type: str = "all", start: int = 0, count: int = 100, json_file:str = "json_files/Y_Finance/crypto.json") -> str | None:
+        """Get the crypto data
+        
+        Args:
+            crypto_type (str | optional): Type of the crypto. Defaults to "all".
+            start (int, optional): Start index of the stocks. Defaults to 0.
+            count (int, optional): Count of the stocks. Defaults to 100.
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/crypto.json".
+        
+        Returns:
+            str | None: Data of the stocks
+        """
+
+        if crypto_type not in self.__available_sub_markets__["crypto"]:
+            return None
+        
+        full_url: str = self.__base_url__ + self.__markets_crypto_url__ + crypto_type + "?start=" + str(start) + "&count=" + str(count)
+        html_content = self.__get_html__(full_url)
+
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+
+        crypto = []
+        for i in range(len(table_data["body"])):
+            crypto.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Price": table_data['body'][i][3].split("+")[0].split("-")[0],
+                "Change": table_data['body'][i][4],
+                "Change %": table_data['body'][i][5],
+                "Market Cap": table_data['body'][i][6],
+                "Volume": table_data['body'][i][7],
+                "Volume in Currency (24hr)": table_data['body'][i][8],
+                "Total Volume All Currencies (24hr)": table_data['body'][i][9],
+                "Circulating Supply": table_data['body'][i][10],
+                "52 Week Change %": table_data['body'][i][11],
+            })
+        
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(crypto, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
 
 if __name__ == "__main__":
     yahoo = YahooFinance()
@@ -558,3 +604,4 @@ if __name__ == "__main__":
     yahoo.get_options("highest-implied-volatility")
     yahoo.get_sub_sectors("technology", False, "semiconductors")
     yahoo.get_stocks("most-active")
+    yahoo.get_crypto("most-active", 100, 100)

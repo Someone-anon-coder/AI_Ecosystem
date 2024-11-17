@@ -3,29 +3,29 @@
         "Symbol": "^IRX",
         "Name": "13 WEEK TREASURY BILL",
         "Price": "4.3930",
-        "Change": "+0.0100",
-        "Change %": "+0.23%"
+        "Change": "-4.3830",
+        "Change %": "-49.94%"
     },
     {
         "Symbol": "^FVX",
         "Name": "Treasury Yield 5 Years",
         "Price": "4.2980",
-        "Change": "+0.0060",
-        "Change %": "+0.14%"
+        "Change": "-4.2920",
+        "Change %": "-49.97%"
     },
     {
         "Symbol": "^TNX",
         "Name": "CBOE Interest Rate 10 Year T No",
         "Price": "4.4280",
-        "Change": "+0.0100",
-        "Change %": "+0.23%"
+        "Change": "-4.4180",
+        "Change %": "-49.94%"
     },
     {
         "Symbol": "^TYX",
         "Name": "Treasury Yield 30 Years",
         "Price": "4.6010",
-        "Change": "+0.0180",
-        "Change %": "+0.39%"
+        "Change": "-4.5830",
+        "Change %": "-49.90%"
     },
     {
         "Symbol": "2YY=F",

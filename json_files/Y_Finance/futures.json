@@ -232,10 +232,10 @@
     {
         "Symbol": "KE=F",
         "Name": "KC HRW Wheat Futures,Mar-2025",
-        "Price": "552.50",
+        "Price": "540.75",
         "Market-Time": "2:19PM EST",
-        "Change": "+5.75",
-        "Change %": "+1.05%",
+        "Change": "+7.75",
+        "Change %": "+1.45%",
         "Volume": "35,605",
         "Open Interest": "126,175"
     },
@@ -252,10 +252,10 @@
     {
         "Symbol": "ZM=F",
         "Name": "S&P Composite 1500 ESG Tilted I",
-        "Price": "290.90",
+        "Price": "289.60",
         "Market-Time": "2:19PM EST",
-        "Change": "+1.80",
-        "Change %": "+0.62%",
+        "Change": "+2.60",
+        "Change %": "+0.91%",
         "Volume": "59,032",
         "Open Interest": "161,917"
     },
@@ -332,10 +332,10 @@
     {
         "Symbol": "CT=F",
         "Name": "Cotton Mar 25",
-        "Price": "68.93",
+        "Price": "66.81",
         "Market-Time": "2:19PM EST",
-        "Change": "+0.02",
-        "Change %": "+0.03%",
+        "Change": "+0.01",
+        "Change %": "+0.01%",
         "Volume": "39,813",
         "Open Interest": "122,897"
     },
