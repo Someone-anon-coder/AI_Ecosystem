@@ -604,4 +604,4 @@ if __name__ == "__main__":
     yahoo.get_options("highest-implied-volatility")
     yahoo.get_sub_sectors("technology", False, "semiconductors")
     yahoo.get_stocks("most-active")
-    yahoo.get_crypto("most-active", 100, 100)
+    yahoo.get_crypto("most-active", start=100, count=100)
