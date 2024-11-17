@@ -89,7 +89,7 @@ class YahooFinance:
 
     __available_sub_markets__: dict = {
         "options": ("most-active", "gainers", "losers", "highest-implied-volatility", "highest-open-interest"), # Options market in yahoo finance
-        "stock": ("most-active", "gainers", "losers", "trending", "52-week-gainers", "52-week-losers"), # Stock market in yahoo finance
+        "stocks": ("most-active", "gainers", "losers", "trending", "52-week-gainers", "52-week-losers"), # Stock market in yahoo finance
         "crypto": ("all", "most-active", "gainers", "losers", "trending"), # Crypto market in yahoo finance
         "etfs": ("most-active", "gainers", "losers", "trending", "top-performing", "best-historical-performance", "top"), # ETF market in yahoo finance
         "mutual_funds": ("most-active", "gainers", "losers", "top-performing", "best-historical-performance", "top") # Mutual Funds market in yahoo finance
@@ -193,6 +193,46 @@ class YahooFinance:
                 table_data["body"].append([cell.get_text(strip=True) for cell in row.find_all("td")])
         
         return table_data
+    
+    def __get_news_data__(self, html_content: str) -> json:
+        """Get the news data from the given HTML
+
+        Args:
+            html_content (str): HTML to get the news data from
+
+        Returns:
+            json: News data of the given HTML
+        """
+        
+        soup = BeautifulSoup(html_content, "html.parser")
+
+        news_stream_div = soup.find("div", attrs={"id": "Fin-Stream"})
+        if not news_stream_div:
+            print("News stream not found")
+            return None
+        
+        news_data = []
+
+        li_tags = news_stream_div.find_all("li")
+        for li in li_tags:
+            item_data = {}
+
+            h3_tag = li.find("h3")
+            p_tag = li.find("p")
+
+            if h3_tag:
+                item_data["h3"] = h3_tag.get_text(strip=True)
+            if p_tag:
+                item_data["p"] = p_tag.get_text(strip=True)
+
+            a_tag = li.find("a")
+            if a_tag and a_tag.has_attr('href'):
+                item_data["link"] = a_tag['href']
+
+            if item_data:
+                news_data.append(item_data)
+
+        return news_data
     
     def __is_sector_available__(self, sector: str) -> bool:
         """Check if the given sector is available
@@ -522,7 +562,7 @@ class YahooFinance:
             str | None: Data of the stocks
         """
 
-        if stock_type not in self.__available_sub_markets__["stock"]:
+        if stock_type not in self.__available_sub_markets__["stocks"]:
             return None
         
         full_url: str = self.__base_url__ + self.__markets_stock_url__ + stock_type
@@ -711,16 +751,48 @@ class YahooFinance:
         except:
             print("Error serializing table data to JSON")
             raise
+    
+    def get_news(self, topic: str, json_file:str = "json_files/Y_Finance/news.json"):
+        """Get the news data
+        
+        Args:
+            market (str): Category of the news
+            specifics (str, optional): Specifics of the news. Defaults to "".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/news.json".
+            
+        Returns:
+            str | None: Data of the news
+        """
+
+        if topic not in self.__available_news__:
+            print("Invalid market")
+            return None
+
+        full_url: str = self.__base_url__ + self.__news_url__ + topic
+        html_content = self.__get_html__(full_url)
+
+        news_data = self.__get_news_data__(html_content)
+        if not news_data:
+            print("No news found")
+            return None
+
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(news_data, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
 
 if __name__ == "__main__":
     yahoo = YahooFinance()
-    yahoo.get_world_indices()
-    yahoo.get_futures()
-    yahoo.get_bonds()
-    yahoo.get_currencies()
-    yahoo.get_options("highest-implied-volatility", 25, 100)
-    yahoo.get_sub_sectors("technology", False, "semiconductors")
-    yahoo.get_stocks("most-active")
-    yahoo.get_crypto("most-active", start=100, count=100)
-    yahoo.get_etfs("most-active", start=100, count=100)
-    yahoo.get_mutual_funds("most-active", start=100, count=100)
+    # yahoo.get_world_indices()
+    # yahoo.get_futures()
+    # yahoo.get_bonds()
+    # yahoo.get_currencies()
+    # yahoo.get_options("highest-implied-volatility", 25, 100)
+    # yahoo.get_sub_sectors("technology", False, "semiconductors")
+    # yahoo.get_stocks("most-active")
+    # yahoo.get_crypto("most-active", start=100, count=100)
+    # yahoo.get_etfs("most-active", start=100, count=100)
+    # yahoo.get_mutual_funds("most-active", start=100, count=100)
+    yahoo.get_news("stock-market-news")
