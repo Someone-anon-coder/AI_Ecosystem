@@ -14,20 +14,6 @@
         "Open-Interest": "13"
     },
     {
-        "Symbol": "SCLX241220C00000500",
-        "Name": "SCLX Dec 2024 0.500 call",
-        "Underlying-Symbol": "SCLX",
-        "Strike": "0.50",
-        "Expiration-Date": "2024-12-19",
-        "Price": "0.1500",
-        "Change": "-0.0500",
-        "Change %": "-25.00%",
-        "Bid": "0.15",
-        "Ask": "1.00",
-        "Volume": "14",
-        "Open-Interest": "115"
-    },
-    {
         "Symbol": "BOIL2241122P00006000",
         "Name": "BOIL Nov 2024 6.000 put",
         "Underlying-Symbol": "BOIL",
@@ -40,5 +26,33 @@
         "Ask": "4.80",
         "Volume": "99",
         "Open-Interest": "107"
+    },
+    {
+        "Symbol": "BOIL2241122P00006500",
+        "Name": "BOIL Nov 2024 6.500 put",
+        "Underlying-Symbol": "BOIL",
+        "Strike": "6.50",
+        "Expiration-Date": "2024-11-21",
+        "Price": "2.51000.0000(0.00%)",
+        "Change": "0.0000",
+        "Change %": "0.00%",
+        "Bid": "0.00",
+        "Ask": "4.80",
+        "Volume": "1",
+        "Open-Interest": "193"
+    },
+    {
+        "Symbol": "SCLX241220C00000500",
+        "Name": "SCLX Dec 2024 0.500 call",
+        "Underlying-Symbol": "SCLX",
+        "Strike": "0.50",
+        "Expiration-Date": "2024-12-19",
+        "Price": "0.1500",
+        "Change": "-0.0500",
+        "Change %": "-25.00%",
+        "Bid": "0.15",
+        "Ask": "1.00",
+        "Volume": "14",
+        "Open-Interest": "115"
     }
 ]

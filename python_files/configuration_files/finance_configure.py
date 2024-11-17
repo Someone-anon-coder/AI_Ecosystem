@@ -108,7 +108,7 @@ class YahooFinance:
         "utilities": ("utilities-regulated-electric", "utilities-renewable", "utilities-diversified", "utilities-independent-power-producers", "utilities-regulated-gas", "utilities-regulated-water") # Utilities sectors in yahoo finance
     }
 
-    def __get_html__(self, url: str) -> str:
+    def __get_html__(self, url: str, params: dict | None = None) -> str:
         """Get the html of the given url
         
         Args:
@@ -118,7 +118,7 @@ class YahooFinance:
             str: Html of the given url
         """
         
-        response = requests.get(url)
+        response = requests.get(url, params=params)
         return response.text
 
     def __get_table_data__(self, html_content: str) -> json:
@@ -224,33 +224,6 @@ class YahooFinance:
             return False
         
         return True
-    
-    def __get_sectors_percentages__(self, sector: str) -> list | None:
-        """Get the sectors weightage
-
-        Args:
-            sector (str): Sector to get the data from
-
-        Returns:
-            list | None: Data of the sectors
-        """
-        
-        full_url: str = self.__base_url__ + self.__sectors_url__ + sector
-        html_content: str = self.__get_html__(full_url)
-
-        table_data: dict = self.__get_table_data_div__(html_content)
-        if not table_data:
-            return None
-        
-        sectors: list = []
-        for i in range(len(table_data["body"])):
-            sectors.append({
-                "Industry Name": table_data['body'][i][0],
-                "Market Weight": table_data['body'][i][1],
-                "Year To Date Return": table_data['body'][i][2]
-            })
-        
-        return sectors
     
     def get_world_indices(self, index: str = "", json_file:str = "json_files/Y_Finance/world_indices.json") -> str | None:
         """Get the world indices
@@ -410,8 +383,13 @@ class YahooFinance:
         if option_type not in self.__available_sub_markets__["options"]:
             return None
         
-        full_url: str = self.__base_url__ + self.__markets_options_url__ + option_type + "?start=" + str(start) + "&count=" + str(count)
-        html_content = self.__get_html__(full_url)
+        full_url: str = self.__base_url__ + self.__markets_options_url__ + option_type
+        params = {
+            "start": start,
+            "count": count
+        }
+        
+        html_content = self.__get_html__(full_url, params)
 
         table_data = self.__get_table_data__(html_content)
         if not table_data:
@@ -441,6 +419,33 @@ class YahooFinance:
             print("Error serializing table data to JSON")
             raise
 
+    def get_sectors(self, sector: str) -> list | None:
+        """Get the sectors weightage
+
+        Args:
+            sector (str): Sector to get the data from
+
+        Returns:
+            list | None: Data of the sectors
+        """
+        
+        full_url: str = self.__base_url__ + self.__sectors_url__ + sector
+        html_content: str = self.__get_html__(full_url)
+
+        table_data: dict = self.__get_table_data_div__(html_content)
+        if not table_data:
+            return None
+        
+        sectors: list = []
+        for i in range(len(table_data["body"])):
+            sectors.append({
+                "Industry Name": table_data['body'][i][0],
+                "Market Weight": table_data['body'][i][1],
+                "Year To Date Return": table_data['body'][i][2]
+            })
+        
+        return sectors
+
     def get_sub_sectors(self, sector: str, get_only_sector: bool = True, sub_sector: str = "", json_file:str = "json_files/Y_Finance/sectors.json") -> str | None:
         """Get the sectors data
         
@@ -457,7 +462,7 @@ class YahooFinance:
         if not self.__is_sector_available__(sector):
             return None
         
-        sectors = self.__get_sectors_percentages__(sector)
+        sectors = self.get_sectors(sector)
         if not sectors:
             return None
 
@@ -520,8 +525,13 @@ class YahooFinance:
         if stock_type not in self.__available_sub_markets__["stock"]:
             return None
         
-        full_url: str = self.__base_url__ + self.__markets_stock_url__ + stock_type + "?start=" + str(start) + "&count=" + str(count)
-        html_content = self.__get_html__(full_url)
+        full_url: str = self.__base_url__ + self.__markets_stock_url__ + stock_type
+        params = {
+            "start": start,
+            "count": count
+        }
+        
+        html_content = self.__get_html__(full_url, params)
 
         table_data = self.__get_table_data__(html_content)
         if not table_data:
@@ -554,19 +564,24 @@ class YahooFinance:
         
         Args:
             crypto_type (str | optional): Type of the crypto. Defaults to "all".
-            start (int, optional): Start index of the stocks. Defaults to 0.
-            count (int, optional): Count of the stocks. Defaults to 100.
+            start (int, optional): Start index of the crypto. Defaults to 0.
+            count (int, optional): Count of the crypto. Defaults to 100.
             json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/crypto.json".
         
         Returns:
-            str | None: Data of the stocks
+            str | None: Data of the crypto
         """
 
         if crypto_type not in self.__available_sub_markets__["crypto"]:
             return None
         
-        full_url: str = self.__base_url__ + self.__markets_crypto_url__ + crypto_type + "?start=" + str(start) + "&count=" + str(count)
-        html_content = self.__get_html__(full_url)
+        full_url: str = self.__base_url__ + self.__markets_crypto_url__ + crypto_type
+        params = {
+            "start": start,
+            "count": count
+        }
+        
+        html_content = self.__get_html__(full_url, params)
 
         table_data = self.__get_table_data__(html_content)
         if not table_data:
@@ -594,6 +609,108 @@ class YahooFinance:
         except:
             print("Error serializing table data to JSON")
             raise
+    
+    def get_etfs(self, etf_type: str = "most-active", start: int = 0, count: int = 100, json_file:str = "json_files/Y_Finance/etfs.json") -> str | None:
+        """Get the etfs data
+        
+        Args:
+            etf_type (str, optional): Type of the etfs. Defaults to "most-active".
+            start (int, optional): Start index of the etfs. Defaults to 0.
+            count (int, optional): Count of the etfs. Defaults to 100.
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/etfs.json".
+        
+        Returns:
+            str | None: Data of the etfs
+        """
+
+        if etf_type not in self.__available_sub_markets__["etfs"]:
+            return None
+
+        full_url: str = self.__base_url__ + self.__markets_etfs_url__ + etf_type
+        params = {
+            "start": start,
+            "count": count
+        }
+        
+        html_content = self.__get_html__(full_url, params)
+
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+        
+        etfs = []
+        for i in range(len(table_data["body"])):
+            etfs.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Price": table_data['body'][i][3].split("+")[0].split("-")[0],
+                "Change": table_data['body'][i][4],
+                "Change %": table_data['body'][i][5],
+                "Volume": table_data['body'][i][6],
+                "50 Day Average": table_data['body'][i][7],
+                "200 Day Average": table_data['body'][i][8],
+                "3 Month Return": table_data['body'][i][9],
+                "Year To Date Return": table_data['body'][i][10],
+                "52 Week Change %": table_data['body'][i][11],
+            })
+
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(etfs, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
+    
+    def get_mutual_funds(self, mutual_fund_type: str = "most-active", start: int = 0, count: int = 100, json_file:str = "json_files/Y_Finance/mutual_funds.json") -> str | None:
+        """Get the mutual funds data
+        
+        Args:
+            mutual_fund_type (str, optional): Type of the mutual funds. Defaults to "most-active".
+            start (int, optional): Start index of the mutual funds. Defaults to 0.
+            count (int, optional): Count of the mutual funds. Defaults to 100.
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/mutual_funds.json".
+        
+        Returns:
+            str | None: Data of the mutual funds
+        """
+
+        if mutual_fund_type not in self.__available_sub_markets__["mutual_funds"]:
+            return None
+        
+        full_url: str = self.__base_url__ + self.__markets_mutual_funds_url__ + mutual_fund_type
+        params = {
+            "start": start,
+            "count": count
+        }
+        
+        html_content = self.__get_html__(full_url, params)
+
+        table_data = self.__get_table_data__(html_content)
+        if not table_data:
+            return None
+
+        mutual_funds = []
+        for i in range(len(table_data["body"])):
+            mutual_funds.append({
+                "Symbol": table_data['body'][i][0],
+                "Name": table_data['body'][i][1],
+                "Price": table_data['body'][i][2].split("+")[0].split("-")[0],
+                "Change": table_data['body'][i][3],
+                "Change %": table_data['body'][i][4],
+                "Volume": table_data['body'][i][5],
+                "50 Day Average": table_data['body'][i][6],
+                "200 Day Average": table_data['body'][i][7],
+                "3 Month Return": table_data['body'][i][8],
+                "Year To Date Return": table_data['body'][i][9],
+                "52 Week Change %": table_data['body'][i][10]
+            })
+        
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(mutual_funds, file, ensure_ascii=False, indent=4)
+        except:
+            print("Error serializing table data to JSON")
+            raise
 
 if __name__ == "__main__":
     yahoo = YahooFinance()
@@ -601,7 +718,9 @@ if __name__ == "__main__":
     yahoo.get_futures()
     yahoo.get_bonds()
     yahoo.get_currencies()
-    yahoo.get_options("highest-implied-volatility")
+    yahoo.get_options("highest-implied-volatility", 25, 100)
     yahoo.get_sub_sectors("technology", False, "semiconductors")
     yahoo.get_stocks("most-active")
     yahoo.get_crypto("most-active", start=100, count=100)
+    yahoo.get_etfs("most-active", start=100, count=100)
+    yahoo.get_mutual_funds("most-active", start=100, count=100)

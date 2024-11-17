@@ -212,20 +212,20 @@
     {
         "Symbol": "ZC=F",
         "Name": "Corn Futures,Mar-2025",
-        "Price": "424.00",
+        "Price": "435.00",
         "Market-Time": "2:19PM EST",
-        "Change": "+5.00",
-        "Change %": "+1.19%",
+        "Change": "+4.25",
+        "Change %": "+0.99%",
         "Volume": "144,340",
         "Open Interest": "592,033"
     },
     {
         "Symbol": "ZO=F",
         "Name": "Oat Futures,Mar-2025",
-        "Price": "368.50",
-        "Market-Time": "2:19PM EST",
-        "Change": "+7.50",
-        "Change %": "+2.08%",
+        "Price": "357.00",
+        "Market-Time": "2:18PM EST",
+        "Change": "+8.50",
+        "Change %": "+2.44%",
         "Volume": "495",
         "Open Interest": "2,373"
     },
@@ -252,10 +252,10 @@
     {
         "Symbol": "ZM=F",
         "Name": "S&P Composite 1500 ESG Tilted I",
-        "Price": "289.60",
+        "Price": "290.90",
         "Market-Time": "2:19PM EST",
-        "Change": "+2.60",
-        "Change %": "+0.91%",
+        "Change": "+1.80",
+        "Change %": "+0.62%",
         "Volume": "59,032",
         "Open Interest": "161,917"
     },
@@ -322,10 +322,10 @@
     {
         "Symbol": "KC=F",
         "Name": "Coffee Mar 25",
-        "Price": "283.30",
+        "Price": "285.50",
         "Market-Time": "1:29PM EST",
-        "Change": "+1.50",
-        "Change %": "+0.53%",
+        "Change": "+2.20",
+        "Change %": "+0.78%",
         "Volume": "27,486",
         "Open Interest": "103,519"
     },

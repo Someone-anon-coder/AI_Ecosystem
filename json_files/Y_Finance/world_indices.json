@@ -242,18 +242,18 @@
     {
         "Symbol": "^TA125.TA",
         "Name": "TA-125",
-        "Price": "2,280.94",
-        "Change": "-24.25",
-        "Change %": "-1.05%",
+        "Price": "2,271.27",
+        "Change": "-9.67",
+        "Change %": "-0.42%",
         "Volume": "0"
     },
     {
         "Symbol": "^CASE30",
         "Name": "EGX 30 Price Return Index",
-        "Price": "31,462.20",
-        "Change": "+29.20",
-        "Change %": "+0.09%",
-        "Volume": "0"
+        "Price": "31,281.40",
+        "Change": "-151.60",
+        "Change %": "-0.48%",
+        "Volume": "29.529M"
     },
     {
         "Symbol": "^JN0U.JO",
