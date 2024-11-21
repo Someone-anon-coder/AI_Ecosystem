@@ -108,6 +108,11 @@ class YahooFinance:
         "utilities": ("utilities-regulated-electric", "utilities-renewable", "utilities-diversified", "utilities-independent-power-producers", "utilities-regulated-gas", "utilities-regulated-water") # Utilities sectors in yahoo finance
     }
 
+    
+    def __log_info__(self, message: str, filename: str = "log_files/function_execution_logs.txt"):
+        with open(filename, "a", encoding='utf8') as file:
+            file.write(f"{message}\n")
+
     def __get_html__(self, url: str, params: dict | None = None) -> str:
         """Get the html of the given url
         
@@ -206,7 +211,7 @@ class YahooFinance:
         
         soup = BeautifulSoup(html_content, "html.parser")
 
-        news_stream_div = soup.find("div", attrs={"id": "Fin-Stream"})
+        news_stream_div = soup.find("div", attrs={"id": "topic-stream"})
         if not news_stream_div:
             print("News stream not found")
             return None
@@ -297,6 +302,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(world_indexes, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got world indices data and stored it in {json_file}")
         except (TypeError, OverflowError) as e:
             print(f"Error serializing table data to JSON: {e}")
             raise
@@ -335,6 +341,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(futures, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got futures data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -370,6 +377,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(bonds, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got bonds data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -405,6 +413,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(currencies, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got currencies data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -455,6 +464,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(options, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got options data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -545,6 +555,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(sub_sectors, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got sub-sectors data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -595,6 +606,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(stocks, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got stocks data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -646,6 +658,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(crypto, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got crypto data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -697,6 +710,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(etfs, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got etfs data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -748,6 +762,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(mutual_funds, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got mutual funds data and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise
@@ -779,6 +794,7 @@ class YahooFinance:
         try:
             with open(json_file, "w", encoding="utf-8") as file:
                 json.dump(news_data, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got news data for {topic} and stored it in {json_file}")
         except:
             print("Error serializing table data to JSON")
             raise

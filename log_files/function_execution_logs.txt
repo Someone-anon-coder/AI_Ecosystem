@@ -1,0 +1,10 @@
+Got world indices data and stored it in json_files/Y_Finance/world_indices.json
+Got futures data and stored it in json_files/Y_Finance/futures.json
+Got bonds data and stored it in json_files/Y_Finance/bonds.json
+Got currencies data and stored it in json_files/Y_Finance/currencies.json
+Got options data and stored it in json_files/Y_Finance/options.json
+Got sub-sectors data and stored it in json_files/Y_Finance/sectors.json
+Got stocks data and stored it in json_files/Y_Finance/stocks.json
+Got crypto data and stored it in json_files/Y_Finance/crypto.json
+Got etfs data and stored it in json_files/Y_Finance/etfs.json
+Got mutual funds data and stored it in json_files/Y_Finance/mutual_funds.json

@@ -2,43 +2,43 @@
     {
         "Symbol": "^IRX",
         "Name": "13 WEEK TREASURY BILL",
-        "Price": "4.3930",
-        "Change": "+0.0100",
-        "Change %": "+0.23%"
+        "Price": "4.4100",
+        "Change": "+0.0020",
+        "Change %": "+0.05%"
     },
     {
         "Symbol": "^FVX",
         "Name": "Treasury Yield 5 Years",
-        "Price": "4.2980",
-        "Change": "+0.0060",
-        "Change %": "+0.14%"
+        "Price": "4.2750",
+        "Change": "+0.0290",
+        "Change %": "+0.68%"
     },
     {
         "Symbol": "^TNX",
         "Name": "CBOE Interest Rate 10 Year T No",
-        "Price": "4.4280",
-        "Change": "+0.0100",
-        "Change %": "+0.23%"
+        "Price": "4.4060",
+        "Change": "+0.0270",
+        "Change %": "+0.62%"
     },
     {
         "Symbol": "^TYX",
         "Name": "Treasury Yield 30 Years",
-        "Price": "4.6010",
-        "Change": "+0.0180",
-        "Change %": "+0.39%"
+        "Price": "4.5920",
+        "Change": "+0.0270",
+        "Change %": "+0.59%"
     },
     {
         "Symbol": "2YY=F",
         "Name": "2-Year Yield Futures,Nov-2024",
-        "Price": "4.2900",
-        "Change": "+0.0230",
-        "Change %": "+0.54%"
+        "Price": "4.2890",
+        "Change": "+0.0100",
+        "Change %": "+0.23%"
     },
     {
         "Symbol": "ZN=F",
         "Name": "10-Year T-Note Futures,Dec-2024",
-        "Price": "109.40625",
-        "Change": "-0.14062",
-        "Change %": "-0.13%"
+        "Price": "109.68750.0000(0.00%)",
+        "Change": "0.0000",
+        "Change %": "0.00%"
     }
 ]

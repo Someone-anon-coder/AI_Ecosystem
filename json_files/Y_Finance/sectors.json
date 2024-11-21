@@ -4,168 +4,168 @@
             {
                 "Industry Name": "All Industries",
                 "Market Weight": "100.00%",
-                "Year To Date Return": "31.08%"
+                "Year To Date Return": "33.10%"
             },
             {
                 "Industry Name": "Semiconductors",
-                "Market Weight": "28.90%",
-                "Year To Date Return": "78.80%"
+                "Market Weight": "28.95%",
+                "Year To Date Return": "81.89%"
             },
             {
                 "Industry Name": "Software - Infrastructure",
-                "Market Weight": "26.30%",
-                "Year To Date Return": "16.87%"
+                "Market Weight": "26.15%",
+                "Year To Date Return": "17.96%"
             },
             {
                 "Industry Name": "Consumer Electronics",
-                "Market Weight": "17.91%",
-                "Year To Date Return": "13.58%"
+                "Market Weight": "17.95%",
+                "Year To Date Return": "15.60%"
             },
             {
                 "Industry Name": "Software - Application",
-                "Market Weight": "13.21%",
-                "Year To Date Return": "32.47%"
+                "Market Weight": "13.28%",
+                "Year To Date Return": "35.25%"
             },
             {
                 "Industry Name": "Information Technology Services",
-                "Market Weight": "4.64%",
-                "Year To Date Return": "13.65%"
+                "Market Weight": "4.66%",
+                "Year To Date Return": "15.94%"
             },
             {
                 "Industry Name": "Communication Equipment",
-                "Market Weight": "2.34%",
-                "Year To Date Return": "26.25%"
+                "Market Weight": "2.31%",
+                "Year To Date Return": "26.47%"
             },
             {
                 "Industry Name": "Semiconductor Equipment & Materials",
-                "Market Weight": "2.04%",
-                "Year To Date Return": "-3.17%"
+                "Market Weight": "2.03%",
+                "Year To Date Return": "-2.53%"
             },
             {
                 "Industry Name": "Computer Hardware",
-                "Market Weight": "1.90%",
-                "Year To Date Return": "38.28%"
+                "Market Weight": "1.93%",
+                "Year To Date Return": "42.38%"
             },
             {
                 "Industry Name": "Electronic Components",
                 "Market Weight": "1.35%",
-                "Year To Date Return": "24.96%"
+                "Year To Date Return": "26.11%"
             },
             {
                 "Industry Name": "Scientific & Technical Instruments",
                 "Market Weight": "1.02%",
-                "Year To Date Return": "18.37%"
+                "Year To Date Return": "20.18%"
             },
             {
                 "Industry Name": "Solar",
                 "Market Weight": "0.22%",
-                "Year To Date Return": "-36.36%"
+                "Year To Date Return": "-36.10%"
             },
             {
                 "Industry Name": "Electronics & Computer Distribution",
                 "Market Weight": "0.15%",
-                "Year To Date Return": "-5.09%"
+                "Year To Date Return": "-5.22%"
             }
         ]
     },
     {
         "Name": "NVDANVIDIA Corporation",
-        "Last Price": "141.98",
+        "Last Price": "145.73",
         "1Y Target Estimate": "151.52",
-        "Market Weight": "18.59%",
-        "Market Cap": "3.483T",
-        "Day Change %": "-3.26%",
-        "Year To Date Return": "+186.70%",
+        "Market Weight": "18.76%",
+        "Market Cap": "3.575T",
+        "Day Change %": "-0.87%",
+        "Year To Date Return": "+194.27%",
         "Average Analyst Rating": "Buy"
     },
     {
         "Name": "AAPLApple Inc.",
-        "Last Price": "225.00",
+        "Last Price": "228.88",
         "1Y Target Estimate": "240.42",
         "Market Weight": "18.15%",
-        "Market Cap": "3.401T",
-        "Day Change %": "-1.41%",
-        "Year To Date Return": "+16.86%",
+        "Market Cap": "3.46T",
+        "Day Change %": "+0.27%",
+        "Year To Date Return": "+18.88%",
         "Average Analyst Rating": "Buy"
     },
     {
         "Name": "MSFTMicrosoft Corporation",
-        "Last Price": "415.00",
+        "Last Price": "415.49",
         "1Y Target Estimate": "497.60",
-        "Market Weight": "16.47%",
-        "Market Cap": "3.085T",
-        "Day Change %": "-2.79%",
-        "Year To Date Return": "+10.36%",
+        "Market Weight": "16.21%",
+        "Market Cap": "3.089T",
+        "Day Change %": "-0.55%",
+        "Year To Date Return": "+10.49%",
         "Average Analyst Rating": "Buy"
     },
     {
         "Name": "AVGOBroadcom Inc.",
-        "Last Price": "164.85",
+        "Last Price": "163.49",
         "1Y Target Estimate": "196.42",
-        "Market Weight": "4.11%",
-        "Market Cap": "769.945B",
-        "Day Change %": "-3.25%",
-        "Year To Date Return": "+47.68%",
+        "Market Weight": "4.01%",
+        "Market Cap": "763.593B",
+        "Day Change %": "-1.12%",
+        "Year To Date Return": "+46.46%",
         "Average Analyst Rating": "Buy"
     },
     {
         "Name": "ORCLOracle Corporation",
-        "Last Price": "183.74",
+        "Last Price": "190.75",
         "1Y Target Estimate": "181.33",
-        "Market Weight": "2.72%",
-        "Market Cap": "509.155B",
-        "Day Change %": "-1.77%",
-        "Year To Date Return": "+74.28%",
+        "Market Weight": "2.77%",
+        "Market Cap": "528.58B",
+        "Day Change %": "+0.98%",
+        "Year To Date Return": "+80.93%",
         "Average Analyst Rating": "Buy"
     },
     {
         "Name": "CRMSalesforce, Inc.",
-        "Last Price": "325.26",
+        "Last Price": "325.70",
         "1Y Target Estimate": "319.02",
-        "Market Weight": "1.66%",
-        "Market Cap": "310.949B",
-        "Day Change %": "-1.93%",
-        "Year To Date Return": "+23.61%",
+        "Market Weight": "1.63%",
+        "Market Cap": "311.369B",
+        "Day Change %": "+0.70%",
+        "Year To Date Return": "+23.77%",
         "Average Analyst Rating": "Buy"
     },
     {
         "Name": "CSCOCisco Systems, Inc.",
-        "Last Price": "57.46",
+        "Last Price": "57.50",
         "1Y Target Estimate": "57.24",
-        "Market Weight": "1.22%",
-        "Market Cap": "229.037B",
-        "Day Change %": "-0.79%",
-        "Year To Date Return": "+13.74%",
-        "Average Analyst Rating": "Buy"
-    },
-    {
-        "Name": "ADBEAdobe Inc.",
-        "Last Price": "503.37",
-        "1Y Target Estimate": "623.55",
-        "Market Weight": "1.18%",
-        "Market Cap": "221.583B",
-        "Day Change %": "-5.00%",
-        "Year To Date Return": "-15.63%",
-        "Average Analyst Rating": "Buy"
-    },
-    {
-        "Name": "ACNAccenture plc",
-        "Last Price": "353.57",
-        "1Y Target Estimate": "382.95",
-        "Market Weight": "1.18%",
-        "Market Cap": "220.93B",
-        "Day Change %": "-2.35%",
-        "Year To Date Return": "+0.76%",
+        "Market Weight": "1.21%",
+        "Market Cap": "229.796B",
+        "Day Change %": "+0.86%",
+        "Year To Date Return": "+13.82%",
         "Average Analyst Rating": "Buy"
     },
     {
         "Name": "AMDAdvanced Micro Devices, Inc.",
-        "Last Price": "134.90",
+        "Last Price": "137.57",
         "1Y Target Estimate": "184.72",
         "Market Weight": "1.17%",
-        "Market Cap": "218.917B",
-        "Day Change %": "-2.84%",
-        "Year To Date Return": "-8.49%",
+        "Market Cap": "223.25B",
+        "Day Change %": "-1.31%",
+        "Year To Date Return": "-6.68%",
+        "Average Analyst Rating": "Buy"
+    },
+    {
+        "Name": "ACNAccenture plc",
+        "Last Price": "357.07",
+        "1Y Target Estimate": "382.95",
+        "Market Weight": "1.17%",
+        "Market Cap": "223.117B",
+        "Day Change %": "+0.88%",
+        "Year To Date Return": "+1.76%",
+        "Average Analyst Rating": "Buy"
+    },
+    {
+        "Name": "ADBEAdobe Inc.",
+        "Last Price": "499.50",
+        "1Y Target Estimate": "623.55",
+        "Market Weight": "1.16%",
+        "Market Cap": "221.579B",
+        "Day Change %": "-0.02%",
+        "Year To Date Return": "-16.28%",
         "Average Analyst Rating": "Buy"
     }
 ]

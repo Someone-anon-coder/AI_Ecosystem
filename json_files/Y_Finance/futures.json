@@ -2,202 +2,202 @@
     {
         "Symbol": "ES=F",
         "Name": "E-Mini S&P 500 Dec 24",
-        "Price": "5,900.00",
-        "Market-Time": "4:59PM EST",
-        "Change": "-78.25",
-        "Change %": "-1.31%",
-        "Volume": "1.849M",
-        "Open Interest": "2.212M"
+        "Price": "5,927.75",
+        "Market-Time": "12:34AM EST",
+        "Change": "-10.00",
+        "Change %": "-0.17%",
+        "Volume": "51,992",
+        "Open Interest": "2.177M"
     },
     {
         "Symbol": "YM=F",
         "Name": "Mini Dow Jones Indus.-$5 Dec 24",
-        "Price": "43,586.00",
-        "Market-Time": "4:59PM EST",
-        "Change": "-315.00",
-        "Change %": "-0.72%",
-        "Volume": "129,894",
-        "Open Interest": "84,633"
+        "Price": "43,516.000.00(0.00%)",
+        "Market-Time": "12:34AM EST",
+        "Change": "0.00",
+        "Change %": "0.00%",
+        "Volume": "6,288",
+        "Open Interest": "80,979"
     },
     {
         "Symbol": "NQ=F",
         "Name": "Nasdaq 100 Dec 24",
-        "Price": "20,503.25",
-        "Market-Time": "4:59PM EST",
-        "Change": "-508.50",
-        "Change %": "-2.42%",
-        "Volume": "674,752",
-        "Open Interest": "289,821"
+        "Price": "20,691.75",
+        "Market-Time": "12:34AM EST",
+        "Change": "-57.25",
+        "Change %": "-0.28%",
+        "Volume": "39,616",
+        "Open Interest": "277,889"
     },
     {
         "Symbol": "RTY=F",
         "Name": "E-mini Russell 2000 Index Futur",
-        "Price": "2,316.70",
-        "Market-Time": "4:59PM EST",
-        "Change": "-32.90",
-        "Change %": "-1.40%",
-        "Volume": "174,160",
-        "Open Interest": "479,357"
+        "Price": "2,332.10",
+        "Market-Time": "12:34AM EST",
+        "Change": "-3.10",
+        "Change %": "-0.13%",
+        "Volume": "5,077",
+        "Open Interest": "484,797"
     },
     {
         "Symbol": "ZB=F",
         "Name": "U.S. Treasury Bond Futures,Dec-",
-        "Price": "116.09",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.47",
-        "Change %": "-0.40%",
-        "Volume": "581,150",
-        "Open Interest": "1.858M"
+        "Price": "116.53",
+        "Market-Time": "12:34AM EST",
+        "Change": "-0.03",
+        "Change %": "-0.03%",
+        "Volume": "15,128",
+        "Open Interest": "1.746M"
     },
     {
         "Symbol": "ZN=F",
         "Name": "10-Year T-Note Futures,Dec-2024",
-        "Price": "109.41",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.14",
-        "Change %": "-0.13%",
-        "Volume": "2.404M",
-        "Open Interest": "4.542M"
+        "Price": "109.690.00(0.00%)",
+        "Market-Time": "12:32AM EST",
+        "Change": "0.00",
+        "Change %": "0.00%",
+        "Volume": "57,662",
+        "Open Interest": "4.232M"
     },
     {
         "Symbol": "ZF=F",
         "Name": "Five-Year US Treasury Note Futu",
-        "Price": "106.53",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.07",
-        "Change %": "-0.07%",
-        "Volume": "1.634M",
-        "Open Interest": "6.364M"
+        "Price": "106.670.00(0.00%)",
+        "Market-Time": "12:33AM EST",
+        "Change": "0.00",
+        "Change %": "0.00%",
+        "Volume": "105,629",
+        "Open Interest": "5.832M"
     },
     {
         "Symbol": "ZT=F",
         "Name": "2-Year T-Note Futures,Dec-2024",
-        "Price": "102.64",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.04",
-        "Change %": "-0.04%",
-        "Volume": "943,616",
-        "Open Interest": "4.54M"
+        "Price": "102.61",
+        "Market-Time": "12:34AM EST",
+        "Change": "-0.02",
+        "Change %": "-0.02%",
+        "Volume": "48,071",
+        "Open Interest": "3.911M"
     },
     {
         "Symbol": "GC=F",
         "Name": "Gold Dec 24",
-        "Price": "2,567.40",
-        "Market-Time": "4:59PM EST",
-        "Change": "-5.50",
-        "Change %": "-0.21%",
-        "Volume": "163,829",
-        "Open Interest": "252,381"
+        "Price": "2,657.80",
+        "Market-Time": "12:34AM EST",
+        "Change": "+6.10",
+        "Change %": "+0.23%",
+        "Volume": "20,083",
+        "Open Interest": "193,093"
     },
     {
         "Symbol": "MGC=F",
         "Name": "Micro Gold Futures,Feb-2025",
-        "Price": "2,567.50",
-        "Market-Time": "4:59PM EST",
-        "Change": "-5.40",
-        "Change %": "-0.21%",
-        "Volume": "2,827",
-        "Open Interest": "6,975"
+        "Price": "2,657.80",
+        "Market-Time": "12:34AM EST",
+        "Change": "+6.10",
+        "Change %": "+0.23%",
+        "Volume": "20,423",
+        "Open Interest": "8,159"
     },
     {
         "Symbol": "SI=F",
         "Name": "Silver Dec 24",
-        "Price": "30.33",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.23",
-        "Change %": "-0.77%",
-        "Volume": "55,135",
-        "Open Interest": "66,390"
+        "Price": "31.21",
+        "Market-Time": "12:34AM EST",
+        "Change": "+0.20",
+        "Change %": "+0.66%",
+        "Volume": "7,141",
+        "Open Interest": "53,771"
     },
     {
         "Symbol": "SIL=F",
         "Name": "Micro Silver Futures,Dec-2024",
-        "Price": "30.34",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.23",
-        "Change %": "-0.75%",
-        "Volume": "19,868",
-        "Open Interest": "9,778"
+        "Price": "31.21",
+        "Market-Time": "12:34AM EST",
+        "Change": "+0.20",
+        "Change %": "+0.66%",
+        "Volume": "3,004",
+        "Open Interest": "9,812"
     },
     {
         "Symbol": "PL=F",
         "Name": "Platinum Jan 25",
-        "Price": "946.00",
-        "Market-Time": "4:59PM EST",
-        "Change": "+2.00",
-        "Change %": "+0.21%",
-        "Volume": "19,066",
-        "Open Interest": "77,865"
+        "Price": "970.20",
+        "Market-Time": "12:34AM EST",
+        "Change": "+4.40",
+        "Change %": "+0.46%",
+        "Volume": "1,400",
+        "Open Interest": "76,853"
     },
     {
         "Symbol": "HG=F",
         "Name": "Copper Dec 24",
-        "Price": "4.0635",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.0240",
-        "Change %": "-0.59%",
-        "Volume": "73,523",
-        "Open Interest": "62,142"
+        "Price": "4.1465",
+        "Market-Time": "12:34AM EST",
+        "Change": "-0.0090",
+        "Change %": "-0.22%",
+        "Volume": "3,638",
+        "Open Interest": "48,895"
     },
     {
         "Symbol": "PA=F",
         "Name": "Palladium Dec 24",
-        "Price": "946.50",
-        "Market-Time": "4:59PM EST",
-        "Change": "+20.80",
-        "Change %": "+2.25%",
-        "Volume": "6,344",
-        "Open Interest": "12,058"
+        "Price": "1,030.50",
+        "Market-Time": "12:33AM EST",
+        "Change": "+4.60",
+        "Change %": "+0.45%",
+        "Volume": "113",
+        "Open Interest": "7,878"
     },
     {
         "Symbol": "CL=F",
         "Name": "Crude Oil Dec 24",
-        "Price": "66.95",
-        "Market-Time": "5:00PM EST",
-        "Change": "-1.75",
-        "Change %": "-2.55%",
-        "Volume": "181,679",
-        "Open Interest": "116,040"
+        "Price": "68.95",
+        "Market-Time": "2:29PM EST",
+        "Change": "+0.08",
+        "Change %": "+0.12%",
+        "Volume": "17,232",
+        "Open Interest": "8,082"
     },
     {
         "Symbol": "HO=F",
         "Name": "Heating Oil Dec 24",
-        "Price": "2.1727",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.0396",
-        "Change %": "-1.79%",
-        "Volume": "39,268",
-        "Open Interest": "93,948"
+        "Price": "2.2298",
+        "Market-Time": "12:24AM EST",
+        "Change": "+0.0035",
+        "Change %": "+0.16%",
+        "Volume": "852",
+        "Open Interest": "58,661"
     },
     {
         "Symbol": "NG=F",
         "Name": "Natural Gas Dec 24",
-        "Price": "2.8370",
-        "Market-Time": "4:59PM EST",
-        "Change": "+0.0520",
-        "Change %": "+1.87%",
-        "Volume": "162,965",
-        "Open Interest": "129,076"
+        "Price": "3.2500",
+        "Market-Time": "12:34AM EST",
+        "Change": "+0.0570",
+        "Change %": "+1.79%",
+        "Volume": "5,392",
+        "Open Interest": "54,796"
     },
     {
         "Symbol": "RB=F",
         "Name": "RBOB Gasoline Dec 24",
-        "Price": "1.9475",
-        "Market-Time": "4:59PM EST",
-        "Change": "-0.0342",
-        "Change %": "-1.73%",
-        "Volume": "36,639",
-        "Open Interest": "81,492"
+        "Price": "2.0347",
+        "Market-Time": "12:21AM EST",
+        "Change": "-0.0111",
+        "Change %": "-0.54%",
+        "Volume": "521",
+        "Open Interest": "49,183"
     },
     {
         "Symbol": "BZ=F",
         "Name": "Brent Crude Oil Last Day Financ",
-        "Price": "71.04",
-        "Market-Time": "4:59PM EST",
-        "Change": "-1.52",
-        "Change %": "-2.09%",
-        "Volume": "29,514",
-        "Open Interest": "25,755"
+        "Price": "72.94",
+        "Market-Time": "12:30AM EST",
+        "Change": "+0.13",
+        "Change %": "+0.18%",
+        "Volume": "574",
+        "Open Interest": "25,255"
     },
     {
         "Symbol": "B0=F",
@@ -212,132 +212,132 @@
     {
         "Symbol": "ZC=F",
         "Name": "Corn Futures,Mar-2025",
-        "Price": "435.00",
-        "Market-Time": "2:19PM EST",
-        "Change": "+4.25",
-        "Change %": "+0.99%",
-        "Volume": "144,340",
-        "Open Interest": "592,033"
+        "Price": "430.250.00(0.00%)",
+        "Market-Time": "12:21AM EST",
+        "Change": "0.00",
+        "Change %": "0.00%",
+        "Volume": "13,593",
+        "Open Interest": "361,345"
     },
     {
         "Symbol": "ZO=F",
         "Name": "Oat Futures,Mar-2025",
-        "Price": "357.00",
-        "Market-Time": "2:18PM EST",
-        "Change": "+8.50",
-        "Change %": "+2.44%",
-        "Volume": "495",
-        "Open Interest": "2,373"
+        "Price": "347.25",
+        "Market-Time": "8:35PM EST",
+        "Change": "+2.50",
+        "Change %": "+0.73%",
+        "Volume": "9",
+        "Open Interest": "2,769"
     },
     {
         "Symbol": "KE=F",
         "Name": "KC HRW Wheat Futures,Mar-2025",
-        "Price": "540.75",
-        "Market-Time": "2:19PM EST",
-        "Change": "+7.75",
-        "Change %": "+1.45%",
-        "Volume": "35,605",
-        "Open Interest": "126,175"
+        "Price": "562.25",
+        "Market-Time": "12:21AM EST",
+        "Change": "+0.50",
+        "Change %": "+0.09%",
+        "Volume": "943",
+        "Open Interest": "142,985"
     },
     {
         "Symbol": "ZR=F",
         "Name": "Rough Rice Futures,Jan-2025",
-        "Price": "15.01",
-        "Market-Time": "2:19PM EST",
-        "Change": "+0.34",
-        "Change %": "+2.32%",
-        "Volume": "968",
-        "Open Interest": "10,516"
+        "Price": "15.11",
+        "Market-Time": "9:37PM EST",
+        "Change": "-0.01",
+        "Change %": "-0.03%",
+        "Volume": "5",
+        "Open Interest": "9,742"
     },
     {
         "Symbol": "ZM=F",
         "Name": "S&P Composite 1500 ESG Tilted I",
-        "Price": "290.90",
-        "Market-Time": "2:19PM EST",
-        "Change": "+1.80",
-        "Change %": "+0.62%",
-        "Volume": "59,032",
-        "Open Interest": "161,917"
+        "Price": "290.30",
+        "Market-Time": "12:28AM EST",
+        "Change": "+0.90",
+        "Change %": "+0.31%",
+        "Volume": "1,778",
+        "Open Interest": "90,416"
     },
     {
         "Symbol": "ZL=F",
         "Name": "Soybean Oil Futures,Jan-2025",
-        "Price": "45.46",
-        "Market-Time": "2:19PM EST",
-        "Change": "+1.02",
-        "Change %": "+2.30%",
-        "Volume": "85,083",
-        "Open Interest": "166,179"
+        "Price": "43.26",
+        "Market-Time": "12:30AM EST",
+        "Change": "-0.02",
+        "Change %": "-0.05%",
+        "Volume": "5,073",
+        "Open Interest": "69,293"
     },
     {
         "Symbol": "ZS=F",
         "Name": "Soybean Futures,Jan-2025",
-        "Price": "998.25",
-        "Market-Time": "2:19PM EST",
-        "Change": "+10.75",
-        "Change %": "+1.09%",
-        "Volume": "132,803",
-        "Open Interest": "349,854"
+        "Price": "993.50",
+        "Market-Time": "12:33AM EST",
+        "Change": "+3.00",
+        "Change %": "+0.30%",
+        "Volume": "5,995",
+        "Open Interest": "353,669"
     },
     {
         "Symbol": "GF=F",
         "Name": "WisdomTree International High D",
-        "Price": "246.90",
+        "Price": "252.43",
         "Market-Time": "2:04PM EST",
-        "Change": "+3.70",
-        "Change %": "+1.52%",
-        "Volume": "11,487",
-        "Open Interest": "24,465"
+        "Change": "+0.43",
+        "Change %": "+0.17%",
+        "Volume": "5,456",
+        "Open Interest": "25,934"
     },
     {
         "Symbol": "HE=F",
         "Name": "Lean Hogs Futures,Dec-2024",
-        "Price": "79.43",
+        "Price": "80.43",
         "Market-Time": "2:04PM EST",
-        "Change": "-0.67",
-        "Change %": "-0.84%",
-        "Volume": "24,068",
-        "Open Interest": "72,506"
+        "Change": "+0.88",
+        "Change %": "+1.10%",
+        "Volume": "12,424",
+        "Open Interest": "60,920"
     },
     {
         "Symbol": "LE=F",
         "Name": "Live Cattle Futures,Dec-2024",
-        "Price": "182.88",
+        "Price": "186.15",
         "Market-Time": "2:04PM EST",
-        "Change": "-0.07",
-        "Change %": "-0.04%",
-        "Volume": "25,344",
-        "Open Interest": "70,199"
+        "Change": "-0.43",
+        "Change %": "-0.23%",
+        "Volume": "9,483",
+        "Open Interest": "52,145"
     },
     {
         "Symbol": "CC=F",
         "Name": "Cocoa Mar 25",
-        "Price": "8,542.00",
-        "Market-Time": "1:29PM EST",
-        "Change": "+38.00",
-        "Change %": "+0.45%",
-        "Volume": "16,705",
-        "Open Interest": "61,743"
+        "Price": "8,425.00",
+        "Market-Time": "1:24PM EST",
+        "Change": "+85.00",
+        "Change %": "+1.02%",
+        "Volume": "0",
+        "Open Interest": "1,503"
     },
     {
         "Symbol": "KC=F",
         "Name": "Coffee Mar 25",
-        "Price": "285.50",
-        "Market-Time": "1:29PM EST",
-        "Change": "+2.20",
-        "Change %": "+0.78%",
-        "Volume": "27,486",
-        "Open Interest": "103,519"
+        "Price": "296.95",
+        "Market-Time": "1:28PM EST",
+        "Change": "+1.65",
+        "Change %": "+0.56%",
+        "Volume": "0",
+        "Open Interest": "2,371"
     },
     {
         "Symbol": "CT=F",
         "Name": "Cotton Mar 25",
-        "Price": "66.81",
-        "Market-Time": "2:19PM EST",
-        "Change": "+0.01",
-        "Change %": "+0.01%",
-        "Volume": "39,813",
-        "Open Interest": "122,897"
+        "Price": "68.72",
+        "Market-Time": "12:02AM EST",
+        "Change": "+0.26",
+        "Change %": "+0.38%",
+        "Volume": "1,209",
+        "Open Interest": "11,713"
     },
     {
         "Symbol": "LBS=F",
@@ -352,21 +352,21 @@
     {
         "Symbol": "OJ=F",
         "Name": "Orange Juice Jan 25",
-        "Price": "482.80",
+        "Price": "492.45",
         "Market-Time": "1:59PM EST",
-        "Change": "+2.55",
-        "Change %": "+0.53%",
-        "Volume": "488",
-        "Open Interest": "7,598"
+        "Change": "-2.30",
+        "Change %": "-0.46%",
+        "Volume": "0",
+        "Open Interest": "7,422"
     },
     {
         "Symbol": "SB=F",
         "Name": "Sugar #11 Mar 25",
-        "Price": "21.62",
+        "Price": "21.650.00(0.00%)",
         "Market-Time": "12:59PM EST",
-        "Change": "+0.04",
-        "Change %": "+0.19%",
-        "Volume": "45,305",
-        "Open Interest": "349,555"
+        "Change": "0.00",
+        "Change %": "0.00%",
+        "Volume": "0",
+        "Open Interest": "346,005"
     }
 ]
