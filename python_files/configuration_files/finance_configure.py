@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 class YahooFinance:
-    """Class for Yahoo Finance
+    """Class for getting data from Yahoo Finance
     
     Private Variables:
         __base_url__: Base url for yahoo finance
@@ -34,12 +34,6 @@ class YahooFinance:
         __available_news__: Different news categories in Yahoo finance
         __available_markets__: Different markets in Yahoo finance
 
-        __market_options__: Options market in yahoo finance
-        __market_stock__: Stock market in yahoo finance
-        __market_crypto__: Crypto market in yahoo finance
-        __market_etfs__: ETF market in yahoo finance
-        __market_mutual_funds__: Mutual Funds market in yahoo finance
-    
         __available_sub_markets__: Different sub-markets in Yahoo finance
         __available_sectors__: Different sectors in Yahoo finance
     
@@ -57,6 +51,41 @@ class YahooFinance:
         get_currencies: Get the currencies data
         get_options: Get the options data
         get_sub_sectors: Get the sectors data
+        get_stocks: Get the stocks data
+        get_crypto: Get the crypto data
+        get_mutual_funds: Get the mutual funds data
+        get_etfs: Get the etfs data
+        
+        get_news: Get the news data
+        get_base_url: Get the base url
+        get_news_url: Get the news url
+        get_market_url: Get the market url
+        get_sectors_url: Get the sectors url
+        get_compare_stocks_url: Get the compare stocks url
+        
+        get_markets_options_url: Get the markets options url
+        get_markets_stock_url: Get the markets stock url
+        get_markets_crypto_url: Get the markets crypto url
+        get_markets_etfs_url: Get the markets etfs url
+        get_markets_mutual_funds_url: Get the markets mutual funds url
+        
+        get_sectors_technology_url: Get the sectors technology url
+        get_sectors_finance_services_url: Get the sectors finance services url
+        get_sectors_consumer_cyclical_url: Get the sectors consumer cyclical url
+        get_sectors_healthcare_url: Get the sectors healthcare url
+        get_sectors_communication_services_url: Get the sectors communication services url
+        get_sectors_industrials_url: Get the sectors industrials url
+        get_sectors_consumer_defensive_url: Get the sectors consumer defensive url
+        get_sectors_energy_url: Get the sectors energy url
+        get_sectors_real_estate_url: Get the sectors real estate url
+        get_sectors_basic_materials_url: Get the sectors basic materials url
+        get_sectors_utilities_url: Get the sectors utilities url
+        
+        get_available_news: Get the available news categories
+        get_available_markets: Get the available markets categories
+        
+        get_available_sub_markets: Get the available sub-markets categories
+        get_available_sectors: Get the available sectors categories
     """
     
     __base_url__: str = "https://finance.yahoo.com" # Base url for yahoo finance
@@ -87,14 +116,14 @@ class YahooFinance:
     __available_news__: tuple = ("latest-news", "stock-market-news", "yahoo-finance-originals", "morning-brief", "economic-news", "housing-market", "earnings", "tech", "crypto") # Different news categories in Yahoo finance
     __available_markets__: tuple = ("world-indices", "commodities", "bonds", "currencies") # Different markets in Yahoo finance
 
-    __available_sub_markets__: dict = {
+    __available_sub_markets__: dict = { # Available sub markets in the market
         "options": ("most-active", "gainers", "losers", "highest-implied-volatility", "highest-open-interest"), # Options market in yahoo finance
         "stocks": ("most-active", "gainers", "losers", "trending", "52-week-gainers", "52-week-losers"), # Stock market in yahoo finance
         "crypto": ("all", "most-active", "gainers", "losers", "trending"), # Crypto market in yahoo finance
         "etfs": ("most-active", "gainers", "losers", "trending", "top-performing", "best-historical-performance", "top"), # ETF market in yahoo finance
         "mutual_funds": ("most-active", "gainers", "losers", "top-performing", "best-historical-performance", "top") # Mutual Funds market in yahoo finance
     }
-    __available_sectors__: dict = {
+    __available_sectors__: dict = { # Available sectors in yahoo finance
         "technology": ("semiconductors", "software-infrastructure", "consumer-electronics", "software-application", "information-technology-services", "communication-equipment", "semiconductor-equipment-materials", "computer-hardware", "electronic-component", "scientific-technical-instruments", "solar", "electronics-computer-distribution"), # Technology sectors in yahoo finance
         "finance_services": ("banks-diversified", "credit-services", "asset-management", "insurance-diversified", "banks-regional", "capital-markets", "financial-data-stock-exchanges", "insurance-propery-casualty", "insurance-brokers", "insuranc-life", "insurance-specialty", "mortgage-finance", "insurance-reinsurance", "shell-companies", "financial-conglomarates"), # Finance services sectors in yahoo finance,
         "consumer_cyclical": ("internet-retail", "auto-manufacturers", "restaurants", "home-improvement-retail", "travel-services", "speciality-retail", "apparel-retail", "residential-construction", "footware-accessories", "packaging-containers", "lodging", "auto-truck-dealership", "auto-parts", "resorts-casinos", "gambling", "leisure", "apparel-manufacturing", "personal-services", "furnishings-fixtures-appliances", "recreational-vehicles", "luxury-goods", "department-stores", "textile-manufacturing"), # Consumer cyclical sectors in yahoo finance
@@ -107,7 +136,6 @@ class YahooFinance:
         "basic_materials": ("specialty-chemicals", "gold", "building-materials", "copper", "steel", "agricultural-inputs", "chemicals", "other-industrial-metals-mining", "lumber-wood-production", "aluminium", "other-precious-metal-mining", "coking-coal", "paper-paper-products", "silver"), # Basic materials sectors in yahoo finance
         "utilities": ("utilities-regulated-electric", "utilities-renewable", "utilities-diversified", "utilities-independent-power-producers", "utilities-regulated-gas", "utilities-regulated-water") # Utilities sectors in yahoo finance
     }
-
     
     def __log_info__(self, message: str, filename: str = "log_files/function_execution_logs.txt"):
         with open(filename, "a", encoding='utf8') as file:
@@ -798,6 +826,231 @@ class YahooFinance:
         except:
             print("Error serializing table data to JSON")
             raise
+    
+    def get_base_url(self) -> str:
+        """Get the base url
+        
+        Returns:
+            str: Base url
+        """
+        
+        return self.__base_url__
+    
+    def get_news_url(self) -> str:
+        """Get the news url
+        
+        Returns:
+            str: News url
+        """
+        
+        return self.__news_url__
+    
+    def get_market_url(self) -> str:
+        """Get the market url
+        
+        Returns:
+            str: Market url
+        """
+        
+        return self.__market_url__
+    
+    def get_sectors_url(self) -> str:
+        """Get the sectors url
+        
+        Returns:
+            str: Sectors url
+        """
+        
+        return self.__sectors_url__
+    
+    def get_compare_stocks_url(self) -> str:
+        """Get the compare stocks url
+        
+        Returns:
+            str: Compare stocks url
+        """
+        
+        return self.__compare_stocks_url__
+    
+    def get_markets_options_url(self) -> str:
+        """Get the markets options url
+        
+        Returns:
+            str: Markets options url
+        """
+
+        return self.__markets_options_url__
+    
+    def get_markets_stock_url(self) -> str:
+        """Get the markets stock url
+        
+        Returns:
+            str: Markets stock url
+        """
+
+        return self.__markets_stock_url__
+    
+    def get_markets_crypto_url(self) -> str:
+        """Get the markets crypto url
+        
+        Returns:
+            str: Markets crypto url
+        """
+
+        return self.__markets_crypto_url__
+    
+    def get_markets_etfs_url(self) -> str:
+        """Get the markets etfs url
+        
+        Returns:
+            str: Markets etfs url
+        """
+
+        return self.__markets_etfs_url__
+    
+    def get_markets_mutual_funds_url(self) -> str:
+        """Get the markets mutual funds url
+        
+        Returns:
+            str: Markets mutual funds url
+        """
+
+        return self.__markets_mutual_funds_url__
+
+    def get_sectors_technology_url(self) -> str:
+        """Get the Sectors technology url
+        
+        Returns:
+            str: Sectors technology url
+        """
+
+        return self.__sectors_technology_url__
+
+    def get_sectors_finance_services_url(self) -> str:
+        """Get the Sectors finance services url
+        
+        Returns:
+            str: Sectors finance services url
+        """
+
+        return self.__sectors_finance_services_url__
+
+    def get_sectors_consumer_cyclical_url(self) -> str:
+        """Get the Sectors consumer cyclical url
+        
+        Returns:
+            str: Sectors consumer cyclical url
+        """
+
+        return self.__sectors_consumer_cyclical_url__
+
+    def get_sectors_healthcare_url(self) -> str:
+        """Get the Sectors healthcare url
+        
+        Returns:
+            str: Sectors healthcare url
+        """
+
+        return self.__sectors_healthcare_url__
+
+    def get_sectors_communication_services_url(self) -> str:
+        """Get the Sectors communication services url
+        
+        Returns:
+            str: Sectors communication services url
+        """
+
+        return self.__sectors_communication_services_url__
+
+    def get_sectors_industrials_url(self) -> str:
+        """Get the Sectors industrials url
+        
+        Returns:
+            str: Sectors industrials url
+        """
+
+        return self.__sectors_industrials_url__
+
+    def get_sectors_consumer_defensive_url(self) -> str:
+        """Get the Sectors consumer defensive url
+        
+        Returns:
+            str: Sectors consumer defensive url
+        """
+
+        return self.__sectors_consumer_defensive_url__
+
+    def get_sectors_energy_url(self) -> str:
+        """Get the Sectors energy url
+        
+        Returns:
+            str: Sectors energy url
+        """
+
+        return self.__sectors_energy_url__
+
+    def get_sectors_real_estate_url(self) -> str:
+        """Get the Sectors real estate url
+        
+        Returns:
+            str: Sectors real estate url
+        """
+
+        return self.__sectors_real_estate_url__
+
+    def get_sectors_basic_materials_url(self) -> str:
+        """Get the Sectors basic materials url
+        
+        Returns:
+            str: Sectors basic materials url
+        """
+
+        return self.__sectors_basic_materials_url__
+
+    def get_sectors_utilities_url(self) -> str:
+        """Get the Sectors utilities url
+        
+        Returns:
+            str: Sectors utilities url
+        """
+
+        return self.__sectors_utilities_url__
+    
+    def get_available_news(self) -> list:
+        """Get the available news
+        
+        Returns:
+            list: Available news
+        """
+        
+        return self.__available_news__
+    
+    def get_available_markets(self) -> list:
+        """Get the available markets
+        
+        Returns:
+            list: Available markets
+        """
+        
+        return self.__available_markets__
+    
+    def get_available_sub_markets(self) -> dict:
+        """Get the available sub-markets
+        
+        Returns:
+            dict: Available sub-markets
+        """
+        
+        return self.__available_sub_markets__
+    
+    def get_available_sectors(self) -> dict:
+        """Get the available sectors
+        
+        Returns:
+            dict: Available sectors
+        """
+        
+        return self.__available_sectors__
 
 if __name__ == "__main__":
     yahoo = YahooFinance()
