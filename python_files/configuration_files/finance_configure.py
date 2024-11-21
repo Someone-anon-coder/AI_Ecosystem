@@ -136,6 +136,148 @@ class YahooFinance:
         "basic_materials": ("specialty-chemicals", "gold", "building-materials", "copper", "steel", "agricultural-inputs", "chemicals", "other-industrial-metals-mining", "lumber-wood-production", "aluminium", "other-precious-metal-mining", "coking-coal", "paper-paper-products", "silver"), # Basic materials sectors in yahoo finance
         "utilities": ("utilities-regulated-electric", "utilities-renewable", "utilities-diversified", "utilities-independent-power-producers", "utilities-regulated-gas", "utilities-regulated-water") # Utilities sectors in yahoo finance
     }
+
+    def __class_info__(self) -> dict:
+        __name_discription__ = {"YahooFinance": "Class for getting data from Yahoo Finance"} # Name and description of the class
+        __constuctor_paramters__ = {"Not used": "Not used"} # Constructor parameters of the class
+        
+        __function_info__ = { # Function names and their description
+            "get_world_indices": "Function to get the world indices",
+            "get_futures": "Function to get the futures data",
+            "get_bonds": "Function to get the bonds data",
+            "get_currencies": "Function to get the currencies data",
+            "get_options": "Function to get the options data",
+            "get_sectors": "Function to get the sectors weightage",
+            "get_sub_sectors": "Function to get the sectors data",
+            "get_stocks": "Function to get the stocks data",
+            "get_crypto": "Function to get the crypto data",
+            "get_etfs": "Function to get the etfs data",
+            "get_mutual_funds": "Function to get the mutual funds data",
+            "get_news": "Function to get the news data",
+            "get_base_url": "Function to get the base url",
+            "get_news_url": "Function to get the news url",
+            "get_market_url": "Function to get the market url",
+            "get_sectors_url": "Function to get the sectors url",
+            "get_compare_stocks_url": "Function to get the compare stocks url",
+            "get_markets_options_url": "Function to get the markets options url",
+            "get_markets_stock_url": "Function to get the markets stock url",
+            "get_markets_crypto_url": "Function to get the markets crypto url",
+            "get_markets_etfs_url": "Function to get the markets etfs url",
+            "get_markets_mutual_funds_url": "Function to get the markets mutual funds url",
+            "get_sectors_technology_url": "Function to get the sectors technology url",
+            "get_sectors_finance_services_url": "Function to get the sectors finance services url",
+            "get_sectors_consumer_cyclical_url": "Function to get the sectors consumer cyclical url",
+            "get_sectors_healthcare_url": "Function to get the sectors healthcare url",
+            "get_sectors_communication_services_url": "Function to get the sectors communication services url",
+            "get_sectors_industrials_url": "Function to get the sectors industrials url",
+            "get_sectors_consumer_defensive_url": "Function to get the sectors consumer defensive url",
+            "get_sectors_energy_url": "Function to get the sectors energy url",
+            "get_sectors_real_estate_url": "Function to get the sectors real estate url",
+            "get_sectors_basic_materials_url": "Function to get the sectors basic materials url",
+            "get_sectors_utilities_url": "Function to get the sectors utilities url",
+            "get_available_news": "Function to get the available news categories",
+            "get_available_markets": "Function to get the available markets categories",
+            "get_available_sub_markets": "Function to get the available sub-markets categories",
+            "get_available_sectors": "Function to get the available sectors categories"
+        }
+        
+        __function_parameters__ = { # Function names and their parameter
+            "get_world_indices": "index (str)\njson_file (str)",
+            "get_futures": "index (str)\njson_file (str)",
+            "get_bonds": "index (str)\njson_file (str)",
+            "get_currencies": "index (str)\njson_file (str)",
+            "get_options": "option_type (str)\nstart (int)\ncount (int)\njson_file (str)",
+            "get_sectors": "sector (str) <Required>",
+            "get_sub_sectors": "sector (str) <Required>\nget_only_sector (bool)\nsub_sector (str)\njson_file (str)",
+            "get_stocks": "index (str)\njson_file (str)",
+            "get_crypto": "crypto_type (str)\nstart (int)\ncount (int)\njson_file (str)",
+            "get_etfs": "etf_type (str)\nstart (int)\ncount (int)\njson_file (str)",
+            "get_mutual_funds": "mutual_fund_type (str)\nstart (int)\ncount (int)\njson_file (str)",
+            "get_news": "topic (str) <Required>\njson_file (str)",
+            "get_base_url": "Not used",
+            "get_news_url": "Not used",
+            "get_market_url": "Not used",
+            "get_sectors_url": "Not used",
+            "get_compare_stocks_url": "Not used",
+            "get_markets_options_url": "Not used",
+            "get_markets_stock_url": "Not used",
+            "get_markets_crypto_url": "Not used",
+            "get_markets_etfs_url": "Not used",
+            "get_markets_mutual_funds_url": "Not used",
+            "get_sectors_technology_url": "Not used",
+            "get_sectors_finance_services_url": "Not used",
+            "get_sectors_consumer_cyclical_url": "Not used",
+            "get_sectors_healthcare_url": "Not used",
+            "get_sectors_communication_services_url": "Not used",
+            "get_sectors_industrials_url": "Not used",
+            "get_sectors_consumer_defensive_url": "Not used",
+            "get_sectors_energy_url": "Not used",
+            "get_sectors_real_estate_url": "Not used",
+            "get_sectors_basic_materials_url": "Not used",
+            "get_sectors_utilities_url": "Not used",
+            "get_available_news": "Not used",
+            "get_available_markets": "Not used",
+            "get_available_sub_markets": "Not used",
+            "get_available_sectors": "Not used"
+        }
+        
+        __function_parameters_description__ = { # Function Parameter names and their description
+            "get_world_indices": "index: Index to get the data from. Defaults to \"\"\njson_file: Name of the json file to save the data to. Defaults to json_files/Y_Finance/world_indices.json",
+            "get_futures": "index: Index to get the data from. Defaults to \"\"\njson_file: Name of the json file to save the data to. Defaults to json_files/Y_Finance/futures.json",
+            "get_bonds": "index: Index to get the data from. Defaults to \"\"\njson_file: Name of the json file to save the data to. Defaults to json_files/Y_Finance/bonds.json",
+            "get_currencies": "index: Index to get the data from. Defaults to \"\"\njson_file: Name of the json file to save the data to. Defaults to json_files/Y_Finance/currencies.json",
+            "get_options": "option_type: Option type to get the data from. Defaults to \"most-active\". Available options are: {\"most-active\", \"gainers\", \"losers\", \"highest-implied-volatility\", \"highest-open-interest\"}\nstart_count: Start index of the options. Defaults to 0\ncount: Count of the options. Defaults to 100\njson_file: Name of the json file to save the data to. Defaults to json_files/Y_Finance/options.json",
+            "get_sectors": "sector: Sector to get the data from",
+            "get_sub_sectors": "",
+            "get_stocks": "",
+            "get_crypto": "",
+            "get_etfs": "",
+            "get_mutual_funds": "",
+            "get_news": "",
+            "get_base_url": "",
+            "get_news_url": "",
+            "get_market_url": "",
+            "get_sectors_url": "",
+            "get_compare_stocks_url": "",
+            "get_markets_options_url": "",
+            "get_markets_stock_url": "",
+            "get_markets_crypto_url": "",
+            "get_markets_etfs_url": "",
+            "get_markets_mutual_funds_url": "",
+            "get_sectors_technology_url": "",
+            "get_sectors_finance_services_url": "",
+            "get_sectors_consumer_cyclical_url": "",
+            "get_sectors_healthcare_url": "",
+            "get_sectors_communication_services_url": "",
+            "get_sectors_industrials_url": "",
+            "get_sectors_consumer_defensive_url": "",
+            "get_sectors_energy_url": "",
+            "get_sectors_real_estate_url": "",
+            "get_sectors_basic_materials_url": "",
+            "get_sectors_utilities_url": "",
+            "get_available_news": "",
+            "get_available_markets": "",
+            "get_available_sub_markets": "",
+            "get_available_sectors": "",
+        }
+        
+        __function_return_types__ = { # Function names and their return types
+            
+        }
+
+        __class_examples__ = { # Class usage examples
+        
+        }
+        
+        return {
+            "Name_Description": __name_discription__,
+            "Constructor_Parameters": __constuctor_paramters__,
+            "Function_Info": __function_info__,
+            "Function_Parameters": __function_parameters__,
+            "Parameter_Description": __function_parameters_description__,
+            "Function_Return": __function_return_types__,
+            "Class_Examples": __class_examples__
+        }
     
     def __log_info__(self, message: str, filename: str = "log_files/function_execution_logs.txt"):
         with open(filename, "a", encoding='utf8') as file:
@@ -303,7 +445,7 @@ class YahooFinance:
 
         Args:
             index (str, optional): Index to get the data from. Defaults to "".
-            json_file (str, optional): Name of the json file to save the data to. Defaults to "world_indices.json".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/world_indices.json".
 
         Returns:
             str | None: Data of the world indices
@@ -340,7 +482,7 @@ class YahooFinance:
         
         Args:
             index (str, optional): Index to get the data from. Defaults to "".
-            json_file (str, optional): Name of the json file to save the data to. Defaults to "futures.json".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/futures.json".
         
         Returns:
             str | None: Data of the futures
@@ -379,7 +521,7 @@ class YahooFinance:
         
         Args:
             index (str, optional): Index to get the data from. Defaults to "".
-            json_file (str, optional): Name of the json file to save the data to. Defaults to "bonds.json".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/bonds.json".
         
         Returns:
             str | None: Data of the bonds
@@ -415,7 +557,7 @@ class YahooFinance:
         
         Args:
             index (str, optional): Index to get the data from. Defaults to "".
-            json_file (str, optional): Name of the json file to save the data to. Defaults to "currencies.json".
+            json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/currencies.json".
         
         Returns:
             str | None: Data of the currencies
@@ -450,7 +592,9 @@ class YahooFinance:
         """Get the options data
 
         Args:
-            option_type (str, optional): Type of the options. Defaults to "most-active".
+            option_type (str, optional): Type of the options. Defaults to "most-active". Available options are: {\"most-active\", \"gainers\", \"losers\", \"highest-implied-volatility\", \"highest-open-interest\"}
+            start_count (int | optional): Start index of the options. Defaults to 0.
+            count (int | optional): Count of the options. Defaults to 100.
             json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/options.json".
 
         Returns:
