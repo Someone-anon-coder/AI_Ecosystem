@@ -154,6 +154,8 @@ class YahooFinance:
             "get_etfs": "Function to get the etfs data",
             "get_mutual_funds": "Function to get the mutual funds data",
             "get_news": "Function to get the news data",
+            "get_market_news": "Function to get the market news data",
+            "get_sectors_news": "Function to get the sectors news data",
             "get_base_url": "Function to get the base url",
             "get_news_url": "Function to get the news url",
             "get_market_url": "Function to get the market url",
@@ -194,6 +196,8 @@ class YahooFinance:
             "get_etfs": "etf_type (str)\nstart (int)\ncount (int)\njson_file (str)",
             "get_mutual_funds": "mutual_fund_type (str)\nstart (int)\ncount (int)\njson_file (str)",
             "get_news": "topic (str) <Required>\njson_file (str)",
+            "get_market_news": "topic (str) <Required>\nsub_topic (str)\njson_file (str)",
+            "get_sectors_news": "sector (str) <Required>\nsub_sector (str)\njson_file (str)",
             "get_base_url": "Not used",
             "get_news_url": "Not used",
             "get_market_url": "Not used",
@@ -228,37 +232,12 @@ class YahooFinance:
             "get_currencies": "index: Index to get the data from. Defaults to \"\"\njson_file: Name of the json file to save the data to. Defaults to json_files/Y_Finance/currencies.json",
             "get_options": "option_type: Option type to get the data from. Defaults to \"most-active\". Available options are: {\"most-active\", \"gainers\", \"losers\", \"highest-implied-volatility\", \"highest-open-interest\"}\nstart_count: Start index of the options. Defaults to 0\ncount: Count of the options. Defaults to 100\njson_file: Name of the json file to save the data to. Defaults to json_files/Y_Finance/options.json",
             "get_sectors": "sector: Sector to get the data from",
-            "get_sub_sectors": "",
-            "get_stocks": "",
-            "get_crypto": "",
-            "get_etfs": "",
-            "get_mutual_funds": "",
-            "get_news": "",
-            "get_base_url": "",
-            "get_news_url": "",
-            "get_market_url": "",
-            "get_sectors_url": "",
-            "get_compare_stocks_url": "",
-            "get_markets_options_url": "",
-            "get_markets_stock_url": "",
-            "get_markets_crypto_url": "",
-            "get_markets_etfs_url": "",
-            "get_markets_mutual_funds_url": "",
-            "get_sectors_technology_url": "",
-            "get_sectors_finance_services_url": "",
-            "get_sectors_consumer_cyclical_url": "",
-            "get_sectors_healthcare_url": "",
-            "get_sectors_communication_services_url": "",
-            "get_sectors_industrials_url": "",
-            "get_sectors_consumer_defensive_url": "",
-            "get_sectors_energy_url": "",
-            "get_sectors_real_estate_url": "",
-            "get_sectors_basic_materials_url": "",
-            "get_sectors_utilities_url": "",
-            "get_available_news": "",
-            "get_available_markets": "",
-            "get_available_sub_markets": "",
-            "get_available_sectors": "",
+            "get_sub_sectors": "sector: Sector to get the data from\nget_only_sector: Whether to get only the sector data. Defaults to True.\nsub_sector: Sub-sector to get the data from. Defaults to \"\"\njson_file: Name of the json file to save the data to. Defaults to \"json_files/Y_Finance/sectors.json\"",
+            "get_stocks": "stock_type: Stock type to get the data from. Defaults to \"most-active\"\nstart: Start index of the stocks. Defaults to 0\ncount: Count of the stocks. Defaults to 100\njson_file: Name of the json file to save the data to. Defaults to \"json_files/Y_Finance/stocks.json\"",
+            "get_crypto": "crypto_type: Type of the crypto. Defaults to \"all\"\nstart: Start index of the stocks. Defaults to 0\ncount: Count of the stocks. Defaults to 100\njson_file: Name of the json file to save the data to. Defaults to \"json_files/Y_Finance/crypto.json\"",
+            "get_etfs": "etf_type: Type of the etfs. Defaults to \"most-active\"\nstart: Start index of the etfs. Defaults to 0\ncount: Count of the etfs. Defaults to 100\njson_file: Name of the json file to save the data to. Defaults to \"json_files/Y_Finance/etfs.json\"",
+            "get_mutual_funds": "mutual_fund_type: Type of the mutual funds. Defaults to \"most-active\"\nstart: Start index of the mutual funds. Defaults to 0\ncount: Count of the mutual funds. Defaults to 100\njson_file: Name of the json file to save the data to. Defaults to \"json_files/Y_Finance/mutual_funds.json\"",
+            
         }
         
         __function_return_types__ = { # Function names and their return types
@@ -695,7 +674,7 @@ class YahooFinance:
         """Get the sectors data
         
         Args:
-            sector (str, optional): Sector to get the data from. Defaults to "technology".
+            sector (str, optional): Sector to get the data from.
             get_only_sector (bool, optional): Whether to get only the sector data. Defaults to True.
             sub_sector (str, optional): Sub-sector to get the data from. Defaults to "".
             json_file (str, optional): Name of the json file to save the data to. Defaults to "json_files/Y_Finance/sectors.json".
