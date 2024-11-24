@@ -8,3 +8,4 @@ Got stocks data and stored it in json_files/Y_Finance/stocks.json
 Got crypto data and stored it in json_files/Y_Finance/crypto.json
 Got etfs data and stored it in json_files/Y_Finance/etfs.json
 Got mutual funds data and stored it in json_files/Y_Finance/mutual_funds.json
+Got news data for stock-market-news and stored it in json_files/Y_Finance/news.json

@@ -369,7 +369,7 @@ class YahooFinance:
         
         return table_data
     
-    def __get_news_data__(self, html_content: str) -> json:
+    def __get_news_data__(self, url: str) -> json:
         """Get the news data from the given HTML
 
         Args:
@@ -378,10 +378,33 @@ class YahooFinance:
         Returns:
             json: News data of the given HTML
         """
+
+        from selenium import webdriver
+        from selenium.webdriver.firefox.service import Service
+        from webdriver_manager.firefox import GeckoDriverManager
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        from selenium.webdriver.common.by import By
+
+        options = webdriver.FirefoxOptions()
+        options.add_argument("--headless")
         
+        with webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options) as driver:
+            driver.get(url)
+
+            try:
+                news_stream_div = WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, '[data-testid="topic-stream"]'))
+                )
+                html_content = driver.page_source
+
+            except Exception as e:
+                print(f"Error getting news data: {e}")
+                return None
+
         soup = BeautifulSoup(html_content, "html.parser")
 
-        news_stream_div = soup.find("div", attrs={"id": "topic-stream"})
+        news_stream_div = soup.find("div", attrs={"data-testid": "topic-stream"})
         if not news_stream_div:
             print("News stream not found")
             return None
@@ -956,9 +979,8 @@ class YahooFinance:
             return None
 
         full_url: str = self.__base_url__ + self.__news_url__ + topic
-        html_content = self.__get_html__(full_url)
-
-        news_data = self.__get_news_data__(html_content)
+        
+        news_data = self.__get_news_data__(full_url)
         if not news_data:
             print("No news found")
             return None
