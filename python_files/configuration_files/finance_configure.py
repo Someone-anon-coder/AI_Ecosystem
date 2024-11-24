@@ -369,7 +369,7 @@ class YahooFinance:
         
         return table_data
     
-    def __get_news_data__(self, url: str) -> json:
+    def __get_news_data__(self, url: str, attributes: tuple = ("data-testid", "topic-stream")) -> json:
         """Get the news data from the given HTML
 
         Args:
@@ -394,7 +394,7 @@ class YahooFinance:
 
             try:
                 news_stream_div = WebDriverWait(driver, 10).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, '[data-testid="topic-stream"]'))
+                    EC.presence_of_element_located((By.CSS_SELECTOR, f'[{attributes[0]}="{attributes[1]}"]'))
                 )
                 html_content = driver.page_source
 
@@ -404,7 +404,7 @@ class YahooFinance:
 
         soup = BeautifulSoup(html_content, "html.parser")
 
-        news_stream_div = soup.find("div", attrs={"data-testid": "topic-stream"})
+        news_stream_div = soup.find("div", attrs={attributes[0]: attributes[1]})
         if not news_stream_div:
             print("News stream not found")
             return None
@@ -993,6 +993,77 @@ class YahooFinance:
             print("Error serializing table data to JSON")
             raise
     
+    def get_market_news(self, topic: str, sub_topic: str = "", json_file:str = "json_files/Y_Finance/market_news.json") -> str | None:
+        """Get the market news 
+        
+        Args:
+            topic (str): Topic of the news
+            sub_topic (str, optional): Sub-topic of the news. Defaults to "".
+            json_file (str, optional): File to save the data to. Defaults to "json_files/Y_Finance/market_news.json".
+        
+        Returns:
+            str | None: Data of the market news
+        """
+
+        if topic not in self.__available_markets__ and topic not in tuple(self.__available_sub_markets__.keys()):
+            print("Invalid market")
+            return None
+        
+        if sub_topic not in self.__available_sub_markets__[topic]:
+            print("Invalid sub-market")
+            return None
+        
+        full_url: str = self.__base_url__ + self.__market_url__ + topic
+        
+        news_data = self.__get_news_data__(full_url, ("data-testid", "news-stream"))
+        if not news_data:
+            print("No news found")
+            return None
+        
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(news_data, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got news data for {topic} and stored it in {json_file}")
+        except:
+            print("Error serializing table data to JSON")
+            raise
+    
+    def get_sector_news(self, sector: str, sub_sector: str = "", json_file:str = "json_files/Y_Finance/sector_news.json") -> str | None:
+        """Get the sector news
+        
+        Args:
+            sector (str): Sector of the news
+            sub_sector (str, optional): Sub-sector of the news. Defaults to "".
+            sub_sub_sector (str, optional): Sub-sub-sector of the news. Defaults to "".
+            json_file (str, optional): Save the data to this file. Defaults to "json_files/Y_Finance/sector_news.json".
+        
+        Returns:
+            str | None: Data of the sector news
+        """
+
+        if sector not in tuple(self.__available_sectors__.keys()):
+            print("Invalid sector")
+            return None
+        
+        if sub_sector not in self.__available_sectors__[sector]:
+            print("Invalid sub-sector")
+            return None
+        
+        full_url = self.__base_url__ + self.__sectors_url__ + sector + "/" + sub_sector
+        
+        news_data = self.__get_news_data__(full_url, ("data-testid", "news-stream"))
+        if not news_data:
+            print("No news found")
+            return None
+        
+        try:
+            with open(json_file, "w", encoding="utf-8") as file:
+                json.dump(news_data, file, ensure_ascii=False, indent=4)
+                self.__log_info__(f"Got news data for {sector +  "" if sub_sector == '' else " and " + sub_sector} and stored it in {json_file}")
+        except:
+            print("Error serializing table data to JSON")
+            raise
+    
     def get_base_url(self) -> str:
         """Get the base url
         
@@ -1230,4 +1301,5 @@ if __name__ == "__main__":
     # yahoo.get_crypto("most-active", start=100, count=100)
     # yahoo.get_etfs("most-active", start=100, count=100)
     # yahoo.get_mutual_funds("most-active", start=100, count=100)
-    yahoo.get_news("stock-market-news")
+    # yahoo.get_news("stock-market-news")
+    yahoo.get_market_news("stocks", "most-active")
